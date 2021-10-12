@@ -49,7 +49,7 @@ if ($checkSetup == false) {
     }
 }
 
-$checkWritten = true;
+$checkWritten = false;
 
 if ($checkWritten == false) {
     $url = $http . "://";
@@ -95,7 +95,7 @@ if (isset($_GET["view"]) && strpos($_GET["view"], "setup/") == false) {
     PARAMETERS
 */
 define("HTTP_HTTPS", $http);
-define("SUBFOLDER", "/ultimate-z/");
+define("SUBFOLDER", "/");
 define("PRESTASHOP", false);
 
 /*

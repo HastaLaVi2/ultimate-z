@@ -14,13 +14,5 @@
  *
  */
 
-if (strpos("$_SERVER[REQUEST_URI]", "z.php") !== false) {
-    header("location: index.php");
-}
-
-define("HOST", "localhost");
-define("USER", "root");
-define("PASS", "pass");
-define("DABASE", "ultimate-z");
-define("CONNECTION", false);
-define("SETUP", false);
+ header("Location: ../");
+ exit;
