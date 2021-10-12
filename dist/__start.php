@@ -15,7 +15,7 @@
  */
 
 /*
-    START SESSIONd
+    START SESSION
 */
 
 ob_start();
