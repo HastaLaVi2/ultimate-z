@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteBase /
+
+<Files ~ ".(pl|txt|tpl|inc)$">
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ %{ENV:REWRITEBASE}/ultimate-z/index.php [NC,L]
+
+ErrorDocument 403 /ultimate-z/index.php?view=403
+ErrorDocument 404 /ultimate-z/index.php?view=404
+ErrorDocument 500 /ultimate-z/index.php?view=500
