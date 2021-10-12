@@ -95,7 +95,8 @@ $tables .= "INSERT INTO `zHolders` (`id_holder`, `type`) VALUES
 (1, 'text'),
 (2, 'image'),
 (3, 'categorylist'),
-(4, 'input');";
+(4, 'input'),
+(5, 'input;image;text');";
 
 // ////////////////////////////////////////////////////////
 
@@ -122,7 +123,9 @@ $tables .= "INSERT INTO `zHolders_tr` (`id_holder_tr`, `id_holder`, `id_lang`, `
 (5, 3, 1, 'Category List'),
 (6, 3, 2, 'Kategori Listesi'),
 (7, 4, 1, 'Tag'),
-(8, 4, 2, 'Etiket');";
+(8, 4, 2, 'Etiket'),
+(9, 5, 1, 'Slider'),
+(10, 5, 2, 'Slayt');";
 
 // ////////////////////////////////////////////////////////
 
@@ -180,6 +183,8 @@ $tables .= "INSERT INTO `zPages` (`id_page`, `url`, `area`, `id_template`) VALUE
 (14, '/_admin/advanced/database/table', 'back', 0),
 (15, '/_admin/users', 'back', 0),
 (16, '/_admin/media', 'back', 0),
+(17, '/_admin/layouts/design', 'back', 0),
+(18, '/_admin/layouts/design/favicon', 'back', 0),
 (1001, '/', 'front', 1);";
 
 // ////////////////////////////////////////////////////////
@@ -233,8 +238,12 @@ $tables .= "INSERT INTO `zPages_tr` (`id_page_tr`, `id_page`, `id_lang`, `value`
 (30, 15, 2, 'Kullanıcılar', ''),
 (31, 16, 1, 'Media', ''),
 (32, 16, 2, 'Medya', ''),
-(33, 1001, 1, 'Home', 'ultimate Z'),
-(34, 1001, 2, 'Anasayfa', 'ultimate Z');";
+(33, 17, 1, 'Design', ''),
+(34, 17, 2, 'Tasarım', ''),
+(35, 18, 1, 'Favicon', ''),
+(36, 18, 2, 'Site Simgesi', ''),
+(37, 1001, 1, 'Home', 'ultimate Z'),
+(38, 1001, 2, 'Anasayfa', 'ultimate Z');";
 
 // ////////////////////////////////////////////////////////
 
@@ -258,6 +267,7 @@ $tables .= "CREATE TABLE `zPagesHolders` (
   `id_page_holder` int AUTO_INCREMENT PRIMARY KEY,
   `id_holder` int NOT NULL,
   `id_page` int NOT NULL,
+  `id_block` int NOT NULL,
   `order` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
 
@@ -324,7 +334,8 @@ $tables .= "INSERT INTO `zRanks_tr` (`id_rank_tr`, `id_rank`, `id_lang`, `value`
 
 $tables .= "CREATE TABLE `zTemplates` (
   `id_template` int AUTO_INCREMENT PRIMARY KEY,
-  `area` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  `area` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `blocks` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
 
 //
@@ -332,7 +343,7 @@ $tables .= "CREATE TABLE `zTemplates` (
 //
 
 $tables .= "INSERT INTO `zTemplates` (`id_template`, `area`) VALUES
-(1, 'front');";
+(1, 'front', 1);";
 
 // ////////////////////////////////////////////////////////
 
