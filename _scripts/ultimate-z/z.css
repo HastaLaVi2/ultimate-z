@@ -505,7 +505,7 @@ hr {
     overflow: auto;
 	background-color: var(--touchbackC);
     background-image: var(--touchbackB);
-	background-size: 100%;
+	background-size: var(--touchbackS);
 	background-attachment: var(--touchbackA);
     background-repeat: var(--touchbackR);
 }
