@@ -1,15 +1,15 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 07:37:51
+/* Smarty version 3.1.39, created on 2021-11-02 07:30:52
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180eacf716c30_98817051',
+  'unifunc' => 'content_6180e92c1844d5_68615299',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '0538971dc732ac65971b8a4e8622951228ba23c9' => 
+    '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
       1 => 1633381842,
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6180eacf716c30_98817051 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '19305928766180eacf6f1850_30440314';
+function content_6180e92c1844d5_68615299 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '6347762206180e92c166f41_20286733';
 ?>
 
 <meta charset="utf-8">

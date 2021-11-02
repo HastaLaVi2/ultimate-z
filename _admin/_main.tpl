@@ -20,6 +20,8 @@
     {include file="../_holders/head.tpl"}
 </head>
 <body class="back7">
+    {include file="_partials/loading.tpl"}
+
     <div class="floatingTheSpace fixed index-11 height-100 widthAll">
         <div class="height-70 widthAll back7" zMob-1200="height-100"></div>
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
@@ -50,7 +52,5 @@
         {block name="zBottom"}
         {/block}
     </div>
-    
-    {include file="_partials/loading.tpl"}
 </body>
 </html>

@@ -280,6 +280,17 @@ hr {
     visibility: hidden;
 }
 
+.zPreLoadOut {
+    z-index: 102;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.zPreLoadIn {
+    font-size: 24px;
+    z-index: 103;
+    background: var(--color7);
+}
+
 /*-------------*/
 /* Little Box */
 /*-----------*/

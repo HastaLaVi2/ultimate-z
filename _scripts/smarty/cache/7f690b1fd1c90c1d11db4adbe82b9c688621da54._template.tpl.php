@@ -1,44 +1,52 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 07:37:18
-  from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/error/404/_template.tpl' */
+/* Smarty version 3.1.39, created on 2021-11-02 07:30:52
+  from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180eaae2a3a58_90436962',
+  'unifunc' => 'content_6180e92c1d10f4_14049175',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ef89980a7e3865faf826361eaa16eee00fa10740' => 
+    'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/error/404/_template.tpl',
-      1 => 1627811511,
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
+      1 => 1633642066,
       2 => 'file',
     ),
-    '0538971dc732ac65971b8a4e8622951228ba23c9' => 
+    '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
       1 => 1633381842,
       2 => 'file',
     ),
+    '37b0e39aed323c9a8a0278f28ec8e347d4af9913' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/4/_holder.tpl',
+      1 => 1633642192,
+      2 => 'file',
+    ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6180eaae2a3a58_90436962 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6180e92c1d10f4_14049175 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Sayfa Bulunamadı</title>
+    <title>Anasayfa | Dönmezoğlu Bilişim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="ultimate Z" />
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,33 +83,22 @@ function content_6180eaae2a3a58_90436962 (Smarty_Internal_Template $_smarty_tpl)
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
 <meta name="theme-color" content="#2d89ef">
 
+    <!-- font libraries -->
+    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fonts/stylesheet.css" type="text/css" charset="utf-8" />
 
-    <!-- dragula -->
-    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
-    <script src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
-
-    <!-- toastify -->
-    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/toastify/toastify.css">
-
-    <!-- imagetracer -->
-    <script src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
-
-    <!-- html2canvas -->
-    <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
+    <!-- custom css/javascript libraries -->
+                    <link rel="stylesheet" type="text/css" href="http://localhost/ultimate-z/_templates/1/assets/styles.css"/>
+                <script src="http://localhost/ultimate-z/_templates/1/assets/javascript.js"></script>
+    
 </head>
-<body class="back7">
-    <div class="width-760 zMob768-widthAll horMid centerText">
-        <img src="http://localhost/ultimate-z/_media/error/error-404.png" class="widthAll">
-        <div class="text-center padB-100">
-            <h1 class="font-4rem">BULUNAMADI</h1>
-            <p class="gray2 font-20 bottom-50 top-50">Aradığınız sayfa bulunamadı.</p>
-            <a href="http://localhost/ultimate-z/" class="zButton secondary sweet">Anasayfaya Dön</a>
-        </div>
-    </div>
-</body>
+<body>
+                                            <!-- zHolder: Etiket -->
+        
+<div class="pad-40">
+    <h1>ultimate Z'ye hoş geldiniz!</h1>
+</div>
+        <!-- zHolder: Etiket -->
+    </body>
 </html>
 <?php }
 }
