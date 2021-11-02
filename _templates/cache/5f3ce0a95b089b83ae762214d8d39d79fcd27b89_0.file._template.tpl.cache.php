@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 07:37:48
+/* Smarty version 3.1.39, created on 2021-11-02 08:43:37
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180eacc442516_27976998',
+  'unifunc' => 'content_6180fa394239f1_63704501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,32 +22,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/statistics.tpl' => 1,
   ),
 ),false)) {
-function content_6180eacc442516_27976998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6180fa394239f1_63704501 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '8462811956180eacc3f97b3_82926136';
+$_smarty_tpl->compiled->nocache_hash = '17725647686180fa393e2435_39482476';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15654253266180eacc41c2d7_57753172', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14987030426180fa393fb676_36798287', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21156583916180eacc434f44_60747330', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5692124686180fa39414232_84390448', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_15654253266180eacc41c2d7_57753172 extends Smarty_Internal_Block
+class Block_14987030426180fa393fb676_36798287 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_15654253266180eacc41c2d7_57753172',
+    0 => 'Block_14987030426180fa393fb676_36798287',
   ),
 );
 public $append = 'true';
@@ -114,12 +114,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_21156583916180eacc434f44_60747330 extends Smarty_Internal_Block
+class Block_5692124686180fa39414232_84390448 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_21156583916180eacc434f44_60747330',
+    0 => 'Block_5692124686180fa39414232_84390448',
   ),
 );
 public $append = 'true';
