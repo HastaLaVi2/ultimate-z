@@ -268,8 +268,9 @@ hr {
 
 .visible {opacity: 1;}
 .hidden {opacity: 0;}
-.displayNone {display: none;}
-.blockThis {display: block;}
+.displayNone, .display-none {display: none;}
+.displayNoneI {display: none !important;}
+.blockThis, .display-block {display: block;}
 .pointThis {cursor: pointer;}
 .pointRun {pointer-events: auto;}
 .pointNo {pointer-events: none;}
