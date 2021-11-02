@@ -36,7 +36,9 @@ class zTemplate {
             $this->name = $query[0]["value"];
         } else {
             $query = $db->select("SELECT * FROM zTemplates_tr WHERE id_template = '$this->id' AND id_lang = '1'");
-            $this->name = $query[0]["value"];
+            if (!empty($query)) {
+                $this->name = $query[0]["value"];
+            }
         }
 
         # get the block number
