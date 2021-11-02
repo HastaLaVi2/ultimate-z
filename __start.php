@@ -329,7 +329,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
     }
 
     // check if we have a language code right before "_admin"
-    if ($found && preg_match("/_admin/", $direct)) {
+    if (isset($found) && $found && preg_match("/_admin/", $direct)) {
         header("Location: " . $server . $direct . (isset($params) ? "index.php?".$params : ""));
     }
 
