@@ -243,7 +243,13 @@ if(isset($_SERVER["REQUEST_URI"])) {
 
     // yet still?..
     if (!isset($langcode)) {
-        $langcode = "en";
+        $zLangs = $zTools->zToolsGetAllLangs();
+        for ($x = 0; $x < count($zLangs); $x++) {
+            if (!$zLangs[$x]->disabled) {
+                $langcode = $zLangs[$x]->iso_code;
+                break;
+            }
+        }
     }
 
     # DEVELOP THIS "Z"
