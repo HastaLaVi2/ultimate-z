@@ -354,11 +354,6 @@ function zDetect() {
     inLine.forEach(function(value) {
         value.parentElement.classList.add("font0");
     });
-    var allSqu = document.querySelectorAll(".specSquare");
-    allSqu.forEach(function(value) {
-        var ourWidth = width(value);
-        value.style.cssText = value.style.cssText + "height: " + ourWidth + "px;";
-    });
     detecting("font", "font-size");
     detecting("color");
     detecting("mortalTextW", "color");
@@ -410,6 +405,11 @@ function zDetect() {
     detecting("rotate", "transform-rotate");
     zBetween();
 
+    var allSqu = document.querySelectorAll(".specSquare");
+    allSqu.forEach(function(value) {
+        var ourWidth = width(value);
+        value.style.cssText = value.style.cssText + "height: " + ourWidth + "px;";
+    });
     var widthRest = document.querySelectorAll(".widthRest");
     widthRest.forEach(function(value) {
         var prev = width(value.previousElementSibling);
