@@ -82,33 +82,15 @@
     </script>
     <script src="{$zContent->srcFull["scripts"]}/simple-datatables/simple-datatables.js"></script>
     <script>
-        function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            let dataTable;
-            tables.forEach((item, i) => {
-                dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        { select: [2,3], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-            });
-            zDetect();
-
+        function deleteFromTable(dataTable) {
             // delete form functions
             $(".zForm").submit(function(e) {
                 e.preventDefault();
 
                 window.location.assign("#");
                 var form = $(this).clone();
-                var id_cat = form.find("input[name='id_category']").val();
-                var obj_cat = $("#zCategory-"+id_cat);
+                var id_page = form.find("input[name='id_category']").val();
+                var obj_page = $("#zCategory-"+id_page);
                 var post_url = form.attr("action");
                 var post_data = form.serialize();
 
@@ -117,9 +99,10 @@
                     url: post_url,
                     data: post_data,
                     success: function(responseText) {
-                        obj_cat.remove();
-                        dataTable.rows().remove(obj_cat[0].dataIndex);
+                        obj_page.remove();
+                        dataTable.rows().remove(obj_page[0].dataIndex);
                         dataTable.update();
+                        deleteFromTable(dataTable);
                         Toastify({
                             text: responseText,
                             duration: 3000
@@ -134,6 +117,28 @@
                     },
                 });
             });
+        }
+        function zPageJS() {
+            // Simple Datatable
+            let tables = document.querySelectorAll(".zTable");
+            let dataTable;
+            tables.forEach((item, i) => {
+                dataTable = new simpleDatatables.DataTable(item, {
+                    columns: [
+                        { select: [2,3], sortable: false},
+                    ]
+                });
+                dataTable.on("datatable.page", function(page) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+                dataTable.on("datatable.sort", function(column, direction) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+            });
+            zDetect();
+            deleteFromTable(dataTable);
         }
 
         document.addEventListener("DOMContentLoaded", function(event) {
