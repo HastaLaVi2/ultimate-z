@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 14:35:03
+/* Smarty version 3.1.39, created on 2021-11-06 21:08:28
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61869297ad1138_01126433',
+  'unifunc' => 'content_6186eecc280ee6_50468710',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3e1152df841f7cec2c5ff34d7e9e78e3783197e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl',
-      1 => 1633372152,
+      1 => 1636232896,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -51,12 +51,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1633373917,
       2 => 'file',
     ),
-    'ea921527d0a89eb10256e18f21e891c839c80637' => 
-    array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1631789997,
-      2 => 'file',
-    ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
@@ -72,7 +66,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61869297ad1138_01126433 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6186eecc280ee6_50468710 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -367,7 +361,7 @@ $(window).resize(function(){
         <div class="whiteBack rad-15 pad-20 font-16">
             <h4 class="font-19 top-0 text4 boldText">Sayfa Listesi</h4>
             
-            <a href="http://localhost/ultimate-z/_admin/layouts/pages/create/" class="zButton primary sweet font-16">
+            <a href="http://localhost/ultimate-z/_admin/layouts/pages/create/" class="zButton zHov-zShadow5 primary sweet font-16">
                 <i class="fas fa-plus-square right-10"></i>
                 Yeni Sayfa Ekle
             </a>
@@ -388,52 +382,11 @@ $(window).resize(function(){
                             <td>Anasayfa</td>
                             <td>zAna</td>
                             <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001" class="zButton primary sweet">
+                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001" class="zButton zHov-zShadow5 primary sweet">
                                      Düzenle
                                 </a>
                             </td>
                             <td>
-                                                            </td>
-                        </tr>
-                                            <tr id="zPage-1002">
-                            <td>2</td>
-                            <td>Deneme</td>
-                            <td>zAna</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002" class="zButton primary sweet">
-                                     Düzenle
-                                </a>
-                            </td>
-                            <td>
-                                                                
-<a href="#modal1002" class="zButton primary sweet font-16">Sil</a>
-
-<div class="zModal" id="modal1002">
-    <a class="zCancel" href="#"></a>
-    <div class="zModalContent rad-15" zMob-768="zCol-11">
-        <div class="pad-20">
-                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
-                            <div class="modal-header bg-primary">
-                    <h5 class="top-0 bottom-0 font-18">
-                        Sayfayı Sil
-                    </h5>
-                </div>
-                <div class="zInside gray2 font-15 padTB-20">
-                    <div class="displayNone"><input name='id_page' value='1002'></div>
-                    Bu sayfayı silmek istediğinize emin misiniz?
-                </div>
-                <div class="rightText">
-                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Kapat
-                    </a>
-                                                            <button type="submit" class="zButton primary sweet font-16">
-                        <span>Evet</span>
-                    </button>
-                                    </div>
-                        </form>
-                    </div>
-    </div>
-</div>
                                                             </td>
                         </tr>
                                     </tbody>
@@ -476,25 +429,7 @@ $(window).resize(function(){
     </script>
     <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
     <script>
-        function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            let dataTable;
-            tables.forEach((item, i) => {
-                dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        { select: [3,4], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-            });
-            zDetect();
-
+        function deleteFromTable(dataTable) {
             // delete form functions
             $(".zForm").submit(function(e) {
                 e.preventDefault();
@@ -514,6 +449,7 @@ $(window).resize(function(){
                         obj_page.remove();
                         dataTable.rows().remove(obj_page[0].dataIndex);
                         dataTable.update();
+                        deleteFromTable(dataTable);
                         Toastify({
                             text: responseText,
                             duration: 3000
@@ -528,6 +464,28 @@ $(window).resize(function(){
                     },
                 });
             });
+        }
+        function zPageJS() {
+            // Simple Datatable
+            let tables = document.querySelectorAll(".zTable");
+            let dataTable;
+            tables.forEach((item, i) => {
+                dataTable = new simpleDatatables.DataTable(item, {
+                    columns: [
+                        { select: [3,4], sortable: false},
+                    ]
+                });
+                dataTable.on("datatable.page", function(page) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+                dataTable.on("datatable.sort", function(column, direction) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+            });
+            zDetect();
+            deleteFromTable(dataTable);
         }
 
         document.addEventListener("DOMContentLoaded", function(event) {

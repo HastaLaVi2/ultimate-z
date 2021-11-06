@@ -770,6 +770,7 @@ function zShadow() {
                 finalColor = color.replace(color.match("rgb+(?:| )\\("), "rgba(").replace(")", ",.4)");
             }
             createStyleTag("zShadow" + i, "box-shadow", "0 1rem 3rem " + finalColor);
+            createStyleTag("zHov-zShadow" + i, "box-shadow", "0 1rem 3rem " + finalColor, "hover");
         }
     }
 }

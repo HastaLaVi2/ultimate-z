@@ -14,7 +14,7 @@
  *}
 
 {if $_mButton}
-<a href="#modal{$_mLabel}" class="zButton primary sweet font-16">{$_mButton}</a>
+<a href="#modal{$_mLabel}" class="zButton zHov-zShadow5 primary sweet font-16">{$_mButton}</a>
 {/if}
 
 <div class="zModal" id="modal{$_mLabel}">
@@ -40,7 +40,7 @@
                     </a>
                     {/if}
                     {if $_mForm}
-                    <button type="submit" class="zButton primary sweet font-16">
+                    <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
                         <span>{if $_mSubmit}{$_mSubmit}{else}{$zThis["Accept"]}{/if}</span>
                     </button>
                     {/if}

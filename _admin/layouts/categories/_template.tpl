@@ -24,7 +24,7 @@
         <div class="whiteBack rad-15 pad-20 font-16">
             <h4 class="font-19 top-0 text4 boldText">{zThis z="Category List"}</h4>
             {$zTools->zToolsFormWarning($success1, $error1)}
-            <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/create/" class="zButton primary sweet font-16">
+            <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/create/" class="zButton zHov-zShadow5 primary sweet font-16">
                 <i class="fas fa-plus-square right-10"></i>
                 {zThis z="Add New Category"}
             </a>
@@ -44,7 +44,7 @@
                             <td>{$cat->id}</td>
                             <td>{$cat->name}</td>
                             <td>
-                                <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/edit/index.php?id_category={$cat->id}" class="zButton primary sweet">
+                                <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/edit/index.php?id_category={$cat->id}" class="zButton zHov-zShadow5 primary sweet">
                                      {zThis z="Edit"}
                                 </a>
                             </td>

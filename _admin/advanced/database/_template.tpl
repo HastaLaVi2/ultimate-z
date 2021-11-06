@@ -40,7 +40,7 @@
                         <td>{$table[0]}</td>
                         <td>{$tableIn|count}</td>
                         <td>
-                            <a href="{$zContent->srcFull["_main"]}_admin/advanced/database/table/index.php?table={$table[0]}" class="zButton primary sweet">
+                            <a href="{$zContent->srcFull["_main"]}_admin/advanced/database/table/index.php?table={$table[0]}" class="zButton zHov-zShadow5 primary sweet">
                                  {zThis z="Edit"}
                             </a>
                         </td>

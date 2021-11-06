@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:10:07
-  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
+/* Smarty version 3.1.39, created on 2021-11-06 21:07:52
+  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/categories/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186ef2fb99619_24620526',
+  'unifunc' => 'content_6186eea8778d35_12892718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '5f3ce0a95b089b83ae762214d8d39d79fcd27b89' => 
+    '9383d56e130f38b69f2c73e295931b1c58a4208f' => 
     array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl',
-      1 => 1631556859,
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/categories/_template.tpl',
+      1 => 1636232832,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -51,16 +51,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1633373917,
       2 => 'file',
     ),
-    '00713257cf9551af20df90b209cc4ee0ca5ac7bb' => 
+    'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl',
-      1 => 1636207784,
-      2 => 'file',
-    ),
-    '3c98e242087fd8cf119847a5ffb011fca48c94fb' => 
-    array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/statistics.tpl',
-      1 => 1626945324,
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
+      1 => 1636232870,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
@@ -78,21 +72,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186ef2fb99619_24620526 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6186eea8778d35_12892718 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Gösterge Paneli | zAdmin</title>
+    <title>Kategoriler | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/_admin/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin" />
+<link rel="alternate" href="http://localhost/ultimate-z/_admin/layouts/categories/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/categories" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/categories" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -184,7 +178,9 @@ function content_6186ef2fb99619_24620526 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead"></div>
+    <div id="zHead">
+    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/simple-datatables/style.css">
+</div>
 
     
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">
@@ -199,19 +195,19 @@ function content_6186ef2fb99619_24620526 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="text4 padLR-1rem weight-600">Menü</li>
 
                 <li class="top-0_5rem padTB-5">
-                    <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis back5 color-white">
-                        <i class="fas fa-th-large whiteText"></i>
+                    <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
+                        <i class="fas fa-th-large text6"></i>
                         <span class="padL-15">Gösterge Paneli</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
-                    <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 zHov-grayBack1 animSlow text4">
-                        <i class="fas fa-layer-group text6"></i>
+                    <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 back5 color-white">
+                        <i class="fas fa-layer-group whiteText"></i>
                         <span class="padL-15">Düzen</span>
-                        <i class="fas fa-chevron-down inRight top-3 text6"></i>
+                        <i class="fas fa-chevron-down inRight top-3 whiteText"></i>
                     </a>
-                    <ul class="zShow-side1 font-13 padL-2rem left-2rem displayNone">
+                    <ul class="zShow-side1 font-13 padL-2rem left-2rem toggled">
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/design" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
                                 Tasarım
@@ -223,7 +219,7 @@ function content_6186ef2fb99619_24620526 (Smarty_Internal_Template $_smarty_tpl)
                             </a>
                         </li>
                         <li class="weight-600">
-                            <a href="http://localhost/ultimate-z/_admin/layouts/categories/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
+                            <a href="http://localhost/ultimate-z/_admin/layouts/categories/index.php" class="weight-700 text5">
                                 Kategoriler
                             </a>
                         </li>
@@ -361,79 +357,73 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Gösterge Paneli</h3>
+            <h3 class="boldText top-10">Kategoriler</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
             
             
-    <div class="col-3 colTop padR-10 zMob-padB-20">
-        
-<div class="whiteBack rad-15 pad-20">
-    <div class="font0 padB-20">
-        <div class="width-70">
-            <img src="http://localhost/ultimate-z/_media/user/profile/4.jpg" class="widthAll rad-half">
-        </div>
-        <div class="floatingSpace padL-85 padT-10">
-            <h5 class="top-0 bottom-0 font-20 text4">Kerimcan Ayaz</h5>
-            <h6 class="top-0 bottom-0 font-16 text6">Yönetici</h6>
-        </div>
-    </div>
+    <div class="col-12">
+        <div class="whiteBack rad-15 pad-20 font-16">
+            <h4 class="font-19 top-0 text4 boldText">Kategori Listesi</h4>
+            
+            <a href="http://localhost/ultimate-z/_admin/layouts/categories/create/" class="zButton zHov-zShadow5 primary sweet font-16">
+                <i class="fas fa-plus-square right-10"></i>
+                Yeni Kategori Ekle
+            </a>
+            <div class="top-20"></div>
+            <table class="zTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ad</th>
+                        <th>Düzenle</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody>
+                                            <tr id="zCategory-11">
+                            <td>11</td>
+                            <td>700</td>
+                            <td>
+                                <a href="http://localhost/ultimate-z/_admin/layouts/categories/edit/index.php?id_category=11" class="zButton zHov-zShadow5 primary sweet">
+                                     Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                
+<a href="#modal11" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
 
-    <a href="http://localhost/ultimate-z/_admin/logout/" class="forceLink weight-400">
-        <div class="back5 zHov-back2 animation font-16 centerText whiteText bottom--20 left--20 right--20 pad-8 rad-c3-15 rad-c4-15 zShadow5">
-            <i class="fas fa-sign-out-alt"></i>
-            Çıkış Yap
-        </div>
-    </a>
-</div>
-        <div class="widthAll zMob-padB-20 padT-20">
-            <div class="whiteBack rad-15 pad-0 font-16">
-                <h4 class="font-19 top-0 bottom-0 text4 boldText pad-20">Sayfalara Göre Ziyaretler</h4>
-                                                                        <div class="statsTabs">
-                                            <div class="widthAll padL-20 padR-100">
-                            Anasayfa
-                            <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                14
-                            </span>
-                        </div>
-                        <div id="chart-1001" class="left--22 right--10"></div>
-                                        </div>
-                                                    <div class="widthAll centerText pad-20 bottom-20">
-                    <div class="zDatePrev zCol-6 padR-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
-                    <div class="zDateNext zCol-6 padL-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+<div class="zModal" id="modal11">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/categories/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Kategoriyi Sil
+                    </h5>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9 colTop">
-        
-<div class="col-4 colTop padLR-20 zMob-padB-20 font-24">
-    <div class="whiteBack rad-15 pad-20 padL-2_3em">
-        <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
-        <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">14</h6>
-    </div>
-</div>
-<div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
-    <div class="whiteBack rad-15 pad-20 padL-2_3em">
-        <i class="fas fa-user floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #57caeb"></i>
-        <h6 class="text6 weight-600 top-0 bottom-10">Toplam Kullanıcı</h6>
-        <h6 class="top-0 bottom-0">1</h6>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='id_category' value='11'></div>
+                    Bu kategoriyi silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
     </div>
 </div>
-<div class="col-4 colTop padL-20 zMob-padB-20 font-24">
-    <div class="whiteBack rad-15 pad-20 padL-2_3em">
-        <i class="fas fa-bookmark floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #ff7976"></i>
-        <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa</h6>
-        <h6 class="top-0 bottom-0">1</h6>
-    </div>
-</div>
-        <div class="widthAll padL-20 zMob-padB-20 padT-20 zMob-padT-0">
-            <div class="whiteBack rad-15 pad-20 font-16">
-                <h4 class="font-19 top-0 text4 boldText">Zamana Göre Toplam Görüntülenme</h4>
-                <div id="chart-profile-visit"></div>
-            </div>
+                            </td>
+                        </tr>
+                                    </tbody>
+            </table>
         </div>
     </div>
 
@@ -457,157 +447,83 @@ $(window).resize(function(){
     <script src="http://localhost/ultimate-z/_scripts/toastify/toastify.js"></script>
         
         
-    <script src="http://localhost/ultimate-z/_scripts/apexcharts/apexcharts.min.js"></script>
     <script>
-    $.ajax({
-        "async": false,
-        "url": "http://localhost/ultimate-z/_scripts/apexcharts/locales/tr.json",
-        "dataType": "json",
-        "success": function (data) {
-            window.apexLang = data;
-        }
+    var entriesPerPage = "gösterilen öge sayısı";
+    var searchOn = "Ara...";
+    var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
+    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
+    var noRowFound = "Sonuç bulunamadı";
+
+    $("input[type=checkbox]").change(function() {
+        var clas = $(this).attr("class").split(" ")[1];
+        var checked = $(this).prop("checked");
+        $("."+clas).prop("checked", checked);
     });
+    </script>
+    <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
+    <script>
+        function deleteFromTable(dataTable) {
+            // delete form functions
+            $(".zForm").submit(function(e) {
+                e.preventDefault();
 
-    function dateTable(period) {
-        var months = window.apexLang.options.shortMonths;
-        var days = window.apexLang.options.days;
-        var date = new Date("2021/11/06");
-        var table = [];
+                window.location.assign("#");
+                var form = $(this).clone();
+                var id_page = form.find("input[name='id_category']").val();
+                var obj_page = $("#zCategory-"+id_page);
+                var post_url = form.attr("action");
+                var post_data = form.serialize();
 
-        for (let i = 0; i <= (period-1); i++) {
-            table.push([days[date.getDay()] + "", date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear()]);
-            date.setDate(date.getDate() - 1);
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    data: post_data,
+                    success: function(responseText) {
+                        obj_page.remove();
+                        dataTable.rows().remove(obj_page[0].dataIndex);
+                        dataTable.update();
+                        deleteFromTable(dataTable);
+                        Toastify({
+                            text: responseText,
+                            duration: 3000
+                        }).showToast();
+                    },
+                    error: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000,
+                            backgroundColor: "#f3616d",
+                        }).showToast();
+                    },
+                });
+            });
+        }
+        function zPageJS() {
+            // Simple Datatable
+            let tables = document.querySelectorAll(".zTable");
+            let dataTable;
+            tables.forEach((item, i) => {
+                dataTable = new simpleDatatables.DataTable(item, {
+                    columns: [
+                        { select: [2,3], sortable: false},
+                    ]
+                });
+                dataTable.on("datatable.page", function(page) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+                dataTable.on("datatable.sort", function(column, direction) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+            });
+            zDetect();
+            deleteFromTable(dataTable);
         }
 
-        return table;
-    }
-
-    function apexBarCreate(id, period, data) {
-        var table = dateTable(period);
-
-        var options = {
-            annotations: {
-                position: "back"
-            },
-            dataLabels: {
-                enabled:false
-            },
-            chart: {
-               locales: [window.apexLang],
-               defaultLocale: "tr",
-                type: "bar",
-                height: 300
-            },
-            fill: {
-                opacity:1
-            },
-            plotOptions: {
-            },
-            series: [{
-                name: "Ziyaret",
-                data: data
-            }],
-            colors: "#435ebe",
-            xaxis: {
-                categories: table,
-            },
-        };
-        var element = new ApexCharts(document.querySelector(id), options);
-        element.render();
-    }
-
-    function apexLineCreate(id, period, data, color) {
-        var table = dateTable(period);
-
-        var options = {
-        	series: [{
-        		name: "Ziyaret",
-        		data: data
-        	}],
-        	chart: {
-        		height: 80,
-        		type: "area",
-        		toolbar: {
-        			show:false,
-        		},
-        	},
-        	colors: [color],
-        	stroke: {
-        		width: 2,
-        	},
-        	grid: {
-        		show:false,
-        	},
-        	dataLabels: {
-        		enabled: false
-        	},
-        	xaxis: {
-        		type: "date",
-        		categories: table,
-        		axisBorder: {
-        			show:false
-        		},
-        		axisTicks: {
-        			show:false
-        		},
-        		labels: {
-        			show:false,
-        		}
-        	},
-        	show:false,
-        	yaxis: {
-        		labels: {
-        			show:false,
-        		},
-        	},
-        	tooltip: {
-        		x: {
-        			format: "dd/MM/yy"
-        		},
-        	},
-        };
-
-        var element = new ApexCharts(document.querySelector(id), options);
-        element.render();
-    }
-
-    function zPageJS() {
-        $("[id^=SvgjsSvg]").remove();
-
-        apexBarCreate("#chart-profile-visit", 7, ["5","0","0","0","2","0","0"]);
-                apexLineCreate(
-            "#chart-1001",
-            12,
-            ["5","0","0","0","2","0","0","0","0","0","0","0"],
-            "#5350e9"        );
-        
-        let tabNum = 0;
-        $(".zDateNext").click(function() {
-            var statsTabs = $(".statsTabs");
-            if (statsTabs[tabNum+1]) {
-                $(statsTabs[tabNum]).addClass("displayNone");
-                $(statsTabs[tabNum+1]).removeClass("displayNone");
-                tabNum++;
-            }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            zPageJS();
         });
-        $(".zDatePrev").click(function() {
-            var statsTabs = $(".statsTabs");
-            if (statsTabs[tabNum-1]) {
-                $(statsTabs[tabNum]).addClass("displayNone");
-                $(statsTabs[tabNum-1]).removeClass("displayNone");
-                tabNum--;
-            }
-        });
-
-        // remove additional apexcharts tags
-        var styleTags = $("head").find("style");
-        if (styleTags.length > 2) {
-            $(styleTags[styleTags.length-1]).remove();
-        }
-    }
-    document.addEventListener("DOMContentLoaded", function(event) {
-        zPageJS();
-    });
     </script>
 
     </div>

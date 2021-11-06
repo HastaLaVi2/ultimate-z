@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 13:24:58
+/* Smarty version 3.1.39, created on 2021-11-06 21:10:03
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186822a220195_20611060',
+  'unifunc' => 'content_6186ef2b674698_48187396',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de0d64c50b253ec0d54e6807c216dbf8854f56ef' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl',
-      1 => 1631713014,
+      1 => 1636232981,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1633381842,
+      1 => 1636209054,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
@@ -66,7 +66,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186822a220195_20611060 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6186ef2b674698_48187396 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -303,7 +303,7 @@ $(window).resize(function(){
         <div class="no zMob768-displayNone">
             <div class="inLine verMid font-15">
                 Görüntüle
-                <div class="font-12">Dönmezoğlu Bilişim</div>
+                <div class="font-12">ultimate Z</div>
             </div>
             <div class="inLine verMid">
                 <i class="fas fa-home padL-10 font-1_2em"></i>
@@ -329,7 +329,7 @@ $(window).resize(function(){
                     </div>
                     <div class="inLine verMid font-15">
                         Görüntüle
-                        <div class="font-12">Dönmezoğlu Bilişim</div>
+                        <div class="font-12">ultimate Z</div>
                     </div>
                 </div>
             </a>
@@ -372,7 +372,7 @@ $(window).resize(function(){
                         <td>z</td>
                         <td>1</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=z" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=z" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -383,7 +383,7 @@ $(window).resize(function(){
                         <td>zCategories</td>
                         <td>0</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zCategories" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zCategories" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -394,7 +394,7 @@ $(window).resize(function(){
                         <td>zCategories_tr</td>
                         <td>0</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zCategories_tr" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zCategories_tr" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -405,7 +405,7 @@ $(window).resize(function(){
                         <td>zHolders</td>
                         <td>5</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zHolders" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zHolders" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -416,7 +416,7 @@ $(window).resize(function(){
                         <td>zHolders_tr</td>
                         <td>10</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zHolders_tr" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zHolders_tr" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -427,7 +427,7 @@ $(window).resize(function(){
                         <td>zLanguages</td>
                         <td>2</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zLanguages" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zLanguages" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -436,9 +436,9 @@ $(window).resize(function(){
                     </tr>
                                                         <tr>
                         <td>zPages</td>
-                        <td>20</td>
+                        <td>19</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPages" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPages" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -447,9 +447,9 @@ $(window).resize(function(){
                     </tr>
                                                         <tr>
                         <td>zPages_tr</td>
-                        <td>40</td>
+                        <td>38</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPages_tr" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPages_tr" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -460,7 +460,7 @@ $(window).resize(function(){
                         <td>zPagesCategories</td>
                         <td>0</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesCategories" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesCategories" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -471,7 +471,7 @@ $(window).resize(function(){
                         <td>zPagesHolders</td>
                         <td>1</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesHolders" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesHolders" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -482,7 +482,7 @@ $(window).resize(function(){
                         <td>zPagesHolders_tr</td>
                         <td>2</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesHolders_tr" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesHolders_tr" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -493,7 +493,7 @@ $(window).resize(function(){
                         <td>zRanks</td>
                         <td>2</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zRanks" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zRanks" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -504,7 +504,7 @@ $(window).resize(function(){
                         <td>zRanks_tr</td>
                         <td>4</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zRanks_tr" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zRanks_tr" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -515,7 +515,7 @@ $(window).resize(function(){
                         <td>zTemplates</td>
                         <td>1</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zTemplates" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zTemplates" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -526,7 +526,7 @@ $(window).resize(function(){
                         <td>zTemplates_tr</td>
                         <td>2</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zTemplates_tr" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zTemplates_tr" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -537,7 +537,7 @@ $(window).resize(function(){
                         <td>zUsers</td>
                         <td>1</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zUsers" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zUsers" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -548,7 +548,7 @@ $(window).resize(function(){
                         <td>zViewsPage</td>
                         <td>4</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -559,7 +559,7 @@ $(window).resize(function(){
                         <td>zViewsPageByUser</td>
                         <td>4</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPageByUser" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPageByUser" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
@@ -570,7 +570,7 @@ $(window).resize(function(){
                         <td>zViewsTotal</td>
                         <td>4</td>
                         <td>
-                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsTotal" class="zButton primary sweet">
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsTotal" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
                             </a>
                         </td>
