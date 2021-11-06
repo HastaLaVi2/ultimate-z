@@ -178,99 +178,101 @@ function detecting(zClass, property, pseudo, vendor) {
     }
 
     // start to do the same thing for all classes.
-    all.forEach(function(v) {
-        var sth = v.className.split(" ");
-        var repeat = [];
+    if (all && all.length > 0) {
+        all.forEach(function(v) {
+            var sth = v.className.split(" ");
+            var repeat = [];
 
-        sth.forEach(function(s) {
-            if (s.startsWith(zClass) || s.startsWith("zHov-"+zClass)) {
-                repeat.push(s);
+            sth.forEach(function(s) {
+                if (s.startsWith(zClass) || s.startsWith("zHov-"+zClass)) {
+                    repeat.push(s);
+                }
+            });
+
+            for (let d = 0; d < repeat.length; d++) {
+                var i = repeat[d];
+
+                // defaults
+                var minus = false;
+                var pseudo = null;
+                var dotExists = false;
+                var notPx = true;
+
+                if (typeof(i) == "string") {
+                    i = i.replace("zHov-", "");
+
+                    /* look for a number value first */
+
+                    // detect if a negative number is being used.
+                    if (i.match(zClass+"--")) {i = i.replace(zClass+"--", zClass+"-"); minus = true;}
+
+                    // try to define if another unit besides "px" is being used.
+                    // these units could be: em, ex, ch, px, cm, mm, in, pt, pc, vh, vw, rem, vmax and vmin.
+                    var value = i.match("(?:^| )"+zClass+"-[0-9]+(?:|_)(?:|[0-9]+)(?:|em|:|ex|:|ch|:|px|:|cm|:|mm|:|in|:|pt|:|pc|:|vh|:|vw|:|rem|:|vmax|:|vmin|:|%)(?:$| )");
+
+                    // check if we have a dot on our number or have a unit other than px
+                    if (value && value[0].trim().includes("_")) {dotExists = true}
+                    if (value && value[0].trim().match(/[0-9]$/)) {notPx = false}
+
+                    /* look for a color value */
+
+                    // looking for a number so for, but maybe it is a color?
+                    if (!value) {value = i.match("(?:^| )"+zClass+"-[a-z]+(?:$| )");}
+
+                    // catched any value yet? remove the spaces.
+                    if (value) {value = value[0].replace(/ /g,''); value = value.replace(zClass+"-", "");}
+
+                    /* properties that do not use px */
+
+                    // if catched a color or a z-index value, then notPx is true, because
+                    // there should not be a px at the end of a color or a z-index value
+                    if (value && (
+                        cssColors.includes(value) ||
+                        property == "z-index" ||
+                        property == "background" ||
+                        zClass.startsWith("mortal") ||
+                        (typeof(property) == "string" && property.startsWith("transform-")) ||
+                        property == "font-weight"))
+                        {notPx = true}
+
+                    // remove the prefix, so that we have our value only.
+                    if (value) {value = (minus ? "-" : "") + value + (notPx ? "" : "px");}
+
+                    // if zClass has "px" at the end, this is wrong
+                    if (value) {catchedClass = zClass + "-" + value.replace(/px$/, "");}
+
+                    // replace all "_" with "."
+                    if (value && dotExists) {value = value.replace("_", ".");}
+
+                    // mortals (transparent backgrounds and colors)
+                    if (value && zClass.startsWith("mortal") && zClass.endsWith("W")) {value = "rgba(255, 255, 255, 0."+value+")"}
+                    if (value && zClass.startsWith("mortal") && zClass.endsWith("B")) {value = "rgba(0, 0, 0, 0."+value+")"}
+
+                    // text & box shadows
+                    if (value && zClass == "Tshaw") {value = "0 0 "+value+" rgba(0,0,0,0.35)"}
+                    if (value && (zClass == "superow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
+                    if (value && (zClass == "shadow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
+
+                    // detect if zHov is used.
+                    if (repeat[d].includes("zHov-" + catchedClass)) {pseudo = "hover"; catchedClass = "zHov-" + catchedClass;}
+
+                    // filters
+                    if (value && typeof(property) == "string" && property.startsWith("filter-")) {
+                        value = property.replace("filter-", "") + "(" + value + ")";catchedProperty = "filter"
+                    }
+                    // transforms
+                    if (value && typeof(property) == "string" && property.startsWith("transform-")) {
+                        value = property.replace("transform-", "") + "(" + value + "deg)";catchedProperty = "transform"
+                    }
+
+                    if (catchedProperty == "") {catchedProperty = property}
+
+                    // finally, set the style
+                    createStyleTag(catchedClass, catchedProperty, value, pseudo, vendor);
+                }
             }
         });
-
-        for (let d = 0; d < repeat.length; d++) {
-            var i = repeat[d];
-
-            // defaults
-            var minus = false;
-            var pseudo = null;
-            var dotExists = false;
-            var notPx = true;
-
-            if (typeof(i) == "string") {
-                i = i.replace("zHov-", "");
-
-                /* look for a number value first */
-
-                // detect if a negative number is being used.
-                if (i.match(zClass+"--")) {i = i.replace(zClass+"--", zClass+"-"); minus = true;}
-
-                // try to define if another unit besides "px" is being used.
-                // these units could be: em, ex, ch, px, cm, mm, in, pt, pc, vh, vw, rem, vmax and vmin.
-                var value = i.match("(?:^| )"+zClass+"-[0-9]+(?:|_)(?:|[0-9]+)(?:|em|:|ex|:|ch|:|px|:|cm|:|mm|:|in|:|pt|:|pc|:|vh|:|vw|:|rem|:|vmax|:|vmin|:|%)(?:$| )");
-
-                // check if we have a dot on our number or have a unit other than px
-                if (value && value[0].trim().includes("_")) {dotExists = true}
-                if (value && value[0].trim().match(/[0-9]$/)) {notPx = false}
-
-                /* look for a color value */
-
-                // looking for a number so for, but maybe it is a color?
-                if (!value) {value = i.match("(?:^| )"+zClass+"-[a-z]+(?:$| )");}
-
-                // catched any value yet? remove the spaces.
-                if (value) {value = value[0].replace(/ /g,''); value = value.replace(zClass+"-", "");}
-
-                /* properties that do not use px */
-
-                // if catched a color or a z-index value, then notPx is true, because
-                // there should not be a px at the end of a color or a z-index value
-                if (value && (
-                    cssColors.includes(value) ||
-                    property == "z-index" ||
-                    property == "background" ||
-                    zClass.startsWith("mortal") ||
-                    (typeof(property) == "string" && property.startsWith("transform-")) ||
-                    property == "font-weight"))
-                    {notPx = true}
-
-                // remove the prefix, so that we have our value only.
-                if (value) {value = (minus ? "-" : "") + value + (notPx ? "" : "px");}
-
-                // if zClass has "px" at the end, this is wrong
-                if (value) {catchedClass = zClass + "-" + value.replace(/px$/, "");}
-
-                // replace all "_" with "."
-                if (value && dotExists) {value = value.replace("_", ".");}
-
-                // mortals (transparent backgrounds and colors)
-                if (value && zClass.startsWith("mortal") && zClass.endsWith("W")) {value = "rgba(255, 255, 255, 0."+value+")"}
-                if (value && zClass.startsWith("mortal") && zClass.endsWith("B")) {value = "rgba(0, 0, 0, 0."+value+")"}
-
-                // text & box shadows
-                if (value && zClass == "Tshaw") {value = "0 0 "+value+" rgba(0,0,0,0.35)"}
-                if (value && (zClass == "superow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
-                if (value && (zClass == "shadow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
-
-                // detect if zHov is used.
-                if (repeat[d].includes("zHov-" + catchedClass)) {pseudo = "hover"; catchedClass = "zHov-" + catchedClass;}
-
-                // filters
-                if (value && typeof(property) == "string" && property.startsWith("filter-")) {
-                    value = property.replace("filter-", "") + "(" + value + ")";catchedProperty = "filter"
-                }
-                // transforms
-                if (value && typeof(property) == "string" && property.startsWith("transform-")) {
-                    value = property.replace("transform-", "") + "(" + value + "deg)";catchedProperty = "transform"
-                }
-
-                if (catchedProperty == "") {catchedProperty = property}
-
-                // finally, set the style
-                createStyleTag(catchedClass, catchedProperty, value, pseudo, vendor);
-            }
-        }
-    });
+    }
 }
 
 function zBetween() {
