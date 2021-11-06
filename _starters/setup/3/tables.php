@@ -159,7 +159,8 @@ $tables .= "CREATE TABLE `zPages` (
   `id_page` int AUTO_INCREMENT PRIMARY KEY,
   `url` text NOT NULL,
   `area` text NOT NULL,
-  `id_template` int NOT NULL
+  `id_template` int NOT NULL,
+  `subpage` int NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
 
 //
@@ -167,25 +168,25 @@ $tables .= "CREATE TABLE `zPages` (
 //
 
 $tables .= "INSERT INTO `zPages` (`id_page`, `url`, `area`, `id_template`) VALUES
-(1, '/_admin', 'back', 0),
-(2, '/_admin/login', 'back', 0),
-(3, '/_admin/forgot', 'back', 0),
-(4, '/_admin/layouts/pages/create', 'back', 0),
-(5, '/_admin/layouts/pages/edit', 'back', 0),
-(6, '/_admin/layouts/pages', 'back', 0),
-(7, '/_admin/layouts/categories/create', 'back', 0),
-(8, '/_admin/layouts/categories/edit', 'back', 0),
-(9, '/_admin/layouts/categories', 'back', 0),
-(10, '/_admin/preferences', 'back', 0),
-(11, '/_admin/profile', 'back', 0),
-(12, '/_admin/advanced/run-queries', 'back', 0),
-(13, '/_admin/advanced/database', 'back', 0),
-(14, '/_admin/advanced/database/table', 'back', 0),
-(15, '/_admin/users', 'back', 0),
-(16, '/_admin/media', 'back', 0),
-(17, '/_admin/layouts/design', 'back', 0),
-(18, '/_admin/layouts/design/favicon', 'back', 0),
-(1001, '/', 'front', 1);";
+(1, '/_admin', 'back', 0, 0),
+(2, '/_admin/login', 'back', 0, 0),
+(3, '/_admin/forgot', 'back', 0, 0),
+(4, '/_admin/layouts/pages/create', 'back', 0, 0),
+(5, '/_admin/layouts/pages/edit', 'back', 0, 0),
+(6, '/_admin/layouts/pages', 'back', 0, 0),
+(7, '/_admin/layouts/categories/create', 'back', 0, 0),
+(8, '/_admin/layouts/categories/edit', 'back', 0, 0),
+(9, '/_admin/layouts/categories', 'back', 0, 0),
+(10, '/_admin/preferences', 'back', 0, 0),
+(11, '/_admin/profile', 'back', 0, 0),
+(12, '/_admin/advanced/run-queries', 'back', 0, 0),
+(13, '/_admin/advanced/database', 'back', 0, 0),
+(14, '/_admin/advanced/database/table', 'back', 0, 0),
+(15, '/_admin/users', 'back', 0, 0),
+(16, '/_admin/media', 'back', 0, 0),
+(17, '/_admin/layouts/design', 'back', 0, 0),
+(18, '/_admin/layouts/design/favicon', 'back', 0, 0),
+(1001, '/', 'front', 1, 0);";
 
 // ////////////////////////////////////////////////////////
 
