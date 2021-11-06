@@ -1278,6 +1278,11 @@ form.zForm input[type="range"]::-moz-range-thumb, .zRange::-moz-range-thumb {
     border-radius: 50%;
 }
 
+.disabledInput {
+    pointer-events: none;
+    background-color: var(--gray1) !important;
+}
+
 /*--------------*/
 /* T-imeline ! */
 /*------------*/

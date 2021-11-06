@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 08:45:40
+/* Smarty version 3.1.39, created on 2021-11-06 13:14:27
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180fab49cd554_85895323',
+  'unifunc' => 'content_61867fb303cb96_69869836',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1635838608,
+      1 => 1636204387,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
@@ -51,6 +51,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1633373917,
       2 => 'file',
     ),
+    'ea921527d0a89eb10256e18f21e891c839c80637' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
+      1 => 1631789997,
+      2 => 'file',
+    ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
@@ -66,7 +72,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6180fab49cd554_85895323 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61867fb303cb96_69869836 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -151,7 +157,7 @@ function content_6180fab49cd554_85895323 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 
 <div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn floatingSpace widthAll heightAll">
+<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -387,6 +393,47 @@ $(window).resize(function(){
                                 </a>
                             </td>
                             <td>
+                                                            </td>
+                        </tr>
+                                            <tr id="zPage-1002">
+                            <td>2</td>
+                            <td>Deneme</td>
+                            <td>zAna</td>
+                            <td>
+                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002" class="zButton primary sweet">
+                                     Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                                                
+<a href="#modal1002" class="zButton primary sweet font-16">Sil</a>
+
+<div class="zModal" id="modal1002">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Sayfayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='id_page' value='1002'></div>
+                    Bu sayfayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
                                                             </td>
                         </tr>
                                     </tbody>

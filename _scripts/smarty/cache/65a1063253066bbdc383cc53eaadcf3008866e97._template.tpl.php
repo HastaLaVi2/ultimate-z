@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 08:45:14
+/* Smarty version 3.1.39, created on 2021-11-06 13:14:19
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180fa9a6f1567_74148666',
+  'unifunc' => 'content_61867fab894533_47792751',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1633376471,
+      1 => 1636204229,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1635838608,
+      1 => 1636204387,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
@@ -66,7 +66,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6180fa9a6f1567_74148666 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61867fab894533_47792751 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -151,7 +151,7 @@ function content_6180fa9a6f1567_74148666 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 
 <div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn floatingSpace widthAll heightAll">
+<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -407,60 +407,80 @@ $(window).resize(function(){
                         </div>
                     </div>
                 </div>
-                <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
-                <div class="bottom-10">
-                    <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="Başında / ifadesi olan bir URL girin">
-                    <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                        <i class="fas fa-file-code"></i>
+                <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
+                    <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
+                    <div class="bottom-10">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="Başında / ifadesi olan bir URL girin">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                            <i class="fas fa-file-code"></i>
+                        </div>
                     </div>
+                                            <div class="divFor1 divFor" style="display:none">
+                            <div><input name="id_lang[1]" id="id_lang_1"
+                                        type="text" value="1" style="display:none"></div>
+                            <div class="bottom-10">
+                                <input name="page_name[1]" id="page_name_1" type="text"
+                                       class="page-title padL-45" placeholder="Başlık">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="divFor2 divFor" style="">
+                            <div><input name="id_lang[2]" id="id_lang_2"
+                                        type="text" value="2" style="display:none"></div>
+                            <div class="bottom-10">
+                                <input name="page_name[2]" id="page_name_2" type="text"
+                                       class="page-title padL-45" placeholder="Başlık">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                                        <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
+                    <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
+                                            <div class="divFor1 divFor" style="display: none">
+                            <div class="bottom-10">
+                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="divFor2 divFor" style="">
+                            <div class="bottom-10">
+                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                                        <script>
+                    $(".page-title").keyup(function(){
+                        $("#page_url").val("/"+slug($(this).val()));
+                    });
+                    </script>
                 </div>
-                                    <div class="divFor1 divFor" style="display:none">
-                        <div><input name="id_lang[1]" id="id_lang_1"
-                                    type="text" value="1" style="display:none"></div>
-                        <div class="bottom-10">
-                            <input name="page_name[1]" id="page_name_1" type="text"
-                                   class="page-title padL-45" placeholder="Başlık">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                        </div>
+                <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
+                    <h6 class="bottom-12 top-0 font-1em">Alt Sayfa</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
+                        value="enabled" checked>
+                        <label for="not_a_subpage">Bir alt sayfa değil.</label>
+                        <div class="font-13">Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.</div>
                     </div>
-                                    <div class="divFor2 divFor" style="">
-                        <div><input name="id_lang[2]" id="id_lang_2"
-                                    type="text" value="2" style="display:none"></div>
-                        <div class="bottom-10">
-                            <input name="page_name[2]" id="page_name_2" type="text"
-                                   class="page-title padL-45" placeholder="Başlık">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                                <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
-                <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
-                                    <div class="divFor1 divFor" style="display: none">
-                        <div class="bottom-10">
-                            <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-keyboard"></i>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="divFor2 divFor" style="">
-                        <div class="bottom-10">
-                            <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-keyboard"></i>
-                            </div>
-                        </div>
-                    </div>
-                                <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
-                <ul class="cleanList nextToEach bottom-10"></ul>
-                <script>
-                $(".page-title").keyup(function(){
-                    $("#page_url").val("/"+slug($(this).val()));
-                });
-                </script>
+                    <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
+                        <option selected>Seç...</option>
+                        <option value='1001'>Anasayfa</option>
+                    </select>
+                    <script>
+                    $("#not_a_subpage").change(function() {
+                        $("#change_subpage").toggleClass("disabledInput");
+                    });
+                    </script>
+                    <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
+                    <ul class="cleanList nextToEach bottom-10"></ul>
+                </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">
                         <button class="zButton primary widthAll zShadow top-20">Oluştur</button>
@@ -503,7 +523,7 @@ $(window).resize(function(){
                 if (form.find("select")) {
                     form.find("select").each(function() {
                         var name = $(this).attr("name");
-                        var value = $("#"+name+" option").filter(":selected").val();
+                        var value = $("[name='"+name+"'] option").filter(":selected").val();
                         $(this).val(value);
                     });
                 }

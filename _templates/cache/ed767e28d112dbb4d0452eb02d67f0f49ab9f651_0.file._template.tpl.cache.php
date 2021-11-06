@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 08:45:14
+/* Smarty version 3.1.39, created on 2021-11-06 13:14:19
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180fa9a608cc8_12539799',
+  'unifunc' => 'content_61867fab744b05_22725691',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1633376471,
+      1 => 1636204229,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6180fa9a608cc8_12539799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61867fab744b05_22725691 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '9118293236180fa9a5caea3_69778922';
+$_smarty_tpl->compiled->nocache_hash = '128999024561867fab6f68f6_76459545';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4844667186180fa9a5e6ba6_38108591', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_104576480061867fab719387_02603442', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1759557416180fa9a607d27_77942820', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_94291552661867fab743376_41413429', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_4844667186180fa9a5e6ba6_38108591 extends Smarty_Internal_Block
+class Block_104576480061867fab719387_02603442 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_4844667186180fa9a5e6ba6_38108591',
+    0 => 'Block_104576480061867fab719387_02603442',
   ),
 );
 public $append = 'true';
@@ -120,78 +120,105 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                         </div>
                     </div>
                 </div>
-                <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Title"),$_smarty_tpl);?>
+                <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
+                    <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Title"),$_smarty_tpl);?>
 </h6>
-                <div class="bottom-10">
-                    <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="<?php echo smarty_function_zThis(array('z'=>"URL with / at start"),$_smarty_tpl);?>
+                    <div class="bottom-10">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="<?php echo smarty_function_zThis(array('z'=>"URL with / at start"),$_smarty_tpl);?>
 ">
-                    <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                        <i class="fas fa-file-code"></i>
-                    </div>
-                </div>
-                <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
-$_smarty_tpl->tpl_vars['l']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
-$_smarty_tpl->tpl_vars['l']->do_else = false;
-?>
-                    <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
- divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display:none<?php }?>">
-                        <div><input name="id_lang[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
-]" id="id_lang_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
-"
-                                    type="text" value="<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
-" style="display:none"></div>
-                        <div class="bottom-10">
-                            <input name="page_name[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
-]" id="page_name_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
-" type="text"
-                                   class="page-title padL-45" placeholder="<?php echo smarty_function_zThis(array('z'=>"Title"),$_smarty_tpl);?>
-">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                            <i class="fas fa-file-code"></i>
                         </div>
                     </div>
-                <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Meta Description"),$_smarty_tpl);?>
-</h6>
-                <p><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
-</p>
-                <?php
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
 $_smarty_tpl->tpl_vars['l']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
 $_smarty_tpl->tpl_vars['l']->do_else = false;
 ?>
-                    <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+                        <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+ divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display:none<?php }?>">
+                            <div><input name="id_lang[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+]" id="id_lang_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+"
+                                        type="text" value="<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+" style="display:none"></div>
+                            <div class="bottom-10">
+                                <input name="page_name[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+]" id="page_name_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+" type="text"
+                                       class="page-title padL-45" placeholder="<?php echo smarty_function_zThis(array('z'=>"Title"),$_smarty_tpl);?>
+">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Meta Description"),$_smarty_tpl);?>
+</h6>
+                    <p><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
+</p>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
+$_smarty_tpl->tpl_vars['l']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
+$_smarty_tpl->tpl_vars['l']->do_else = false;
+?>
+                        <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
  divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display: none<?php }?>">
-                        <div class="bottom-10">
-                            <input name="page_meta[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+                            <div class="bottom-10">
+                                <input name="page_meta[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
 ]" id="page_meta_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
 " type="text" class="padL-45" value="<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->meta;?>
 ">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-keyboard"></i>
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php
+                    <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <h6 class="bottom-0 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Category"),$_smarty_tpl);?>
+                    <?php echo '<script'; ?>
+>
+                    $(".page-title").keyup(function(){
+                        $("#page_url").val("/"+slug($(this).val()));
+                    });
+                    <?php echo '</script'; ?>
+>
+                </div>
+                <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
+                    <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Subpage"),$_smarty_tpl);?>
 </h6>
-                <?php echo $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryCheckboxes($_smarty_tpl->tpl_vars['zUser']->value->id_lang,$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id);?>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
+                        <?php if (!$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->isSubpage) {?>value="enabled" checked<?php }?>>
+                        <label for="not_a_subpage"><?php echo smarty_function_zThis(array('z'=>"Not a subpage."),$_smarty_tpl);?>
+</label>
+                        <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Uncheck this switch, if you want this page to be a subpage of another."),$_smarty_tpl);?>
+</div>
+                    </div>
+                    <select class="zSelect pad-10 top-12 bottom-20 <?php if (!$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->isSubpage) {?>disabledInput<?php }?>" id="change_subpage" name="change_subpage">
+                        <option selected><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
+</option>
+                        <?php echo $_smarty_tpl->tpl_vars['zPageTools']->value->zPageGetSubpageSelector($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->id,$_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
 
-                <?php echo '<script'; ?>
+                    </select>
+                    <?php echo '<script'; ?>
 >
-                $(".page-title").keyup(function(){
-                    $("#page_url").val("/"+slug($(this).val()));
-                });
-                <?php echo '</script'; ?>
+                    $("#not_a_subpage").change(function() {
+                        $("#change_subpage").toggleClass("disabledInput");
+                    });
+                    <?php echo '</script'; ?>
 >
+                    <h6 class="bottom-0 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Category"),$_smarty_tpl);?>
+</h6>
+                    <?php echo $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryCheckboxes($_smarty_tpl->tpl_vars['zUser']->value->id_lang,$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id);?>
+
+                </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">
                         <button class="zButton primary widthAll zShadow top-20"><?php echo smarty_function_zThis(array('z'=>"Create"),$_smarty_tpl);?>
@@ -210,12 +237,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_1759557416180fa9a607d27_77942820 extends Smarty_Internal_Block
+class Block_94291552661867fab743376_41413429 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_1759557416180fa9a607d27_77942820',
+    0 => 'Block_94291552661867fab743376_41413429',
   ),
 );
 public $append = 'true';
@@ -233,7 +260,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 if (form.find("select")) {
                     form.find("select").each(function() {
                         var name = $(this).attr("name");
-                        var value = $("#"+name+" option").filter(":selected").val();
+                        var value = $("[name='"+name+"'] option").filter(":selected").val();
                         $(this).val(value);
                     });
                 }

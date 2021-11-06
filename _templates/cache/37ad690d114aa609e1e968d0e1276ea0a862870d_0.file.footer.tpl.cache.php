@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 08:45:50
+/* Smarty version 3.1.39, created on 2021-11-06 13:14:38
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180fabe995c87_45774894',
+  'unifunc' => 'content_61867fbe5216b4_94565212',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6180fabe995c87_45774894 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11877316166180fabe9952a7_58606838';
+function content_61867fbe5216b4_94565212 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '27774538761867fbe520a42_96140006';
 ?>
 
 <footer class="font-16 text6 padT-40 bottom-50">

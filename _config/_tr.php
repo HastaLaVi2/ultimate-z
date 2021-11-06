@@ -177,6 +177,9 @@ $lang["Are you sure you want to delete this holder?"] = "Bu tutucuyu silmek iste
 $lang["Meta Description"] = "Meta Açıklaması";
 $lang["If you do not enter a meta description, the first text on the page will be used."] = "Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.";
 $lang["Block"] = "Blok";
+$lang["Subpage"] = "Alt Sayfa";
+$lang["Not a subpage."] = "Bir alt sayfa değil.";
+$lang["Uncheck this switch, if you want this page to be a subpage of another."] = "Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.";
 
 # zCATEGORY EDIT
 $lang["Category List"] = "Kategori Listesi";

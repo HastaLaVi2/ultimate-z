@@ -68,45 +68,65 @@
                         </div>
                     </div>
                 </div>
-                <h6 class="bottom-10 top-0 font-1em">{zThis z="Title"}</h6>
-                <div class="bottom-10">
-                    <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="{zThis z="URL with / at start"}">
-                    <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                        <i class="fas fa-file-code"></i>
+                <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
+                    <h6 class="bottom-10 top-0 font-1em">{zThis z="Title"}</h6>
+                    <div class="bottom-10">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="{zThis z="URL with / at start"}">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                            <i class="fas fa-file-code"></i>
+                        </div>
                     </div>
+                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
+                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display:none{/if}">
+                            <div><input name="id_lang[{$l->id}]" id="id_lang_{$l->id}"
+                                        type="text" value="{$l->id}" style="display:none"></div>
+                            <div class="bottom-10">
+                                <input name="page_name[{$l->id}]" id="page_name_{$l->id}" type="text"
+                                       class="page-title padL-45" placeholder="{zThis z="Title"}">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    {/foreach}
+                    <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
+                    <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
+                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
+                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
+                            <div class="bottom-10">
+                                <input name="page_meta[{$l->id}]" id="page_meta_{$l->id}" type="text" class="padL-45" value="{$editPage[$l->id]->meta}">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                    {/foreach}
+                    <script>
+                    $(".page-title").keyup(function(){
+                        $("#page_url").val("/"+slug($(this).val()));
+                    });
+                    </script>
                 </div>
-                {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                    <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display:none{/if}">
-                        <div><input name="id_lang[{$l->id}]" id="id_lang_{$l->id}"
-                                    type="text" value="{$l->id}" style="display:none"></div>
-                        <div class="bottom-10">
-                            <input name="page_name[{$l->id}]" id="page_name_{$l->id}" type="text"
-                                   class="page-title padL-45" placeholder="{zThis z="Title"}">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                        </div>
+                <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
+                    <h6 class="bottom-12 top-0 font-1em">{zThis z="Subpage"}</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
+                        {if !$editPage[$l->id]->isSubpage}value="enabled" checked{/if}>
+                        <label for="not_a_subpage">{zThis z="Not a subpage."}</label>
+                        <div class="font-13">{zThis z="Uncheck this switch, if you want this page to be a subpage of another."}</div>
                     </div>
-                {/foreach}
-                <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
-                <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
-                {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                    <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
-                        <div class="bottom-10">
-                            <input name="page_meta[{$l->id}]" id="page_meta_{$l->id}" type="text" class="padL-45" value="{$editPage[$l->id]->meta}">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-keyboard"></i>
-                            </div>
-                        </div>
-                    </div>
-                {/foreach}
-                <h6 class="bottom-0 top-0 font-1em">{zThis z="Category"}</h6>
-                {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang, $editPage[$zUser->id_lang]->id)}
-                <script>
-                $(".page-title").keyup(function(){
-                    $("#page_url").val("/"+slug($(this).val()));
-                });
-                </script>
+                    <select class="zSelect pad-10 top-12 bottom-20 {if !$editPage[$l->id]->isSubpage}disabledInput{/if}" id="change_subpage" name="change_subpage">
+                        <option selected>{zThis z="Choose..."}</option>
+                        {$zPageTools->zPageGetSubpageSelector($editPage[$l->id]->id, $zUser->id_lang)}
+                    </select>
+                    <script>
+                    $("#not_a_subpage").change(function() {
+                        $("#change_subpage").toggleClass("disabledInput");
+                    });
+                    </script>
+                    <h6 class="bottom-0 top-0 font-1em">{zThis z="Category"}</h6>
+                    {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang, $editPage[$zUser->id_lang]->id)}
+                </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">
                         <button class="zButton primary widthAll zShadow top-20">{zThis z="Create"}</button>
@@ -131,7 +151,7 @@
                 if (form.find("select")) {
                     form.find("select").each(function() {
                         var name = $(this).attr("name");
-                        var value = $("#"+name+" option").filter(":selected").val();
+                        var value = $("[name='"+name+"'] option").filter(":selected").val();
                         $(this).val(value);
                     });
                 }

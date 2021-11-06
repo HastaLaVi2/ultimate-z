@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 08:43:33
+/* Smarty version 3.1.39, created on 2021-11-06 13:13:39
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180fa359c4971_22674243',
+  'unifunc' => 'content_61867f83617c93_19110944',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -30,12 +30,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6180fa359c4971_22674243 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61867f83617c93_19110944 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <title>Anasayfa | Dönmezoğlu Bilişim</title>
+    <title>Home | Dönmezoğlu Bilişim</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     
 <meta charset="utf-8">
@@ -92,12 +92,12 @@ function content_6180fa359c4971_22674243 (Smarty_Internal_Template $_smarty_tpl)
     
 </head>
 <body>
-                                            <!-- zHolder: Etiket -->
+                                            <!-- zHolder: Tag -->
         
 <div class="pad-40">
-    <h1>ultimate Z'ye hoş geldiniz!</h1>
+    <h1>welcome to the ultimate Z!</h1>
 </div>
-        <!-- zHolder: Etiket -->
+        <!-- zHolder: Tag -->
     </body>
 </html>
 <?php }

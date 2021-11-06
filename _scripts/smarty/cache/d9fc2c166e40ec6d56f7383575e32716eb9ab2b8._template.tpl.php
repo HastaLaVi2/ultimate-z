@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 08:45:50
+/* Smarty version 3.1.39, created on 2021-11-06 13:14:33
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180fabe99f3c6_12686150',
+  'unifunc' => 'content_61867fb923ed47_17448911',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1633376476,
+      1 => 1636204239,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1635838608,
+      1 => 1636204387,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6180fabe99f3c6_12686150 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61867fb923ed47_17448911 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -91,8 +91,8 @@ function content_6180fabe99f3c6_12686150 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/_admin/layouts/pages/edit/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1001" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1001" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1002" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1002" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -163,7 +163,7 @@ function content_6180fabe99f3c6_12686150 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 
 <div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn floatingSpace widthAll heightAll">
+<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -389,14 +389,14 @@ $(window).resize(function(){
         </nav>
 
         <div class="whiteBack rad-15 pad-20 font-16">
-            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001">
+            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002">
                 
                 <div>
                     <div class="inLeft index-10">
                         <h4 class="font-19 top-0 bottom-0 text6 boldText">Bu sayfayı düzenliyorsunuz:</h4>
                         <h4 class="font-19 top-0 text4 boldText">
-                            Anasayfa
-                            <span class="font-14"><a href="http://localhost/ultimate-z/tr/" target="_blank">[Sayfayı Görüntüle]</a></span>
+                            Deneme
+                            <span class="font-14"><a href="http://localhost/ultimate-z/tr/deneme" target="_blank">[Sayfayı Görüntüle]</a></span>
                         </h4>
                     </div>
                     <div class="rightText padB-15">
@@ -413,56 +413,76 @@ $(window).resize(function(){
                         </div>
                     </div>
                 </div>
-                <div><input name="id_page" id="id_page" type="text" value="1001" style="display:none"></div>
-                <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
-                <div class="bottom-10">
-                    <input name="page_url" id="page_url" type="text" class="padL-45" value="/" placeholder="Başında / ifadesi olan bir URL girin">
-                    <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                        <i class="fas fa-file-code"></i>
+                <div><input name="id_page" id="id_page" type="text" value="1002" style="display:none"></div>
+                <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
+                    <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
+                    <div class="bottom-10">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" value="/deneme" placeholder="Başında / ifadesi olan bir URL girin">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                            <i class="fas fa-file-code"></i>
+                        </div>
                     </div>
+                                            <div class="divFor1 divFor" style="display: none">
+                            <div><input name="id_lang[1]" id="id_lang_1"
+                                        type="text" value="1" style="display:none"></div>
+                            <div class="bottom-10">
+                                <input name="page_name[1]" id="page_name_1" type="text"
+                                       class="padL-45" value="Untitled" placeholder="Başlık">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="divFor2 divFor" style="">
+                            <div><input name="id_lang[2]" id="id_lang_2"
+                                        type="text" value="2" style="display:none"></div>
+                            <div class="bottom-10">
+                                <input name="page_name[2]" id="page_name_2" type="text"
+                                       class="padL-45" value="Deneme" placeholder="Başlık">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                                        <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
+                    <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
+                                            <div class="divFor1 divFor" style="display: none">
+                            <div class="bottom-10">
+                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="divFor2 divFor" style="">
+                            <div class="bottom-10">
+                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="">
+                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+                <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
+                    <h6 class="bottom-12 top-0 font-1em">Alt Sayfa</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
+                        value="enabled" checked>
+                        <label for="not_a_subpage">Bir alt sayfa değil.</label>
+                        <div class="font-13">Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.</div>
+                    </div>
+                    <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
+                        <option selected>Seç...</option>
+                        <option value='1001'>Anasayfa</option>
+                    </select>
+                    <script>
+                    $("#not_a_subpage").change(function() {
+                        $("#change_subpage").toggleClass("disabledInput");
+                    });
+                    </script>
+                    <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
+                    <ul class="cleanList nextToEach bottom-10"></ul>
                 </div>
-                                    <div class="divFor1 divFor" style="display: none">
-                        <div><input name="id_lang[1]" id="id_lang_1"
-                                    type="text" value="1" style="display:none"></div>
-                        <div class="bottom-10">
-                            <input name="page_name[1]" id="page_name_1" type="text"
-                                   class="padL-45" value="Home" placeholder="Başlık">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="divFor2 divFor" style="">
-                        <div><input name="id_lang[2]" id="id_lang_2"
-                                    type="text" value="2" style="display:none"></div>
-                        <div class="bottom-10">
-                            <input name="page_name[2]" id="page_name_2" type="text"
-                                   class="padL-45" value="Anasayfa" placeholder="Başlık">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                                <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
-                <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
-                                    <div class="divFor1 divFor" style="display: none">
-                        <div class="bottom-10">
-                            <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="ultimate Z">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-keyboard"></i>
-                            </div>
-                        </div>
-                    </div>
-                                    <div class="divFor2 divFor" style="">
-                        <div class="bottom-10">
-                            <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="ultimate Z">
-                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                <i class="fas fa-keyboard"></i>
-                            </div>
-                        </div>
-                    </div>
-                                <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
-                <ul class="cleanList nextToEach bottom-10"></ul>
                 <h6 class="bottom-10 top-0 font-1em">Tutucular</h6>
                 <div>
                     <div class="col-12 back7 bottom-20 pad-20 centerText pointThis rad-5 gray2" id="AddNewHolder">
@@ -766,62 +786,7 @@ $(window).resize(function(){
                     <div id="dragula" class="col-12 colTop between-20">
                                                                             <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
                                                                 
-    <div class="zDestroy-holder6 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="6">
-        <h6 class="bottom--10 top--10 left--10 right--10 font-1_5em thinText">
-            Etiket
-        </h6>
-        <div class="text5 font-25 floatingTheRight pad-32 zMob-pad-20 index-10 top--10 right--10 hideForAdd">
-            <span class="pointThis toggleParentNext">
-                <i class="fas fa-chevron-down arrows" style="display:none"></i>
-                <i class="fas fa-chevron-up arrows"></i>
-            </span>
-            <a href="#modal6" class="zModalLink">
-                <i class="fas fa-times"></i>
-            </a>
-        </div>
-        <div class="padT-20 hideForAdd">
-            <div class="zModal" id="modal6">
-                <a class="zCancel" href="#"></a>
-                <div class="zModalContent rad-15">
-                    <div class="pad-20">
-                        <div class="modal-header bg-primary">
-                            <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
-                            </h5>
-                        </div>
-                        <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
-                        </div>
-                        <div class="rightText">
-                            <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
-                            </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder6" href="#">
-                                <span>Evet</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input name="id_holder[]" type="text" value="4" class="displayNone">
-            <input name="id_page_holder[]" type="text" value="1" class="displayNone">
-                            <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="input">
-                            welcome to the ultimate Z!
-                        </textarea>
-                                                                    <textarea name="content[2][]" data-type="input">
-                            ultimate Z'ye hoş geldiniz!
-                        </textarea>
-                                    </div>
-                                    <div class="top-20">
-                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="ultimate Z'ye hoş geldiniz!">
-                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                            <i class="far fa-square"></i>
-                        </div>
-                    </div>
-                                    </div>
-    </div>
-                                    <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
+                                <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
                                     Blok 1
                                 </div>
                             </div>
@@ -1057,7 +1022,7 @@ $(window).resize(function(){
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
-            data.set("zPage", "1001");
+            data.set("zPage", "1002");
             if (filepond) {
                 data.set("filepond", "true");
             }
@@ -1073,7 +1038,7 @@ $(window).resize(function(){
                 type: "POST",
                 success: function(filename) {
                     // this is an image tag to insert into a summernote after upload
-                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1001/" + filename).addClass("img-fluid");
+                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1002/" + filename).addClass("img-fluid");
                     if (summernote) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
@@ -1123,7 +1088,7 @@ $(window).resize(function(){
                     var files = [];
                     for (let i=0; i < value.split(";").length; i++) {
                         files.push({
-                            source: "../../../../_media/uploads/1001/"+value.split(";")[i],
+                            source: "../../../../_media/uploads/1002/"+value.split(";")[i],
                             options: {
                                 type: "local"
                             }
@@ -1270,7 +1235,7 @@ $(window).resize(function(){
 
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
-        var modalNumber = "7";
+        var modalNumber = "6";
 
         function zPageJS() {
             toggleParentNext($(".toggleParentNext"));
@@ -1352,6 +1317,13 @@ $(window).resize(function(){
                 storeCat();
 
                 var form = $(this).clone();
+                if (form.find("select")) {
+                    form.find("select").each(function() {
+                        var name = $(this).attr("name");
+                        var value = $("[name='"+name+"'] option").filter(":selected").val();
+                        $(this).val(value);
+                    });
+                }
                 form.find("#dragulaAdd").remove();
                 $("#dragula").children().each(function(i) {
                     var z = $("<input>")

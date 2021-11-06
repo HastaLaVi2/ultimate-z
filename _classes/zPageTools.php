@@ -40,6 +40,11 @@ class zPageTools {
             $id_langs = $data["id_lang"];
             $page_url = $data["page_url"];
             $categories = $data["categories"];
+            $subpage = $data["change_subpage"];
+
+            if (isset($data["not_a_subpage"])) {
+                $subpage = 0;
+            }
 
             $check_id_page = $db->select("SELECT * FROM zPages WHERE id_page > 1000 ORDER BY id_page");
             if (!empty($check_id_page)) {
@@ -76,7 +81,7 @@ class zPageTools {
 
                 $check = $db->select("SELECT count(*) AS total FROM zPages WHERE id_page = '$id_page'");
                 if (isset($check[0]) && $check[0]["total"] == 0) {
-                    $query = "INSERT INTO `zPages` (id_page, url, area, id_template) VALUES ('$id_page', '$page_url', 'front', '$final_id_template')";
+                    $query = "INSERT INTO `zPages` (id_page, url, area, id_template, subpage) VALUES ('$id_page', '$page_url', 'front', '$final_id_template', '$subpage')";
                     $result = $db->execute($query);
                 }
             }
@@ -106,6 +111,7 @@ class zPageTools {
             $unique_holders = $data["id_page_holder"] ? $data["id_page_holder"] : array();
             $categories = $data["categories"] ? $data["categories"] : array();
             $id_template = $data["change_template"];
+            $subpage = $data["change_subpage"];
             $blocks = array();
 
             if (!isset($id_page)) {
@@ -140,6 +146,14 @@ class zPageTools {
                     $id_block = $key + 1;
                     break;
                 }
+            }
+
+            # update subpage
+            if (isset($data["not_a_subpage"])) {
+                $subpage = 0;
+            }
+            if (isset($subpage)) {
+                $query .= "UPDATE `zPages` SET subpage = '$subpage' WHERE id_page = '$id_page';";
             }
 
             // insert new categories
@@ -375,6 +389,24 @@ class zPageTools {
             foreach ($query as $page) {
                 $page_obj = new zPage($page["id_page"], $id_lang);
                 array_push($result, $page_obj);
+            }
+        }
+
+        return $result;
+    }
+
+    public function zPageGetSubpageSelector($id_page = NULL, $id_lang = NULL) {
+        $db = zDB::get();
+
+        $result = "";
+        $allPages = $this->zPageGetAll($id_lang, "front");
+        $mainPage = new zPage($id_page, $id_lang);
+        if (!empty($allPages)) {
+            foreach ($allPages as $zPage) {
+                $sub = ($mainPage->isSubpage && $mainPage->subpageOf == $zPage->id) ? true : null;
+                if ($zPage->id !== $id_page) {
+                    $result .= "<option value='".$zPage->id."'".($sub ? "selected" : "").">".$zPage->name."</option>";
+                }
             }
         }
 

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-02 07:31:07
+/* Smarty version 3.1.39, created on 2021-11-06 13:13:55
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/login/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6180e93b5d6396_52315740',
+  'unifunc' => 'content_61867f93f34f47_76616692',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,10 +36,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6180e93b5d6396_52315740 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61867f93f34f47_76616692 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <title>Log in | Dönmezoğlu Bilişim</title>
     
@@ -108,15 +108,15 @@ function content_6180e93b5d6396_52315740 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery.validate.min.js"></script>
 <script type="text/javascript">
 var formMessages = {
-    name_req: "Lütfen bir ad girin.",
-    name_remote: "Bu isme sahip bir kullanıcı zaten mevcut.",
-    surname_req: "Lütfen bir soyad girin.",
-    email_req: "Lütfen bir eposta girin.",
-    password_req: "Lütfen bir şifre girin.",
-    confirm_password_req: "Lütfen şifrenizi tekrar girin.",
-    confirm_password_equal: "Şifreler eşleşmiyor.",
-    rank_req: "Lütfen bir rütbe seçin.",
-    site_name_req: "Lütfen bir site adı girin."
+    name_req: "Please enter a name.",
+    name_remote: "A user with the exact name provided already exists.",
+    surname_req: "Please enter a surname.",
+    email_req: "Please enter an email.",
+    password_req: "Please enter a password.",
+    confirm_password_req: "Please enter password again.",
+    confirm_password_equal: "Passwords do not match.",
+    rank_req: "Please choose a rank.",
+    site_name_req: "Please enter a site name."
 };
 var zUsers = ["Kerimcan Ayaz"];
 $.validator.addMethod("alreadyexist", function(value, element, parameter) {
@@ -134,27 +134,27 @@ $.validator.addMethod("alreadyexist", function(value, element, parameter) {
     <div class="text1 weight-900 font-30">ultimate Z</div>
     <div class="boldText gray2 font-13 top--5">powered by <a href="https://onucyirmibir.com" target="_blank">13/21</a></div>
 </div>
-                <h1 class="font-64 boldText">Giriş Yap.</h1>
-                <p class="font-27_2 gray2 bottom-48">Kendi kontrol panelini oluşturmak için bilgilerini girin.</p>
+                <h1 class="font-64 boldText">Log in.</h1>
+                <p class="font-27_2 gray2 bottom-48">Input your data to create your own control panel.</p>
 
                 <form id="zUser-login-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/login/index.php">
                     
                     <div>
-                        <input name="name" id="name" type="text" class="padL-45" placeholder="Ad">
+                        <input name="name" id="name" type="text" class="padL-45" placeholder="Name">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-user"></i>
                         </div>
                     </div>
                     <div class="help-box top-10 bottom-25 rad-4"></div>
                     <div>
-                        <input name="surname" id="surname" type="text" class="padL-45" placeholder="Soyadı">
+                        <input name="surname" id="surname" type="text" class="padL-45" placeholder="Surname">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-user"></i>
                         </div>
                     </div>
                     <div class="help-box top-10 bottom-25 rad-4"></div>
                     <div>
-                        <input name="password" id="password" type="password" class="padL-45" placeholder="Şifre">
+                        <input name="password" id="password" type="password" class="padL-45" placeholder="Password">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-shield-alt"></i>
                         </div>
@@ -163,16 +163,16 @@ $.validator.addMethod("alreadyexist", function(value, element, parameter) {
                     <div class="bottom-25">
                         <input type="checkbox" value="1" name="keepLoggedIn" id="keepLoggedIn">
                         <label class="top--8" for="keepLoggedIn">
-                            Beni Hatırla
+                            Keep me logged in
                         </label>
                     </div>
-                    <button id="btnSubmit" class="zButton primary widthAll zShadow">Giriş Yap</button>
+                    <button id="btnSubmit" class="zButton primary widthAll zShadow">Log in</button>
                 </form>
                 <p class="font-27_2 gray2 top-20 bottom-48">
-                    <a href="http://localhost/ultimate-z/tr/_admin/forgot/" class="forceLink">Şifreni mi Unuttun?</a>
+                    <a href="http://localhost/ultimate-z/en/_admin/forgot/" class="forceLink">Forgot your password?</a>
                 </p>
                 <div class="centerText top-48 font-24">
-                    <p class="gray3">Bizi seçtiğiniz için teşekkürler,<br><span class="boldText">ultimate Z.</span></p>
+                    <p class="gray3">Thanks for choosing,<br><span class="boldText">ultimate Z.</span></p>
                 </div>
             </div>
         </div>

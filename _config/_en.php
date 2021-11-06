@@ -177,6 +177,9 @@ $lang["Are you sure you want to delete this holder?"] = "Are you sure you want t
 $lang["Meta Description"] = "Meta Description";
 $lang["If you do not enter a meta description, the first text on the page will be used."] = "If you do not enter a meta description, the first text on the page will be used.";
 $lang["Block"] = "Block";
+$lang["Subpage"] = "Subpage";
+$lang["Not a subpage."] = "Not a subpage.";
+$lang["Uncheck this switch, if you want this page to be a subpage of another."] = "Uncheck this switch, if you want this page to be a subpage of another.";
 
 # zCATEGORY EDIT
 $lang["Category List"] = "Category List";
