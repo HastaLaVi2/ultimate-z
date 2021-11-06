@@ -891,6 +891,7 @@ a.zButton, button.zButton {
     border-color: var(--zButtonBorderColor);
     border-width: 2px;
     border-style: solid;
+    top: 0;
 }
 
 a.sweet, button.sweet {
@@ -926,6 +927,7 @@ a.small {
 a.zButton:hover, button.zButton:hover {
     border-color: var(--zButtonHoverBorderColor);
     color: var(--zButtonHoverColor);
+    top: -5px;
 }
 
 a.primary, button.primary {

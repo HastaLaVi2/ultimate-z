@@ -1,179 +1,353 @@
-{**
- * Copyright since 2021 the ultimate z and Contributors
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.md.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/OSL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@theultimatez.com so we can send you a copy immediately.
- *
- *}
+<?php
+/* Smarty version 3.1.39, created on 2021-11-06 14:34:43
+  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
-{extends file="_main.tpl"}
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_61869283e62b71_07337803',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
+      1 => 1636209072,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:_partials/modal.tpl' => 1,
+  ),
+),false)) {
+function content_61869283e62b71_07337803 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+$_smarty_tpl->compiled->nocache_hash = '158115908061869283de0e97_85245311';
+?>
 
-{block name="zHead" append}
+
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_101267581761869283dfd732_27053253', "zHead");
+?>
+
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_108179689761869283e04928_70121473', "zContent");
+?>
+
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15896457661869283e486c4_39997105', "zBottom");
+?>
+
+<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
+}
+/* {block "zHead"} */
+class Block_101267581761869283dfd732_27053253 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'zHead' => 
+  array (
+    0 => 'Block_101267581761869283dfd732_27053253',
+  ),
+);
+public $append = 'true';
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
     <!-- summernote -->
-    <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/summernote/summernote-lite.min.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/summernote/summernote-lite.min.css">
 
     <!-- filepond -->
-    <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond.css">
-    <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-image-preview.css">
-    <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.css">
-    {literal}<style>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-image-preview.css">
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.css">
+    <style>
     .hideForAddTop .hideForAdd {display: none;}
-    </style>{/literal}
-{/block}
+    </style>
+<?php
+}
+}
+/* {/block "zHead"} */
+/* {block "zContent"} */
+class Block_108179689761869283e04928_70121473 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'zContent' => 
+  array (
+    0 => 'Block_108179689761869283e04928_70121473',
+  ),
+);
+public $append = 'true';
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageUrl.php','function'=>'smarty_function_zPageUrl',),1=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageName.php','function'=>'smarty_function_zPageName',),2=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
+?>
 
-{block name="zContent" append}
     <div class="col-12">
         <nav>
             <ol class="cleanList">
-                <li><a href="{zPageUrl ID="6"}/index.php" class="inLine font-16">
+                <li><a href="<?php echo smarty_function_zPageUrl(array('ID'=>"6"),$_smarty_tpl);?>
+/index.php" class="inLine font-16">
                     <i class="fas fa-caret-left"></i>
-                    {zPageName ID="6"}
+                    <?php echo smarty_function_zPageName(array('ID'=>"6"),$_smarty_tpl);?>
+
                 </a></li>
             </ol>
         </nav>
 
         <div class="whiteBack rad-15 pad-20 font-16">
-            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="{$zContent->base_uri}">
-                {$zTools->zToolsFormWarning($success, $error)}
+            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+">
+                <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsFormWarning($_smarty_tpl->tpl_vars['success']->value,$_smarty_tpl->tpl_vars['error']->value);?>
+
                 <div>
                     <div class="inLeft index-10">
-                        <h4 class="font-19 top-0 bottom-0 text6 boldText">{zThis z="Editing page:"}</h4>
+                        <h4 class="font-19 top-0 bottom-0 text6 boldText"><?php echo smarty_function_zThis(array('z'=>"Editing page:"),$_smarty_tpl);?>
+</h4>
                         <h4 class="font-19 top-0 text4 boldText">
-                            {$zPageTools->zPageGetPageName($smarty.get.id_page, $zUser->id_lang)}
-                            <span class="font-14"><a href="{$zContent->srcFull["main"]}{$editPage[$zUser->id_lang]->url|ltrim:'/'}" target="_blank">[{zThis z="View Page"}]</a></span>
+                            <?php echo $_smarty_tpl->tpl_vars['zPageTools']->value->zPageGetPageName($_GET['id_page'],$_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+
+                            <span class="font-14"><a href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["main"];
+echo ltrim($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->url,'/');?>
+" target="_blank">[<?php echo smarty_function_zThis(array('z'=>"View Page"),$_smarty_tpl);?>
+]</a></span>
                         </h4>
                     </div>
                     <div class="rightText padB-15">
                         <div class="inLine width-350 zMob-widthAll">
                             <div class="zGroup bottom-20">
                                 <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6" for="id_lang">
-                                    {zThis z="Select Language"}
+                                    <?php echo smarty_function_zThis(array('z'=>"Select Language"),$_smarty_tpl);?>
+
                                 </label>
                                 <select class="zSelect pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
-                                    <option disabled>{zThis z="Choose..."}</option>
-                                    {$zTools->zToolsGetLanguages($zUser->id_lang)}
+                                    <option disabled><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
+</option>
+                                    <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetLanguages($_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div><input name="id_page" id="id_page" type="text" value="{$smarty.get.id_page}" style="display:none"></div>
+                <div><input name="id_page" id="id_page" type="text" value="<?php echo $_GET['id_page'];?>
+" style="display:none"></div>
                 <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
-                    <h6 class="bottom-10 top-0 font-1em">{zThis z="Title"}</h6>
+                    <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Title"),$_smarty_tpl);?>
+</h6>
                     <div class="bottom-10">
-                        <input name="page_url" id="page_url" type="text" class="padL-45" value="{$editPage[$zUser->id_lang]->url}" placeholder="{zThis z="URL with / at start"}">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" value="<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->url;?>
+" placeholder="<?php echo smarty_function_zThis(array('z'=>"URL with / at start"),$_smarty_tpl);?>
+">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-file-code"></i>
                         </div>
                     </div>
-                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
-                            <div><input name="id_lang[{$l->id}]" id="id_lang_{$l->id}"
-                                        type="text" value="{$l->id}" style="display:none"></div>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
+$_smarty_tpl->tpl_vars['l']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
+$_smarty_tpl->tpl_vars['l']->do_else = false;
+?>
+                        <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+ divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display: none<?php }?>">
+                            <div><input name="id_lang[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+]" id="id_lang_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+"
+                                        type="text" value="<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+" style="display:none"></div>
                             <div class="bottom-10">
-                                <input name="page_name[{$l->id}]" id="page_name_{$l->id}" type="text"
-                                       class="padL-45" value="{$editPage[$l->id]->name}" placeholder="{zThis z="Title"}">
+                                <input name="page_name[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+]" id="page_name_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+" type="text"
+                                       class="padL-45" value="<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->name;?>
+" placeholder="<?php echo smarty_function_zThis(array('z'=>"Title"),$_smarty_tpl);?>
+">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
                             </div>
                         </div>
-                    {/foreach}
-                    <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
-                    <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
-                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Meta Description"),$_smarty_tpl);?>
+</h6>
+                    <p><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
+</p>
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
+$_smarty_tpl->tpl_vars['l']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
+$_smarty_tpl->tpl_vars['l']->do_else = false;
+?>
+                        <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+ divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display: none<?php }?>">
                             <div class="bottom-10">
-                                <input name="page_meta[{$l->id}]" id="page_meta_{$l->id}" type="text" class="padL-45" value="{$editPage[$l->id]->meta}">
+                                <input name="page_meta[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+]" id="page_meta_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
+" type="text" class="padL-45" value="<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->meta;?>
+">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-keyboard"></i>
                                 </div>
                             </div>
                         </div>
-                    {/foreach}
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">{zThis z="Subpage"}</h6>
+                    <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Subpage"),$_smarty_tpl);?>
+</h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
-                        {if !$editPage[$l->id]->isSubpage}value="enabled" checked{/if}>
-                        <label for="not_a_subpage">{zThis z="Not a subpage."}</label>
-                        <div class="font-13">{zThis z="Uncheck this switch, if you want this page to be a subpage of another."}</div>
+                        <?php if (!$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->isSubpage) {?>value="enabled" checked<?php }?>>
+                        <label for="not_a_subpage"><?php echo smarty_function_zThis(array('z'=>"Not a subpage."),$_smarty_tpl);?>
+</label>
+                        <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Uncheck this switch, if you want this page to be a subpage of another."),$_smarty_tpl);?>
+</div>
                     </div>
-                    <select class="zSelect pad-10 top-12 bottom-20 {if !$editPage[$l->id]->isSubpage}disabledInput{/if}" id="change_subpage" name="change_subpage">
-                        <option selected>{zThis z="Choose..."}</option>
-                        {$zPageTools->zPageGetSubpageSelector($editPage[$l->id]->id, $zUser->id_lang)}
+                    <select class="zSelect pad-10 top-12 bottom-20 <?php if (!$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->isSubpage) {?>disabledInput<?php }?>" id="change_subpage" name="change_subpage">
+                        <option selected><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
+</option>
+                        <?php echo $_smarty_tpl->tpl_vars['zPageTools']->value->zPageGetSubpageSelector($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->id,$_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+
                     </select>
-                    <script>
+                    <?php echo '<script'; ?>
+>
                     $("#not_a_subpage").change(function() {
                         $("#change_subpage").toggleClass("disabledInput");
                     });
-                    </script>
-                    <h6 class="bottom-0 top-0 font-1em">{zThis z="Category"}</h6>
-                    {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang, $editPage[$zUser->id_lang]->id)}
+                    <?php echo '</script'; ?>
+>
+                    <h6 class="bottom-0 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Category"),$_smarty_tpl);?>
+</h6>
+                    <?php echo $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryCheckboxes($_smarty_tpl->tpl_vars['zUser']->value->id_lang,$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id);?>
+
                 </div>
-                <h6 class="bottom-10 top-0 font-1em">{zThis z="Holders"}</h6>
+                <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Holders"),$_smarty_tpl);?>
+</h6>
                 <div>
                     <div class="col-12 back7 bottom-20 pad-20 centerText pointThis rad-5 gray2" id="AddNewHolder">
-                        {zThis z="Add a New Holder"}
+                        <?php echo smarty_function_zThis(array('z'=>"Add a New Holder"),$_smarty_tpl);?>
+
                     </div>
                     <div id="dragulaAdd" class="col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
-                        {assign var=holders value=$zTools->zToolsGetAllHolders($zUser->id_lang)}
-                        {include file="{$zContent->src["admin"]}/_partials/holderEdit.tpl"}
+                        <?php $_smarty_tpl->_assignInScope('holders', $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllHolders($_smarty_tpl->tpl_vars['zUser']->value->id_lang));?>
+                        <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->value->src["admin"])."/_partials/holderEdit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
                     </div>
                     <div id="dragula" class="col-12 colTop between-20">
-                        {assign var=blocks value=$editPage[$zUser->id_lang]->template->blocks}
-                        {for $id_block=1 to $blocks}
+                        <?php $_smarty_tpl->_assignInScope('blocks', $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->template->blocks);?>
+                        <?php
+$_smarty_tpl->tpl_vars['id_block'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['id_block']->step = 1;$_smarty_tpl->tpl_vars['id_block']->total = (int) ceil(($_smarty_tpl->tpl_vars['id_block']->step > 0 ? $_smarty_tpl->tpl_vars['blocks']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['blocks']->value)+1)/abs($_smarty_tpl->tpl_vars['id_block']->step));
+if ($_smarty_tpl->tpl_vars['id_block']->total > 0) {
+for ($_smarty_tpl->tpl_vars['id_block']->value = 1, $_smarty_tpl->tpl_vars['id_block']->iteration = 1;$_smarty_tpl->tpl_vars['id_block']->iteration <= $_smarty_tpl->tpl_vars['id_block']->total;$_smarty_tpl->tpl_vars['id_block']->value += $_smarty_tpl->tpl_vars['id_block']->step, $_smarty_tpl->tpl_vars['id_block']->iteration++) {
+$_smarty_tpl->tpl_vars['id_block']->first = $_smarty_tpl->tpl_vars['id_block']->iteration === 1;$_smarty_tpl->tpl_vars['id_block']->last = $_smarty_tpl->tpl_vars['id_block']->iteration === $_smarty_tpl->tpl_vars['id_block']->total;?>
                             <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
-                                {assign var=holders value=$editPage[$zUser->id_lang]->zPageGetHolders($zUser->id_lang, $id_block)}
-                                {include file="{$zContent->src["admin"]}/_partials/holderEdit.tpl" id_block=$id_block}
+                                <?php $_smarty_tpl->_assignInScope('holders', $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->zPageGetHolders($_smarty_tpl->tpl_vars['zUser']->value->id_lang,$_smarty_tpl->tpl_vars['id_block']->value));?>
+                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->value->src["admin"])."/_partials/holderEdit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array('id_block'=>$_smarty_tpl->tpl_vars['id_block']->value), 0, true);
+?>
                                 <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
-                                    {zThis z="Block"} {$id_block}
+                                    <?php echo smarty_function_zThis(array('z'=>"Block"),$_smarty_tpl);?>
+ <?php echo $_smarty_tpl->tpl_vars['id_block']->value;?>
+
                                 </div>
                             </div>
-                        {/for}
+                        <?php }
+}
+?>
                     </div>
                 </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">
-                        <button class="zButton primary widthAll zShadow5 top-20">{zThis z="Save"}</button>
+                        <button class="zButton primary widthAll zShadow5 top-20"><?php echo smarty_function_zThis(array('z'=>"Save"),$_smarty_tpl);?>
+</button>
                     </div>
                 </div>
                 <div class="ButtonPos2">
-                    <button class="zButton primary widthAll zShadow5 top-20">{zThis z="Save"}</button>
+                    <button class="zButton primary widthAll zShadow5 top-20"><?php echo smarty_function_zThis(array('z'=>"Save"),$_smarty_tpl);?>
+</button>
                 </div>
             </form>
         </div>
     </div>
-    {include file="_partials/modal.tpl" _mLabel=ForUpload _mTitle={zThis z="Error"}}
-{/block}
+    <?php ob_start();
+echo smarty_function_zThis(array('z'=>"Error"),$_smarty_tpl);
+$_prefixVariable1 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array('_mLabel'=>'ForUpload','_mTitle'=>$_prefixVariable1), 0, false);
+}
+}
+/* {/block "zContent"} */
+/* {block "zBottom"} */
+class Block_15896457661869283e486c4_39997105 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'zBottom' => 
+  array (
+    0 => 'Block_15896457661869283e486c4_39997105',
+  ),
+);
+public $append = 'true';
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
 
-{block name="zBottom" append}
     <!-- summernote -->
-    <script src="{$zContent->srcFull["scripts"]}/summernote/summernote-lite.min.js"></script>
-    {if $zContent->language->id !== "1"}
-    <script src="{$zContent->srcFull["scripts"]}/summernote/lang/summernote-{$zContent->language->four_code}.min.js"></script>
-    {/if}
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/summernote/summernote-lite.min.js"><?php echo '</script'; ?>
+>
+    <?php if ($_smarty_tpl->tpl_vars['zContent']->value->language->id !== "1") {?>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/summernote/lang/summernote-<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
+.min.js"><?php echo '</script'; ?>
+>
+    <?php }?>
 
     <!-- filepond plugins -->
-    <script src="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-file-validate-size.js"></script>
-    <script src="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-file-validate-type.js"></script>
-    <script src="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-file-rename.js"></script>
-    <script src="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-image-preview.js"></script>
-    <script src="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.js"></script>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-file-validate-size.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-file-validate-type.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-file-rename.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-image-preview.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.js"><?php echo '</script'; ?>
+>
 
     <!-- filepond -->
-    <script src="{$zContent->srcFull["scripts"]}/filepond/locale/{$zContent->language->four_code}.js"></script>
-    <script src="{$zContent->srcFull["scripts"]}/filepond/filepond.js"></script>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/locale/<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
+.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/filepond/filepond.js"><?php echo '</script'; ?>
+>
 
-    <script>
+    <?php echo '<script'; ?>
+>
         function dragulaEvery() {
             var containers = $(".dragula").toArray();
 
@@ -333,15 +507,18 @@
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
-            data.set("zPage", "{$editPage[$zUser->id_lang]->id}");
+            data.set("zPage", "<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id;?>
+");
             if (filepond) {
                 data.set("filepond", "true");
             }
-            data.set("langcode", "{$zContent->language->iso_code}");
+            data.set("langcode", "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->iso_code;?>
+");
             // send the file to server
             data.append("fileToUpload", image);
             $.ajax({
-                url: "{$zContent->srcFull["images"]}/upload.php",
+                url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["images"];?>
+/upload.php",
                 cache: false,
                 contentType: false,
                 processData: false,
@@ -349,7 +526,9 @@
                 type: "POST",
                 success: function(filename) {
                     // this is an image tag to insert into a summernote after upload
-                    var image = $("<img>").attr("src", "{$zContent->srcFull["images"]}/uploads/{$editPage[$zUser->id_lang]->id}/" + filename).addClass("img-fluid");
+                    var image = $("<img>").attr("src", "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["images"];?>
+/uploads/<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id;?>
+/" + filename).addClass("img-fluid");
                     if (summernote) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
@@ -399,7 +578,9 @@
                     var files = [];
                     for (let i=0; i < value.split(";").length; i++) {
                         files.push({
-                            source: "{$zContent->src["images"]}/uploads/{$editPage[$zUser->id_lang]->id}/"+value.split(";")[i],
+                            source: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->src["images"];?>
+/uploads/<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id;?>
+/"+value.split(";")[i],
                             options: {
                                 type: "local"
                             }
@@ -546,7 +727,8 @@
 
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
-        var modalNumber = "{$modalNumber}";
+        var modalNumber = "<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
+";
 
         function zPageJS() {
             toggleParentNext($(".toggleParentNext"));
@@ -568,7 +750,8 @@
 
             // start all summernotes
             $(".summernote").summernote({
-                lang: "{$zContent->language->four_code}",
+                lang: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
+",
                 tabsize: 1,
                 callbacks: {
                     onImageUpload: function(files) {
@@ -596,7 +779,8 @@
             );
 
             // set filepond language
-            FilePond.setOptions(window["{$zContent->language->four_code}"]);
+            FilePond.setOptions(window["<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
+"]);
 
             window.pondNS = [];
             window.pondIDS = [];
@@ -669,5 +853,10 @@
         document.addEventListener("DOMContentLoaded", function(event) {
             zPageJS();
         });
-    </script>
-{/block}
+    <?php echo '</script'; ?>
+>
+<?php
+}
+}
+/* {/block "zBottom"} */
+}

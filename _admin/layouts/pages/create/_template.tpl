@@ -129,11 +129,11 @@
                 </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">
-                        <button class="zButton primary widthAll zShadow top-20">{zThis z="Create"}</button>
+                        <button class="zButton primary widthAll zShadow5 top-20">{zThis z="Create"}</button>
                     </div>
                 </div>
                 <div class="ButtonPos2">
-                    <button class="zButton primary widthAll zShadow top-20">{zThis z="Create"}</button>
+                    <button class="zButton primary widthAll zShadow5 top-20">{zThis z="Create"}</button>
                 </div>
             </form>
         </div>

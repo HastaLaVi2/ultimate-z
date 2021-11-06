@@ -25,7 +25,7 @@
     </div>
 
     <a href="{$zContent->srcFull["_main"]}_admin/logout/" class="forceLink weight-400">
-        <div class="back5 zHov-back2 animation font-16 centerText whiteText bottom--20 left--20 right--20 pad-8 rad-c3-15 rad-c4-15 zShadow">
+        <div class="back5 zHov-back2 animation font-16 centerText whiteText bottom--20 left--20 right--20 pad-8 rad-c3-15 rad-c4-15 zShadow5">
             <i class="fas fa-sign-out-alt"></i>
             {$zThis["Log out"]}
         </div>
