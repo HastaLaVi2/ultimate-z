@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 14:16:32
+/* Smarty version 3.1.39, created on 2021-11-06 21:11:32
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61868e404b8ec1_42734947',
+  'unifunc' => 'content_6186ef84c72921_87153437',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636207541,
+      1 => 1636209054,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61868e404b8ec1_42734947 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '131251008461868e4048cba3_34035730';
+function content_6186ef84c72921_87153437 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '15655760806186ef84c4e009_80882882';
 ?>
 
 <meta charset="utf-8">
@@ -76,7 +76,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 /ultimate-z/z.min.css"/>
 <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/ultimate-z/z.js"><?php echo '</script'; ?>
+/ultimate-z/z.min.js"><?php echo '</script'; ?>
 >
 
 <!-- owl.carousel -->

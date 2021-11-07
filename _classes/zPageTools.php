@@ -32,70 +32,6 @@ class zPageTools {
         return $zPage->url;
     }
 
-    public function zPageCreate(array $data) {
-        $db = zDB::get();
-        $zThis = zThis::get()->table;
-
-        if(!empty($data)) {
-            $id_langs = $data["id_lang"];
-            $page_url = $data["page_url"];
-            $categories = $data["categories"];
-            $subpage = $data["change_subpage"];
-
-            if (isset($data["not_a_subpage"])) {
-                $subpage = 0;
-            }
-
-            $check_id_page = $db->select("SELECT * FROM zPages WHERE id_page > 1000 ORDER BY id_page");
-            if (!empty($check_id_page)) {
-                foreach ($check_id_page as $ch) {
-                    $check = $ch["id_page"];
-                }
-            }
-            $id_page = $check + 1;
-
-            if (isset($categories)) {
-                foreach ($categories as $category) {
-                    $query = "INSERT INTO `zPagesCategories` (id_page, id_category) VALUES ('$id_page', '$category')";
-                    $result = $db->execute($query);
-                }
-            }
-
-            foreach ($id_langs as $id_lang) {
-                $page_name = $data["page_name"][$id_lang];
-                $page_name = str_replace("'", "\'", $page_name);
-                $page_meta = $data["page_meta"][$id_lang];
-                $template_ids = $data["id_template"][$id_lang];
-                $final_id_template = $data["change_template"];
-
-                if (!$page_name || $page_name == "") {
-                    $page_name = "Untitled";
-                }
-
-                if (!$id_lang) {
-    				throw new Exception($zThis["The information is missing."]);
-    			}
-
-                $query = "INSERT INTO `zPages_tr` (id_page, id_lang, value, meta) VALUES ('$id_page', '$id_lang', '$page_name', '$page_meta')";
-                $result = $db->execute($query);
-
-                $check = $db->select("SELECT count(*) AS total FROM zPages WHERE id_page = '$id_page'");
-                if (isset($check[0]) && $check[0]["total"] == 0) {
-                    $query = "INSERT INTO `zPages` (id_page, url, area, id_template, subpage) VALUES ('$id_page', '$page_url', 'front', '$final_id_template', '$subpage')";
-                    $result = $db->execute($query);
-                }
-            }
-
-            if($result) {
-                return true;
-            } else {
-                throw new Exception($zThis["Cannot connect to database."]);
-            }
-        } else {
-            throw new Exception($zThis["The information is missing."]);
-        }
-    }
-
     public function zPageUpdate(array $data) {
         $db = zDB::get();
         $zThis = zThis::get()->table;
@@ -103,37 +39,69 @@ class zPageTools {
         $query = "";
 
         if(!empty($data)) {
-            # seperate each data
+            # get page id from form.
             $id_page = $data["id_page"];
+
+            # fet page url from form.
             $page_url = $data["page_url"];
+
+            # prepare contains all the data for all languages.
             $prepare = $data["id_lang"];
+
+            # get all used holders ids and holders special ids for the current page
+            # all holders have an id of their own, and other ids on different pages.
             $holder_ids = $data["id_holder"] ? $data["id_holder"] : array();
             $unique_holders = $data["id_page_holder"] ? $data["id_page_holder"] : array();
+
+            # getting the categories' data.
             $categories = $data["categories"] ? $data["categories"] : array();
+
+            # what is our template's id, if we have? and start its block number.
             $id_template = $data["change_template"];
-            $subpage = $data["change_subpage"];
             $blocks = array();
 
+            # is this a subpage? and maybe not?
+            $subpage = $data["change_subpage"];
+            if (isset($data["not_a_subpage"]) || !is_numeric($subpage)) {
+                $subpage = 0;
+            }
+
+            # check if we are on a "create page" or "edit page".
             if (!isset($id_page)) {
+                # if we are creating a page, we need to set a new id to our page.
+                # check he last biggest number on the database.
                 $check_id_page = $db->select("SELECT * FROM zPages WHERE id_page > 1000 ORDER BY id_page");
                 if (!empty($check_id_page)) {
                     foreach ($check_id_page as $ch) {
                         $check = $ch["id_page"];
                     }
                 }
-                $id_page = $check + 1;
-                $query .= "INSERT INTO `zPages` (id_page, url, area, id_template) VALUES ('$id_page', '$page_url', 'front', '$id_template')";
-            } else {
-                // url always a single value, so start with that
-                $query .= "UPDATE zPages SET url = '$page_url' WHERE id_page = '$id_page';";
 
+                # plus one to that number and insert a new page row.
+                $id_page = $check + 1;
+                $query .= "INSERT INTO `zPages` (id_page, url, area, id_template, subpage) VALUES ('$id_page', '$page_url', 'front', '$id_template', '$subpage');";
+            } else {
+                # if we are editing a page, we need to update some values.
+                # url is always a single value, so we start with that.
+                # also, we need to update subpage parameter as well.
+                $query .= "UPDATE zPages SET url = '$page_url', subpage = '$subpage' WHERE id_page = '$id_page';";
+
+                # now, time to find out which template is used on the page.
                 $select1 = $db->select("SELECT * FROM zPages WHERE id_page = '$id_page'");
+
+                # we got our page from the table?
                 if (!empty($select1)) {
+                    # get the template's id.
                     $id_template = $select1[0]["id_template"];
+                    # now find the template's data from database.
                     $select2 = $db->select("SELECT * FROM zTemplates WHERE id_template = '$id_template'");
+                    # is the template valid?
                     if (!empty($select2)) {
+                        # all templates have their block numbers stored in the database.
                         $block_number = $select2[0]["blocks"];
 
+                        # we are pushing the blocks' data gained from the original form,
+                        # to the blocks array we created at the beginning.
                         for ($x = 0; $x < $block_number; $x++) {
                             array_push($blocks, $data["block".$x]);
                         }
@@ -141,6 +109,9 @@ class zPageTools {
                 }
             }
 
+            # which block should we start adding the holders to?
+            # the first block might be empty, so maybe we will skip it.
+            # this specifies the first block id to be start the loop.
             foreach ($blocks as $key => $block) {
                 if ($block > 0) {
                     $id_block = $key + 1;
@@ -148,15 +119,7 @@ class zPageTools {
                 }
             }
 
-            # update subpage
-            if (isset($data["not_a_subpage"])) {
-                $subpage = 0;
-            }
-            if (isset($subpage)) {
-                $query .= "UPDATE `zPages` SET subpage = '$subpage' WHERE id_page = '$id_page';";
-            }
-
-            // insert new categories
+            # insert new categories.
             if (!empty($categories)) {
                 foreach ($categories as $category) {
                     $check = $db->select("SELECT * FROM zPagesCategories WHERE id_page = '$id_page' AND id_category = '$category'");
@@ -167,7 +130,7 @@ class zPageTools {
                 }
             }
 
-            // if some categories have been removed, delete those
+            # if some categories have been removed, delete those.
             $alreadyCats = array();
             $check_cat = $db->select("SELECT * FROM zPagesCategories WHERE id_page = '$id_page'");
             if (!empty($check_cat)) {
@@ -175,7 +138,6 @@ class zPageTools {
                     array_push($alreadyCats, $c["id_category"]);
                 }
             }
-
             if (!empty($alreadyCats)) {
                 foreach ($alreadyCats as $already) {
                     if (!in_array($already, $categories)) {
@@ -184,10 +146,14 @@ class zPageTools {
                 }
             }
 
+            # find the last holder id for the current page, we may need to insert a new holder,
+            # so we might assign a new holder id.
             $lastId = $this->zPageGetHolderLastId();
 
+            # holder's order on the block always starts at 0.
             $orderOnBlock = 0;
-            // update zPagesHolders
+
+            # start updating zPagesHolders.
             if (!empty($holder_ids)) {
                 foreach ($holder_ids as $orderPre => $id_holder) {
                     $order = $orderPre + 1;
@@ -234,7 +200,13 @@ class zPageTools {
                 $page_meta = $data["page_meta"][$id_lang];
                 $page_name = str_replace("'", "\'", $page_name);
 
-                $query .= "UPDATE zPages_tr SET `value` = '$page_name', `meta` = '$page_meta' WHERE `id_page` = '$id_page' AND `id_lang` = '$id_lang';";
+                $check_for_lang = $db->select("SELECT * FROM zPages_tr WHERE id_page = '$id_page'");
+
+                if (empty($check_for_lang)) {
+                    $query .= "INSERT INTO `zPages_tr` (id_page, id_lang, value, meta) VALUES ('$id_page', '$id_lang', '$page_name', '$page_meta');";
+                } else {
+                    $query .= "UPDATE zPages_tr SET `value` = '$page_name', `meta` = '$page_meta' WHERE `id_page` = '$id_page' AND `id_lang` = '$id_lang';";
+                }
 
                 # check if there is missing information
                 if ((!$id_page) || (!$id_lang) ) {

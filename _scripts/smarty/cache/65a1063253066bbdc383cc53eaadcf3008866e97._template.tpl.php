@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:08:22
+/* Smarty version 3.1.39, created on 2021-11-07 20:32:34
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186eec6e567d0_77020549',
+  'unifunc' => 'content_618837e252b026_43845433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1636209079,
+      1 => 1636317017,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -66,7 +66,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186eec6e567d0_77020549 (Smarty_Internal_Template $_smarty_tpl) {
+function content_618837e252b026_43845433 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -471,7 +471,7 @@ $(window).resize(function(){
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
                         <option selected>Seç...</option>
-                        <option value='1001'>Anasayfa</option>
+                        <option value='1001'>Anasayfa</option><option value='1002'>1</option><option value='1003'>2</option>
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {

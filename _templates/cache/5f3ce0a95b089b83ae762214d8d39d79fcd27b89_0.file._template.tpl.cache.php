@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:10:07
+/* Smarty version 3.1.39, created on 2021-11-07 20:16:52
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186ef2f99c1f5_83873903',
+  'unifunc' => 'content_61883434039dc2_31046294',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,32 +22,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/statistics.tpl' => 1,
   ),
 ),false)) {
-function content_6186ef2f99c1f5_83873903 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61883434039dc2_31046294 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '17110095546186ef2f94dd16_77315513';
+$_smarty_tpl->compiled->nocache_hash = '14369128261883433f31bc9_36866297';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2219098056186ef2f96db13_53778563', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_83825590061883434013151_90624414', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15693468566186ef2f98c302_41800387', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19114729746188343402d884_15168692', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_2219098056186ef2f96db13_53778563 extends Smarty_Internal_Block
+class Block_83825590061883434013151_90624414 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_2219098056186ef2f96db13_53778563',
+    0 => 'Block_83825590061883434013151_90624414',
   ),
 );
 public $append = 'true';
@@ -114,12 +114,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_15693468566186ef2f98c302_41800387 extends Smarty_Internal_Block
+class Block_19114729746188343402d884_15168692 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_15693468566186ef2f98c302_41800387',
+    0 => 'Block_19114729746188343402d884_15168692',
   ),
 );
 public $append = 'true';

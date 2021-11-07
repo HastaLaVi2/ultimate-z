@@ -43,6 +43,7 @@ $lang["Page created."] = "Sayfa oluşturuldu.";
 $lang["Page deleted."] = "Sayfa silindi.";
 $lang["Category created."] = "Kategori oluşturuldu.";
 $lang["Category deleted."] = "Kategori silindi.";
+$lang["Now go to the edit page."] = "Şimdi düzenleme sayfasına gidin.";
 
 # MEDIA ISSUES
 $lang["File is not an image nor a video."] = "Dosya bir fotoğraf veya video değil.";

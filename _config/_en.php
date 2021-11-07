@@ -43,6 +43,7 @@ $lang["Page created."] = "Page created.";
 $lang["Page deleted."] = "Page deleted.";
 $lang["Category created."] = "Category created.";
 $lang["Category deleted."] = "Category deleted.";
+$lang["Now go to the edit page."] = "Now go to the edit page.";
 
 # MEDIA ISSUES
 $lang["File is not an image nor a video."] = "File is not an image nor a video.";

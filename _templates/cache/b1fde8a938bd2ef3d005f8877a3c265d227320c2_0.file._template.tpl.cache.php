@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 14:16:32
+/* Smarty version 3.1.39, created on 2021-11-06 21:11:32
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61868e404846c7_76955667',
+  'unifunc' => 'content_6186ef84c439f3_83015939',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1636208190,
+      1 => 1636208197,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_holders/".((string)$_smarty_tpl->tpl_vars[\'holder\']->value->id)."/_holder.tpl' => 1,
   ),
 ),false)) {
-function content_61868e404846c7_76955667 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '36030035761868e40455154_44676814';
+function content_6186ef84c439f3_83015939 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2816955456186ef84c1ced0_93645148';
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,6 @@ $_smarty_tpl->compiled->nocache_hash = '36030035761868e40455154_44676814';
 ?>
 </head>
 <body>
-    <div class="zShadow5"></div>
     <?php $_smarty_tpl->_assignInScope('holders', $_smarty_tpl->tpl_vars['zPage']->value->zPageGetHolders($_smarty_tpl->tpl_vars['zContent']->value->language->id,1));?>
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['holders']->value, 'holder');

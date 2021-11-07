@@ -26,9 +26,9 @@ class zPageStarter extends zPage {
         if (!empty($data)) {
             if (isset($data["page_name"]) && isset($data["id_lang"]) && isset($data["change_template"])) {
                 try {
-                    $data = $zPageTools->zPageCreate($data);
+                    $data = $zPageTools->zPageUpdate($data);
                     if ($data) {
-                        die($zThis["Page created."]);
+                        die($zThis["Page created."] . " " . $zThis["Now go to the edit page."]);
                     }
                 } catch(Exception $e) {
                     $error = $e->getMessage();

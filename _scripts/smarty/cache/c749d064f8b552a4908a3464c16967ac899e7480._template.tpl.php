@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:08:28
+/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186eecc280ee6_50468710',
+  'unifunc' => 'content_61883813520aa1_85404386',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -51,6 +51,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1633373917,
       2 => 'file',
     ),
+    'ea921527d0a89eb10256e18f21e891c839c80637' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
+      1 => 1636232870,
+      2 => 'file',
+    ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
@@ -66,7 +72,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186eecc280ee6_50468710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -387,6 +393,170 @@ $(window).resize(function(){
                                 </a>
                             </td>
                             <td>
+                                                            </td>
+                        </tr>
+                                            <tr id="zPage-1002">
+                            <td>2</td>
+                            <td>1</td>
+                            <td>zAna</td>
+                            <td>
+                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002" class="zButton zHov-zShadow5 primary sweet">
+                                     Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                                                
+<a href="#modal1002" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
+
+<div class="zModal" id="modal1002">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Sayfayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='id_page' value='1002'></div>
+                    Bu sayfayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                                                            </td>
+                        </tr>
+                                            <tr id="zPage-1003">
+                            <td>3</td>
+                            <td>2</td>
+                            <td>zAna</td>
+                            <td>
+                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1003" class="zButton zHov-zShadow5 primary sweet">
+                                     Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                                                
+<a href="#modal1003" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
+
+<div class="zModal" id="modal1003">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Sayfayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='id_page' value='1003'></div>
+                    Bu sayfayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                                                            </td>
+                        </tr>
+                                            <tr id="zPage-1004">
+                            <td>4</td>
+                            <td>3</td>
+                            <td>zAna</td>
+                            <td>
+                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1004" class="zButton zHov-zShadow5 primary sweet">
+                                     Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                                                
+<a href="#modal1004" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
+
+<div class="zModal" id="modal1004">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Sayfayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='id_page' value='1004'></div>
+                    Bu sayfayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                                                            </td>
+                        </tr>
+                                            <tr id="zPage-1005">
+                            <td>5</td>
+                            <td>30</td>
+                            <td>zAna</td>
+                            <td>
+                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1005" class="zButton zHov-zShadow5 primary sweet">
+                                     Düzenle
+                                </a>
+                            </td>
+                            <td>
+                                                                
+<a href="#modal1005" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
+
+<div class="zModal" id="modal1005">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Sayfayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='id_page' value='1005'></div>
+                    Bu sayfayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
                                                             </td>
                         </tr>
                                     </tbody>

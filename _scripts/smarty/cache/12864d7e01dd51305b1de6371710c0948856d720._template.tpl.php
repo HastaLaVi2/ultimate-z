@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:10:07
+/* Smarty version 3.1.39, created on 2021-11-07 20:16:52
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186ef2fb99619_24620526',
+  'unifunc' => 'content_61883434157c03_65400450',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186ef2fb99619_24620526 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -394,7 +394,7 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                14
+                                15
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
@@ -412,7 +412,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">14</h6>
+        <h6 class="top-0 bottom-0">15</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -471,7 +471,7 @@ $(window).resize(function(){
     function dateTable(period) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
-        var date = new Date("2021/11/06");
+        var date = new Date("2021/11/07");
         var table = [];
 
         for (let i = 0; i <= (period-1); i++) {
@@ -574,11 +574,11 @@ $(window).resize(function(){
     function zPageJS() {
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["5","0","0","0","2","0","0"]);
+        apexBarCreate("#chart-profile-visit", 7, ["0","6","0","0","0","2","0"]);
                 apexLineCreate(
             "#chart-1001",
             12,
-            ["5","0","0","0","2","0","0","0","0","0","0","0"],
+            ["0","6","0","0","0","2","0","0","0","0","0","0"],
             "#5350e9"        );
         
         let tabNum = 0;

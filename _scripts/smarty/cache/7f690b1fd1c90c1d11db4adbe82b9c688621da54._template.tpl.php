@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 14:16:32
+/* Smarty version 3.1.39, created on 2021-11-06 21:11:32
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_61868e404d9b48_64318799',
+  'unifunc' => 'content_6186ef84c8f429_60501891',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1636208190,
+      1 => 1636208197,
       2 => 'file',
     ),
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636207541,
+      1 => 1636209054,
       2 => 'file',
     ),
     '37b0e39aed323c9a8a0278f28ec8e347d4af9913' => 
@@ -30,7 +30,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61868e404d9b48_64318799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6186ef84c8f429_60501891 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +63,7 @@ function content_61868e404d9b48_64318799 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- the ultimate z -->
 <link rel="stylesheet" type="text/css" href="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.css"/>
-<script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.js"></script>
+<script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
 <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
@@ -92,7 +92,6 @@ function content_61868e404d9b48_64318799 (Smarty_Internal_Template $_smarty_tpl)
     
 </head>
 <body>
-    <div class="zShadow5"></div>
                                             <!-- zHolder: Tag -->
         
 <div class="pad-40">

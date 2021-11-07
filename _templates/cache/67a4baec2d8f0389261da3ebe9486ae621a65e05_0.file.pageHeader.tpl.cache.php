@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:10:07
+/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6186ef2fb47646_58084519',
+  'unifunc' => 'content_61883813442220_53233214',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6186ef2fb47646_58084519 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '14634711086186ef2fb3f0e4_29801231';
+function content_61883813442220_53233214 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '178933260561883813438203_69004846';
 ?>
 
 <header class="floatingTheSpace fixed displayNone zMob1200-no index-50">
