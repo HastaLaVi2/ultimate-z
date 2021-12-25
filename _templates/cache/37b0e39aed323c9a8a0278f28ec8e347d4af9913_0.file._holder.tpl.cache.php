@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:14:33
+/* Smarty version 3.1.40, created on 2021-12-25 08:52:07
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/4/_holder.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6d2e9559643_73702267',
+  'unifunc' => 'content_61c6dbb7d94404_79661952',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61c6d2e9559643_73702267 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '201978306761c6d2e9556e96_01005139';
+function content_61c6dbb7d94404_79661952 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '118337349161c6dbb7d936a7_40797422';
 ?>
 
 <div class="pad-40">

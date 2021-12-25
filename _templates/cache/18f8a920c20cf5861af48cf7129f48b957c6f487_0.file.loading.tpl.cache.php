@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:14:33
+/* Smarty version 3.1.40, created on 2021-12-25 08:52:07
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6d2e953fbf9_87017521',
+  'unifunc' => 'content_61c6dbb7d86563_26472592',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '18f8a920c20cf5861af48cf7129f48b957c6f487' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1637660534,
+      1 => 1640421401,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61c6d2e953fbf9_87017521 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '52410012661c6d2e953bd80_13302028';
+function content_61c6dbb7d86563_26472592 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '55597697661c6dbb7d84377_54092547';
 ?>
 
 <div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>

@@ -1,42 +1,42 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:14:33
+/* Smarty version 3.1.40, created on 2021-12-25 08:52:07
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6d2e955dca6_10453691',
+  'unifunc' => 'content_61c6dbb7d97b76_73416738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1639779029,
+      1 => 1640422324,
       2 => 'file',
     ),
     '3919874f51ba2bcf80120a6cbf05a2f24c4274ce' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/_main.tpl',
-      1 => 1638294294,
+      1 => 1640421402,
       2 => 'file',
     ),
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640259430,
+      1 => 1640421401,
       2 => 'file',
     ),
     '0731ef1aedb336563dff9b49bcc043d0fb40cf08' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
-      1 => 1640259422,
+      1 => 1640421401,
       2 => 'file',
     ),
     '18f8a920c20cf5861af48cf7129f48b957c6f487' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1637660534,
+      1 => 1640421401,
       2 => 'file',
     ),
     '37b0e39aed323c9a8a0278f28ec8e347d4af9913' => 
@@ -48,7 +48,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c6d2e955dca6_10453691 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6dbb7d97b76_73416738 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -151,117 +151,17 @@ function content_61c6d2e955dca6_10453691 (Smarty_Internal_Template $_smarty_tpl)
     <div id="zTop"></div>
 
     <div id="zBefore">
-            <!--<a href="http://localhost/ultimate-z/">Anasayfa</a>-->
-            <!--<a href="http://localhost/ultimate-z/moda">Moda</a>-->
-            <!--<a href="http://localhost/ultimate-z/1001">1001</a>-->
-    </div>
+<div class"pad-20">
+                        <a href="http://localhost/ultimate-z/">Anasayfa</a>
+                                <a href="http://localhost/ultimate-z/moda">Moda</a>
+                                <a href="http://localhost/ultimate-z/1001">1001</a>
+            </div>
+</div>
 
     <div id="zContent">
         
         
-<div class="horMid width-500" style="color:#666;padding:50px;background:#f2f7ff">
-    <div style="margin-bottom:50px">
-        <img src="http://localhost/ultimate-z/_media/mail_logo.png" style="height:50px">
-        <a href="https://onucyirmibir.com" target="_blank" style="position:absolute;bottom:2px;left:90px;">
-            <img src="http://localhost/ultimate-z/_media/mail_link.png" style="height:12px">
-        </a>
-    </div>
-    <div style="background:white;border-radius:20px;padding:20px">
-        <div style="position:absolute;top:-25px;left:20px;font-weight:bold;color:#2d499d">Password Renew Link</div>
-        hey
-    </div>
-    <div style="font-size:12px;padding-top:20px;text-align:center">
-        Copyright © 2021 ultimate Z
-    </div>
-</div>
-<!--
-<div class="fullScr widthAll hideRest">
-    <div class="floatingSpace pad-20 index-100">
-        <a target="home" href="http://localhost/ultimate-z/">
-            <img src="http://localhost/ultimate-z/_media/logo1.png" class="height-30">
-        </a>
-    </div>
-    <div class="floatingTheRight pad-20 index-100 rightText">
-        <ul class="cleanList nextToEach zShow-menu top--28">
-            <li>
-                <a id="#" class="uppercase blackText thinText">Anasayfa</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">İletişim</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">Hakkımızda</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">EN</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">TR</a>
-            </li>
-        </ul>
-    </div>
-    <div class="row-6 padT-100 padLR-20">
-        <div class="horizontal-scroll-wrap">
-            <div class="horizontal-scroll">
-                <div class="horizontal-scroll-in">
-                    <div class="horizontal-scroll-bar style2 lightgallery">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_1.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_2.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_3.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_4.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_5.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_6.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_7.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_8.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_9.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_10.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_11.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_12.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_13.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_14.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_15.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_16.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_17.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_18.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_19.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_20.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_21.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_22.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_23.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_24.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/p/p_25.jpg" class="row-12 padR-20">
-                                                <div class="hr-right-padd"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row-6 padT-50 padB-50 padLR-20">
-        <div class="horizontal-scroll-wrap">
-            <div class="horizontal-scroll">
-                <div class="horizontal-scroll-in">
-                    <div class="horizontal-scroll-bar style2 lightgallery">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_1.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_2.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_3.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_4.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_5.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_6.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_7.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_8.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_9.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_10.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_11.jpg" class="row-12 padR-20">
-                                                <img src="http://localhost/ultimate-z/_media/deneme/c/c_12.jpg" class="row-12 padR-20">
-                                                <div class="hr-right-padd"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="IWantItDownL widthAll centerText font-14 padB-20">Konum: İstanbul | Yıl: 2014 | Kategori: Konut | Yapı Alanı: 1.200 m2</div>
-</div>
-    <div class="back7 pad-20">
+    <!--<div class="back7 pad-20">
         <div class="whiteBack rad-20 width-280 hideRest zShadow">
             <div class="pad-20 padB-10">
                 <div class="zCol-6 padR-10">
@@ -345,17 +245,14 @@ function content_61c6d2e955dca6_10453691 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
         </div>
-    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -->
-        <!-- zHolder: Etiket -->
-        <!--
+    </div>-->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <!-- zHolder: Etiket -->
+        
 <div class="pad-40">
     <h1>ultimate Z'ye hoş geldiniz!</h1>
 </div>
--->
         <!-- zHolder: Etiket -->
-    <!---->
-
+    
     </div>
 
     <div id="zAfter"></div>

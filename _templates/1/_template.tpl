@@ -20,84 +20,17 @@
 {/block}
 
 {block name="zBefore" append}
+<div class"pad-20">
     {foreach from=$mainMenu item=page}
-        <!--<a href="{$zContent->srcFull["_main"]|@rtrim:'/'}{$page->url}">{$page->name}</a>-->
+        {if $page->status}
+            <a href="{$zContent->srcFull["_main"]|@rtrim:'/'}{$page->url}">{$page->name}</a>
+        {/if}
     {/foreach}
+</div>
 {/block}
 
 {block name="zContent" append}
-<div class="horMid width-500" style="color:#666;padding:50px;background:#f2f7ff">
-    <div style="margin-bottom:50px">
-        <img src="{$zContent->srcFull["media"]}/mail_logo.png" style="height:50px">
-        <a href="https://onucyirmibir.com" target="_blank" style="position:absolute;bottom:2px;left:90px;">
-            <img src="{$zContent->srcFull["media"]}/mail_link.png" style="height:12px">
-        </a>
-    </div>
-    <div style="background:white;border-radius:20px;padding:20px">
-        <div style="position:absolute;top:-25px;left:20px;font-weight:bold;color:#2d499d">Password Renew Link</div>
-        hey
-    </div>
-    <div style="font-size:12px;padding-top:20px;text-align:center">
-        Copyright © 2021 ultimate Z
-    </div>
-</div>
-<!--
-<div class="fullScr widthAll hideRest">
-    <div class="floatingSpace pad-20 index-100">
-        <a target="home" href="{$zContent->srcFull['_main']}">
-            <img src="{$zContent->srcFull["media"]}/logo1.png" class="height-30">
-        </a>
-    </div>
-    <div class="floatingTheRight pad-20 index-100 rightText">
-        <ul class="cleanList nextToEach zShow-menu top--28">
-            <li>
-                <a id="#" class="uppercase blackText thinText">Anasayfa</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">İletişim</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">Hakkımızda</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">EN</a>
-            </li>
-            <li>
-                <a id="#" class="uppercase blackText thinText">TR</a>
-            </li>
-        </ul>
-    </div>
-    <div class="row-6 padT-100 padLR-20">
-        <div class="horizontal-scroll-wrap">
-            <div class="horizontal-scroll">
-                <div class="horizontal-scroll-in">
-                    <div class="horizontal-scroll-bar style2 lightgallery">
-                        {for $num=1 to 25}
-                        <img src="{$zContent->srcFull["media"]}/deneme/p/p_{$num}.jpg" class="row-12 padR-20">
-                        {/for}
-                        <div class="hr-right-padd"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row-6 padT-50 padB-50 padLR-20">
-        <div class="horizontal-scroll-wrap">
-            <div class="horizontal-scroll">
-                <div class="horizontal-scroll-in">
-                    <div class="horizontal-scroll-bar style2 lightgallery">
-                        {for $num=1 to 12}
-                        <img src="{$zContent->srcFull["media"]}/deneme/c/c_{$num}.jpg" class="row-12 padR-20">
-                        {/for}
-                        <div class="hr-right-padd"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="IWantItDownL widthAll centerText font-14 padB-20">Konum: İstanbul | Yıl: 2014 | Kategori: Konut | Yapı Alanı: 1.200 m2</div>
-</div>
-    <div class="back7 pad-20">
+    <!--<div class="back7 pad-20">
         <div class="whiteBack rad-20 width-280 hideRest zShadow">
             <div class="pad-20 padB-10">
                 <div class="zCol-6 padR-10">
@@ -181,7 +114,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     {assign var=holders value=$zPage->zPageGetHolders($zContent->language->id, 1)}
     {foreach from=$holders item=holder}
         {for $foo=1 to 100}
@@ -189,9 +122,9 @@
         {/for}
         {foreach from=$holder->content key=k item=content}
             {assign var="_{$k+1}" value="$content"}
-        {/foreach}-->
+        {/foreach}
         <!-- zHolder: {$holder->name} -->
-        <!--{include file="_holders/{$holder->id}/_holder.tpl" scope="parent"}-->
+        {include file="_holders/{$holder->id}/_holder.tpl" scope="parent"}
         <!-- zHolder: {$holder->name} -->
-    <!--{/foreach}-->
+    {/foreach}
 {/block}
