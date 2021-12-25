@@ -170,7 +170,7 @@ $tables .= "CREATE TABLE `zPages` (
 // Dumping data for table `zPages`
 //
 
-$tables .= "INSERT INTO `zPages` (`id_page`, `url`, `area`, `id_template`) VALUES
+$tables .= "INSERT INTO `zPages` (`id_page`, `url`, `area`, `id_template`, `subpage`, `status`) VALUES
 (1, '/_admin', 'back', 0, 0, 1),
 (2, '/_admin/login', 'back', 0, 0, 1),
 (3, '/_admin/forgot', 'back', 0, 0, 1),
@@ -346,7 +346,7 @@ $tables .= "CREATE TABLE `zTemplates` (
 // Dumping data for table `zTemplates`
 //
 
-$tables .= "INSERT INTO `zTemplates` (`id_template`, `area`) VALUES
+$tables .= "INSERT INTO `zTemplates` (`id_template`, `area`, `blocks`) VALUES
 (1, 'front', 1);";
 
 // ////////////////////////////////////////////////////////
