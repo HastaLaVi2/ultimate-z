@@ -1,42 +1,48 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:08:35
+/* Smarty version 3.1.40, created on 2021-12-23 22:14:22
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/design/favicon/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_6186eed32886d1_71300218',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c4f4be67ac13_70903978',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ec7122157196ef1dc1de8f2c8f3ae9375c5bb02' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/design/favicon/_template.tpl',
-      1 => 1633642854,
+      1 => 1640297414,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1636204676,
+      1 => 1637665907,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
+      2 => 'file',
+    ),
+    '573b073f619aeb439fcac73d74e676de04fada42' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
+      1 => 1640259422,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -48,19 +54,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1633373917,
+      1 => 1639138316,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1636232870,
+      1 => 1639138416,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1636204676,
+      1 => 1637666153,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -72,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186eed32886d1_71300218 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c4f4be67ac13_70903978 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -95,8 +101,6 @@ function content_6186eed32886d1_71300218 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jquery -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery-3.6.0.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fontawesome/css/all.min.css"/>
@@ -106,23 +110,29 @@ function content_6186eed32886d1_71300218 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
+    
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/ultimate-z/_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/ultimate-z/_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/ultimate-z/_favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/ultimate-z/_favicon/favicon-16x16.png">
 <link rel="manifest" href="http://localhost/ultimate-z/_favicon/site.webmanifest">
-<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#2d89ef">
+<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#99154e">
 <link rel="shortcut icon" href="http://localhost/ultimate-z/_favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileColor" content="#99154e">
 <meta name="msapplication-TileImage" content="http://localhost/ultimate-z/_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
+<meta name="theme-color" content="#99154e">
 
+<!-- lazysizes -->
+<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -136,9 +146,6 @@ function content_6186eed32886d1_71300218 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- html2canvas -->
     <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
 </head>
 <body class="back7">
     
@@ -167,8 +174,7 @@ function content_6186eed32886d1_71300218 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
-            </div>
+                ultimate Z            </div>
         </center>
     </div>
 </div>
@@ -178,7 +184,7 @@ function content_6186eed32886d1_71300218 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead">
+    <div id="zTop">
     <!-- filepond -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond.css">
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-image-preview.css">
@@ -482,14 +488,14 @@ $(window).resize(function(){
                 </div>
                 <div class="inLine widthRest zMob-widthAll colTop padL-20 zMob-padL-0">
                     <div>
-                        <input type="radio" name="iosType" value="same" id="iosSame" checked>
+                        <input type="radio" name="iosType" value="same" id="iosSame" >
                         <label for="iosSame">Asıl resmi kullan.</label>
                     </div>
                     <div class="bottom-10">
-                        <input type="radio" name="iosType" value="differ" id="iosDiffer" >
+                        <input type="radio" name="iosType" value="differ" id="iosDiffer" checked>
                         <label for="iosDiffer">Boşluk ve arkaplan rengi ekle.</label>
                     </div>
-                    <div class="displayNone iosDifferDiv">
+                    <div class=" iosDifferDiv font0">
                         <div class="col-6 colTop">
                             <div class="zGroup">
                                 <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -528,7 +534,7 @@ $(window).resize(function(){
                         <input type="radio" name="androidType" value="differ" id="androidDiffer" >
                         <label for="androidDiffer">Boşluk ve arkaplan rengi ekle.</label>
                     </div>
-                    <div class="displayNone androidDifferDiv">
+                    <div class="displayNone androidDifferDiv font0">
                         <div class="col-6 colTop padTB-10">
                             <div class="zGroup">
                                 <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -558,7 +564,7 @@ $(window).resize(function(){
                     <img src="http://localhost/ultimate-z/_media/user/windows.png" class="widthAll rad-5 back-black">
                     <div class="floatingSpace">
                         <div class="winIcon verMid font-0 top-23 left-17_5 width-79 height-79 centerText index-10" style="background:#2d89ef;">
-                            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="widthAll hollyMid" style="width:70%;">
+                            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="widthAll hollyMid" style="width:70%;-webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);">
                         </div>
                     </div>
                 </div>
@@ -568,7 +574,7 @@ $(window).resize(function(){
                         <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
                             Arkaplan Rengi
                         </span>
-                        <input type="text" class="pad-10 top-0 bottom-0 minW-150" value="#2d89ef" name="winDiffer_bg">
+                        <input type="text" class="pad-10 top-0 bottom-0 minW-150" value="#99154e" name="winDiffer_bg">
                     </div>
                     <div class="zGroup bottom-10">
                         <input type="radio" class="pad-10 boldMin-1 left-0 right-0 top-0 bottom-0" value="#00aba9" style="height:auto;background:#00aba9;" name="winDiffer_winbg">
@@ -582,11 +588,11 @@ $(window).resize(function(){
                         <input type="radio" class="pad-10 boldMin-1 left-0 right-0 top-0 bottom-0" value="#2d89ef" style="height:auto;background:#2d89ef;" name="winDiffer_winbg">
                     </div>
                     <div>
-                        <input type="radio" name="winType" value="same" id="winSame" checked>
+                        <input type="radio" name="winType" value="same" id="winSame" >
                         <label for="winSame">Asıl resmi kullan.</label>
                     </div>
                     <div>
-                        <input type="radio" name="winType" value="white" id="winWhite" >
+                        <input type="radio" name="winType" value="white" id="winWhite" checked>
                         <label for="winWhite">Arkaplanı transparan olan logolar için, beyaz logoya çevir.</label>
                     </div>
                 </div>
@@ -628,7 +634,7 @@ $(window).resize(function(){
                         <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
                             Tema Rengi
                         </span>
-                        <input type="text" class="pad-10 top-0 bottom-0 minW-150" value="#2d89ef" name="macDiffer_bg">
+                        <input type="text" class="pad-10 top-0 bottom-0 minW-150" value="#99154e" name="macDiffer_bg">
                     </div>
                 </div>
                 <!-- macOS SAFARI -->
@@ -672,12 +678,12 @@ $(window).resize(function(){
         <div class="pad-20">
                             <div class="modal-header bg-primary">
                     <h5 class="top-0 bottom-0 font-18">
-                        Creating Files
+                        Dosyalar Oluşturuluyor
                     </h5>
                 </div>
                 <div class="zInside gray2 font-15 padTB-20">
                     <div class="displayNone"></div>
-                    Wait until your files created...
+                    Lütfen dosyalarınız oluşturulurken biraz bekleyin...
                 </div>
                 <div class="rightText">
                                                         </div>
@@ -693,7 +699,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.1</b></p>
     </div>
 </footer>
     </div>
@@ -707,19 +713,19 @@ $(window).resize(function(){
         
     <div class="winSet displayNone">
         <div class="winIcon inLine colTop hideRest font-0 centerText width-70 height-70" size="70">
-            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid" style="width:70%;">
+            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid" style="width:70%;-webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);">
         </div>
         <div class="winIcon inLine colTop hideRest font-0 centerText width-144 height-144" size="144">
-            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid" style="height:100%;">
+            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid" style="height:100%;-webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);">
         </div>
         <div class="winIcon inLine colTop hideRest font-0 centerText width-150 height-150" size="150">
-            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid padT-25 padB-50" style="height:100%;">
+            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid padT-25 padB-50" style="height:100%;-webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);">
         </div>
         <div class="winIcon inLine colTop hideRest font-0 centerText width-310 height-310" size="310">
-            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid padT-70 padB-95" style="height:100%;">
+            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid padT-70 padB-95" style="height:100%;-webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);">
         </div>
         <div class="winIcon inLine colTop hideRest font-0 centerText width-310 height-150" size="310x150">
-            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid padT-28 padB-52" style="height:100%;">
+            <img src="http://localhost/ultimate-z/_favicon/favicon.png" class="hollyMid padT-28 padB-52" style="height:100%;-webkit-filter: brightness(0) invert(1);filter: brightness(0) invert(1);">
         </div>
     </div>
     <!-- filepond plugins -->
@@ -734,46 +740,73 @@ $(window).resize(function(){
     <script src="http://localhost/ultimate-z/_scripts/filepond/filepond.js"></script>
     <script>
         /*
-            FAVICON
+            EDITING PROCESS
         */
 
         // helper functions
         function bg(type) {
+            // this function updates the background color of the favicon,
+            // if the background color changed from an input field on the page.
             if ($("input[name="+type+"Differ_bg]").length) {
+                // get the input field which starts with the name of the platform
+                // which could be either iOS, android, windows or macOS, and ends
+                // with Differ_bg, because all of the background fields are.
                 var value = $("input[name="+type+"Differ_bg]").val();
+                // then pick each icon on the page for a platform.
                 $("."+type+"Icon").each(function() {
+                    // then change the background of the icon.
+                    // except for windows, because windows icons' background color
+                    // is set in the "browserconfig.xml" file later.
                     if (type == "win" && $(this).parent().hasClass(type+"Set")) {} else {
                         $(this).css("background", value);
                     }
                 });
             }
         }
+        // there is a radius option for the favicon, and this function is a helper
+        // function for radius giving.
         function radius(type) {
+            // select the input field ends with "Differ_rad" and starts with the
+            // platform name.
             if ($("input[name="+type+"Differ_rad]").length) {
+                // then get its value.
                 var value = $("input[name="+type+"Differ_rad]").val();
+                // then pick each icon on the page for a platform, and give it a little radius!
                 $("."+type+"Icon").css("border-radius", value+"%");
             }
         }
+        // sizing the icon helper function. the process is the same as the above two functions.
         function size(type) {
             if ($("input[name="+type+"Differ_size]").length) {
                 var value = $("input[name="+type+"Differ_size]").val();
                 $("."+type+"Icon img").attr("style", "width: "+value+"% !important");
             }
         }
+
+        // this function combines all the helper functions above into one,
+        // and for each platform, it will have different options
         function check(type) {
+            // if any option of "background, size, or radius" changing is open on screen,
+            // run the helper functions to change the spesifications of any icon
+            // according to the input fields.
             if ($("."+type+"DifferDiv").css("display") == "block") {
                 bg(type);
                 size(type);
                 radius(type);
             } else {
+                // if "background, size, or radius" changing is NOT open on screen,
+                // then we should remove all styling and go back to the default.
                 $("."+type+"Icon").attr("style", "");
                 $("."+type+"Icon img").attr("style", "");
             }
+            // this is a shadow option, it only works for android.
             if ($("input[name="+type+"Type]:checked").prop("id") == type+"Shadow") {
                 $("."+type+"Icon img").attr("style", "width:70%;filter:drop-shadow(0 0 2px rgba(0,0,0,.5));");
             }
         }
 
+        // let's do the magic, and collect every option on the icons at final state.
+        // later from here, the icons will go for uploading process.
         function usefullNess() {
             // DESKTOP
             $("input[name=desktopType]").click(function() {
@@ -858,6 +891,10 @@ $(window).resize(function(){
             check("android");
         }
 
+        /*
+            ON FIRST UPLOAD
+        */
+
         function partial(type) {
             if (type == "mac") {
                 $("."+type+"Icon div").css("-webkit-mask-image", "url(http://localhost/ultimate-z/_favicon/favicon.png)");
@@ -877,6 +914,10 @@ $(window).resize(function(){
             partial("mac");
         }
 
+        /*
+            DELETER
+        */
+
         function deleteImage(filename) {
             var data = new FormData();
             data.set("file_name", filename);
@@ -891,6 +932,10 @@ $(window).resize(function(){
                 error: function() { }
             });
         }
+
+        /*
+            UPLOAD PROCESS
+        */
 
         // this is to upload an image to server,
         // used both by summernote and filepond
@@ -948,6 +993,7 @@ $(window).resize(function(){
                 sheight = size;
             }
             let filename = "mstile-" + swidth + "x" + sheight;
+
             ImageTracer.imageToSVG(
                 "http://localhost/ultimate-z/_favicon/"+filename+".png", /* input filename / URL */
                 function(svgstr){
@@ -958,7 +1004,8 @@ $(window).resize(function(){
                     uploadImage(blackF, filename);
                 } /* callback function to run on SVG string result */
             );
-            setTimeout(function(){
+
+            setTimeout(function (){
                 $.get("http://localhost/ultimate-z/_favicon/"+filename+".svg", function(data) {
                     var svgString = new XMLSerializer().serializeToString(data.documentElement);
 
@@ -1013,16 +1060,21 @@ $(window).resize(function(){
                                 }
                             }
                         });
+                        next();
                     };
                 }(function() {
                     if (prefix == "mstile" && $("#winWhite").is(":checked")) {
-                        uploadForWin(size);
+                        setTimeout(function (){
+                            $.each(sizes, function(unn, size) {
+                                uploadForWin(size);
+                            });
+                        }, 3000);
                     }
                 }));
             });
         }
 
-        function renderEverything(callback) {
+        function renderEverything() {
             let sets = [];
             sets[0] = [$(".desktopIcon")[0], "favicon", [16, 32, 48]];
             sets[1] = [$(".iosIcon")[0], "apple-touch-icon", [57, 60, 72, 76, 114, 120, 144, 152, 180]];
@@ -1048,9 +1100,6 @@ $(window).resize(function(){
                     createFinalImg(v[0], v[1], null, v[2]);
                 }
             });
-
-            if (typeof callback == "function")
-                callback();
         }
 
         function zPageJS() {
@@ -1075,7 +1124,7 @@ $(window).resize(function(){
 
             // start the pond, filepond
             var loaded = $(".filepond").prev();
-            var value = null;
+            var value = true;
             if (value) {
                 $(".favSettings").removeClass("displayNone");
                 var files = [];
@@ -1190,25 +1239,24 @@ $(window).resize(function(){
                 $("body").css("overflow", "hidden");
 
                 setTimeout(function (){
-                    (function(next) {
-                        renderEverything();
-                    }(function() {
-                        $.ajax({
-                            url: "http://localhost/ultimate-z/_favicon/configure.php",
-                            cache: false,
-                            contentType: false,
-                            processData: false,
-                            data: post_data,
-                            type: "GET",
-                            success: function(data) {
-                            }
-                        });
-                    }));
+                    renderEverything();
 
                     window.location.assign("#");
                     $("body").css("overflow", "auto");
 
                     Toastify({
+                        callback: function() {
+                            $.ajax({
+                                url: "http://localhost/ultimate-z/_favicon/configure.php",
+                                cache: false,
+                                contentType: false,
+                                processData: false,
+                                data: post_data,
+                                type: "GET",
+                                success: function(data) {
+                                }
+                            });
+                        },
                         text: "Değişiklik yapıldı.",
                         duration: 3000
                     }).showToast();
@@ -1218,6 +1266,7 @@ $(window).resize(function(){
 
         document.addEventListener("DOMContentLoaded", function(event) {
             zPageJS();
+            zDetect();
         });
     </script>
 

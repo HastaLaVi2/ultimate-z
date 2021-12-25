@@ -48,6 +48,7 @@ DROP TABLE IF EXISTS `zViewsTotal`;";
 $tables .= "CREATE TABLE `z` (
   `id_z` int AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `cookie_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `error` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
@@ -160,7 +161,8 @@ $tables .= "CREATE TABLE `zPages` (
   `url` text NOT NULL,
   `area` text NOT NULL,
   `id_template` int NOT NULL,
-  `subpage` int NOT NULL
+  `subpage` int NOT NULL,
+  `status` int NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
 
 //
@@ -168,25 +170,25 @@ $tables .= "CREATE TABLE `zPages` (
 //
 
 $tables .= "INSERT INTO `zPages` (`id_page`, `url`, `area`, `id_template`) VALUES
-(1, '/_admin', 'back', 0, 0),
-(2, '/_admin/login', 'back', 0, 0),
-(3, '/_admin/forgot', 'back', 0, 0),
-(4, '/_admin/layouts/pages/create', 'back', 0, 0),
-(5, '/_admin/layouts/pages/edit', 'back', 0, 0),
-(6, '/_admin/layouts/pages', 'back', 0, 0),
-(7, '/_admin/layouts/categories/create', 'back', 0, 0),
-(8, '/_admin/layouts/categories/edit', 'back', 0, 0),
-(9, '/_admin/layouts/categories', 'back', 0, 0),
-(10, '/_admin/preferences', 'back', 0, 0),
-(11, '/_admin/profile', 'back', 0, 0),
-(12, '/_admin/advanced/run-queries', 'back', 0, 0),
-(13, '/_admin/advanced/database', 'back', 0, 0),
-(14, '/_admin/advanced/database/table', 'back', 0, 0),
-(15, '/_admin/users', 'back', 0, 0),
-(16, '/_admin/media', 'back', 0, 0),
-(17, '/_admin/layouts/design', 'back', 0, 0),
-(18, '/_admin/layouts/design/favicon', 'back', 0, 0),
-(1001, '/', 'front', 1, 0);";
+(1, '/_admin', 'back', 0, 0, 1),
+(2, '/_admin/login', 'back', 0, 0, 1),
+(3, '/_admin/forgot', 'back', 0, 0, 1),
+(4, '/_admin/layouts/pages/create', 'back', 0, 0, 1),
+(5, '/_admin/layouts/pages/edit', 'back', 0, 0, 1),
+(6, '/_admin/layouts/pages', 'back', 0, 0, 1),
+(7, '/_admin/layouts/categories/create', 'back', 0, 0, 1),
+(8, '/_admin/layouts/categories/edit', 'back', 0, 0, 1),
+(9, '/_admin/layouts/categories', 'back', 0, 0, 1),
+(10, '/_admin/preferences', 'back', 0, 0, 1),
+(11, '/_admin/profile', 'back', 0, 0, 1),
+(12, '/_admin/advanced/run-queries', 'back', 0, 0, 1),
+(13, '/_admin/advanced/database', 'back', 0, 0, 1),
+(14, '/_admin/advanced/database/table', 'back', 0, 0, 1),
+(15, '/_admin/users', 'back', 0, 0, 1),
+(16, '/_admin/media', 'back', 0, 0, 1),
+(17, '/_admin/layouts/design', 'back', 0, 0, 1),
+(18, '/_admin/layouts/design/favicon', 'back', 0, 0, 1),
+(1001, '/', 'front', 1, 0, 1);";
 
 // ////////////////////////////////////////////////////////
 

@@ -1,42 +1,48 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:17:06
+/* Smarty version 3.1.40, created on 2021-12-25 08:15:58
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883442b02611_90757606',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d33e9b85c5_11176554',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1636209072,
+      1 => 1640283363,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1636204676,
+      1 => 1637665907,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
+      2 => 'file',
+    ),
+    '573b073f619aeb439fcac73d74e676de04fada42' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
+      1 => 1640259422,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -48,25 +54,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1633373917,
+      1 => 1639138316,
       2 => 'file',
     ),
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1632988440,
+      1 => 1640283377,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1636232870,
+      1 => 1639138416,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1636204676,
+      1 => 1637666153,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -78,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d33e9b85c5_11176554 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -101,8 +107,6 @@ function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jquery -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery-3.6.0.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fontawesome/css/all.min.css"/>
@@ -112,23 +116,29 @@ function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
+    
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/ultimate-z/_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/ultimate-z/_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/ultimate-z/_favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/ultimate-z/_favicon/favicon-16x16.png">
 <link rel="manifest" href="http://localhost/ultimate-z/_favicon/site.webmanifest">
-<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#2d89ef">
+<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#99154e">
 <link rel="shortcut icon" href="http://localhost/ultimate-z/_favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileColor" content="#99154e">
 <meta name="msapplication-TileImage" content="http://localhost/ultimate-z/_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
+<meta name="theme-color" content="#99154e">
 
+<!-- lazysizes -->
+<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -142,9 +152,6 @@ function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- html2canvas -->
     <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
 </head>
 <body class="back7">
     
@@ -173,8 +180,7 @@ function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
-            </div>
+                ultimate Z            </div>
         </center>
     </div>
 </div>
@@ -184,7 +190,7 @@ function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead">
+    <div id="zTop">
     <!-- summernote -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/summernote/summernote-lite.min.css">
 
@@ -193,7 +199,8 @@ function content_61883442b02611_90757606 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-image-preview.css">
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.css">
     <style>
-    .hideForAddTop .hideForAdd {display: none;}
+    .hideForAddTop .hideForAdd { display: none;}
+    .note-btn { font-size: 12px !important; height: auto !important; padding: 8px !important;}
     </style>
 </div>
 
@@ -464,7 +471,14 @@ $(window).resize(function(){
                         </div>
                                     </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">Alt Sayfa</h6>
+                    <h6 class="bottom-12 top-0 font-1em">Durum</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="page_status" id="page_status"
+                        value="enabled" checked>
+                        <label for="page_status">Sayfa durumu</label>
+                        <div class="font-13">Sayfanın aktif olarak görüntülenip görüntülenemeyeceğini belirleyin.</div>
+                    </div>
+                    <h6 class="bottom-12 top-12 font-1em">Alt Sayfa</h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
                         value="enabled" checked>
@@ -473,7 +487,7 @@ $(window).resize(function(){
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
                         <option selected>Seç...</option>
-                        
+                        <option value='1002'>Moda</option><option value='1003'>1001</option>
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
@@ -481,14 +495,14 @@ $(window).resize(function(){
                     });
                     </script>
                     <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
-                    <ul class="cleanList nextToEach bottom-10"></ul>
+                    <ul class="cleanList nextToEach bottom-10"><li class="padL-0"><div><input type="checkbox" id="checkbox1" name="categories[]" value="1"checked><label for="checkbox1">Menü</label></div></li></ul>
                 </div>
                 <h6 class="bottom-10 top-0 font-1em">Tutucular</h6>
                 <div>
                     <div class="col-12 back7 bottom-20 pad-20 centerText pointThis rad-5 gray2" id="AddNewHolder">
                         Yeni Bir Tutucu Ekle
                     </div>
-                    <div id="dragulaAdd" class="col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
+                    <div id="dragulaAdd" class="hideScroll col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
                                                 
     <div class="zDestroy-holder1 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="1">
         <h6 class="bottom--10 top--10 left--10 right--10 font-1_5em thinText">
@@ -520,7 +534,7 @@ $(window).resize(function(){
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
                                 Kapat
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder1" href="#">
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder1" href="#">
                                 <span>Evet</span>
                             </a>
                         </div>
@@ -572,7 +586,7 @@ $(window).resize(function(){
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
                                 Kapat
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder2" href="#">
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder2" href="#">
                                 <span>Evet</span>
                             </a>
                         </div>
@@ -625,7 +639,7 @@ $(window).resize(function(){
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
                                 Kapat
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder3" href="#">
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder3" href="#">
                                 <span>Evet</span>
                             </a>
                         </div>
@@ -645,6 +659,7 @@ $(window).resize(function(){
                                                         <div class="top-20">
                         <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[2][]" style="background-color: white">
                             <option disabled>Seç...</option>
+                                                            <option value="1" >Menü</option>
                                                     </select>
                     </div>
                                     </div>
@@ -679,7 +694,7 @@ $(window).resize(function(){
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
                                 Kapat
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder4" href="#">
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder4" href="#">
                                 <span>Evet</span>
                             </a>
                         </div>
@@ -734,7 +749,7 @@ $(window).resize(function(){
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
                                 Kapat
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder5" href="#">
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder5" href="#">
                                 <span>Evet</span>
                             </a>
                         </div>
@@ -783,7 +798,7 @@ $(window).resize(function(){
                                     </div>
     </div>
                         </div>
-                    <div id="dragula" class="col-12 colTop between-20">
+                    <div id="dragula" class="hideScroll hideRest col-12 colTop between-20">
                                                                             <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
                                                                 
     <div class="zDestroy-holder6 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="6">
@@ -816,7 +831,7 @@ $(window).resize(function(){
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
                                 Kapat
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder6" href="#">
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder6" href="#">
                                 <span>Evet</span>
                             </a>
                         </div>
@@ -834,7 +849,7 @@ $(window).resize(function(){
                         </textarea>
                                     </div>
                                     <div class="top-20">
-                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="ultimate Z'ye hoş geldiniz!">
+                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="ultimate Z&#039;ye hoş geldiniz!">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
                         </div>
@@ -847,9 +862,9 @@ $(window).resize(function(){
                             </div>
                                             </div>
                 </div>
-                <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
-                    <div class="pad-20 gradYouToWhite">
-                        <button class="zButton primary widthAll zShadow5 top-20">Kaydet</button>
+                <div class="ButtonPos1 IWantItDownR padR-32 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
+                    <div class="padB-20 padLR-20 whiteBack">
+                        <button class="zButton primary widthAll zShadow5">Kaydet</button>
                     </div>
                 </div>
                 <div class="ButtonPos2">
@@ -890,7 +905,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.1</b></p>
     </div>
 </footer>
     </div>
@@ -935,8 +950,8 @@ $(window).resize(function(){
                 moves: function (el, container, handle) {
                     var searchPond = $(handle).closest(".filepond");
                     var searchSummer = $(handle).closest(".note-editor");
-                    if (searchPond.length || searchSummer.length ||
-                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
+                    if (searchPond.length || searchSummer.length || handle.nodeName == "INPUT" ||
+                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
                         return false;
                     } else {
                         return true;
@@ -948,12 +963,6 @@ $(window).resize(function(){
                     value.style.display = "none";
                 });
             }).on("out", function (el, container, source) {
-                // the data attribute tells us the old modalNumber of our holder,
-                // because on page load, holders on the left column has their own
-                // modalNumber values, but when they are copied to the actual page,
-                // we need to change it with a new modalNumber
-                var data = el.getAttribute("data");
-
                 // make the content visible again
                 var hides = el.querySelectorAll(".hideForAdd");
                 if ($(el).find(".fa-chevron-up").css("display") !== "none") {
@@ -967,20 +976,42 @@ $(window).resize(function(){
                     $(el).parent().append(blockTitle);
                 }
 
-                $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
-                $(el).find(".zShow-downHolder" + data).removeClass("zShow-downHolder" + data).addClass("zShow-downHolder" + modalNumber);
+                if (source.getAttribute("id") == "dragulaAdd") {
+                    el.setAttribute("update", "true");
+                }
+            }).on("dragend", function (el) {
+                // the data attribute tells us the old modalNumber of our holder,
+                // because on page load, holders on the left column has their own
+                // modalNumber values, but when they are copied to the actual page,
+                // we need to change it with a new modalNumber
+                var data = el.getAttribute("data");
+                console.log(modalNumber);
 
-                // time to update the modalNumber
-                el.querySelectorAll(".zModal")[0].setAttribute("id", "modal" + modalNumber);
-                el.querySelectorAll(".zModalLink")[0].setAttribute("href", "#modal" + modalNumber);
-                el.classList.remove("zDestroy-holder"+data);
-                el.classList.add("zDestroy-holder"+modalNumber);
-                var remove = el.querySelectorAll("[class*=zRemove]")[0];
-                remove.classList.remove("zRemove-holder"+data);
-                remove.classList.add("zRemove-holder"+modalNumber);
+                if (el.getAttribute("update") == "true") {
+                    $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
+                    $(el).find(".zShow-downHolder" + data).removeClass("zShow-downHolder" + data).addClass("zShow-downHolder" + modalNumber);
+                    $(el).find(".zTog-imagesFor" + data).removeClass("zTog-imagesFor" + data).addClass("zTog-imagesFor" + modalNumber);
+                    $(el).find(".zShow-imagesFor" + data).removeClass("zShow-imagesFor" + data).addClass("zShow-imagesFor" + modalNumber);
 
-                // now lets increase the modalNumber value for the next arrival
-                modalNumber += 1;
+                    // time to update the modalNumber
+                    el.querySelectorAll(".zModal")[0].setAttribute("id", "modal" + modalNumber);
+                    el.querySelectorAll(".zModalLink")[0].setAttribute("href", "#modal" + modalNumber);
+                    el.classList.remove("zDestroy-holder"+data);
+                    el.classList.add("zDestroy-holder"+modalNumber);
+                    var remove = el.querySelectorAll("[class*=zRemove]")[0];
+                    remove.classList.remove("zRemove-holder"+data);
+                    remove.classList.add("zRemove-holder"+modalNumber);
+                    remove.setAttribute("zRemove", "false");
+
+                    // now lets increase the modalNumber value for the next arrival
+                    modalNumber = Number(modalNumber) + 1;
+                    el.setAttribute("update", "false");
+
+                    toggleParentNext($(el).find(".toggleParentNext"));
+
+                    $(el).find(".note-editor").remove();
+                    summernoteStart($(el).find(".summernote"));
+                }
 
                 // functions that need a rerun after a copy
                 zRemove();
@@ -989,10 +1020,6 @@ $(window).resize(function(){
                 runFilePond();
                 summernoteKeyup($(el).find(".note-editable"));
                 storeCat();
-
-                if ($(source).attr("id") == "dragulaAdd") {
-                    toggleParentNext($(el).find(".toggleParentNext"));
-                }
             });
         }
 
@@ -1083,7 +1110,9 @@ $(window).resize(function(){
             }
             data.set("langcode", "tr");
             // send the file to server
-            data.append("fileToUpload", image);
+            var newName = slug(image.name.replace(/\.[^/.]+$/, "")) + "." + image.name.replace(/^[^/.]+\./, "");
+            var newFile = new File([image], newName, { type: image.type});
+            data.append("fileToUpload", newFile);
             $.ajax({
                 url: "http://localhost/ultimate-z/_media/upload.php",
                 cache: false,
@@ -1102,7 +1131,7 @@ $(window).resize(function(){
                         // instead of "content[]", normally storingData() function stores
                         // all hidden content but images, so files uploaded with filepond will be
                         // stored through here
-                        $(filepond).parent().prev().children().each(function () {
+                        $(filepond).closest(".top-20").prev().children().each(function () {
                             // get the hidden content's current value
                             var already = $(this).val();
                             var alreO = [];
@@ -1135,56 +1164,59 @@ $(window).resize(function(){
 
         // start the pond, filepond
         function runFilePond() {
-            document.getElementById("dragula").querySelectorAll(".filepond").forEach(function(v, i) {
-                var loaded = $(v).prev();
-                var value = v.previousElementSibling.value;
-                var multi = loaded.attr("data-multi");
-                if (value !== "") {
-                    var files = [];
-                    for (let i=0; i < value.split(";").length; i++) {
-                        files.push({
-                            source: "../../../../_media/uploads/1001/"+value.split(";")[i],
-                            options: {
-                                type: "local"
+            if ($(document.getElementById("dragula")).length) {
+                document.getElementById("dragula").querySelectorAll(".filepond").forEach(function(v, i) {
+                    var loaded = $(v).prev();
+                    var value = v.previousElementSibling.value;
+                    var multi = loaded.attr("data-multi");
+                    if (value !== "") {
+                        var files = [];
+                        for (let i=0; i < value.split(";").length; i++) {
+                            files.push({
+                                source: "../../../../_media/uploads/1001/"+value.split(";")[i],
+                                options: {
+                                    type: "local"
+                                }
+                            });
+                        }
+                        var load = {
+                            load: (uniqueFileId, load) => {
+                                // you would get the file data from your server here
+                                fetch(uniqueFileId)
+                                .then(res => res.blob())
+                                .then(load);
                             }
+                        };
+                    }
+                    if (loaded.attr("data-filepond-loaded") !== "true") {
+                        FilePond.create(v, {
+                            allowImagePreview: true,
+                            imagePreviewMaxFileSize: "500kb",
+                            allowMultiple: (multi == "true" ? true : false),
+                            allowReorder: (multi == "true" ? true : false),
+                            maxFileSize: "20MB",
+                            acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
+                            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                                // Do custom type detection here and return with promise
+                                resolve(type);
+                            }),
+                            files: (files ? files : null),
+                            server: (load ? load : null)
                         });
                     }
-                    var load = {
-                        load: (uniqueFileId, load) => {
-                            // you would get the file data from your server here
-                            fetch(uniqueFileId)
-                            .then(res => res.blob())
-                            .then(load);
-                        }
-                    };
-                }
-                if (loaded.attr("data-filepond-loaded") !== "true") {
-                    FilePond.create(v, {
-                        allowImagePreview: true,
-                        allowMultiple: (multi == "true" ? true : false),
-                        allowReorder: (multi == "true" ? true : false),
-                        maxFileSize: "20MB",
-                        acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
-                        fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
-                            // Do custom type detection here and return with promise
-                            resolve(type);
-                        }),
-                        files: (files ? files : null),
-                        server: (load ? load : null)
-                    });
-                }
 
-                if (loaded.closest("#dragula").length) {
-                    loaded.attr("data-filepond-loaded", true);
-                }
-            });
+                    if (loaded.closest("#dragula").length) {
+                        loaded.attr("data-filepond-loaded", true);
+                    }
+                });
 
-            // set filepond server
-            FilePond.setOptions({
-                server: "./",
-            });
+                // set filepond server
+                FilePond.setOptions({
+                    server: "./",
+                });
 
-            filepondCallbacks();
+                filepondCallbacks();
+            }
         }
 
         // callbacks for filepond
@@ -1227,7 +1259,7 @@ $(window).resize(function(){
                         var elemID = e.detail.file.id;
                         var files = e.detail.pond.getFiles();
 
-                        elem.parent().prev().children().each(function () {
+                        elem.closest(".top-20").prev().children().each(function () {
                             var already = $(this).val();
                             already = already.split(";");
                             already.splice(window.pondNS[elemID], 1);
@@ -1248,7 +1280,7 @@ $(window).resize(function(){
                         var elemID = e.detail.pond.getFile().id;
                         var files = e.detail.pond.getFiles();
 
-                        elem.parent().prev().children().each(function () {
+                        elem.closest(".top-20").prev().children().each(function () {
                             var already = $(this).val().trim();
                             already = already.split(";");
                             var newAlre = [];
@@ -1288,6 +1320,31 @@ $(window).resize(function(){
             });
         }
 
+        // start all summernotes
+        function summernoteStart(element) {
+            element.summernote({
+                lang: "tr-TR",
+                fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48' , '64', '82', '150'],
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontname', ['fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['picture', ['picture', 'link', 'video', 'table']],
+                    ['view', ['fullscreen', 'codeview']],
+                ],
+                tabsize: 1,
+                callbacks: {
+                    onImageUpload: function(files) {
+                        for (let i=0; i < files.length; i++) {
+                            uploadImage(files[i], $(this));
+                        }
+                    }
+                }
+            });
+        }
+
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
         var modalNumber = "7";
@@ -1310,18 +1367,7 @@ $(window).resize(function(){
                 $(".divFor"+now).css("display", "block");
             });
 
-            // start all summernotes
-            $(".summernote").summernote({
-                lang: "tr-TR",
-                tabsize: 1,
-                callbacks: {
-                    onImageUpload: function(files) {
-                        for (let i=0; i < files.length; i++) {
-                            uploadImage(files[i], $(this));
-                        }
-                    }
-                }
-            });
+            summernoteStart($(".summernote"));
             summernoteKeyup($(".note-editable"));
             storeCat();
 
@@ -1349,18 +1395,34 @@ $(window).resize(function(){
 
             // add new holder button
             $("#AddNewHolder").click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(this).offset().top - 100
+                }, 500);
+
                 var dragula = $("#dragula");
                 var dragulaAdd = $("#dragulaAdd");
 
                 dragulaAdd.toggle();
                 dragula.toggleClass("col-8").toggleClass("col-12");
+                var calcPX = ($(window).width() > 1024)
+                    ? ($(window).height() - 180 - $(this).height() - $(".ButtonPos2").height() + "px")
+                    : "40vh";
 
                 if (dragulaAdd.css("display") !== "none") {
                     var count = dragula.children().length;
                     var newHeight = (dragulaAdd.height() - ((count-1)*20)) / count;
                     dragula.children().css("min-height", newHeight);
+                    dragulaAdd.css({
+                        "height": calcPX,
+                        "overflow": "scroll"
+                    });
+                    dragula.css({
+                        "height": calcPX,
+                        "overflow": "scroll"
+                    });
                 } else {
                     dragula.children().css("min-height", "100%");
+                    dragula.css("height", "auto");
                 }
             });
 

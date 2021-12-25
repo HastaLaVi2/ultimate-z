@@ -68,11 +68,11 @@ $android_cont .= '
 }';
 file_put_contents("site.webmanifest", $android_cont);
 
-// head.tpl
-$head_con = file_get_contents("../_holders/head.tpl");
+// favicon.tpl
+$head_con = file_get_contents("../_holders/favicon.tpl");
 $head_con = preg_replace('/safari-pinned-tab.svg" color="(.+?)">/s', 'safari-pinned-tab.svg" color="'.$_GET["macDiffer_bg"].'">', $head_con);
 $head_con = preg_replace('/<meta name="msapplication-TileColor" content="(.+?)">/s', '<meta name="msapplication-TileColor" content="'.$_GET["winDiffer_bg"].'">', $head_con);
 $head_con = preg_replace('/<meta name="theme-color" content="(.+?)">/s', '<meta name="theme-color" content="'.$andr_color.'">', $head_con);
-file_put_contents("../_holders/head.tpl", $head_con);
+file_put_contents("../_holders/favicon.tpl", $head_con);
 
 ?>

@@ -35,7 +35,11 @@ class zPageStarter extends zPage {
         }
 
         if((isset($_SESSION["zLogged-" . $z->key]) && $_SESSION["zLogged-" . $z->key])) {
-            header("Location: ../");
+            if (isset($_GET["redirect"])) {
+                header("Location: ../" . $_GET["redirect"]);
+            } else {
+                header("Location: ../");
+            }
         }
     }
 }

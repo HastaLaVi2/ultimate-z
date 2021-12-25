@@ -1,42 +1,48 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:16:52
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:01
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883434157c03_65400450',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d6892651b4_54002856',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f3ce0a95b089b83ae762214d8d39d79fcd27b89' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl',
-      1 => 1631556859,
+      1 => 1639309789,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1636204676,
+      1 => 1637665907,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
+      2 => 'file',
+    ),
+    '573b073f619aeb439fcac73d74e676de04fada42' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
+      1 => 1640259422,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -48,25 +54,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1633373917,
+      1 => 1639138316,
       2 => 'file',
     ),
     '00713257cf9551af20df90b209cc4ee0ca5ac7bb' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl',
-      1 => 1636207784,
+      1 => 1639138452,
       2 => 'file',
     ),
     '3c98e242087fd8cf119847a5ffb011fca48c94fb' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/statistics.tpl',
-      1 => 1626945324,
+      1 => 1639138439,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1636204676,
+      1 => 1640420923,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -78,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d6892651b4_54002856 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -101,8 +107,6 @@ function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jquery -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery-3.6.0.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fontawesome/css/all.min.css"/>
@@ -112,23 +116,29 @@ function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
+    
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/ultimate-z/_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/ultimate-z/_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/ultimate-z/_favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/ultimate-z/_favicon/favicon-16x16.png">
 <link rel="manifest" href="http://localhost/ultimate-z/_favicon/site.webmanifest">
-<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#2d89ef">
+<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#99154e">
 <link rel="shortcut icon" href="http://localhost/ultimate-z/_favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileColor" content="#99154e">
 <meta name="msapplication-TileImage" content="http://localhost/ultimate-z/_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
+<meta name="theme-color" content="#99154e">
 
+<!-- lazysizes -->
+<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -142,9 +152,6 @@ function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- html2canvas -->
     <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
 </head>
 <body class="back7">
     
@@ -173,8 +180,7 @@ function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
-            </div>
+                ultimate Z            </div>
         </center>
     </div>
 </div>
@@ -184,7 +190,7 @@ function content_61883434157c03_65400450 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead"></div>
+    <div id="zTop"></div>
 
     
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">
@@ -394,14 +400,28 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                15
+                                372
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
+                                                                                <div class="widthAll padL-20 padR-100">
+                            Moda
+                            <span class="floatingTheRight padR-20 boldText" style="color: #008b75">
+                                32
+                            </span>
+                        </div>
+                        <div id="chart-1002" class="left--22 right--10"></div>
+                                                                                <div class="widthAll padL-20 padR-100">
+                            1001
+                            <span class="floatingTheRight padR-20 boldText" style="color: #dc3545">
+                                19
+                            </span>
+                        </div>
+                        <div id="chart-1003" class="left--22 right--10"></div>
                                         </div>
-                                                    <div class="widthAll centerText pad-20 bottom-20">
-                    <div class="zDatePrev zCol-6 padR-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
-                    <div class="zDateNext zCol-6 padL-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+                                                                        <div class="widthAll centerText pad-20 bottom-20 gray2">
+                    <div class="zDatePrev zCol-6 padR-5 "><div class="grayBack1 rad-5"><i class="fas fa-chevron-left"></i></div></div>
+                    <div class="zDateNext zCol-6 padL-5 "><div class="grayBack1 rad-5"><i class="fas fa-chevron-right"></i></div></div>
                 </div>
             </div>
         </div>
@@ -412,7 +432,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">15</h6>
+        <h6 class="top-0 bottom-0">423</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -426,13 +446,17 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-bookmark floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #ff7976"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa</h6>
-        <h6 class="top-0 bottom-0">1</h6>
+        <h6 class="top-0 bottom-0">3</h6>
     </div>
 </div>
         <div class="widthAll padL-20 zMob-padB-20 padT-20 zMob-padT-0">
             <div class="whiteBack rad-15 pad-20 font-16">
                 <h4 class="font-19 top-0 text4 boldText">Zamana Göre Toplam Görüntülenme</h4>
                 <div id="chart-profile-visit"></div>
+                <div class="widthAll centerText padT-20">
+                    <div class="zBarPrev zCol-6 padR-5 pointThis" onclick="barDatePrevClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
+                    <div class="zBarNext zCol-6 padL-5 pointThis" onclick="barDateNextClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+                </div>
             </div>
         </div>
     </div>
@@ -445,7 +469,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.2</b></p>
     </div>
 </footer>
     </div>
@@ -468,10 +492,14 @@ $(window).resize(function(){
         }
     });
 
-    function dateTable(period) {
+    function dateTable(period, start) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
-        var date = new Date("2021/11/07");
+        var date = new Date("2021/12/25");
+        if (start) {
+            date.setDate(date.getDate() - start);
+        }
+
         var table = [];
 
         for (let i = 0; i <= (period-1); i++) {
@@ -482,8 +510,8 @@ $(window).resize(function(){
         return table;
     }
 
-    function apexBarCreate(id, period, data) {
-        var table = dateTable(period);
+    function apexBarCreate(id, period, data, start) {
+        var table = dateTable(period, start);
 
         var options = {
             annotations: {
@@ -512,8 +540,11 @@ $(window).resize(function(){
                 categories: table,
             },
         };
-        var element = new ApexCharts(document.querySelector(id), options);
-        element.render();
+        if ($(document.querySelector(id)).length) {
+            document.querySelector(id).innerHTML = "";
+            var element = new ApexCharts(document.querySelector(id), options);
+            element.render();
+        }
     }
 
     function apexLineCreate(id, period, data, color) {
@@ -571,15 +602,65 @@ $(window).resize(function(){
         element.render();
     }
 
+    function barDateNextClicker() {
+        window.barDate = window.barDate + (window.next == null ? 7 : 0);
+        $.ajax({
+            url: "http://localhost/ultimate-z/_admin/stats.php",
+            type: "post",
+            dataType: 'json',
+            data: { barDate:window.barDate },
+            error:function(result){
+                var hey = result.responseText.replace("'", "").replace("'", "");
+                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
+                window.barDate = window.barDate + 7;
+                window.next = true;
+            }
+        });
+    }
+
+    function barDatePrevClicker() {
+        window.barDate = window.barDate - (window.barDate - 7 >= 0 ? 7 : 0);
+        window.barDate = window.barDate - ((window.next !== null && window.barDate - 7 >= 0) ? 7 : 0);
+        $.ajax({
+            url: "http://localhost/ultimate-z/_admin/stats.php",
+            type: "post",
+            dataType: 'json',
+            data: { barDate:window.barDate },
+            error:function(result){
+                var hey = result.responseText.replace("'", "").replace("'", "");
+                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
+                window.next = null;
+            }
+        });
+    }
+
     function zPageJS() {
+        window.barDate = 7;
+        window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["0","6","0","0","0","2","0"]);
-                apexLineCreate(
-            "#chart-1001",
-            12,
-            ["0","6","0","0","0","2","0","0","0","0","0","0"],
-            "#5350e9"        );
+        apexBarCreate("#chart-profile-visit", 7, ["1","0","2","0","1","1","0"]);
+                if ($("#chart-1001").length) {
+            apexLineCreate(
+                "#chart-1001",
+                12,
+                ["1","0","2","0","1","1","0","0","5","1","0","0"],
+                "#5350e9"            );
+        }
+                if ($("#chart-1002").length) {
+            apexLineCreate(
+                "#chart-1002",
+                12,
+                ["0","0","0","0","0","0","0","0","0","0","0","0"],
+                "#008b75"            );
+        }
+                if ($("#chart-1003").length) {
+            apexLineCreate(
+                "#chart-1003",
+                12,
+                ["0","0","0","0","0","0","0","0","0","0","0","0"],
+                "#dc3545"            );
+        }
         
         let tabNum = 0;
         $(".zDateNext").click(function() {

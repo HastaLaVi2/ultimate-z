@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:04
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_618838133a23d2_74148344',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d68c623f84_12132471',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_618838133a23d2_74148344 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1657833954618838133a1851_71395119';
+function content_61c6d68c623f84_12132471 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '206516782461c6d68c622270_45356185';
 ?>
 
 <div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
-<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 padL-332 zMob1200-padL-0">
+<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 <?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {?>padL-332 zMob1200-padL-0<?php }?>">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -49,7 +49,9 @@ $_smarty_tpl->compiled->nocache_hash = '1657833954618838133a1851_71395119';
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
+                <?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {?>ultimate Z<?php } else {
+echo $_smarty_tpl->tpl_vars['z']->value->name;
+}?>
             </div>
         </center>
     </div>

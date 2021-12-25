@@ -20,7 +20,8 @@ class zPageStarter extends zPage {
     }
 
     public function _zStarter(array $data = NULL, $zSmarty = NULL) {
-        $zThis = zThis::get()->table;
+        $zThis = $zSmarty->tpl_vars["zThis"]->value;
+        $z = $zSmarty->tpl_vars["z"]->value;
         $zUser = $zSmarty->tpl_vars["zUser"]->value;
         $zContent = $zSmarty->tpl_vars["zContent"]->value;
 
@@ -28,13 +29,51 @@ class zPageStarter extends zPage {
             header("Location: " . $zContent->srcFull["_main"] . "index.php?view=403");
         }
 
-		if(!empty($data)) {
+        if(!empty($data)) {
+            if (isset($data["updateSite"])) {
+                $params = array();
+                $params["langcode"] = $data["langcode"];
+                $params["cookie_key"] = $z->key;
+                $params["hidden_key"] = $z->hidden_key;
+                $params["page"] = "_update.php";
+
+                $ch = curl_init();
+
+                curl_setopt($ch, CURLOPT_URL, "https://onucyirmibir.com/zUpdate.php");
+                curl_setopt($ch, CURLOPT_POST, count($params));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                $new = curl_exec($ch);
+
+                $current = file_get_contents($zContent->src["main"] . $params["page"]);
+
+                if ($current !== $new) {
+                    file_put_contents($zContent->src["main"] . $params["page"], $new);
+                }
+
+                curl_close($ch);
+
+                $ch = curl_init();
+
+                curl_setopt($ch, CURLOPT_URL, $zContent->srcFull["_main"] . "/_update.php");
+                curl_setopt($ch, CURLOPT_POST, count($params));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                $result = curl_exec($ch);
+
+                curl_close($ch);
+
+                die($result);
+            }
+
 			$error_page = $data["error_page"];
 			$site_name = $data["site_name"];
 			$status = $data["enabledSite"];
 			$disabledLangs = $data["languages"];
-		    if (!isset($error_page))$error_page = "disabled";
-		    if (!isset($status))$status = "disabled";
+            if (!isset($error_page))$error_page = "disabled";
+            if (!isset($status))$status = "disabled";
 
             $query = "UPDATE zLanguages SET disabled = '1';";
             if (!empty($disabledLangs)) {
@@ -43,12 +82,12 @@ class zPageStarter extends zPage {
                 }
             }
 			$query .= "UPDATE z SET name = '$site_name', status = '$status', error = '$error_page' WHERE id_z = '1';";
-		    if (zDB::get()->execute($query)) {
-                die($zThis["Change has been made."]);
-		    } else {
+            if (zDB::get()->execute($query)) {
+                die($zThis->value("Change has been made."));
+            } else {
                 header("Content-Type: application/json; charset=UTF-8");
-                die($zThis["Change has failed."]);
-		    }
+                die($zThis->value("Change has failed."));
+            }
 		}
     }
 }

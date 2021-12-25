@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:16:52
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:01
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_618834341106a7_90878559',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d6890ba7c7_62095522',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '00713257cf9551af20df90b209cc4ee0ca5ac7bb' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl',
-      1 => 1636207784,
+      1 => 1639138452,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_618834341106a7_90878559 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '6631021196188343410c584_80215973';
+function content_61c6d6890ba7c7_62095522 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
+$_smarty_tpl->compiled->nocache_hash = '9069272261c6d6890b71b1_32999799';
 ?>
 
 <div class="whiteBack rad-15 pad-20">
@@ -43,7 +44,7 @@ $_smarty_tpl->compiled->nocache_hash = '6631021196188343410c584_80215973';
 _admin/logout/" class="forceLink weight-400">
         <div class="back5 zHov-back2 animation font-16 centerText whiteText bottom--20 left--20 right--20 pad-8 rad-c3-15 rad-c4-15 zShadow5">
             <i class="fas fa-sign-out-alt"></i>
-            <?php echo $_smarty_tpl->tpl_vars['zThis']->value["Log out"];?>
+            <?php echo smarty_function_zThis(array('z'=>"Log out"),$_smarty_tpl);?>
 
         </div>
     </a>

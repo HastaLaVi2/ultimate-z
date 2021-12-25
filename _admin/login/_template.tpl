@@ -57,7 +57,7 @@
                             {zThis z="Keep me logged in"}
                         </label>
                     </div>
-                    <button id="btnSubmit" class="zButton primary widthAll zShadow">{zThis z="Log in"}</button>
+                    <button id="btnSubmit" class="zButton primary widthAll zShadow5">{zThis z="Log in"}</button>
                 </form>
                 <p class="font-27_2 gray2 top-20 bottom-48">
                     <a href="{$zContent->srcFull["main"]}_admin/forgot/" class="forceLink">{zThis z="Forgot your password?"}</a>

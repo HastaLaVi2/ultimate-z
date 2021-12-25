@@ -27,7 +27,7 @@
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead">{block name="zHead"}{/block}</div>
+    <div id="zTop">{block name="zTop"}{/block}</div>
 
     {include file="_partials/sidebar.tpl"}
     <div class="widthAll pad-32 padL-332" zMob-1200="padL-32">

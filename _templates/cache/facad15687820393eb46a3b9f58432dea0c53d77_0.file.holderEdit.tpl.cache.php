@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:17:06
+/* Smarty version 3.1.40, created on 2021-12-25 08:15:58
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883442ac1503_64625382',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d33e973bd2_50794331',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1632988440,
+      1 => 1640283377,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61883442ac1503_64625382 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d33e973bd2_50794331 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '6666835661883442aa81b8_05612191';
+$_smarty_tpl->compiled->nocache_hash = '159435063961c6d33e94fb74_26319548';
 ?>
 
 <?php
@@ -56,22 +56,22 @@ $_smarty_tpl->tpl_vars['holder']->do_else = false;
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                <?php echo $_smarty_tpl->tpl_vars['zThis']->value["Delete Holder"];?>
+                                <?php echo smarty_function_zThis(array('z'=>"Delete Holder"),$_smarty_tpl);?>
 
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            <?php echo $_smarty_tpl->tpl_vars['zThis']->value["Are you sure you want to delete this holder?"];?>
+                            <?php echo smarty_function_zThis(array('z'=>"Are you sure you want to delete this holder?"),$_smarty_tpl);?>
 
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                <?php echo $_smarty_tpl->tpl_vars['zThis']->value["Close"];?>
+                                <?php echo smarty_function_zThis(array('z'=>"Close"),$_smarty_tpl);?>
 
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
 " href="#">
-                                <span><?php echo $_smarty_tpl->tpl_vars['zThis']->value["Accept"];?>
+                                <span><?php echo smarty_function_zThis(array('z'=>"Accept"),$_smarty_tpl);?>
 </span>
                             </a>
                         </div>
@@ -110,7 +110,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['holder']->value->types[$_smarty_tpl->tpl_vars['key']->value] == "input") {?>
                     <div class="top-20">
                         <input name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang;?>
-][]" type="text" class="back-white page-title padL-45" value="<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+][]" type="text" class="back-white page-title padL-45" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['content']->value, ENT_QUOTES, 'UTF-8', true);?>
 ">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
@@ -124,9 +124,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
                 <?php } elseif ($_smarty_tpl->tpl_vars['holder']->value->types[$_smarty_tpl->tpl_vars['key']->value] == "images") {?>
                     <div class="top-20">
-                        <input class="displayNone" value="<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+                        <div class="zTog-imagesFor<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
+ pad-10 rad-5 pointThis" style="background:#f0efee">
+                            <div class="zShow-imagesFor<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
+"><?php echo smarty_function_zThis(array('z'=>"Click to upload your media."),$_smarty_tpl);?>
+</div>
+                            <div class="zShow-imagesFor<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
+ displayNone"><?php echo smarty_function_zThis(array('z'=>"Hide upload panel."),$_smarty_tpl);?>
+</div>
+                        </div>
+                        <div class="displayNone zShow-imagesFor<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
+ _top--5">
+                            <div class="floatingSpace widthAll height-10 boldMin-1 boldSoG2 boldNoL boldNoR boldNoB index-10" style="background:#f0efee"></div>
+                            <input class="displayNone" value="<?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 " data-multi="true">
-                        <input type="file" class="filepond">
+                            <input type="file" class="filepond">
+                        </div>
                     </div>
                 <?php } elseif ($_smarty_tpl->tpl_vars['holder']->value->types[$_smarty_tpl->tpl_vars['key']->value] == "categorylist") {?>
                     <?php $_smarty_tpl->_assignInScope('allcats', $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryGetAll($_smarty_tpl->tpl_vars['zContent']->value->language->id));?>

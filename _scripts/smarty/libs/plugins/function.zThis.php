@@ -10,7 +10,7 @@
  */
 function smarty_function_zThis($params, Smarty_Internal_Template $template)
 {
-    $allTranslations = $template->smarty->tpl_vars["zThis"]->value;
+    $allTranslations = $template->smarty->tpl_vars["zThis"]->value->table;
 
     return $allTranslations[$params["z"]] ? $allTranslations[$params["z"]] : $params["z"];
 }

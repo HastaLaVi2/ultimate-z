@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:16:52
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:00
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883434039dc2_31046294',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d688e798d9_66666814',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f3ce0a95b089b83ae762214d8d39d79fcd27b89' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl',
-      1 => 1631556859,
+      1 => 1639309789,
       2 => 'file',
     ),
   ),
@@ -22,32 +22,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/statistics.tpl' => 1,
   ),
 ),false)) {
-function content_61883434039dc2_31046294 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d688e798d9_66666814 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '14369128261883433f31bc9_36866297';
+$_smarty_tpl->compiled->nocache_hash = '120288871261c6d688e354e3_12726257';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_83825590061883434013151_90624414', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_42566970361c6d688e4f958_19909424', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19114729746188343402d884_15168692', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7901107461c6d688e69ff6_45379658', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_83825590061883434013151_90624414 extends Smarty_Internal_Block
+class Block_42566970361c6d688e4f958_19909424 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_83825590061883434013151_90624414',
+    0 => 'Block_42566970361c6d688e4f958_19909424',
   ),
 );
 public $append = 'true';
@@ -91,9 +91,9 @@ $_smarty_tpl->tpl_vars['page']->do_else = false;
                 <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <div class="widthAll centerText pad-20 bottom-20">
-                    <div class="zDatePrev zCol-6 padR-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
-                    <div class="zDateNext zCol-6 padL-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+                <div class="widthAll centerText pad-20 bottom-20 <?php if (count($_smarty_tpl->tpl_vars['pageStats']->value) > 3) {?>text4<?php } else { ?>gray2<?php }?>">
+                    <div class="zDatePrev zCol-6 padR-5 <?php if (count($_smarty_tpl->tpl_vars['pageStats']->value) > 3) {?>pointThis<?php }?>"><div class="<?php if (count($_smarty_tpl->tpl_vars['pageStats']->value) > 3) {?>back7<?php } else { ?>grayBack1<?php }?> rad-5"><i class="fas fa-chevron-left"></i></div></div>
+                    <div class="zDateNext zCol-6 padL-5 <?php if (count($_smarty_tpl->tpl_vars['pageStats']->value) > 3) {?>pointThis<?php }?>"><div class="<?php if (count($_smarty_tpl->tpl_vars['pageStats']->value) > 3) {?>back7<?php } else { ?>grayBack1<?php }?> rad-5"><i class="fas fa-chevron-right"></i></div></div>
                 </div>
             </div>
         </div>
@@ -106,6 +106,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <h4 class="font-19 top-0 text4 boldText"><?php echo smarty_function_zThis(array('z'=>"Total Views by Period"),$_smarty_tpl);?>
 </h4>
                 <div id="chart-profile-visit"></div>
+                <div class="widthAll centerText padT-20">
+                    <div class="zBarPrev zCol-6 padR-5 pointThis" onclick="barDatePrevClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
+                    <div class="zBarNext zCol-6 padL-5 pointThis" onclick="barDateNextClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,12 +118,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_19114729746188343402d884_15168692 extends Smarty_Internal_Block
+class Block_7901107461c6d688e69ff6_45379658 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_19114729746188343402d884_15168692',
+    0 => 'Block_7901107461c6d688e69ff6_45379658',
   ),
 );
 public $append = 'true';
@@ -144,11 +148,15 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
         }
     });
 
-    function dateTable(period) {
+    function dateTable(period, start) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
         var date = new Date("<?php echo date('Y/m/d');?>
 ");
+        if (start) {
+            date.setDate(date.getDate() - start);
+        }
+
         var table = [];
 
         for (let i = 0; i <= (period-1); i++) {
@@ -159,8 +167,8 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
         return table;
     }
 
-    function apexBarCreate(id, period, data) {
-        var table = dateTable(period);
+    function apexBarCreate(id, period, data, start) {
+        var table = dateTable(period, start);
 
         var options = {
             annotations: {
@@ -191,8 +199,11 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                 categories: table,
             },
         };
-        var element = new ApexCharts(document.querySelector(id), options);
-        element.render();
+        if ($(document.querySelector(id)).length) {
+            document.querySelector(id).innerHTML = "";
+            var element = new ApexCharts(document.querySelector(id), options);
+            element.render();
+        }
     }
 
     function apexLineCreate(id, period, data, color) {
@@ -251,7 +262,43 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
         element.render();
     }
 
+    function barDateNextClicker() {
+        window.barDate = window.barDate + (window.next == null ? 7 : 0);
+        $.ajax({
+            url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull['admin'];?>
+/stats.php",
+            type: "post",
+            dataType: 'json',
+            data: { barDate:window.barDate },
+            error:function(result){
+                var hey = result.responseText.replace("'", "").replace("'", "");
+                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
+                window.barDate = window.barDate + 7;
+                window.next = true;
+            }
+        });
+    }
+
+    function barDatePrevClicker() {
+        window.barDate = window.barDate - (window.barDate - 7 >= 0 ? 7 : 0);
+        window.barDate = window.barDate - ((window.next !== null && window.barDate - 7 >= 0) ? 7 : 0);
+        $.ajax({
+            url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull['admin'];?>
+/stats.php",
+            type: "post",
+            dataType: 'json',
+            data: { barDate:window.barDate },
+            error:function(result){
+                var hey = result.responseText.replace("'", "").replace("'", "");
+                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
+                window.next = null;
+            }
+        });
+    }
+
     function zPageJS() {
+        window.barDate = 7;
+        window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
         apexBarCreate("#chart-profile-visit", 7, <?php echo json_encode($_smarty_tpl->tpl_vars['zTools']->value->zToolsViewsTotalForPeriod("7"));?>
@@ -262,14 +309,17 @@ $_smarty_tpl->tpl_vars['page']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['page']->value) {
 $_smarty_tpl->tpl_vars['page']->do_else = false;
 ?>
-        apexLineCreate(
-            "#chart-<?php echo $_smarty_tpl->tpl_vars['page']->value->id;?>
+        if ($("#chart-<?php echo $_smarty_tpl->tpl_vars['page']->value->id;?>
+").length) {
+            apexLineCreate(
+                "#chart-<?php echo $_smarty_tpl->tpl_vars['page']->value->id;?>
 ",
-            12,
-            <?php echo json_encode($_smarty_tpl->tpl_vars['zTools']->value->zToolsViewsTotalForPeriod("12",((string)$_smarty_tpl->tpl_vars['page']->value->id)));?>
+                12,
+                <?php echo json_encode($_smarty_tpl->tpl_vars['zTools']->value->zToolsViewsTotalForPeriod("12",((string)$_smarty_tpl->tpl_vars['page']->value->id)));?>
 ,
-            <?php if (($_smarty_tpl->tpl_vars['key']->value+1)%3 == 0) {?>"#dc3545"<?php } elseif (($_smarty_tpl->tpl_vars['key']->value+1)%2 == 0) {?>"#008b75"<?php } else { ?>"#5350e9"<?php }?>
-        );
+                <?php if (($_smarty_tpl->tpl_vars['key']->value+1)%3 == 0) {?>"#dc3545"<?php } elseif (($_smarty_tpl->tpl_vars['key']->value+1)%2 == 0) {?>"#008b75"<?php } else { ?>"#5350e9"<?php }?>
+            );
+        }
         <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>

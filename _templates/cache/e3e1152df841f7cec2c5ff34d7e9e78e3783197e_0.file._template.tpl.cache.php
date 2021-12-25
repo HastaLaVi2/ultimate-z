@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
+/* Smarty version 3.1.40, created on 2021-12-25 08:15:54
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883813367e81_72255320',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d33a251990_19792801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3e1152df841f7cec2c5ff34d7e9e78e3783197e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl',
-      1 => 1636232896,
+      1 => 1639138559,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61883813367e81_72255320 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d33a251990_19792801 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '166486300361883813332166_76720809';
+$_smarty_tpl->compiled->nocache_hash = '158978580461c6d33a219668_96766922';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3802733416188381334b102_59441045', "zHead");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_117751503461c6d33a236018_18831823', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11417396506188381334e513_71465416', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_210290058561c6d33a239474_54408399', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_84252106861883813363b14_66225412', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_194132874061c6d33a24dfb9_97535185', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
-/* {block "zHead"} */
-class Block_3802733416188381334b102_59441045 extends Smarty_Internal_Block
+/* {block "zTop"} */
+class Block_117751503461c6d33a236018_18831823 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
-  'zHead' => 
+  'zTop' => 
   array (
-    0 => 'Block_3802733416188381334b102_59441045',
+    0 => 'Block_117751503461c6d33a236018_18831823',
   ),
 );
 public $append = 'true';
@@ -62,14 +62,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <?php
 }
 }
-/* {/block "zHead"} */
+/* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_11417396506188381334e513_71465416 extends Smarty_Internal_Block
+class Block_210290058561c6d33a239474_54408399 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_11417396506188381334e513_71465416',
+    0 => 'Block_210290058561c6d33a239474_54408399',
   ),
 );
 public $append = 'true';
@@ -155,28 +155,29 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_84252106861883813363b14_66225412 extends Smarty_Internal_Block
+class Block_194132874061c6d33a24dfb9_97535185 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_84252106861883813363b14_66225412',
+    0 => 'Block_194132874061c6d33a24dfb9_97535185',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
 ?>
 
     <?php echo '<script'; ?>
 >
-    var entriesPerPage = "<?php echo $_smarty_tpl->tpl_vars['zThis']->value["entries per page"];?>
+    var entriesPerPage = "<?php echo smarty_function_zThis(array('z'=>"entries per page"),$_smarty_tpl);?>
 ";
-    var searchOn = "<?php echo $_smarty_tpl->tpl_vars['zThis']->value["Search..."];?>
+    var searchOn = "<?php echo smarty_function_zThis(array('z'=>"Search..."),$_smarty_tpl);?>
 ";
-    var showingOf = "<?php echo $_smarty_tpl->tpl_vars['zThis']->value["Showing [start] to [end] of [rows] entries"];?>
+    var showingOf = "<?php echo smarty_function_zThis(array('z'=>"Showing [start] to [end] of [rows] entries"),$_smarty_tpl);?>
 ";
     showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-    var noRowFound = "<?php echo $_smarty_tpl->tpl_vars['zThis']->value["No entries found"];?>
+    var noRowFound = "<?php echo smarty_function_zThis(array('z'=>"No entries found"),$_smarty_tpl);?>
 ";
 
     $("input[type=checkbox]").change(function() {

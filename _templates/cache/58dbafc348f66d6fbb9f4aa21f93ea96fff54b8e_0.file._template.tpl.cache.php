@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:17:06
+/* Smarty version 3.1.40, created on 2021-12-25 08:15:58
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_618834429b3d88_03245023',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d33e84b8d1_99476806',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1636209072,
+      1 => 1640283363,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/modal.tpl' => 1,
   ),
 ),false)) {
-function content_618834429b3d88_03245023 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d33e84b8d1_99476806 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '9179922266188344294e133_09782292';
+$_smarty_tpl->compiled->nocache_hash = '168351447561c6d33e7e6cd5_66767489';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14406967456188344296c082_73311895', "zHead");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_32277067361c6d33e802f00_70656171', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_99848771861883442970cb2_38993253', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_113013009261c6d33e807a70_17981401', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_198224902618834429a38a8_67747304', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_209028051361c6d33e83b808_06730944', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
-/* {block "zHead"} */
-class Block_14406967456188344296c082_73311895 extends Smarty_Internal_Block
+/* {block "zTop"} */
+class Block_32277067361c6d33e802f00_70656171 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
-  'zHead' => 
+  'zTop' => 
   array (
-    0 => 'Block_14406967456188344296c082_73311895',
+    0 => 'Block_32277067361c6d33e802f00_70656171',
   ),
 );
 public $append = 'true';
@@ -70,19 +70,20 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.css">
     <style>
-    .hideForAddTop .hideForAdd {display: none;}
+    .hideForAddTop .hideForAdd { display: none;}
+    .note-btn { font-size: 12px !important; height: auto !important; padding: 8px !important;}
     </style>
 <?php
 }
 }
-/* {/block "zHead"} */
+/* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_99848771861883442970cb2_38993253 extends Smarty_Internal_Block
+class Block_113013009261c6d33e807a70_17981401 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_99848771861883442970cb2_38993253',
+    0 => 'Block_113013009261c6d33e807a70_17981401',
   ),
 );
 public $append = 'true';
@@ -205,7 +206,17 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Subpage"),$_smarty_tpl);?>
+                    <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Status"),$_smarty_tpl);?>
+</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="page_status" id="page_status"
+                        <?php if ($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->status) {?>value="enabled" checked<?php }?>>
+                        <label for="page_status"><?php echo smarty_function_zThis(array('z'=>"Page status"),$_smarty_tpl);?>
+</label>
+                        <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Determine whether the page should active or not."),$_smarty_tpl);?>
+</div>
+                    </div>
+                    <h6 class="bottom-12 top-12 font-1em"><?php echo smarty_function_zThis(array('z'=>"Subpage"),$_smarty_tpl);?>
 </h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
@@ -240,12 +251,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <?php echo smarty_function_zThis(array('z'=>"Add a New Holder"),$_smarty_tpl);?>
 
                     </div>
-                    <div id="dragulaAdd" class="col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
+                    <div id="dragulaAdd" class="hideScroll col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
                         <?php $_smarty_tpl->_assignInScope('holders', $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllHolders($_smarty_tpl->tpl_vars['zUser']->value->id_lang));?>
                         <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->value->src["admin"])."/_partials/holderEdit.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
                     </div>
-                    <div id="dragula" class="col-12 colTop between-20">
+                    <div id="dragula" class="hideScroll hideRest col-12 colTop between-20">
                         <?php $_smarty_tpl->_assignInScope('blocks', $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->template->blocks);?>
                         <?php
 $_smarty_tpl->tpl_vars['id_block'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['id_block']->step = 1;$_smarty_tpl->tpl_vars['id_block']->total = (int) ceil(($_smarty_tpl->tpl_vars['id_block']->step > 0 ? $_smarty_tpl->tpl_vars['blocks']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['blocks']->value)+1)/abs($_smarty_tpl->tpl_vars['id_block']->step));
@@ -267,9 +278,9 @@ $_smarty_tpl->tpl_vars['id_block']->first = $_smarty_tpl->tpl_vars['id_block']->
 ?>
                     </div>
                 </div>
-                <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
-                    <div class="pad-20 gradYouToWhite">
-                        <button class="zButton primary widthAll zShadow5 top-20"><?php echo smarty_function_zThis(array('z'=>"Save"),$_smarty_tpl);?>
+                <div class="ButtonPos1 IWantItDownR padR-32 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
+                    <div class="padB-20 padLR-20 whiteBack">
+                        <button class="zButton primary widthAll zShadow5"><?php echo smarty_function_zThis(array('z'=>"Save"),$_smarty_tpl);?>
 </button>
                     </div>
                 </div>
@@ -288,12 +299,12 @@ $_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_198224902618834429a38a8_67747304 extends Smarty_Internal_Block
+class Block_209028051361c6d33e83b808_06730944 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_198224902618834429a38a8_67747304',
+    0 => 'Block_209028051361c6d33e83b808_06730944',
   ),
 );
 public $append = 'true';
@@ -365,8 +376,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 moves: function (el, container, handle) {
                     var searchPond = $(handle).closest(".filepond");
                     var searchSummer = $(handle).closest(".note-editor");
-                    if (searchPond.length || searchSummer.length ||
-                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
+                    if (searchPond.length || searchSummer.length || handle.nodeName == "INPUT" ||
+                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
                         return false;
                     } else {
                         return true;
@@ -378,12 +389,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     value.style.display = "none";
                 });
             }).on("out", function (el, container, source) {
-                // the data attribute tells us the old modalNumber of our holder,
-                // because on page load, holders on the left column has their own
-                // modalNumber values, but when they are copied to the actual page,
-                // we need to change it with a new modalNumber
-                var data = el.getAttribute("data");
-
                 // make the content visible again
                 var hides = el.querySelectorAll(".hideForAdd");
                 if ($(el).find(".fa-chevron-up").css("display") !== "none") {
@@ -397,20 +402,42 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     $(el).parent().append(blockTitle);
                 }
 
-                $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
-                $(el).find(".zShow-downHolder" + data).removeClass("zShow-downHolder" + data).addClass("zShow-downHolder" + modalNumber);
+                if (source.getAttribute("id") == "dragulaAdd") {
+                    el.setAttribute("update", "true");
+                }
+            }).on("dragend", function (el) {
+                // the data attribute tells us the old modalNumber of our holder,
+                // because on page load, holders on the left column has their own
+                // modalNumber values, but when they are copied to the actual page,
+                // we need to change it with a new modalNumber
+                var data = el.getAttribute("data");
+                console.log(modalNumber);
 
-                // time to update the modalNumber
-                el.querySelectorAll(".zModal")[0].setAttribute("id", "modal" + modalNumber);
-                el.querySelectorAll(".zModalLink")[0].setAttribute("href", "#modal" + modalNumber);
-                el.classList.remove("zDestroy-holder"+data);
-                el.classList.add("zDestroy-holder"+modalNumber);
-                var remove = el.querySelectorAll("[class*=zRemove]")[0];
-                remove.classList.remove("zRemove-holder"+data);
-                remove.classList.add("zRemove-holder"+modalNumber);
+                if (el.getAttribute("update") == "true") {
+                    $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
+                    $(el).find(".zShow-downHolder" + data).removeClass("zShow-downHolder" + data).addClass("zShow-downHolder" + modalNumber);
+                    $(el).find(".zTog-imagesFor" + data).removeClass("zTog-imagesFor" + data).addClass("zTog-imagesFor" + modalNumber);
+                    $(el).find(".zShow-imagesFor" + data).removeClass("zShow-imagesFor" + data).addClass("zShow-imagesFor" + modalNumber);
 
-                // now lets increase the modalNumber value for the next arrival
-                modalNumber += 1;
+                    // time to update the modalNumber
+                    el.querySelectorAll(".zModal")[0].setAttribute("id", "modal" + modalNumber);
+                    el.querySelectorAll(".zModalLink")[0].setAttribute("href", "#modal" + modalNumber);
+                    el.classList.remove("zDestroy-holder"+data);
+                    el.classList.add("zDestroy-holder"+modalNumber);
+                    var remove = el.querySelectorAll("[class*=zRemove]")[0];
+                    remove.classList.remove("zRemove-holder"+data);
+                    remove.classList.add("zRemove-holder"+modalNumber);
+                    remove.setAttribute("zRemove", "false");
+
+                    // now lets increase the modalNumber value for the next arrival
+                    modalNumber = Number(modalNumber) + 1;
+                    el.setAttribute("update", "false");
+
+                    toggleParentNext($(el).find(".toggleParentNext"));
+
+                    $(el).find(".note-editor").remove();
+                    summernoteStart($(el).find(".summernote"));
+                }
 
                 // functions that need a rerun after a copy
                 zRemove();
@@ -419,10 +446,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 runFilePond();
                 summernoteKeyup($(el).find(".note-editable"));
                 storeCat();
-
-                if ($(source).attr("id") == "dragulaAdd") {
-                    toggleParentNext($(el).find(".toggleParentNext"));
-                }
             });
         }
 
@@ -515,7 +538,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             data.set("langcode", "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->iso_code;?>
 ");
             // send the file to server
-            data.append("fileToUpload", image);
+            var newName = slug(image.name.replace(/\.[^/.]+$/, "")) + "." + image.name.replace(/^[^/.]+\./, "");
+            var newFile = new File([image], newName, { type: image.type});
+            data.append("fileToUpload", newFile);
             $.ajax({
                 url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["images"];?>
 /upload.php",
@@ -537,7 +562,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         // instead of "content[]", normally storingData() function stores
                         // all hidden content but images, so files uploaded with filepond will be
                         // stored through here
-                        $(filepond).parent().prev().children().each(function () {
+                        $(filepond).closest(".top-20").prev().children().each(function () {
                             // get the hidden content's current value
                             var already = $(this).val();
                             var alreO = [];
@@ -570,58 +595,61 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
         // start the pond, filepond
         function runFilePond() {
-            document.getElementById("dragula").querySelectorAll(".filepond").forEach(function(v, i) {
-                var loaded = $(v).prev();
-                var value = v.previousElementSibling.value;
-                var multi = loaded.attr("data-multi");
-                if (value !== "") {
-                    var files = [];
-                    for (let i=0; i < value.split(";").length; i++) {
-                        files.push({
-                            source: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->src["images"];?>
+            if ($(document.getElementById("dragula")).length) {
+                document.getElementById("dragula").querySelectorAll(".filepond").forEach(function(v, i) {
+                    var loaded = $(v).prev();
+                    var value = v.previousElementSibling.value;
+                    var multi = loaded.attr("data-multi");
+                    if (value !== "") {
+                        var files = [];
+                        for (let i=0; i < value.split(";").length; i++) {
+                            files.push({
+                                source: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->src["images"];?>
 /uploads/<?php echo $_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id;?>
 /"+value.split(";")[i],
-                            options: {
-                                type: "local"
+                                options: {
+                                    type: "local"
+                                }
+                            });
+                        }
+                        var load = {
+                            load: (uniqueFileId, load) => {
+                                // you would get the file data from your server here
+                                fetch(uniqueFileId)
+                                .then(res => res.blob())
+                                .then(load);
                             }
+                        };
+                    }
+                    if (loaded.attr("data-filepond-loaded") !== "true") {
+                        FilePond.create(v, {
+                            allowImagePreview: true,
+                            imagePreviewMaxFileSize: "500kb",
+                            allowMultiple: (multi == "true" ? true : false),
+                            allowReorder: (multi == "true" ? true : false),
+                            maxFileSize: "20MB",
+                            acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
+                            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                                // Do custom type detection here and return with promise
+                                resolve(type);
+                            }),
+                            files: (files ? files : null),
+                            server: (load ? load : null)
                         });
                     }
-                    var load = {
-                        load: (uniqueFileId, load) => {
-                            // you would get the file data from your server here
-                            fetch(uniqueFileId)
-                            .then(res => res.blob())
-                            .then(load);
-                        }
-                    };
-                }
-                if (loaded.attr("data-filepond-loaded") !== "true") {
-                    FilePond.create(v, {
-                        allowImagePreview: true,
-                        allowMultiple: (multi == "true" ? true : false),
-                        allowReorder: (multi == "true" ? true : false),
-                        maxFileSize: "20MB",
-                        acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
-                        fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
-                            // Do custom type detection here and return with promise
-                            resolve(type);
-                        }),
-                        files: (files ? files : null),
-                        server: (load ? load : null)
-                    });
-                }
 
-                if (loaded.closest("#dragula").length) {
-                    loaded.attr("data-filepond-loaded", true);
-                }
-            });
+                    if (loaded.closest("#dragula").length) {
+                        loaded.attr("data-filepond-loaded", true);
+                    }
+                });
 
-            // set filepond server
-            FilePond.setOptions({
-                server: "./",
-            });
+                // set filepond server
+                FilePond.setOptions({
+                    server: "./",
+                });
 
-            filepondCallbacks();
+                filepondCallbacks();
+            }
         }
 
         // callbacks for filepond
@@ -664,7 +692,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         var elemID = e.detail.file.id;
                         var files = e.detail.pond.getFiles();
 
-                        elem.parent().prev().children().each(function () {
+                        elem.closest(".top-20").prev().children().each(function () {
                             var already = $(this).val();
                             already = already.split(";");
                             already.splice(window.pondNS[elemID], 1);
@@ -685,7 +713,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         var elemID = e.detail.pond.getFile().id;
                         var files = e.detail.pond.getFiles();
 
-                        elem.parent().prev().children().each(function () {
+                        elem.closest(".top-20").prev().children().each(function () {
                             var already = $(this).val().trim();
                             already = already.split(";");
                             var newAlre = [];
@@ -725,6 +753,32 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             });
         }
 
+        // start all summernotes
+        function summernoteStart(element) {
+            element.summernote({
+                lang: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
+",
+                fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48' , '64', '82', '150'],
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontname', ['fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['picture', ['picture', 'link', 'video', 'table']],
+                    ['view', ['fullscreen', 'codeview']],
+                ],
+                tabsize: 1,
+                callbacks: {
+                    onImageUpload: function(files) {
+                        for (let i=0; i < files.length; i++) {
+                            uploadImage(files[i], $(this));
+                        }
+                    }
+                }
+            });
+        }
+
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
         var modalNumber = "<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
@@ -748,19 +802,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 $(".divFor"+now).css("display", "block");
             });
 
-            // start all summernotes
-            $(".summernote").summernote({
-                lang: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
-",
-                tabsize: 1,
-                callbacks: {
-                    onImageUpload: function(files) {
-                        for (let i=0; i < files.length; i++) {
-                            uploadImage(files[i], $(this));
-                        }
-                    }
-                }
-            });
+            summernoteStart($(".summernote"));
             summernoteKeyup($(".note-editable"));
             storeCat();
 
@@ -789,18 +831,34 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
             // add new holder button
             $("#AddNewHolder").click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(this).offset().top - 100
+                }, 500);
+
                 var dragula = $("#dragula");
                 var dragulaAdd = $("#dragulaAdd");
 
                 dragulaAdd.toggle();
                 dragula.toggleClass("col-8").toggleClass("col-12");
+                var calcPX = ($(window).width() > 1024)
+                    ? ($(window).height() - 180 - $(this).height() - $(".ButtonPos2").height() + "px")
+                    : "40vh";
 
                 if (dragulaAdd.css("display") !== "none") {
                     var count = dragula.children().length;
                     var newHeight = (dragulaAdd.height() - ((count-1)*20)) / count;
                     dragula.children().css("min-height", newHeight);
+                    dragulaAdd.css({
+                        "height": calcPX,
+                        "overflow": "scroll"
+                    });
+                    dragula.css({
+                        "height": calcPX,
+                        "overflow": "scroll"
+                    });
                 } else {
                     dragula.children().css("min-height", "100%");
+                    dragula.css("height", "auto");
                 }
             });
 

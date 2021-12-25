@@ -21,9 +21,11 @@ if (strpos("$_SERVER[REQUEST_URI]", "z.php") !== false) {
 class z {
     public $id;
     public $name;
+    public $creation;
     public $key;
     public $status;
     public $error;
+    public $hidden_key;
 
     # connect to database
     public function __construct($id_site = NULL) {
@@ -37,8 +39,10 @@ class z {
         if (!empty($query)) {
             $this->name = $query[0]["name"];
             $this->key = $query[0]["cookie_key"];
+            $this->hidden_key = $query[0]["hidden_key"];
             $this->status = $query[0]["status"];
             $this->error = $query[0]["error"];
+            $this->creation = $query[0]["create_date"];
         }
     }
  }

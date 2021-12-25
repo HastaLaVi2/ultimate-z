@@ -15,7 +15,7 @@
 
 {extends file="_main.tpl"}
 
-{block name="zHead" append}
+{block name="zTop" append}
     {include file="{$zContent->src["holders"]}/validate.tpl"}
 {/block}
 

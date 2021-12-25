@@ -184,13 +184,13 @@ class zUserTools {
 			$result = $db->select($query);
             if(!empty($result))$data=$result[0];
 
-            if ($data["password"] !== md5($passw)) {
+            if ($data["password"] !== $passw && $data["password"] !== md5($passw)) {
                 throw new Exception($zThis["Wrong password."]);
             }
 
             $passw_new = md5($passw_new);
 
-            if(!empty($result) && $data["password"] == md5($passw)) {
+            if(!empty($result) && ($data["password"] == md5($passw) || $data["password"] == $passw)) {
                 $update = $db->execute("UPDATE zUsers SET password = '$passw_new' WHERE id_user = '$id_user'");
 				return true;
             } else {
@@ -368,9 +368,9 @@ class zUserTools {
         }
     }
 
-    public function zUserPermission($loginPage, $key) {
+    public function zUserPermission($loginPage, $key, $redirect = NULL) {
         if((isset($_SESSION["zLogged-" . $key]) && !$_SESSION["zLogged-" . $key]) || !isset($_SESSION["zLogged-" . $key])) {
-        	header("Location: " . $loginPage);
+        	header("Location: " . $loginPage . ($redirect ? "index.php?redirect=" . $redirect : ""));
             exit();
         }
 

@@ -69,14 +69,15 @@ Last update: 9 April 2021
 
 ::selection {background-color: var(--selection);}
 
-.hideScroll, .zModalContent {
+.hideScroll, .zModalContent, .zHorizon {
     overflow: auto;
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */
 }
 
 .hideScroll::-webkit-scrollbar, .hideScroll::-webkit-scrollbar-thumb, .hideScroll::-webkit-scrollbar-track,
-.zModalContent::-webkit-scrollbar, .zModalContent::-webkit-scrollbar-thumb, .zModalContent::-webkit-scrollbar-track {
+.zModalContent::-webkit-scrollbar, .zModalContent::-webkit-scrollbar-thumb, .zModalContent::-webkit-scrollbar-track,
+.zHorizon::-webkit-scrollbar, .zHorizon::-webkit-scrollbar-thumb, .zHorizon::-webkit-scrollbar-track {
     display: none;
     width: 0 !important;
 }
@@ -368,10 +369,10 @@ hr {
 }
 
 /* Shorcut for the usual "white-space: nowrap". */
-.noWrap {
+.noWrap, .zHorizon {
     white-space: nowrap !important;
 }
-.noWrap > * {
+.noWrap > *, .zHorizon > * {
     white-space: normal;
 }
 
@@ -382,13 +383,16 @@ hr {
 
 /* If the website will have full-width and full-height screen,
    this code shall just do the trick. */
-.fullScr {
+.fullScr, .screen-full {
+    width: 100%;
     height: 100vh;
     overflow: auto;
 }
 
+.screen-fix {width: auto; height: auto;}
+
 .thereIs {box-sizing: content-box;}
-.inLine {display: inline-block;font-size: var(--normalSize);}
+.inLine {display: inline-block; font-size: var(--normalSize);}
 .Know {display: inline-table;}
 .toSpan {display: inline;}
 .inLeft {float: left;}
@@ -400,6 +404,7 @@ hr {
    right for the needs at the time. Also the rows. */
 .col-1, .zCol-1 {width: 8.33%;}
 .col-2, .zCol-2 {width: 16.66%;}
+.col-2_5, .zCol-2_5 {width: 20%;}
 .col-3, .zCol-3 {width: 25%;}
 .col-4, .zCol-4 {width: 33.33%;}
 .col-5, .zCol-5 {width: 41.66%;}
@@ -409,7 +414,7 @@ hr {
 .col-9, .zCol-9 {width: 75%;}
 .col-10, .zCol-10 {width: 83.33%;}
 .col-11, .zCol-11 {width: 91.66%;}
-.col-12, .zCol-12, .widthAll {width: 100%;}
+.col-12, .zCol-12, .widthAll, .width-all, .fullScr {width: 100%;}
 
 .row-1, .zRow-1 {height: 8.33%;}
 .row-2, .zRow-2 {height: 16.66%;}
@@ -424,6 +429,32 @@ hr {
 .row-11, .zRow-11 {height: 91.66%;}
 .row-12, .zRow-12 {height: 100%;}
 
+.perTop-1 {top: 8.33%;} .perTop--1 {top: -8.33%;}
+.perTop-2 {top: 16.66%;} .perTop--2 {top: -16.66%;}
+.perTop-3 {top: 25%;} .perTop--3 {top: -25%;}
+.perTop-4 {top: 33.33%;} .perTop--4 {top: -33.33%;}
+.perTop-5 {top: 41.66%;} .perTop--5 {top: -41.66%;}
+.perTop-6 {top: 50%;} .perTop--6 {top: -50%;}
+.perTop-7 {top: 58.33%;} .perTop--7 {top: -58.33%;}
+.perTop-8 {top: 66.66%;} .perTop--8 {top: -66.66%;}
+.perTop-9 {top: 75%;} .perTop--9 {top: -75%;}
+.perTop-10 {top: 83.33%;} .perTop--10 {top: -83.33%;}
+.perTop-11 {top: 91.66%;} .perTop--11 {top: -91.66%;}
+.perTop-12 {top: 100%;} .perTop--12 {top: -100%;}
+
+.perLeft-1 {left: 8.33%;} .perLeft--1 {left: -8.33%;}
+.perLeft-2 {left: 16.66%;} .perLeft--2 {left: -16.66%;}
+.perLeft-3 {left: 25%;} .perLeft--3 {left: -25%;}
+.perLeft-4 {left: 33.33%;} .perLeft--4 {left: -33.33%;}
+.perLeft-5 {left: 41.66%;} .perLeft--5 {left: -41.66%;}
+.perLeft-6 {left: 50%;} .perLeft--6 {left: -50%;}
+.perLeft-7 {left: 58.33%;} .perLeft--7 {left: -58.33%;}
+.perLeft-8 {left: 66.66%;} .perLeft--8 {left: -66.66%;}
+.perLeft-9 {left: 75%;} .perLeft--9 {left: -75%;}
+.perLeft-10 {left: 83.33%;} .perLeft--10 {left: -83.33%;}
+.perLeft-11 {left: 91.66%;} .perLeft--11 {left: -91.66%;}
+.perLeft-12 {left: 100%;} .perLeft--12 {left: -100%;}
+
 .square {
     width: 100%;
     padding-bottom: 100%;
@@ -435,8 +466,8 @@ hr {
 /*-----------*/
 
 .font0 {font-size: 0;}
-.thinText, .hoverThinText:hover {font-family: var(--thinFamily); font-weight: lighter;}
-.boldText {font-family: var(--textFamily); font-weight: bolder;}
+.thinText, .zHov-thinText:hover {font-family: var(--thinFamily); font-weight: lighter;}
+.boldText, .zHov-boldText:hover {font-family: var(--textFamily); font-weight: bolder;}
 .uppercase {text-transform: uppercase;}
 .biggerText {font-size: var(--biggerSize);}
 
@@ -606,7 +637,7 @@ hr {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
-.glass {
+.glass, .zHov-glass:hover {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(10.0px);
     -webkit-backdrop-filter: blur(10.0px);
@@ -652,6 +683,20 @@ hr {
     filter: invert(100%);
 }
 
+.glow1, .zHov-glow1:hover {text-shadow: 0 0 5px var(--color1)}
+.glow2, .zHov-glow2:hover {text-shadow: 0 0 5px var(--color2)}
+.glow3, .zHov-glow3:hover {text-shadow: 0 0 5px var(--color3)}
+.glow4, .zHov-glow4:hover {text-shadow: 0 0 5px var(--color4)}
+.glow5, .zHov-glow5:hover {text-shadow: 0 0 5px var(--color5)}
+.glow6, .zHov-glow6:hover {text-shadow: 0 0 5px var(--color6)}
+.glow7, .zHov-glow7:hover {text-shadow: 0 0 5px var(--color7)}
+.glow8, .zHov-glow8:hover {text-shadow: 0 0 5px var(--color8)}
+.glowWhite, .zHov-glowWhite:hover {text-shadow: 0 0 5px white}
+.glowGray1, .zHov-glowGray1:hover {text-shadow: 0 0 5px var(--gray1)}
+.glowGray2, .zHov-glowGray2:hover {text-shadow: 0 0 5px var(--gray2)}
+.glowGray3, .zHov-glowGray3:hover {text-shadow: 0 0 5px var(--gray3)}
+.glowGray4, .zHov-glowGray4:hover {text-shadow: 0 0 5px var(--gray4)}
+
 /*---------------------------------------------*/
 /* The reason design is called design: spaces */
 /*-------------------------------------------*/
@@ -688,17 +733,17 @@ hr {
     vertical-align: middle;
 }
 
-.floatingSpace {
+.floatingSpace, .floating-space {
     position: absolute;
     top: 0; left: 0;
 }
 
-.floatingTheRight {
+.floatingTheRight, .floating-theRight {
     position: absolute;
     top: 0; right: 0;
 }
 
-.fixFloating {
+.fixFloating, .floating-fix {
     position: relative;
 }
 
@@ -756,6 +801,17 @@ hr {
 div.zTable {
     display: -webkit-flex;
     display: flex;
+}
+
+.zHorizon {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: 0 auto;
+    cursor: grab;
+}
+
+.zHorizon > * {
+    display: inline-block;
 }
 
 div.zTable-0-1 {-webkit-flex: 0.1;-ms-flex: 0.1;flex: 0.1;}
@@ -1073,7 +1129,7 @@ form.zForm {
 
 form.zForm input, input.zInput, form.zForm select, select.zSelect, form.zForm button, form.zForm textarea {
     font-family: var(--textFamily) !important;
-    font-size: var(--normalSize) !important;
+    font-size: var(--normalSize);
     border-radius: var(--zFormRadius);
     border-width: var(--zFormBorder);
 }
@@ -1089,6 +1145,11 @@ form.zForm select, select.zSelect, form.zForm textarea, .zSwitch {
     background: transparent;
     color: var(--zFormInputColor) !important;
 }
+
+select.many {
+     background-color: var(--gray1);
+     border-color: var(--gray1) !important;
+ }
 
 form.zForm input[type="text"]:focus, input.zInput[type="text"]:focus,
 form.zForm input[type="email"]:focus, input.zInput[type="email"]:focus,
@@ -1518,22 +1579,6 @@ li.Y-ear {
 
 /* X-ROTATING BOXES */
 
-@keyframes configure-clockwise {
-    0% {transform: rotate(0)}
-    25% {transform: rotate(90deg)}
-    50% {transform: rotate(180deg)}
-    75% {transform: rotate(270deg)}
-    100% {transform: rotate(360deg)}
-}
-
-@keyframes configure-xclockwise {
-    0% {transform: rotate(45deg)}
-    25% {transform: rotate(-45deg)}
-    50% {transform: rotate(-135deg)}
-    75% {transform: rotate(-225deg)}
-    100% {transform: rotate(-315deg)}
-}
-
 .clockInfinite {
     -webkit-animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
     -moz-animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
@@ -1550,6 +1595,22 @@ li.Y-ear {
     animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
 }
 
+@keyframes configure-clockwise {
+    0% {transform: rotate(0)}
+    25% {transform: rotate(90deg)}
+    50% {transform: rotate(180deg)}
+    75% {transform: rotate(270deg)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes configure-xclockwise {
+    0% {transform: rotate(45deg)}
+    25% {transform: rotate(-45deg)}
+    50% {transform: rotate(-135deg)}
+    75% {transform: rotate(-225deg)}
+    100% {transform: rotate(-315deg)}
+}
+
 .infiniteTopBottom {
     -webkit-animation: infiniteTopBottom 2s linear infinite;
     -moz-animation: infiniteTopBottom 2s linear infinite;
@@ -1562,109 +1623,6 @@ li.Y-ear {
     0% {top: 0px;}
     50% {top: -10px;}
     100% {top: 0px;}
-}
-
-.make200Circ {
-    animation: make200Circ 0.8s ;
-    animation-fill-mode: forwards;
-}
-
-@keyframes make200Circ {
-    0%     {}
-    50%    {width: 200px; height: 200px;}
-    100%   {width: 200px; height: 200px; border-radius: 50%; top: 60px;}
-}
-
-.rotating0 {
-    -webkit-animation: rotating0 4s linear infinite;
-    -moz-animation: rotating0 4s linear infinite;
-    -ms-animation: rotating0 4s linear infinite;
-    -o-animation: rotating0 4s linear infinite;
-    animation: rotating0 4s linear infinite;
-}
-
-.rotating15 {
-    -webkit-animation: rotating15 7s linear infinite;
-    -moz-animation: rotating15 7s linear infinite;
-    -ms-animation: rotating15 7s linear infinite;
-    -o-animation: rotating15 7s linear infinite;
-    animation: rotating15 7s linear infinite;
-}
-
-.rotating25 {
-    -webkit-animation: rotating25 7s linear infinite;
-    -moz-animation: rotating25 7s linear infinite;
-    -ms-animation: rotating25 7s linear infinite;
-    -o-animation: rotating25 7s linear infinite;
-    animation: rotating25 7s linear infinite;
-}
-
-@-webkit-keyframes rotating0 /* Safari and Chrome */ {
-    0%     {-webkit-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg);}
-    100%   {-webkit-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg);}
-}
-
-@keyframes rotating0 {
-    0%     {-ms-transform: rotate(0deg); -moz-transform: rotate(0deg); -webkit-transform: rotate(0deg);
-            -o-transform: rotate(0deg); transform: rotate(0deg);}
-    100%   {-ms-transform: rotate(360deg); -moz-transform: rotate(360deg); -webkit-transform: rotate(360deg);
-            -o-transform: rotate(360deg); transform: rotate(360deg);}
-}
-
-@-webkit-keyframes rotating15 /* Safari and Chrome */ {
-    0%     {-webkit-transform: rotate(15deg); -o-transform: rotate(15deg); transform: rotate(15deg);}
-    50%    {-webkit-transform: rotate(280deg); -o-transform: rotate(280deg); transform: rotate(280deg);}
-    100%   {-webkit-transform: rotate(375deg); -o-transform: rotate(375deg); transform: rotate(375deg);}
-}
-
-@keyframes rotating15 {
-    0%     {-ms-transform: rotate(15deg); -moz-transform: rotate(15deg); -webkit-transform: rotate(15deg);
-            -o-transform: rotate(15deg); transform: rotate(15deg);}
-    50%    {-ms-transform: rotate(280deg); -moz-transform: rotate(280deg); -webkit-transform: rotate(280deg);
-            -o-transform: rotate(280deg); transform: rotate(280deg);}
-    100%   {-ms-transform: rotate(375deg); -moz-transform: rotate(375deg); -webkit-transform: rotate(375deg);
-            -o-transform: rotate(375deg); transform: rotate(375deg);}
-}
-
-@-webkit-keyframes rotating25 /* Safari and Chrome */ {
-    0%     {-webkit-transform: rotate(25deg); -o-transform: rotate(25deg); transform: rotate(25deg);}
-    50%    {-webkit-transform: rotate(250deg); -o-transform: rotate(250deg); transform: rotate(250deg);}
-    100%   {-webkit-transform: rotate(385deg); -o-transform: rotate(385deg); transform: rotate(385deg);}
-}
-
-@keyframes rotating25 {
-    0%     {-ms-transform: rotate(25deg); -moz-transform: rotate(25deg); -webkit-transform: rotate(25deg);
-            -o-transform: rotate(25deg); transform: rotate(25deg);}
-    50%    {-ms-transform: rotate(250deg); -moz-transform: rotate(250deg); -webkit-transform: rotate(250deg);
-            -o-transform: rotate(250deg); transform: rotate(250deg);}
-    100%   {-ms-transform: rotate(385deg); -moz-transform: rotate(385deg); -webkit-transform: rotate(385deg);
-            -o-transform: rotate(385deg); transform: rotate(385deg);}
-}
-
-.fadeIn {
-    -webkit-animation: fadeIn 0.5s ease-out forwards;
-    -moz-animation: fadeIn 0.5s ease-out forwards;
-    -ms-animation: fadeIn 0.5s ease-out forwards;
-    -o-animation: fadeIn 0.5s ease-out forwards;
-    animation: fadeIn 0.5s ease-out forwards;
-}
-
-.fadeOut {
-    -webkit-animation: fadeOut 0.5s ease-out forwards;
-    -moz-animation: fadeOut 0.5s ease-out forwards;
-    -ms-animation: fadeOut 0.5s ease-out forwards;
-    -o-animation: fadeOut 0.5s ease-out forwards;
-    animation: fadeOut 0.5s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    0%     {opacity: 0;}
-    100%   {opacity: 1;}
-}
-
-@keyframes fadeOut {
-    0%     {opacity: 1;}
-    100%   {opacity: 0;}
 }
 
 /*

@@ -111,7 +111,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     /**
      * smarty version
      */
-    const SMARTY_VERSION = '3.1.39';
+    const SMARTY_VERSION = '3.1.40';
     /**
      * define variable scopes
      */
@@ -600,7 +600,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var array
      */
-    protected $template_dir = array('./');
+    protected $template_dir = array('./templates/');
 
     /**
      * flags for normalized template directory entries
@@ -614,7 +614,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var array
      */
-    protected $config_dir = array('./_scripts/smarty/configs/');
+    protected $config_dir = array('./configs/');
 
     /**
      * flags for normalized template directory entries
@@ -628,7 +628,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var string
      */
-    protected $compile_dir = './_templates/cache/';
+    protected $compile_dir = './templates_c/';
 
     /**
      * plugins directory
@@ -642,7 +642,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var string
      */
-    protected $cache_dir = './_scripts/smarty/cache/';
+    protected $cache_dir = './cache/';
 
     /**
      * removed properties

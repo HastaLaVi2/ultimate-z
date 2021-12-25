@@ -1,42 +1,48 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:08:42
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:04
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_6186eeda430f39_13191916',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d68c6da758_69280680',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40eca603e2fff03d9ede2e86dcef495b76ef25bf' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl',
-      1 => 1633364607,
+      1 => 1640290089,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1636204676,
+      1 => 1637665907,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
+      2 => 'file',
+    ),
+    '573b073f619aeb439fcac73d74e676de04fada42' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
+      1 => 1640259422,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -48,13 +54,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1633373917,
+      1 => 1639138316,
+      2 => 'file',
+    ),
+    'ea921527d0a89eb10256e18f21e891c839c80637' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
+      1 => 1639138416,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1636204676,
+      1 => 1640420923,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -66,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186eeda430f39_13191916 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d68c6da758_69280680 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -89,8 +101,6 @@ function content_6186eeda430f39_13191916 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jquery -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery-3.6.0.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fontawesome/css/all.min.css"/>
@@ -100,23 +110,29 @@ function content_6186eeda430f39_13191916 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
+    
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/ultimate-z/_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/ultimate-z/_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/ultimate-z/_favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/ultimate-z/_favicon/favicon-16x16.png">
 <link rel="manifest" href="http://localhost/ultimate-z/_favicon/site.webmanifest">
-<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#2d89ef">
+<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#99154e">
 <link rel="shortcut icon" href="http://localhost/ultimate-z/_favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileColor" content="#99154e">
 <meta name="msapplication-TileImage" content="http://localhost/ultimate-z/_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
+<meta name="theme-color" content="#99154e">
 
+<!-- lazysizes -->
+<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -130,9 +146,6 @@ function content_6186eeda430f39_13191916 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- html2canvas -->
     <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
 </head>
 <body class="back7">
     
@@ -161,8 +174,7 @@ function content_6186eeda430f39_13191916 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
-            </div>
+                ultimate Z            </div>
         </center>
     </div>
 </div>
@@ -172,7 +184,7 @@ function content_6186eeda430f39_13191916 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead"></div>
+    <div id="zTop"></div>
 
     
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">
@@ -414,19 +426,75 @@ $(window).resize(function(){
                     var value = $(this).val();
                     var enText = $(this).parent().find(".enable").text();
                     var disText = $(this).parent().find(".disable").text();
-                    if (value == "disabled") {
-                        $(this).next("label").text(disText);
-                        $(this).val("enabled");
-                    } else {
+                    if (value == "enabled") {
                         $(this).next("label").text(enText);
                         $(this).val("disabled");
+                    } else {
+                        $(this).next("label").text(disText);
+                        $(this).val("enabled");
                     }
                 });
                 </script>
-                <button id="btnSubmit" class="zButton primary widthAll zShadow">Tamamla</button>
+                <button id="btnSubmit" class="zButton primary widthAll zShadow5">Tamamla</button>
             </div>
         </form>
     </section>
+    <section class="whiteBack rad-15 pad-20 font-16 top-20">
+        <h4 class="font-19 top-0 text4 boldText">Yazılım Güncellemesi</h4>
+        <p class="top-0 font-1em">Lütfen güncelleme sonrası olası hataların çıkabileceğini kabul ederek güncelleyin.</p>
+        <form class="zForm zSure" method="get" role="form" action="#modalsure">
+            <button class="zButton primary widthAll zShadow5">Güncelle</button>
+        </form>
+    </section>
+    
+
+<div class="zModal" id="modalupdate">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Güncelleniyor
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"></div>
+                    Lütfen bekleyin, ultimate Z'niz yükseltiliyor...
+                </div>
+                <div class="rightText">
+                                                        </div>
+                    </div>
+    </div>
+</div>
+    
+
+<div class="zModal" id="modalsure">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form id="zUser-update-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/preferences/index.php">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Güncelle
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type="text" name="langcode" class="displayNone" value="{$zContent->language->iso_code}">
+                  <input type="text" name="updateSite" class="displayNone" value="true"></div>
+                    ultimate Z'yi güncellemek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
 
         </div>
 
@@ -436,7 +504,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.2</b></p>
     </div>
 </footer>
     </div>
@@ -450,6 +518,11 @@ $(window).resize(function(){
         
     <script>
         function zPageJS() {
+            $(".zSure").submit(function(e) {
+                e.preventDefault();
+                window.location.assign("#modalsure");
+            });
+
             // submit form functions
             $("#zUser-preferences-form").submit(function(e) {
                 e.preventDefault();
@@ -463,6 +536,36 @@ $(window).resize(function(){
                     url: post_url,
                     data: post_data,
                     success: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000
+                        }).showToast();
+                    },
+                    error: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000,
+                            backgroundColor: "#f3616d",
+                        }).showToast();
+                    },
+                });
+            });
+            $("#zUser-update-form").submit(function(e) {
+                e.preventDefault();
+
+                var form = $(this).clone();
+                var post_url = form.attr("action");
+                var post_data = form.serialize();
+
+                window.location.assign("#modalupdate");
+                $("body").css("overflow", "hidden");
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    data: post_data,
+                    success: function(responseText) {
+                        window.location.assign("#");
+                        $("body").css("overflow", "auto");
                         Toastify({
                             text: responseText,
                             duration: 3000

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:04
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_618838135118f8_33782925',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d68c6c9a65_27647907',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1636232870,
+      1 => 1639138416,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_618838135118f8_33782925 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '17202930786188381350ab69_92380266';
+function content_61c6d68c6c9a65_27647907 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
+$_smarty_tpl->compiled->nocache_hash = '69702373561c6d68c6c2e20_38763690';
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['_mButton']->value) {?>
@@ -55,7 +56,7 @@ $_smarty_tpl->compiled->nocache_hash = '17202930786188381350ab69_92380266';
                 <div class="rightText">
                     <?php if (!$_smarty_tpl->tpl_vars['_noClose']->value) {?>
                     <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        <?php echo $_smarty_tpl->tpl_vars['zThis']->value["Close"];?>
+                        <?php echo smarty_function_zThis(array('z'=>"Close"),$_smarty_tpl);?>
 
                     </a>
                     <?php }?>
@@ -64,7 +65,7 @@ $_smarty_tpl->compiled->nocache_hash = '17202930786188381350ab69_92380266';
                         <span><?php if ($_smarty_tpl->tpl_vars['_mSubmit']->value) {
 echo $_smarty_tpl->tpl_vars['_mSubmit']->value;
 } else {
-echo $_smarty_tpl->tpl_vars['zThis']->value["Accept"];
+echo smarty_function_zThis(array('z'=>"Accept"),$_smarty_tpl);
 }?></span>
                     </button>
                     <?php }?>

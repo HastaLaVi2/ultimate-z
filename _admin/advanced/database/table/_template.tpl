@@ -15,7 +15,7 @@
 
 {extends file="_main.tpl"}
 
-{block name="zHead" append}
+{block name="zTop" append}
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/simple-datatables/style.css">
 {/block}
 
@@ -94,11 +94,11 @@
 
 {block name="zBottom" append}
     <script>
-    var entriesPerPage = "{$zThis["entries per page"]}";
-    var searchOn = "{$zThis["Search..."]}";
-    var showingOf = "{$zThis["Showing [start] to [end] of [rows] entries"]}";
+    var entriesPerPage = "{zThis z="entries per page"}";
+    var searchOn = "{zThis z="Search..."}";
+    var showingOf = "{zThis z="Showing [start] to [end] of [rows] entries"}";
     showingOf = showingOf.replaceAll("[", "{literal}{{/literal}").replaceAll("]", "{literal}}{/literal}");
-    var noRowFound = "{$zThis["No entries found"]}";
+    var noRowFound = "{zThis z="No entries found"}";
 
     $("input[type=checkbox]").change(function() {
         var clas = $(this).attr("class").split(" ")[1];

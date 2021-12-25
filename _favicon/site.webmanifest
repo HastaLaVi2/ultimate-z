@@ -1,6 +1,6 @@
 {
-    "name": "Dönmezoğlu Bilişim",
-    "short_name": "Dönmezoğlu Bilişim",
+    "name": "ultimate Z",
+    "short_name": "ultimate Z",
     "icons": [
         {
             "src": "/_favicon/android-chrome-144x144.png",
@@ -33,11 +33,6 @@
             "type": "image/png"
         },
         {
-            "src": "/_favicon/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
             "src": "/_favicon/android-chrome-72x72.png",
             "sizes": "72x72",
             "type": "image/png"
@@ -48,7 +43,7 @@
             "type": "image/png"
         },
     ],
-    "theme_color": "#2d89ef",
-    "background_color": "#2d89ef",
+    "theme_color": "#99154e",
+    "background_color": "#99154e",
     "display": "standalone"
 }

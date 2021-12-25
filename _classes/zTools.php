@@ -225,11 +225,15 @@ class zTools {
         return $value;
     }
 
-    public function zToolsViewsTotalForPeriod($period = NULL, $id_page = NULL, $specDate = NULL) {
+    public function zToolsViewsTotalForPeriod($period = NULL, $id_page = NULL, $specDate = NULL, $start = NULL) {
         $db = zDb::get();
 
         $result = array();
         $date = date("Y-m-d");
+
+        if ($start) {
+            $specDate = date("Y-m-d", strtotime(($specDate ? $specDate . " " : "")."-".$start." days"));
+        }
 
         if ($specDate) {
             $date = date("Y-m-d", strtotime($specDate));
@@ -330,6 +334,7 @@ class zTools {
         }
     }
 
+    # copied from https://stackoverflow.com/questions/4356289/php-random-string-generator
     public function generateRandomString($length = 20) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);

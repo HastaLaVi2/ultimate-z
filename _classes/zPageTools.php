@@ -19,19 +19,40 @@ if (strpos("$_SERVER[REQUEST_URI]", "zPageTools.php") !== false) {
 }
 
 class zPageTools {
-
+    /*
+        used on files     : {
+            "_admin/_partials/pageHeader.tpl",
+            "_admin/layouts/pages/edit/_template.tpl",
+            "_scripts/smarty/libs/plugins/function.zPageName.php"
+        }
+        what does it do   : this function is called on a smarty plugin,
+                            which helps on smarty template files to get the link of a page.
+    */
     public function zPageGetPageName($id_page = NULL, $id_lang = NULL) {
         $zPage = new zPage($id_page, $id_lang);
 
         return $zPage->name;
     }
 
+    /*
+        used on files     : {
+            "_scripts/smarty/libs/plugins/function.zPageUrl.php"
+        }
+        what does it do   : this function is used to get the link of a page.
+    */
     public function zPageGetPageUrl($id_page = NULL, $id_lang = NULL) {
         $zPage = new zPage($id_page, $id_lang);
 
         return $zPage->url;
     }
 
+    /*
+        used on files     : {
+            "_starters/back/layouts/pages/create/starter.php",
+            "_starters/back/layouts/pages/edit/starter.php"
+        }
+        what does it do   : this function is called both when creating a new page, or editing a page.
+    */
     public function zPageUpdate(array $data) {
         $db = zDB::get();
         $zThis = zThis::get()->table;
@@ -66,6 +87,9 @@ class zPageTools {
                 $subpage = 0;
             }
 
+            # get page status value
+            $page_status = isset($data["page_status"]) ? 1 : 0;
+
             # check if we are on a "create page" or "edit page".
             if (!isset($id_page)) {
                 # if we are creating a page, we need to set a new id to our page.
@@ -84,7 +108,7 @@ class zPageTools {
                 # if we are editing a page, we need to update some values.
                 # url is always a single value, so we start with that.
                 # also, we need to update subpage parameter as well.
-                $query .= "UPDATE zPages SET url = '$page_url', subpage = '$subpage' WHERE id_page = '$id_page';";
+                $query .= "UPDATE zPages SET url = '$page_url', subpage = '$subpage', status = '$page_status' WHERE id_page = '$id_page';";
 
                 # now, time to find out which template is used on the page.
                 $select1 = $db->select("SELECT * FROM zPages WHERE id_page = '$id_page'");
@@ -267,6 +291,12 @@ class zPageTools {
         }
     }
 
+    /*
+        used on files     : {
+            "_starters/back/layouts/pages/_starter.php"
+        }
+        what does it do   : this function is used to delete a page.
+    */
     public function zPageDelete(array $data) {
         $db = zDB::get();
         $zThis = zThis::get()->table;
@@ -314,6 +344,10 @@ class zPageTools {
         }
     }
 
+    /*
+        used on files     : {}
+        what does it do   : this function is used to get list of pages categorised by their templates.
+    */
     public function zPageGetByTemplate($id_template = NULL, $id_lang = NULL) {
         $db = zDB::get();
 
@@ -330,6 +364,10 @@ class zPageTools {
         return $result;
     }
 
+    /*
+        used on files     : {}
+        what does it do   : this function is used to get list of pages categorised by their categories.
+    */
     public function zPageGetByCategory($id_category = NULL, $id_lang = NULL) {
         $db = zDB::get();
 
@@ -346,6 +384,14 @@ class zPageTools {
         return $result;
     }
 
+    /*
+        used on files     : {
+            "__start.php",
+            "_admin/_template.tpl",
+            "_admin/layouts/pages/_template.tpl"
+        }
+        what does it do   : this function is used to get list of all pages.
+    */
     public function zPageGetAll($id_lang = NULL, $area = NULL) {
         $db = zDB::get();
 
@@ -367,6 +413,13 @@ class zPageTools {
         return $result;
     }
 
+    /*
+        used on files     : {
+            "_starters/back/layouts/pages/create/starter.php",
+            "_starters/back/layouts/pages/edit/starter.php"
+        }
+        what does it do   : this function is called both when creating a new page, or editing a page.
+    */
     public function zPageGetSubpageSelector($id_page = NULL, $id_lang = NULL) {
         $db = zDB::get();
 
@@ -385,6 +438,13 @@ class zPageTools {
         return $result;
     }
 
+    #
+    # internal functions
+    #
+
+    /*
+        what does it do   : this function is used to get the id of the last saved holder to the database.
+    */
     private function zPageGetHolderLastId() {
         $db = zDB::get();
 

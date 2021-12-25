@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
+/* Smarty version 3.1.40, created on 2021-12-25 08:30:04
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_618838133c9455_74725327',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d68c64ed23_67381077',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/logo.tpl' => 1,
   ),
 ),false)) {
-function content_618838133c9455_74725327 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageUrl.php','function'=>'smarty_function_zPageUrl',),1=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageName.php','function'=>'smarty_function_zPageName',),));
-$_smarty_tpl->compiled->nocache_hash = '172014555618838133a5cc8_46150356';
+function content_61c6d68c64ed23_67381077 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),1=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageUrl.php','function'=>'smarty_function_zPageUrl',),2=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageName.php','function'=>'smarty_function_zPageName',),));
+$_smarty_tpl->compiled->nocache_hash = '70438615761c6d68c6276a3_53144645';
 ?>
 
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">
@@ -32,7 +32,7 @@ $_smarty_tpl->compiled->nocache_hash = '172014555618838133a5cc8_46150356';
 ?>
         <div class="top-40">
             <ul class="cleanList font-16">
-                <li class="text4 padLR-1rem weight-600"><?php echo $_smarty_tpl->tpl_vars['zThis']->value["Menu"];?>
+                <li class="text4 padLR-1rem weight-600"><?php echo smarty_function_zThis(array('z'=>"Menu"),$_smarty_tpl);?>
 </li>
 
                 <li class="top-0_5rem padTB-5">
@@ -51,7 +51,7 @@ $_smarty_tpl->compiled->nocache_hash = '172014555618838133a5cc8_46150356';
 ">
                         <i class="fas fa-layer-group <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsSideIconColor(array(4,5,6,7,8,9,17,18),$_smarty_tpl->tpl_vars['zPage']->value->id);?>
 "></i>
-                        <span class="padL-15"><?php echo $_smarty_tpl->tpl_vars['zThis']->value["Layouts"];?>
+                        <span class="padL-15"><?php echo smarty_function_zThis(array('z'=>"Layouts"),$_smarty_tpl);?>
 </span>
                         <i class="fas fa-chevron-down inRight top-3 <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsSideIconColor(array(4,5,6,7,8,9,17,18),$_smarty_tpl->tpl_vars['zPage']->value->id);?>
 "></i>
@@ -122,7 +122,7 @@ $_smarty_tpl->compiled->nocache_hash = '172014555618838133a5cc8_46150356';
                     </a>
                 </li>
 
-                <li class="text4 padLR-1rem weight-600 padT-30"><?php echo $_smarty_tpl->tpl_vars['zThis']->value["Advanced"];?>
+                <li class="text4 padLR-1rem weight-600 padT-30"><?php echo smarty_function_zThis(array('z'=>"Advanced"),$_smarty_tpl);?>
 </li>
 
                 <li class="top-0_5rem padTB-5">

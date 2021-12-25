@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:08:33
+/* Smarty version 3.1.40, created on 2021-12-23 22:14:20
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/design/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_6186eed101c624_19572496',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c4f4bc3bbec2_40687799',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,25 +18,31 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1636204676,
+      1 => 1637665907,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
+      2 => 'file',
+    ),
+    '573b073f619aeb439fcac73d74e676de04fada42' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
+      1 => 1640259422,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -48,13 +54,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1633373917,
+      1 => 1639138316,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1636204676,
+      1 => 1637666153,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -66,7 +72,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_6186eed101c624_19572496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c4f4bc3bbec2_40687799 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -89,8 +95,6 @@ function content_6186eed101c624_19572496 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jquery -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery-3.6.0.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fontawesome/css/all.min.css"/>
@@ -100,23 +104,29 @@ function content_6186eed101c624_19572496 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
+    
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/ultimate-z/_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/ultimate-z/_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/ultimate-z/_favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/ultimate-z/_favicon/favicon-16x16.png">
 <link rel="manifest" href="http://localhost/ultimate-z/_favicon/site.webmanifest">
-<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#2d89ef">
+<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#99154e">
 <link rel="shortcut icon" href="http://localhost/ultimate-z/_favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileColor" content="#99154e">
 <meta name="msapplication-TileImage" content="http://localhost/ultimate-z/_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
+<meta name="theme-color" content="#99154e">
 
+<!-- lazysizes -->
+<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -130,9 +140,6 @@ function content_6186eed101c624_19572496 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- html2canvas -->
     <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
 </head>
 <body class="back7">
     
@@ -161,8 +168,7 @@ function content_6186eed101c624_19572496 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
-            </div>
+                ultimate Z            </div>
         </center>
     </div>
 </div>
@@ -172,7 +178,7 @@ function content_6186eed101c624_19572496 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead"></div>
+    <div id="zTop"></div>
 
     
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">
@@ -369,7 +375,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.1</b></p>
     </div>
 </footer>
     </div>

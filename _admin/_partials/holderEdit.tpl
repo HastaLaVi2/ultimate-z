@@ -34,18 +34,18 @@
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                {$zThis["Delete Holder"]}
+                                {zThis z="Delete Holder"}
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            {$zThis["Are you sure you want to delete this holder?"]}
+                            {zThis z="Are you sure you want to delete this holder?"}
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                {$zThis["Close"]}
+                                {zThis z="Close"}
                             </a>
-                            <a class="zButton primary sweet font-16 zRemove-holder{$modalNumber}" href="#">
-                                <span>{$zThis["Accept"]}</span>
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder{$modalNumber}" href="#">
+                                <span>{zThis z="Accept"}</span>
                             </a>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                 {if $holder->types[$key] == "no"}
                 {elseif $holder->types[$key] == "input"}
                     <div class="top-20">
-                        <input name="zContent[{$zUser->id_lang}][]" type="text" class="back-white page-title padL-45" value="{$content}">
+                        <input name="zContent[{$zUser->id_lang}][]" type="text" class="back-white page-title padL-45" value="{$content|escape:"html"}">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
                         </div>
@@ -77,8 +77,15 @@
                     </div>
                 {elseif $holder->types[$key] == "images"}
                     <div class="top-20">
-                        <input class="displayNone" value="{$content}" data-multi="true">
-                        <input type="file" class="filepond">
+                        <div class="zTog-imagesFor{$modalNumber} pad-10 rad-5 pointThis" style="background:#f0efee">
+                            <div class="zShow-imagesFor{$modalNumber}">{zThis z="Click to upload your media."}</div>
+                            <div class="zShow-imagesFor{$modalNumber} displayNone">{zThis z="Hide upload panel."}</div>
+                        </div>
+                        <div class="displayNone zShow-imagesFor{$modalNumber} _top--5">
+                            <div class="floatingSpace widthAll height-10 boldMin-1 boldSoG2 boldNoL boldNoR boldNoB index-10" style="background:#f0efee"></div>
+                            <input class="displayNone" value="{$content}" data-multi="true">
+                            <input type="file" class="filepond">
+                        </div>
                     </div>
                 {elseif $holder->types[$key] == "categorylist"}
                     {assign var=allcats value=$zCategoryTools->zCategoryGetAll($zContent->language->id)}

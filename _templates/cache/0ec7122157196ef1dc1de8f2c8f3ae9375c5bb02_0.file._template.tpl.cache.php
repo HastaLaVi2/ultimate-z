@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:08:35
+/* Smarty version 3.1.40, created on 2021-12-23 22:14:22
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/design/favicon/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_6186eed317d3f9_83295060',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c4f4be3e9ee1_25006435',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ec7122157196ef1dc1de8f2c8f3ae9375c5bb02' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/design/favicon/_template.tpl',
-      1 => 1633642854,
+      1 => 1640297414,
       2 => 'file',
     ),
   ),
@@ -20,51 +20,53 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6186eed317d3f9_83295060 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c4f4be3e9ee1_25006435 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '13129680816186eed305a302_02596700';
+$_smarty_tpl->compiled->nocache_hash = '187873182061c4f4be34a278_80471362';
 ?>
 
 
 
+<!-- variables start -->
 <?php $_smarty_tpl->_assignInScope('desktopType', "same");
 $_smarty_tpl->_assignInScope('desktopDiffer_bg', "#ffffff");
 $_smarty_tpl->_assignInScope('desktopDiffer_rad', "0");
 $_smarty_tpl->_assignInScope('desktopDiffer_size', "100");
-$_smarty_tpl->_assignInScope('iosType', "same");
+$_smarty_tpl->_assignInScope('iosType', "differ");
 $_smarty_tpl->_assignInScope('iosDiffer_bg', "#ffffff");
 $_smarty_tpl->_assignInScope('iosDiffer_size', "100");
 $_smarty_tpl->_assignInScope('androidType', "same");
 $_smarty_tpl->_assignInScope('androidDiffer_bg', "#ffffff");
 $_smarty_tpl->_assignInScope('androidDiffer_size', "100");
-$_smarty_tpl->_assignInScope('winType', "same");
-$_smarty_tpl->_assignInScope('winDiffer_bg', "#2d89ef");
-$_smarty_tpl->_assignInScope('macDiffer_bg', "#2d89ef");?>
+$_smarty_tpl->_assignInScope('winType', "white");
+$_smarty_tpl->_assignInScope('winDiffer_bg', "#99154e");
+$_smarty_tpl->_assignInScope('macDiffer_bg', "#99154e");?>
+<!-- variables end -->
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8468976946186eed3124d31_50232147', "zHead");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_66905476461c4f4be3717e7_77845782', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20542723976186eed3129584_68925425', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63243470661c4f4be3783f5_01989261', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12945162896186eed315a1a9_97725283', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_23595047861c4f4be3bda74_48166452', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
-/* {block "zHead"} */
-class Block_8468976946186eed3124d31_50232147 extends Smarty_Internal_Block
+/* {block "zTop"} */
+class Block_66905476461c4f4be3717e7_77845782 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
-  'zHead' => 
+  'zTop' => 
   array (
-    0 => 'Block_8468976946186eed3124d31_50232147',
+    0 => 'Block_66905476461c4f4be3717e7_77845782',
   ),
 );
 public $append = 'true';
@@ -81,14 +83,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <?php
 }
 }
-/* {/block "zHead"} */
+/* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_20542723976186eed3129584_68925425 extends Smarty_Internal_Block
+class Block_63243470661c4f4be3783f5_01989261 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_20542723976186eed3129584_68925425',
+    0 => 'Block_63243470661c4f4be3783f5_01989261',
   ),
 );
 public $append = 'true';
@@ -248,7 +250,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                         <label for="iosDiffer"><?php echo smarty_function_zThis(array('z'=>"Add margins and background."),$_smarty_tpl);?>
 </label>
                     </div>
-                    <div class="<?php if ($_smarty_tpl->tpl_vars['iosType']->value !== "differ") {?>displayNone<?php }?> iosDifferDiv">
+                    <div class="<?php if ($_smarty_tpl->tpl_vars['iosType']->value !== "differ") {?>displayNone<?php }?> iosDifferDiv font0">
                         <div class="col-6 colTop">
                             <div class="zGroup">
                                 <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -297,7 +299,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                         <label for="androidDiffer"><?php echo smarty_function_zThis(array('z'=>"Add margins and background."),$_smarty_tpl);?>
 </label>
                     </div>
-                    <div class="<?php if ($_smarty_tpl->tpl_vars['androidType']->value !== "differ") {?>displayNone<?php }?> androidDifferDiv">
+                    <div class="<?php if ($_smarty_tpl->tpl_vars['androidType']->value !== "differ") {?>displayNone<?php }?> androidDifferDiv font0">
                         <div class="col-6 colTop padTB-10">
                             <div class="zGroup">
                                 <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -454,12 +456,12 @@ $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->va
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_12945162896186eed315a1a9_97725283 extends Smarty_Internal_Block
+class Block_23595047861c4f4be3bda74_48166452 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_12945162896186eed315a1a9_97725283',
+    0 => 'Block_23595047861c4f4be3bda74_48166452',
   ),
 );
 public $append = 'true';
@@ -524,46 +526,73 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
     <?php echo '<script'; ?>
 >
         /*
-            FAVICON
+            EDITING PROCESS
         */
 
         // helper functions
         function bg(type) {
+            // this function updates the background color of the favicon,
+            // if the background color changed from an input field on the page.
             if ($("input[name="+type+"Differ_bg]").length) {
+                // get the input field which starts with the name of the platform
+                // which could be either iOS, android, windows or macOS, and ends
+                // with Differ_bg, because all of the background fields are.
                 var value = $("input[name="+type+"Differ_bg]").val();
+                // then pick each icon on the page for a platform.
                 $("."+type+"Icon").each(function() {
+                    // then change the background of the icon.
+                    // except for windows, because windows icons' background color
+                    // is set in the "browserconfig.xml" file later.
                     if (type == "win" && $(this).parent().hasClass(type+"Set")) {} else {
                         $(this).css("background", value);
                     }
                 });
             }
         }
+        // there is a radius option for the favicon, and this function is a helper
+        // function for radius giving.
         function radius(type) {
+            // select the input field ends with "Differ_rad" and starts with the
+            // platform name.
             if ($("input[name="+type+"Differ_rad]").length) {
+                // then get its value.
                 var value = $("input[name="+type+"Differ_rad]").val();
+                // then pick each icon on the page for a platform, and give it a little radius!
                 $("."+type+"Icon").css("border-radius", value+"%");
             }
         }
+        // sizing the icon helper function. the process is the same as the above two functions.
         function size(type) {
             if ($("input[name="+type+"Differ_size]").length) {
                 var value = $("input[name="+type+"Differ_size]").val();
                 $("."+type+"Icon img").attr("style", "width: "+value+"% !important");
             }
         }
+
+        // this function combines all the helper functions above into one,
+        // and for each platform, it will have different options
         function check(type) {
+            // if any option of "background, size, or radius" changing is open on screen,
+            // run the helper functions to change the spesifications of any icon
+            // according to the input fields.
             if ($("."+type+"DifferDiv").css("display") == "block") {
                 bg(type);
                 size(type);
                 radius(type);
             } else {
+                // if "background, size, or radius" changing is NOT open on screen,
+                // then we should remove all styling and go back to the default.
                 $("."+type+"Icon").attr("style", "");
                 $("."+type+"Icon img").attr("style", "");
             }
+            // this is a shadow option, it only works for android.
             if ($("input[name="+type+"Type]:checked").prop("id") == type+"Shadow") {
                 $("."+type+"Icon img").attr("style", "width:70%;filter:drop-shadow(0 0 2px rgba(0,0,0,.5));");
             }
         }
 
+        // let's do the magic, and collect every option on the icons at final state.
+        // later from here, the icons will go for uploading process.
         function usefullNess() {
             // DESKTOP
             $("input[name=desktopType]").click(function() {
@@ -648,6 +677,10 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
             check("android");
         }
 
+        /*
+            ON FIRST UPLOAD
+        */
+
         function partial(type) {
             if (type == "mac") {
                 $("."+type+"Icon div").css("-webkit-mask-image", "url(<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
@@ -671,6 +704,10 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
             partial("mac");
         }
 
+        /*
+            DELETER
+        */
+
         function deleteImage(filename) {
             var data = new FormData();
             data.set("file_name", filename);
@@ -686,6 +723,10 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                 error: function() { }
             });
         }
+
+        /*
+            UPLOAD PROCESS
+        */
 
         // this is to upload an image to server,
         // used both by summernote and filepond
@@ -749,6 +790,7 @@ echo ltrim(ltrim(ltrim($_smarty_tpl->tpl_vars['zContent']->value->current,"https
                 sheight = size;
             }
             let filename = "mstile-" + swidth + "x" + sheight;
+
             ImageTracer.imageToSVG(
                 "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
 /"+filename+".png", /* input filename / URL */
@@ -760,7 +802,8 @@ echo ltrim(ltrim(ltrim($_smarty_tpl->tpl_vars['zContent']->value->current,"https
                     uploadImage(blackF, filename);
                 } /* callback function to run on SVG string result */
             );
-            setTimeout(function(){
+
+            setTimeout(function (){
                 $.get("<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
 /"+filename+".svg", function(data) {
                     var svgString = new XMLSerializer().serializeToString(data.documentElement);
@@ -818,16 +861,21 @@ echo ltrim(ltrim(ltrim($_smarty_tpl->tpl_vars['zContent']->value->current,"https
                                 }
                             }
                         });
+                        next();
                     };
                 }(function() {
                     if (prefix == "mstile" && $("#winWhite").is(":checked")) {
-                        uploadForWin(size);
+                        setTimeout(function (){
+                            $.each(sizes, function(unn, size) {
+                                uploadForWin(size);
+                            });
+                        }, 3000);
                     }
                 }));
             });
         }
 
-        function renderEverything(callback) {
+        function renderEverything() {
             let sets = [];
             sets[0] = [$(".desktopIcon")[0], "favicon", [16, 32, 48]];
             sets[1] = [$(".iosIcon")[0], "apple-touch-icon", [57, 60, 72, 76, 114, 120, 144, 152, 180]];
@@ -853,9 +901,6 @@ echo ltrim(ltrim(ltrim($_smarty_tpl->tpl_vars['zContent']->value->current,"https
                     createFinalImg(v[0], v[1], null, v[2]);
                 }
             });
-
-            if (typeof callback == "function")
-                callback();
         }
 
         function zPageJS() {
@@ -1010,26 +1055,25 @@ echo ltrim(ltrim(ltrim($_smarty_tpl->tpl_vars['zContent']->value->current,"https
                 $("body").css("overflow", "hidden");
 
                 setTimeout(function (){
-                    (function(next) {
-                        renderEverything();
-                    }(function() {
-                        $.ajax({
-                            url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/configure.php",
-                            cache: false,
-                            contentType: false,
-                            processData: false,
-                            data: post_data,
-                            type: "GET",
-                            success: function(data) {
-                            }
-                        });
-                    }));
+                    renderEverything();
 
                     window.location.assign("#");
                     $("body").css("overflow", "auto");
 
                     Toastify({
+                        callback: function() {
+                            $.ajax({
+                                url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
+/configure.php",
+                                cache: false,
+                                contentType: false,
+                                processData: false,
+                                data: post_data,
+                                type: "GET",
+                                success: function(data) {
+                                }
+                            });
+                        },
                         text: "<?php echo smarty_function_zThis(array('z'=>"Change has been made."),$_smarty_tpl);?>
 ",
                         duration: 3000
@@ -1040,6 +1084,7 @@ echo ltrim(ltrim(ltrim($_smarty_tpl->tpl_vars['zContent']->value->current,"https
 
         document.addEventListener("DOMContentLoaded", function(event) {
             zPageJS();
+            zDetect();
         });
     <?php echo '</script'; ?>
 >

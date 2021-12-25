@@ -15,7 +15,7 @@
 
 {extends file="_main.tpl"}
 
-{block name="zHead" append}
+{block name="zTop" append}
     <!-- filepond -->
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond.css">
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-image-preview.css">

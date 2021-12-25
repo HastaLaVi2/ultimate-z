@@ -1,42 +1,48 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:33:23
+/* Smarty version 3.1.40, created on 2021-12-25 08:15:54
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883813520aa1_85404386',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d33a340109_82104826',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3e1152df841f7cec2c5ff34d7e9e78e3783197e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl',
-      1 => 1636232896,
+      1 => 1639138559,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1636204676,
+      1 => 1637665907,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
+      2 => 'file',
+    ),
+    '573b073f619aeb439fcac73d74e676de04fada42' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
+      1 => 1640259422,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1636204676,
+      1 => 1637660534,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1633376417,
+      1 => 1639138246,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -48,19 +54,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1633373917,
+      1 => 1639138316,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1636232870,
+      1 => 1639138416,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1636204676,
+      1 => 1637666153,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -72,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d33a340109_82104826 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -95,8 +101,6 @@ function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- jquery -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery-3.6.0.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.min.js"></script>
-<script src="http://localhost/ultimate-z/_scripts/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/fontawesome/css/all.min.css"/>
@@ -106,23 +110,29 @@ function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
+    <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
+    
 <!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="http://localhost/ultimate-z/_favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost/ultimate-z/_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="http://localhost/ultimate-z/_favicon/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost/ultimate-z/_favicon/favicon-16x16.png">
 <link rel="manifest" href="http://localhost/ultimate-z/_favicon/site.webmanifest">
-<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#2d89ef">
+<link rel="mask-icon" href="http://localhost/ultimate-z/_favicon/safari-pinned-tab.svg" color="#99154e">
 <link rel="shortcut icon" href="http://localhost/ultimate-z/_favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-TileColor" content="#99154e">
 <meta name="msapplication-TileImage" content="http://localhost/ultimate-z/_favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="http://localhost/ultimate-z/_favicon/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
+<meta name="theme-color" content="#99154e">
 
+<!-- lazysizes -->
+<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -136,9 +146,6 @@ function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl)
 
     <!-- html2canvas -->
     <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="http://localhost/ultimate-z/_scripts/admin.js"></script>
 </head>
 <body class="back7">
     
@@ -167,8 +174,7 @@ function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
-            </div>
+                ultimate Z            </div>
         </center>
     </div>
 </div>
@@ -178,7 +184,7 @@ function content_61883813520aa1_85404386 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zHead">
+    <div id="zTop">
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/simple-datatables/style.css">
 </div>
 
@@ -397,7 +403,7 @@ $(window).resize(function(){
                         </tr>
                                             <tr id="zPage-1002">
                             <td>2</td>
-                            <td>1</td>
+                            <td>Moda</td>
                             <td>zAna</td>
                             <td>
                                 <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002" class="zButton zHov-zShadow5 primary sweet">
@@ -438,7 +444,7 @@ $(window).resize(function(){
                         </tr>
                                             <tr id="zPage-1003">
                             <td>3</td>
-                            <td>2</td>
+                            <td>1001</td>
                             <td>zAna</td>
                             <td>
                                 <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1003" class="zButton zHov-zShadow5 primary sweet">
@@ -477,88 +483,6 @@ $(window).resize(function(){
 </div>
                                                             </td>
                         </tr>
-                                            <tr id="zPage-1004">
-                            <td>4</td>
-                            <td>3</td>
-                            <td>zAna</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1004" class="zButton zHov-zShadow5 primary sweet">
-                                     Düzenle
-                                </a>
-                            </td>
-                            <td>
-                                                                
-<a href="#modal1004" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
-
-<div class="zModal" id="modal1004">
-    <a class="zCancel" href="#"></a>
-    <div class="zModalContent rad-15" zMob-768="zCol-11">
-        <div class="pad-20">
-                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
-                            <div class="modal-header bg-primary">
-                    <h5 class="top-0 bottom-0 font-18">
-                        Sayfayı Sil
-                    </h5>
-                </div>
-                <div class="zInside gray2 font-15 padTB-20">
-                    <div class="displayNone"><input name='id_page' value='1004'></div>
-                    Bu sayfayı silmek istediğinize emin misiniz?
-                </div>
-                <div class="rightText">
-                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Kapat
-                    </a>
-                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>Evet</span>
-                    </button>
-                                    </div>
-                        </form>
-                    </div>
-    </div>
-</div>
-                                                            </td>
-                        </tr>
-                                            <tr id="zPage-1005">
-                            <td>5</td>
-                            <td>30</td>
-                            <td>zAna</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1005" class="zButton zHov-zShadow5 primary sweet">
-                                     Düzenle
-                                </a>
-                            </td>
-                            <td>
-                                                                
-<a href="#modal1005" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
-
-<div class="zModal" id="modal1005">
-    <a class="zCancel" href="#"></a>
-    <div class="zModalContent rad-15" zMob-768="zCol-11">
-        <div class="pad-20">
-                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
-                            <div class="modal-header bg-primary">
-                    <h5 class="top-0 bottom-0 font-18">
-                        Sayfayı Sil
-                    </h5>
-                </div>
-                <div class="zInside gray2 font-15 padTB-20">
-                    <div class="displayNone"><input name='id_page' value='1005'></div>
-                    Bu sayfayı silmek istediğinize emin misiniz?
-                </div>
-                <div class="rightText">
-                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Kapat
-                    </a>
-                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>Evet</span>
-                    </button>
-                                    </div>
-                        </form>
-                    </div>
-    </div>
-</div>
-                                                            </td>
-                        </tr>
                                     </tbody>
             </table>
         </div>
@@ -572,7 +496,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.1</b></p>
     </div>
 </footer>
     </div>

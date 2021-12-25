@@ -29,6 +29,8 @@ class zUser {
     public $id_picture;
     public $id_lang;
     public $rank_name;
+    public $token;
+    public $token_expire;
 
     # connect to database
     public function __construct(array $data = NULL) {
@@ -46,6 +48,8 @@ class zUser {
             $this->id_rank = $query[0]["id_rank"];
             $this->id_picture = $query[0]["id_picture"];
             $this->id_lang = $query[0]["id_lang"];
+            $this->token = $query[0]["token"];
+            $this->token_expire = $query[0]["token_expire"];
         }
 
         # get the rank name
@@ -60,4 +64,27 @@ class zUser {
         $this->nameSurname = $this->name . " " . $this->surname;
     }
 
+    public function zUserGetToken() {
+        $token_expire = new DateTime($this->token_expire);
+        $now = new DateTime("now");
+
+        if ($now < $token_expire) {
+            return $this->token;
+        }
+    }
+
+    public function zUserUpdateToken() {
+        $characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $charactersLength = strlen($characters);
+        $randomString = "";
+        for ($i = 0; $i < 12; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+
+        $dt = date("Y-m-d H:i:s", strtotime("+6 hours"));
+
+        $this->token = $randomString;
+        $this->token_expire = $dt;
+        $update_token = zDB::get()->execute("UPDATE zUsers SET token = '$randomString', token_expire = '$dt' WHERE id_user = '$this->id'");
+    }
  }

@@ -15,21 +15,23 @@
 
 {extends file="_main.tpl"}
 
+<!-- variables start -->
 {assign var=desktopType value="same"}
 {assign var=desktopDiffer_bg value="#ffffff"}
 {assign var=desktopDiffer_rad value="0"}
 {assign var=desktopDiffer_size value="100"}
-{assign var=iosType value="same"}
+{assign var=iosType value="differ"}
 {assign var=iosDiffer_bg value="#ffffff"}
 {assign var=iosDiffer_size value="100"}
 {assign var=androidType value="same"}
 {assign var=androidDiffer_bg value="#ffffff"}
 {assign var=androidDiffer_size value="100"}
-{assign var=winType value="same"}
-{assign var=winDiffer_bg value="#2d89ef"}
-{assign var=macDiffer_bg value="#2d89ef"}
+{assign var=winType value="white"}
+{assign var=winDiffer_bg value="#99154e"}
+{assign var=macDiffer_bg value="#99154e"}
+<!-- variables end -->
 
-{block name="zHead" append}
+{block name="zTop" append}
     <!-- filepond -->
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond.css">
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-image-preview.css">
@@ -160,7 +162,7 @@
                         <input type="radio" name="iosType" value="differ" id="iosDiffer" {if $iosType == "differ"}checked{/if}>
                         <label for="iosDiffer">{zThis z="Add margins and background."}</label>
                     </div>
-                    <div class="{if $iosType !== "differ"}displayNone{/if} iosDifferDiv">
+                    <div class="{if $iosType !== "differ"}displayNone{/if} iosDifferDiv font0">
                         <div class="col-6 colTop">
                             <div class="zGroup">
                                 <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -199,7 +201,7 @@
                         <input type="radio" name="androidType" value="differ" id="androidDiffer" {if $androidType == "differ"}checked{/if}>
                         <label for="androidDiffer">{zThis z="Add margins and background."}</label>
                     </div>
-                    <div class="{if $androidType !== "differ"}displayNone{/if} androidDifferDiv">
+                    <div class="{if $androidType !== "differ"}displayNone{/if} androidDifferDiv font0">
                         <div class="col-6 colTop padTB-10">
                             <div class="zGroup">
                                 <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -351,46 +353,73 @@
     <script src="{$zContent->srcFull["scripts"]}/filepond/filepond.js"></script>
     <script>
         /*
-            FAVICON
+            EDITING PROCESS
         */
 
         // helper functions
         function bg(type) {
+            // this function updates the background color of the favicon,
+            // if the background color changed from an input field on the page.
             if ($("input[name="+type+"Differ_bg]").length) {
+                // get the input field which starts with the name of the platform
+                // which could be either iOS, android, windows or macOS, and ends
+                // with Differ_bg, because all of the background fields are.
                 var value = $("input[name="+type+"Differ_bg]").val();
+                // then pick each icon on the page for a platform.
                 $("."+type+"Icon").each(function() {
+                    // then change the background of the icon.
+                    // except for windows, because windows icons' background color
+                    // is set in the "browserconfig.xml" file later.
                     if (type == "win" && $(this).parent().hasClass(type+"Set")) {} else {
                         $(this).css("background", value);
                     }
                 });
             }
         }
+        // there is a radius option for the favicon, and this function is a helper
+        // function for radius giving.
         function radius(type) {
+            // select the input field ends with "Differ_rad" and starts with the
+            // platform name.
             if ($("input[name="+type+"Differ_rad]").length) {
+                // then get its value.
                 var value = $("input[name="+type+"Differ_rad]").val();
+                // then pick each icon on the page for a platform, and give it a little radius!
                 $("."+type+"Icon").css("border-radius", value+"%");
             }
         }
+        // sizing the icon helper function. the process is the same as the above two functions.
         function size(type) {
             if ($("input[name="+type+"Differ_size]").length) {
                 var value = $("input[name="+type+"Differ_size]").val();
                 $("."+type+"Icon img").attr("style", "width: "+value+"% !important");
             }
         }
+
+        // this function combines all the helper functions above into one,
+        // and for each platform, it will have different options
         function check(type) {
+            // if any option of "background, size, or radius" changing is open on screen,
+            // run the helper functions to change the spesifications of any icon
+            // according to the input fields.
             if ($("."+type+"DifferDiv").css("display") == "block") {
                 bg(type);
                 size(type);
                 radius(type);
             } else {
+                // if "background, size, or radius" changing is NOT open on screen,
+                // then we should remove all styling and go back to the default.
                 $("."+type+"Icon").attr("style", "");
                 $("."+type+"Icon img").attr("style", "");
             }
+            // this is a shadow option, it only works for android.
             if ($("input[name="+type+"Type]:checked").prop("id") == type+"Shadow") {
                 $("."+type+"Icon img").attr("style", "width:70%;filter:drop-shadow(0 0 2px rgba(0,0,0,.5));");
             }
         }
 
+        // let's do the magic, and collect every option on the icons at final state.
+        // later from here, the icons will go for uploading process.
         function usefullNess() {
             // DESKTOP
             $("input[name=desktopType]").click(function() {
@@ -475,6 +504,10 @@
             check("android");
         }
 
+        /*
+            ON FIRST UPLOAD
+        */
+
         function partial(type) {
             if (type == "mac") {
                 $("."+type+"Icon div").css("-webkit-mask-image", "url({$zContent->srcFull["favicon"]}/favicon.png)");
@@ -494,6 +527,10 @@
             partial("mac");
         }
 
+        /*
+            DELETER
+        */
+
         function deleteImage(filename) {
             var data = new FormData();
             data.set("file_name", filename);
@@ -508,6 +545,10 @@
                 error: function() { }
             });
         }
+
+        /*
+            UPLOAD PROCESS
+        */
 
         // this is to upload an image to server,
         // used both by summernote and filepond
@@ -565,6 +606,7 @@
                 sheight = size;
             }
             let filename = "mstile-" + swidth + "x" + sheight;
+
             ImageTracer.imageToSVG(
                 "{$zContent->srcFull["favicon"]}/"+filename+".png", /* input filename / URL */
                 function(svgstr){
@@ -575,7 +617,8 @@
                     uploadImage(blackF, filename);
                 } /* callback function to run on SVG string result */
             );
-            setTimeout(function(){
+
+            setTimeout(function (){
                 $.get("{$zContent->srcFull["favicon"]}/"+filename+".svg", function(data) {
                     var svgString = new XMLSerializer().serializeToString(data.documentElement);
 
@@ -630,16 +673,21 @@
                                 }
                             }
                         });
+                        next();
                     };
                 }(function() {
                     if (prefix == "mstile" && $("#winWhite").is(":checked")) {
-                        uploadForWin(size);
+                        setTimeout(function (){
+                            $.each(sizes, function(unn, size) {
+                                uploadForWin(size);
+                            });
+                        }, 3000);
                     }
                 }));
             });
         }
 
-        function renderEverything(callback) {
+        function renderEverything() {
             let sets = [];
             sets[0] = [$(".desktopIcon")[0], "favicon", [16, 32, 48]];
             sets[1] = [$(".iosIcon")[0], "apple-touch-icon", [57, 60, 72, 76, 114, 120, 144, 152, 180]];
@@ -665,9 +713,6 @@
                     createFinalImg(v[0], v[1], null, v[2]);
                 }
             });
-
-            if (typeof callback == "function")
-                callback();
         }
 
         function zPageJS() {
@@ -807,25 +852,24 @@
                 $("body").css("overflow", "hidden");
 
                 setTimeout(function (){
-                    (function(next) {
-                        renderEverything();
-                    }(function() {
-                        $.ajax({
-                            url: "{$zContent->srcFull["favicon"]}/configure.php",
-                            cache: false,
-                            contentType: false,
-                            processData: false,
-                            data: post_data,
-                            type: "GET",
-                            success: function(data) {
-                            }
-                        });
-                    }));
+                    renderEverything();
 
                     window.location.assign("#");
                     $("body").css("overflow", "auto");
 
                     Toastify({
+                        callback: function() {
+                            $.ajax({
+                                url: "{$zContent->srcFull["favicon"]}/configure.php",
+                                cache: false,
+                                contentType: false,
+                                processData: false,
+                                data: post_data,
+                                type: "GET",
+                                success: function(data) {
+                                }
+                            });
+                        },
                         text: "{zThis z="Change has been made."}",
                         duration: 3000
                     }).showToast();
@@ -835,6 +879,7 @@
 
         document.addEventListener("DOMContentLoaded", function(event) {
             zPageJS();
+            zDetect();
         });
     </script>
 {/block}

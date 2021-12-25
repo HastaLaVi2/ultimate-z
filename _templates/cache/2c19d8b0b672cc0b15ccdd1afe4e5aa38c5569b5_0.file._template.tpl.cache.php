@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-07 20:16:51
+/* Smarty version 3.1.40, created on 2021-12-25 08:14:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/login/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_61883433e3a777_38362382',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d2f373a561_47332087',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2c19d8b0b672cc0b15ccdd1afe4e5aa38c5569b5' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/login/_template.tpl',
-      1 => 1631794229,
+      1 => 1639309494,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61883433e3a777_38362382 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c6d2f373a561_47332087 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '160801966061883433e16fb5_38449279';
+$_smarty_tpl->compiled->nocache_hash = '51825293261c6d2f370e2c7_40206283';
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +83,7 @@ $_smarty_tpl->compiled->nocache_hash = '160801966061883433e16fb5_38449279';
 
                         </label>
                     </div>
-                    <button id="btnSubmit" class="zButton primary widthAll zShadow"><?php echo smarty_function_zThis(array('z'=>"Log in"),$_smarty_tpl);?>
+                    <button id="btnSubmit" class="zButton primary widthAll zShadow5"><?php echo smarty_function_zThis(array('z'=>"Log in"),$_smarty_tpl);?>
 </button>
                 </form>
                 <p class="font-27_2 gray2 top-20 bottom-48">

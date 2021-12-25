@@ -49,21 +49,22 @@ function createForVendor(vendor, rest) {
     return final;
 }
 
-function createStyleTag(zClass, property, value, pseudo, vendor) {
+function createStyleTag(zClass, property, value, pseudo, vendor, noImportant) {
     var inside = "";
+    var noClass = zClass.includes("[") ? true : false;
 
     if (typeof(property) == "object") {
         property.forEach(function(v, i) {
-            inside += createForVendor(vendor, v + ":" + value + " !important" + ";");
-            inside += v + ":" + value + " !important" + ";";
+            inside += createForVendor(vendor, v + ":" + value + (noImportant ? "" : " !important") + ";");
+            inside += v + ":" + value + (noImportant ? "" : " !important") + ";";
         });
     } else {
-        inside += createForVendor(vendor, property + ":" + value + " !important" + ";");
-        inside += property + ":" + value + " !important";
+        inside += createForVendor(vendor, property + ":" + value + (noImportant ? "" : " !important") + ";");
+        inside += property + ":" + value + (noImportant ? "" : " !important");
     }
 
     if (value) {
-        newStyle("." + zClass, inside, pseudo);
+        newStyle((noClass ? "" : ".") + (noImportant ? "_" : "") + zClass, inside, pseudo);
     }
 }
 
@@ -152,6 +153,27 @@ function detectAfterDash(className, detectClass) {
     return zProperty;
 }
 
+/*
+    Determines if the passed element is overflowing its bounds,
+    either vertically or horizontally.
+    Will temporarily modify the "overflow" style to detect this
+    if necessary.
+    copied from: https://stackoverflow.com/questions/143815/determine-if-an-html-elements-content-overflows
+*/
+function checkOverflow(el) {
+   var curOverflow = el.style.overflow;
+
+   if ( !curOverflow || curOverflow === "visible" )
+      el.style.overflow = "hidden";
+
+   var isOverflowing = el.clientWidth < el.scrollWidth
+      || el.clientHeight < el.scrollHeight;
+
+   el.style.overflow = curOverflow;
+
+   return isOverflowing;
+}
+
 /********************/
 /***** zDetect *****/
 /******************/
@@ -184,7 +206,7 @@ function detecting(zClass, property, pseudo, vendor) {
             var repeat = [];
 
             sth.forEach(function(s) {
-                if (s.startsWith(zClass) || s.startsWith("zHov-"+zClass)) {
+                if (s.startsWith(zClass) || s.startsWith("_" + zClass) || s.startsWith("zHov-"+zClass)) {
                     repeat.push(s);
                 }
             });
@@ -197,6 +219,7 @@ function detecting(zClass, property, pseudo, vendor) {
                 var pseudo = null;
                 var dotExists = false;
                 var notPx = true;
+                var noImportant = false;
 
                 if (typeof(i) == "string") {
                     i = i.replace("zHov-", "");
@@ -206,9 +229,12 @@ function detecting(zClass, property, pseudo, vendor) {
                     // detect if a negative number is being used.
                     if (i.match(zClass+"--")) {i = i.replace(zClass+"--", zClass+"-"); minus = true;}
 
+                    // should we use !important or not?
+                    if (i.match("_"+zClass)) {noImportant = true}
+
                     // try to define if another unit besides "px" is being used.
                     // these units could be: em, ex, ch, px, cm, mm, in, pt, pc, vh, vw, rem, vmax and vmin.
-                    var value = i.match("(?:^| )"+zClass+"-[0-9]+(?:|_)(?:|[0-9]+)(?:|em|:|ex|:|ch|:|px|:|cm|:|mm|:|in|:|pt|:|pc|:|vh|:|vw|:|rem|:|vmax|:|vmin|:|%)(?:$| )");
+                    var value = i.match("(?:^| )(?:|_)"+zClass+"-[0-9]+(?:|_)(?:|[0-9]+)(?:|em|:|ex|:|ch|:|px|:|cm|:|mm|:|in|:|pt|:|pc|:|vh|:|vw|:|rem|:|vmax|:|vmin|:|%)(?:$| )");
 
                     // check if we have a dot on our number or have a unit other than px
                     if (value && value[0].trim().includes("_")) {dotExists = true}
@@ -220,7 +246,7 @@ function detecting(zClass, property, pseudo, vendor) {
                     if (!value) {value = i.match("(?:^| )"+zClass+"-[a-z]+(?:$| )");}
 
                     // catched any value yet? remove the spaces.
-                    if (value) {value = value[0].replace(/ /g,''); value = value.replace(zClass+"-", "");}
+                    if (value) {value = value[0].replace(/ /g,''); value = value.replace("_"+zClass+"-", "").replace(zClass+"-", "");}
 
                     /* properties that do not use px */
 
@@ -268,7 +294,7 @@ function detecting(zClass, property, pseudo, vendor) {
                     if (catchedProperty == "") {catchedProperty = property}
 
                     // finally, set the style
-                    createStyleTag(catchedClass, catchedProperty, value, pseudo, vendor);
+                    createStyleTag(catchedClass, catchedProperty, value, pseudo, vendor, noImportant);
                 }
             }
         });
@@ -405,7 +431,9 @@ function zDetect() {
     detecting("shadow", "box-shadow");
     detecting("blur", "filter-blur", null, "o");
     detecting("rotate", "transform-rotate");
+    detecting("fadeIn", "animation", null, ["webkit", "moz", "ms", "o"], "ease-out forwards");
     zBetween();
+    zHorizon();
 
     var allSqu = document.querySelectorAll(".specSquare");
     allSqu.forEach(function(value) {
@@ -519,7 +547,7 @@ function zMobVSzWeb() {
             var zWeb = value.getAttribute("zWeb").trim().split(" ");
         }
 
-        // extort the attribute names
+        // export the attribute names
         var allAttr = value.getAttributeNames();
 
         allAttr.forEach(function(vAttr, kAttr) {
@@ -535,7 +563,7 @@ function zMobVSzWeb() {
         });
 
         // check which classes we currently have on the element
-        var alreadyClasses = value.getAttribute("class") ? value.getAttribute("class").trim().split(" ") : [];
+        var alreadyClasses = value.getAttribute("zWeb") ? value.getAttribute("zWeb").trim().split(" ") : [];
         // sort zLevels by their window sizes, because the first element
         // in the arrays are the window sizes
         zLevels.sort(sortByFirst);
@@ -544,8 +572,10 @@ function zMobVSzWeb() {
         for (const [i, v] of zLevels.entries()){
             // get a copy of zMob classes
             var classes = [...v];
+
             // remove the first item, because it is the window size
             classes.shift();
+
             for (const [iCla, vCla] of classes.entries()) {
                 // get the class name and "-" after, because all zClasses have "-" before their value
                 var zClass = vCla.substr(0, vCla.indexOf("-")) + "-";
@@ -553,28 +583,31 @@ function zMobVSzWeb() {
                 // for example, if we have pad-10 in our element and our zMob class is pad-20
                 // we should remove pad-10 and add pad-20 instead
                 var result = findIn(alreadyClasses, zClass);
-                var esult = findIn(zLevels[i-1], zClass);
                 // these are the catches of the system,
                 // when we have multiple zMob attributes, we should always check
                 // the upper or below stage classes to see if they have the same
                 // type of zClasses on them
-                if (zLevels[i-1] && winW <= zLevels[i-1][0] && zLevels[i-1][esult]) {}
-                // here we can set and remove classes
-                else {
-                    if (winW <= v[0]) {
-                        // if our window width smaller than our zMob's window width
-                        if (alreadyClasses[result]) {
-                            value.classList.remove(alreadyClasses[result]);
-                        }
+                if (winW <= v[0]) {
+                    // if our window width smaller than our zMob's window width
+                    if (alreadyClasses[result]) {
+                        value.classList.remove(alreadyClasses[result]);
+                    }
+                    if (vCla) {
                         value.classList.add(vCla);
-                    } else if (winW > zLevels[zLevels.length - 1][0]) {
-                        // if we are not under any obligation of a zMob,
-                        // go back to the things they were
-                        if (zWeb) {
-                            value.setAttribute("class", zWeb.join(" "));
-                        }
-                    } else {
+                    }
+                } else if (winW > zLevels[zLevels.length - 1][0]) {
+                    // if we are not under any obligation of a zMob,
+                    // go back to the things they were
+                    if (zWeb) {
+                        value.setAttribute("class", zWeb.join(" "));
+                    }
+                } else {
+                    if (vCla) {
                         value.classList.remove(vCla);
+                    }
+                    if (alreadyClasses[result]) {
+                        console.log("bu eklendi: "+ alreadyClasses);
+                        value.classList.add(alreadyClasses[result]);
                     }
                 }
             }
@@ -692,19 +725,21 @@ function zTogglePath(path) {
         let sidebarItem = sidebarItems[i];
         let zProperty = detectAfterDash(sidebarItem.className, "zTog"+(path ? path : ""));
 
-    	sidebarItem.addEventListener("click", function(e) {
-            e.preventDefault();
+        if (sidebarItem.getAttribute("zToggle-" + zProperty) !== "true") {
+        	sidebarItem.addEventListener("click", function(e) {
+                e.preventDefault();
 
-            let submenu = document.querySelectorAll(".zShow-" + zProperty);
-            submenu.forEach(function(menu) {
-                if (path && path == "Down") {
-                    slideToggle(menu, 300);
-                } else {
-                    menu.classList.toggle("displayNone");
-                }
-
+                let submenu = document.querySelectorAll(".zShow-" + zProperty);
+                submenu.forEach(function(menu) {
+                    if (path && path == "Down") {
+                        slideToggle(menu, 300);
+                    } else {
+                        menu.classList.toggle("displayNone");
+                    }
+                });
             });
-        })
+        }
+        sidebarItem.setAttribute("zToggle-" + zProperty, "true");
     }
 }
 
@@ -723,14 +758,17 @@ function zRemove() {
         let removeItem = removeItems[i];
         let zProperty = detectAfterDash(removeItem.className, "zRemove");
 
-    	removeItem.addEventListener("click", function(e) {
-            e.preventDefault();
+        if (removeItem.getAttribute("zRemove-" + zProperty) !== "true") {
+        	removeItem.addEventListener("click", function(e) {
+                e.preventDefault();
 
-            let removingItem = document.querySelectorAll(".zDestroy-" + zProperty);
-            removingItem.forEach(function(item) {
-                item.remove();
+                let removingItem = document.querySelectorAll(".zDestroy-" + zProperty);
+                removingItem.forEach(function(item) {
+                    item.remove();
+                });
             });
-        })
+        }
+        removeItem.setAttribute("zRemove-" + zProperty, "true");
     }
 }
 
@@ -775,17 +813,109 @@ function zShadow() {
     }
 }
 
+/*********************/
+/***** zHorizon *****/
+/*******************/
+
+function zHorizon() {
+    const element = document.querySelectorAll(".zHorizon");
+
+    element.forEach(function(item) {
+        item.addEventListener("wheel", (event) => {
+            event.preventDefault();
+
+            item.scrollBy({
+                left: event.deltaY < 0 ? -30 : 30,
+            });
+        });
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        item.addEventListener("mousedown", (e) => {
+            isDown = true;
+            item.classList.add("active");
+            startX = e.pageX - item.offsetLeft;
+            scrollLeft = item.scrollLeft;
+        });
+        item.addEventListener("mouseleave", () => {
+            isDown = false;
+            item.classList.remove("active");
+        });
+        item.addEventListener("mouseup", () => {
+            isDown = false;
+            item.classList.remove('active');
+        });
+        item.addEventListener("mousemove", (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - item.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            item.scrollLeft = scrollLeft - walk;
+        });
+    });
+}
+
+/*********************/
+/***** zAnimate *****/
+/*******************/
+
+function zAnimate() {
+    const inViewport = (entries, observer) => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle("zView", entry.isIntersecting);
+            var attributeList = entry.target.getAttribute("zWeb");
+            if (attributeList) {
+                if (attributeList.includes("zView")) {
+                    entry.target.setAttribute("zWeb", attributeList.replace(" zView", ""));
+                } else {
+                    entry.target.setAttribute("zWeb", attributeList + " zView");
+                }
+            }
+        });
+    };
+
+    const Obs = new IntersectionObserver(inViewport);
+    const obsOptions = {}; //see: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+    // attach observer to every [data-inviewport] element:
+    const ELs_inViewport = document.querySelectorAll("[zAnimate]");
+    ELs_inViewport.forEach(EL => {
+        var children = EL.getAttribute("zAnimate").split("][");
+        Obs.observe(EL, obsOptions);
+
+        children.forEach(CHILD => {
+            var zHov = CHILD.match("zHov-") ? true : false;
+            var params = CHILD.replace("[", "").replace("]", "").replace("zHov-", "").split(":");
+
+            // this is the duration of the animation.
+            if (params[3]) {
+                createStyleTag("[zAnimate*=\""+CHILD+"\"]", "transition", params[3]+"s");
+            }
+            // this is the first state of the animation,
+            // this can be used to state filters or transforms.
+            createStyleTag("[zAnimate*=\""+CHILD+"\"]", params[0], params[1], (zHov ? "hover" : false));
+            // final state of the animation.
+            if (params[2]) {
+                createStyleTag("[zAnimate*=\""+CHILD+"\"].zView", params[0], params[2]);
+            }
+        });
+    });
+}
+
 /***********************************/
 /***** run the magical things *****/
 /*********************************/
 
-document.addEventListener('touchmove', function(event) {
+document.addEventListener("touchmove", function(event) {
         event.preventDefault();
     },
     false
 );
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
+    zAnimate();
     newSystemPre();
     zMobVSzWeb();
     zDetect();

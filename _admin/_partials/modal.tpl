@@ -36,12 +36,12 @@
                 <div class="rightText">
                     {if !$_noClose}
                     <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        {$zThis["Close"]}
+                        {zThis z="Close"}
                     </a>
                     {/if}
                     {if $_mForm}
                     <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>{if $_mSubmit}{$_mSubmit}{else}{$zThis["Accept"]}{/if}</span>
+                        <span>{if $_mSubmit}{$_mSubmit}{else}{zThis z="Accept"}{/if}</span>
                     </button>
                     {/if}
                 </div>

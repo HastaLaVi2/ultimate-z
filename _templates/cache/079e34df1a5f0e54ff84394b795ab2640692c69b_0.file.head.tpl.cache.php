@@ -1,27 +1,29 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-11-06 21:11:32
+/* Smarty version 3.1.40, created on 2021-12-25 08:14:33
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_6186ef84c72921_87153437',
+  'version' => '3.1.40',
+  'unifunc' => 'content_61c6d2e951e6b6_60210182',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1636209054,
+      1 => 1640259430,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:../_holders/favicon.tpl' => 1,
+    'file:_holders/favicon.tpl' => 1,
   ),
 ),false)) {
-function content_6186ef84c72921_87153437 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '15655760806186ef84c4e009_80882882';
+function content_61c6d2e951e6b6_60210182 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '41648603461c6d2e9507297_56894514';
 ?>
 
 <meta charset="utf-8">
@@ -58,14 +60,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
  src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /jquery/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/jquery/jquery.lazy.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/jquery/jquery.lazy.plugins.min.js"><?php echo '</script'; ?>
->
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
@@ -80,66 +74,56 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
 
 <!-- owl.carousel -->
-<link href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+<?php if (file_exists(((string)$_smarty_tpl->tpl_vars['tempDirectory']->value)."assets/owl.carousel.css")) {?>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
+echo $_smarty_tpl->tpl_vars['tempDirectory']->value;?>
+assets/owl.carousel.css"/>
+<?php } else { ?>
+    <link href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+<?php }
+if (file_exists(((string)$_smarty_tpl->tpl_vars['tempDirectory']->value)."assets/owl.theme.default.css")) {?>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
+echo $_smarty_tpl->tpl_vars['tempDirectory']->value;?>
+assets/owl.theme.default.css"/>
+<?php } else { ?>
+    <link href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<?php echo '<script'; ?>
+<?php }
+if (file_exists(((string)$_smarty_tpl->tpl_vars['tempDirectory']->value)."assets/owl.carousel.min.js")) {?>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
+echo $_smarty_tpl->tpl_vars['tempDirectory']->value;?>
+assets/owl.carousel.min.js"><?php echo '</script'; ?>
+>
+<?php } else { ?>
+    <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /owl.carousel/owl.carousel.min.js"><?php echo '</script'; ?>
 >
+<?php }?>
 
-<!-- favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/favicon-16x16.png">
-<link rel="manifest" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/site.webmanifest">
-<link rel="mask-icon" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/safari-pinned-tab.svg" color="#2d89ef">
-<link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
-<meta name="msapplication-TileImage" content="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/mstile-144x144.png">
-<meta name="msapplication-config" content="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["favicon"];?>
-/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
-
-<?php if (!$_smarty_tpl->tpl_vars['zAdmin']->value) {?>
-    <!-- font libraries -->
-    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/fonts/stylesheet.css" type="text/css" charset="utf-8" />
-
-    <!-- custom css/javascript libraries -->
-    <?php if (file_exists(((string)$_smarty_tpl->tpl_vars['zContent']->value->srcFull["templates"])."/assets/styles.css")) {?>
-        <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["templates"];?>
-/assets/styles.css"/>
-    <?php }?>
-    <?php if (file_exists(((string)$_smarty_tpl->tpl_vars['zContent']->value->srcFull["templates"])."/assets/javascript.js")) {?>
-        <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["templates"];?>
-/assets/javascript.js"><?php echo '</script'; ?>
->
-    <?php }?>
-    <?php if (file_exists(((string)$_smarty_tpl->tpl_vars['tempDirectory']->value)."assets/styles.css")) {?>
-        <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
-echo $_smarty_tpl->tpl_vars['tempDirectory']->value;?>
-assets/styles.css"/>
-    <?php }?>
-    <?php if (file_exists(((string)$_smarty_tpl->tpl_vars['tempDirectory']->value)."assets/javascript.js")) {?>
-        <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
-echo $_smarty_tpl->tpl_vars['tempDirectory']->value;?>
-assets/javascript.js"><?php echo '</script'; ?>
->
-    <?php }
+<?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {?>
+    <?php $_smarty_tpl->_subTemplateRender("file:../_holders/favicon.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+} else { ?>
+    <?php $_smarty_tpl->_subTemplateRender("file:_holders/favicon.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }?>
+
+<!-- lazysizes -->
+<?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/lazysizes/lazysizes.min.js" async=""><?php echo '</script'; ?>
+>
+
+<!-- single-page application functions -->
+<?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {
+echo '<script'; ?>
+>window.zAdmin = true<?php echo '</script'; ?>
+><?php }
+echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/spa.js"><?php echo '</script'; ?>
+>
 
 <?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {?>
     <!-- dragula -->
@@ -164,12 +148,6 @@ assets/javascript.js"><?php echo '</script'; ?>
     <?php echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /html2canvas/html2canvas.min.js"><?php echo '</script'; ?>
->
-
-    <!-- admin javascript functions -->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/admin.js"><?php echo '</script'; ?>
 >
 <?php }
 }

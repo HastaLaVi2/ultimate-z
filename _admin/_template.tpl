@@ -40,9 +40,9 @@
                     </div>
                     {/if}
                 {/foreach}
-                <div class="widthAll centerText pad-20 bottom-20">
-                    <div class="zDatePrev zCol-6 padR-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
-                    <div class="zDateNext zCol-6 padL-5 pointThis"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+                <div class="widthAll centerText pad-20 bottom-20 {if $pageStats|@count > 3}text4{else}gray2{/if}">
+                    <div class="zDatePrev zCol-6 padR-5 {if $pageStats|@count > 3}pointThis{/if}"><div class="{if $pageStats|@count > 3}back7{else}grayBack1{/if} rad-5"><i class="fas fa-chevron-left"></i></div></div>
+                    <div class="zDateNext zCol-6 padL-5 {if $pageStats|@count > 3}pointThis{/if}"><div class="{if $pageStats|@count > 3}back7{else}grayBack1{/if} rad-5"><i class="fas fa-chevron-right"></i></div></div>
                 </div>
             </div>
         </div>
@@ -53,6 +53,10 @@
             <div class="whiteBack rad-15 pad-20 font-16">
                 <h4 class="font-19 top-0 text4 boldText">{zThis z="Total Views by Period"}</h4>
                 <div id="chart-profile-visit"></div>
+                <div class="widthAll centerText padT-20">
+                    <div class="zBarPrev zCol-6 padR-5 pointThis" onclick="barDatePrevClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
+                    <div class="zBarNext zCol-6 padL-5 pointThis" onclick="barDateNextClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
+                </div>
             </div>
         </div>
     </div>
@@ -70,10 +74,14 @@
         }
     });
 
-    function dateTable(period) {
+    function dateTable(period, start) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
         var date = new Date("{date('Y/m/d')}");
+        if (start) {
+            date.setDate(date.getDate() - start);
+        }
+
         var table = [];
 
         for (let i = 0; i <= (period-1); i++) {
@@ -84,8 +92,8 @@
         return table;
     }
 
-    function apexBarCreate(id, period, data) {
-        var table = dateTable(period);
+    function apexBarCreate(id, period, data, start) {
+        var table = dateTable(period, start);
 
         var options = {
             annotations: {
@@ -114,8 +122,11 @@
                 categories: table,
             },
         };
-        var element = new ApexCharts(document.querySelector(id), options);
-        element.render();
+        if ($(document.querySelector(id)).length) {
+            document.querySelector(id).innerHTML = "";
+            var element = new ApexCharts(document.querySelector(id), options);
+            element.render();
+        }
     }
 
     function apexLineCreate(id, period, data, color) {
@@ -173,17 +184,53 @@
         element.render();
     }
 
+    function barDateNextClicker() {
+        window.barDate = window.barDate + (window.next == null ? 7 : 0);
+        $.ajax({
+            url: "{$zContent->srcFull['admin']}/stats.php",
+            type: "post",
+            dataType: 'json',
+            data: { barDate:window.barDate },
+            error:function(result){
+                var hey = result.responseText.replace("'", "").replace("'", "");
+                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
+                window.barDate = window.barDate + 7;
+                window.next = true;
+            }
+        });
+    }
+
+    function barDatePrevClicker() {
+        window.barDate = window.barDate - (window.barDate - 7 >= 0 ? 7 : 0);
+        window.barDate = window.barDate - ((window.next !== null && window.barDate - 7 >= 0) ? 7 : 0);
+        $.ajax({
+            url: "{$zContent->srcFull['admin']}/stats.php",
+            type: "post",
+            dataType: 'json',
+            data: { barDate:window.barDate },
+            error:function(result){
+                var hey = result.responseText.replace("'", "").replace("'", "");
+                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
+                window.next = null;
+            }
+        });
+    }
+
     function zPageJS() {
+        window.barDate = 7;
+        window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
         apexBarCreate("#chart-profile-visit", 7, {json_encode($zTools->zToolsViewsTotalForPeriod("7"))});
         {foreach from=$pageStats key=key item=page}
-        apexLineCreate(
-            "#chart-{$page->id}",
-            12,
-            {json_encode($zTools->zToolsViewsTotalForPeriod("12", "{$page->id}"))},
-            {if ($key+1) % 3 == 0}"#dc3545"{elseif ($key+1) % 2 == 0}"#008b75"{else}"#5350e9"{/if}
-        );
+        if ($("#chart-{$page->id}").length) {
+            apexLineCreate(
+                "#chart-{$page->id}",
+                12,
+                {json_encode($zTools->zToolsViewsTotalForPeriod("12", "{$page->id}"))},
+                {if ($key+1) % 3 == 0}"#dc3545"{elseif ($key+1) % 2 == 0}"#008b75"{else}"#5350e9"{/if}
+            );
+        }
         {/foreach}
 
         let tabNum = 0;

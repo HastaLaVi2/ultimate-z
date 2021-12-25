@@ -15,7 +15,7 @@
 
 {extends file="_main.tpl"}
 
-{block name="zHead" append}
+{block name="zTop" append}
     <!-- summernote -->
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/summernote/summernote-lite.min.css">
 
@@ -23,9 +23,10 @@
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond.css">
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-image-preview.css">
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.css">
-    {literal}<style>
-    .hideForAddTop .hideForAdd {display: none;}
-    </style>{/literal}
+    <style>
+    .hideForAddTop .hideForAdd { display: none;}
+    .note-btn { font-size: 12px !important; height: auto !important; padding: 8px !important;}
+    </style>
 {/block}
 
 {block name="zContent" append}
@@ -100,7 +101,14 @@
                     {/foreach}
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">{zThis z="Subpage"}</h6>
+                    <h6 class="bottom-12 top-0 font-1em">{zThis z="Status"}</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="page_status" id="page_status"
+                        {if $editPage[$l->id]->status}value="enabled" checked{/if}>
+                        <label for="page_status">{zThis z="Page status"}</label>
+                        <div class="font-13">{zThis z="Determine whether the page should active or not."}</div>
+                    </div>
+                    <h6 class="bottom-12 top-12 font-1em">{zThis z="Subpage"}</h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
                         {if !$editPage[$l->id]->isSubpage}value="enabled" checked{/if}>
@@ -124,11 +132,11 @@
                     <div class="col-12 back7 bottom-20 pad-20 centerText pointThis rad-5 gray2" id="AddNewHolder">
                         {zThis z="Add a New Holder"}
                     </div>
-                    <div id="dragulaAdd" class="col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
+                    <div id="dragulaAdd" class="hideScroll col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
                         {assign var=holders value=$zTools->zToolsGetAllHolders($zUser->id_lang)}
                         {include file="{$zContent->src["admin"]}/_partials/holderEdit.tpl"}
                     </div>
-                    <div id="dragula" class="col-12 colTop between-20">
+                    <div id="dragula" class="hideScroll hideRest col-12 colTop between-20">
                         {assign var=blocks value=$editPage[$zUser->id_lang]->template->blocks}
                         {for $id_block=1 to $blocks}
                             <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
@@ -141,9 +149,9 @@
                         {/for}
                     </div>
                 </div>
-                <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
-                    <div class="pad-20 gradYouToWhite">
-                        <button class="zButton primary widthAll zShadow5 top-20">{zThis z="Save"}</button>
+                <div class="ButtonPos1 IWantItDownR padR-32 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
+                    <div class="padB-20 padLR-20 whiteBack">
+                        <button class="zButton primary widthAll zShadow5">{zThis z="Save"}</button>
                     </div>
                 </div>
                 <div class="ButtonPos2">
@@ -191,8 +199,8 @@
                 moves: function (el, container, handle) {
                     var searchPond = $(handle).closest(".filepond");
                     var searchSummer = $(handle).closest(".note-editor");
-                    if (searchPond.length || searchSummer.length ||
-                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
+                    if (searchPond.length || searchSummer.length || handle.nodeName == "INPUT" ||
+                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
                         return false;
                     } else {
                         return true;
@@ -204,12 +212,6 @@
                     value.style.display = "none";
                 });
             }).on("out", function (el, container, source) {
-                // the data attribute tells us the old modalNumber of our holder,
-                // because on page load, holders on the left column has their own
-                // modalNumber values, but when they are copied to the actual page,
-                // we need to change it with a new modalNumber
-                var data = el.getAttribute("data");
-
                 // make the content visible again
                 var hides = el.querySelectorAll(".hideForAdd");
                 if ($(el).find(".fa-chevron-up").css("display") !== "none") {
@@ -223,20 +225,42 @@
                     $(el).parent().append(blockTitle);
                 }
 
-                $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
-                $(el).find(".zShow-downHolder" + data).removeClass("zShow-downHolder" + data).addClass("zShow-downHolder" + modalNumber);
+                if (source.getAttribute("id") == "dragulaAdd") {
+                    el.setAttribute("update", "true");
+                }
+            }).on("dragend", function (el) {
+                // the data attribute tells us the old modalNumber of our holder,
+                // because on page load, holders on the left column has their own
+                // modalNumber values, but when they are copied to the actual page,
+                // we need to change it with a new modalNumber
+                var data = el.getAttribute("data");
+                console.log(modalNumber);
 
-                // time to update the modalNumber
-                el.querySelectorAll(".zModal")[0].setAttribute("id", "modal" + modalNumber);
-                el.querySelectorAll(".zModalLink")[0].setAttribute("href", "#modal" + modalNumber);
-                el.classList.remove("zDestroy-holder"+data);
-                el.classList.add("zDestroy-holder"+modalNumber);
-                var remove = el.querySelectorAll("[class*=zRemove]")[0];
-                remove.classList.remove("zRemove-holder"+data);
-                remove.classList.add("zRemove-holder"+modalNumber);
+                if (el.getAttribute("update") == "true") {
+                    $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
+                    $(el).find(".zShow-downHolder" + data).removeClass("zShow-downHolder" + data).addClass("zShow-downHolder" + modalNumber);
+                    $(el).find(".zTog-imagesFor" + data).removeClass("zTog-imagesFor" + data).addClass("zTog-imagesFor" + modalNumber);
+                    $(el).find(".zShow-imagesFor" + data).removeClass("zShow-imagesFor" + data).addClass("zShow-imagesFor" + modalNumber);
 
-                // now lets increase the modalNumber value for the next arrival
-                modalNumber += 1;
+                    // time to update the modalNumber
+                    el.querySelectorAll(".zModal")[0].setAttribute("id", "modal" + modalNumber);
+                    el.querySelectorAll(".zModalLink")[0].setAttribute("href", "#modal" + modalNumber);
+                    el.classList.remove("zDestroy-holder"+data);
+                    el.classList.add("zDestroy-holder"+modalNumber);
+                    var remove = el.querySelectorAll("[class*=zRemove]")[0];
+                    remove.classList.remove("zRemove-holder"+data);
+                    remove.classList.add("zRemove-holder"+modalNumber);
+                    remove.setAttribute("zRemove", "false");
+
+                    // now lets increase the modalNumber value for the next arrival
+                    modalNumber = Number(modalNumber) + 1;
+                    el.setAttribute("update", "false");
+
+                    toggleParentNext($(el).find(".toggleParentNext"));
+
+                    $(el).find(".note-editor").remove();
+                    summernoteStart($(el).find(".summernote"));
+                }
 
                 // functions that need a rerun after a copy
                 zRemove();
@@ -245,10 +269,6 @@
                 runFilePond();
                 summernoteKeyup($(el).find(".note-editable"));
                 storeCat();
-
-                if ($(source).attr("id") == "dragulaAdd") {
-                    toggleParentNext($(el).find(".toggleParentNext"));
-                }
             });
         }
 
@@ -339,7 +359,9 @@
             }
             data.set("langcode", "{$zContent->language->iso_code}");
             // send the file to server
-            data.append("fileToUpload", image);
+            var newName = slug(image.name.replace(/\.[^/.]+$/, "")) + "." + image.name.replace(/^[^/.]+\./, "");
+            var newFile = new File([image], newName, { type: image.type});
+            data.append("fileToUpload", newFile);
             $.ajax({
                 url: "{$zContent->srcFull["images"]}/upload.php",
                 cache: false,
@@ -358,7 +380,7 @@
                         // instead of "content[]", normally storingData() function stores
                         // all hidden content but images, so files uploaded with filepond will be
                         // stored through here
-                        $(filepond).parent().prev().children().each(function () {
+                        $(filepond).closest(".top-20").prev().children().each(function () {
                             // get the hidden content's current value
                             var already = $(this).val();
                             var alreO = [];
@@ -391,56 +413,59 @@
 
         // start the pond, filepond
         function runFilePond() {
-            document.getElementById("dragula").querySelectorAll(".filepond").forEach(function(v, i) {
-                var loaded = $(v).prev();
-                var value = v.previousElementSibling.value;
-                var multi = loaded.attr("data-multi");
-                if (value !== "") {
-                    var files = [];
-                    for (let i=0; i < value.split(";").length; i++) {
-                        files.push({
-                            source: "{$zContent->src["images"]}/uploads/{$editPage[$zUser->id_lang]->id}/"+value.split(";")[i],
-                            options: {
-                                type: "local"
+            if ($(document.getElementById("dragula")).length) {
+                document.getElementById("dragula").querySelectorAll(".filepond").forEach(function(v, i) {
+                    var loaded = $(v).prev();
+                    var value = v.previousElementSibling.value;
+                    var multi = loaded.attr("data-multi");
+                    if (value !== "") {
+                        var files = [];
+                        for (let i=0; i < value.split(";").length; i++) {
+                            files.push({
+                                source: "{$zContent->src["images"]}/uploads/{$editPage[$zUser->id_lang]->id}/"+value.split(";")[i],
+                                options: {
+                                    type: "local"
+                                }
+                            });
+                        }
+                        var load = {
+                            load: (uniqueFileId, load) => {
+                                // you would get the file data from your server here
+                                fetch(uniqueFileId)
+                                .then(res => res.blob())
+                                .then(load);
                             }
+                        };
+                    }
+                    if (loaded.attr("data-filepond-loaded") !== "true") {
+                        FilePond.create(v, {
+                            allowImagePreview: true,
+                            imagePreviewMaxFileSize: "500kb",
+                            allowMultiple: (multi == "true" ? true : false),
+                            allowReorder: (multi == "true" ? true : false),
+                            maxFileSize: "20MB",
+                            acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
+                            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                                // Do custom type detection here and return with promise
+                                resolve(type);
+                            }),
+                            files: (files ? files : null),
+                            server: (load ? load : null)
                         });
                     }
-                    var load = {
-                        load: (uniqueFileId, load) => {
-                            // you would get the file data from your server here
-                            fetch(uniqueFileId)
-                            .then(res => res.blob())
-                            .then(load);
-                        }
-                    };
-                }
-                if (loaded.attr("data-filepond-loaded") !== "true") {
-                    FilePond.create(v, {
-                        allowImagePreview: true,
-                        allowMultiple: (multi == "true" ? true : false),
-                        allowReorder: (multi == "true" ? true : false),
-                        maxFileSize: "20MB",
-                        acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
-                        fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
-                            // Do custom type detection here and return with promise
-                            resolve(type);
-                        }),
-                        files: (files ? files : null),
-                        server: (load ? load : null)
-                    });
-                }
 
-                if (loaded.closest("#dragula").length) {
-                    loaded.attr("data-filepond-loaded", true);
-                }
-            });
+                    if (loaded.closest("#dragula").length) {
+                        loaded.attr("data-filepond-loaded", true);
+                    }
+                });
 
-            // set filepond server
-            FilePond.setOptions({
-                server: "./",
-            });
+                // set filepond server
+                FilePond.setOptions({
+                    server: "./",
+                });
 
-            filepondCallbacks();
+                filepondCallbacks();
+            }
         }
 
         // callbacks for filepond
@@ -483,7 +508,7 @@
                         var elemID = e.detail.file.id;
                         var files = e.detail.pond.getFiles();
 
-                        elem.parent().prev().children().each(function () {
+                        elem.closest(".top-20").prev().children().each(function () {
                             var already = $(this).val();
                             already = already.split(";");
                             already.splice(window.pondNS[elemID], 1);
@@ -504,7 +529,7 @@
                         var elemID = e.detail.pond.getFile().id;
                         var files = e.detail.pond.getFiles();
 
-                        elem.parent().prev().children().each(function () {
+                        elem.closest(".top-20").prev().children().each(function () {
                             var already = $(this).val().trim();
                             already = already.split(";");
                             var newAlre = [];
@@ -544,6 +569,31 @@
             });
         }
 
+        // start all summernotes
+        function summernoteStart(element) {
+            element.summernote({
+                lang: "{$zContent->language->four_code}",
+                fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48' , '64', '82', '150'],
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontname', ['fontname', 'fontsize', 'color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['picture', ['picture', 'link', 'video', 'table']],
+                    ['view', ['fullscreen', 'codeview']],
+                ],
+                tabsize: 1,
+                callbacks: {
+                    onImageUpload: function(files) {
+                        for (let i=0; i < files.length; i++) {
+                            uploadImage(files[i], $(this));
+                        }
+                    }
+                }
+            });
+        }
+
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
         var modalNumber = "{$modalNumber}";
@@ -566,18 +616,7 @@
                 $(".divFor"+now).css("display", "block");
             });
 
-            // start all summernotes
-            $(".summernote").summernote({
-                lang: "{$zContent->language->four_code}",
-                tabsize: 1,
-                callbacks: {
-                    onImageUpload: function(files) {
-                        for (let i=0; i < files.length; i++) {
-                            uploadImage(files[i], $(this));
-                        }
-                    }
-                }
-            });
+            summernoteStart($(".summernote"));
             summernoteKeyup($(".note-editable"));
             storeCat();
 
@@ -605,18 +644,34 @@
 
             // add new holder button
             $("#AddNewHolder").click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $(this).offset().top - 100
+                }, 500);
+
                 var dragula = $("#dragula");
                 var dragulaAdd = $("#dragulaAdd");
 
                 dragulaAdd.toggle();
                 dragula.toggleClass("col-8").toggleClass("col-12");
+                var calcPX = ($(window).width() > 1024)
+                    ? ($(window).height() - 180 - $(this).height() - $(".ButtonPos2").height() + "px")
+                    : "40vh";
 
                 if (dragulaAdd.css("display") !== "none") {
                     var count = dragula.children().length;
                     var newHeight = (dragulaAdd.height() - ((count-1)*20)) / count;
                     dragula.children().css("min-height", newHeight);
+                    dragulaAdd.css({
+                        "height": calcPX,
+                        "overflow": "scroll"
+                    });
+                    dragula.css({
+                        "height": calcPX,
+                        "overflow": "scroll"
+                    });
                 } else {
                     dragula.children().css("min-height", "100%");
+                    dragula.css("height", "auto");
                 }
             });
 
