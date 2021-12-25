@@ -96,7 +96,6 @@ if (isset($_GET["view"]) && strpos($_GET["view"], "setup/") == false) {
 */
 define("HTTP_HTTPS", $http);
 define("SUBFOLDER", "/ultimate-z/");
-define("PRESTASHOP", false);
 
 /*
     CLASSES
@@ -107,9 +106,7 @@ spl_autoload_register(function($class_name) {
     // we do not want to load smarty class under "_classes" folder
     // because it is located in "_scripts/smarty"
     if ($class_name !== "Smarty_Autoloader" &&
-        $class_name !== "Smarty_Internal_Compile_ZThis" &&
-        $class_name !== "Smarty_Internal_Compile_ZPageName" &&
-        $class_name !== "Smarty_Internal_Compile_ZPageUrl" &&
+        substr($class_name, 0, 24) !== "Smarty_Internal_Compile_" &&
         $class_name !== "zPageStarterSpecial") {
         include "_classes/" . $class_name . ".php";
     }
@@ -122,8 +119,6 @@ $zPageTools = new zPageTools();
 $zCategoryTools = new zCategoryTools();
 
 // load PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 require "_scripts/phpmailer/src/Exception.php";
 require "_scripts/phpmailer/src/PHPMailer.php";
 require "_scripts/phpmailer/src/SMTP.php";
@@ -142,26 +137,8 @@ $z = new z(1);
 $subfolder = SUBFOLDER;
 $zAdmin = false;
 
-// detect prestashop subfolder
-function prestashop($direct = NULL) {
-    $prestashop = PRESTASHOP;
-    if ($prestashop == true && strpos($direct, "shop") !== false) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-zDB::get()->execute("SET NAMES 'utf8'");
-zDB::get()->execute("SET CHARACTER SET 'utf8'");
-
-/*
-// check if a ssl certificate is enabled
-if (zDB::get()->has_ssl($http . "://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"])) {
-    echo "evet";
-} else {
-    echo "hayır";
-}*/
+zDB::get()->execute("SET NAMES 'utf8mb4'");
+zDB::get()->execute("SET CHARACTER SET 'utf8mb4'");
 
 /*
     URL PARSING
@@ -260,6 +237,10 @@ if(isset($_SERVER["REQUEST_URI"])) {
     /*
         DO WE HAVE PERMISSION FOR THE PAGE?
     */
+    if (strpos($direct, "_admin") !== false) {
+        $zAdmin = true;
+    }
+
     $userIP = $_SERVER["REMOTE_ADDR"];
     $all_ips = array();
     $checkIP = zDB::get()->select("SELECT * FROM zUsers WHERE ip_user = '$userIP'");
@@ -268,8 +249,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
     }
 
     // if site is disabled
-    if ($z->status == "disabled" && !in_array($userIP, $all_ips)) {
-        $zAdmin = true;
+    if ($z->status == "disabled" && !in_array($userIP, $all_ips) && (isset($zAdmin) && $zAdmin == false)) {
         $_GET["view"] = "500";
     }
 
@@ -277,10 +257,6 @@ if(isset($_SERVER["REQUEST_URI"])) {
         CREATE THE PAGE OBJECT
     */
     $allPages = $zPageTools->zPageGetAll($zTools->zToolsGetLangByCode($langcode)->id);
-
-    if (strpos($direct, "_admin") !== false) {
-        $zAdmin = true;
-    }
 
     // language code for admin page
     $admin_langcode = $zUserTools->zUserCheckUserLanguage($zAdmin, $z->key);
@@ -299,8 +275,8 @@ if(isset($_SERVER["REQUEST_URI"])) {
     if ($direct == "/" && !isset($_GET["view"])) {
         $zPage = new zPage(1001, $zTools->zToolsGetLangByCode($langcode)->id);
     } elseif (!isset($zPage)) {
-        $direct = prestashop($direct) ? $direct : "/";
-        if (!isset($_GET["view"]) && !prestashop($direct)) {
+        $direct = "/";
+        if (!isset($_GET["view"])) {
             $_GET["view"] = "404";
         }
     }
@@ -328,10 +304,6 @@ if(isset($_SERVER["REQUEST_URI"])) {
     // by adding the "../" at the begginning
     for ($x = 1; $x <= $count; $x++) {
         $slash .= "../";
-    }
-
-    if (prestashop($direct)) {
-        $slash = "../";
     }
 
     // check if we have a language code right before "_admin"
@@ -392,7 +364,10 @@ if(isset($_SERVER["REQUEST_URI"])) {
             !isset($_GET["view"]) &&
             $checkSetup == true && (!file_exists($slash . "_setup") && !is_dir($slash . "_setup"))
         ) {
-            $zUserTools->zUserPermission($src["admin"]."/login/", $z->key);
+            // if we have a different link let's cache it
+             $redirectURL = str_replace("/_admin/", "", $direct) . (isset($params) ? "index.php?".$params : "");
+             $zUserTools->zUserPermission($src["admin"]."/login/", $z->key, $redirectURL);
+             $zUserTools->zUserPermission($src["admin"]."/login/", $z->key);
         }
         $zUser = new zUser($_SESSION["zUser-" . $z->key]);
 
@@ -430,7 +405,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
 
     if (file_exists($slash . "_config/_" . $langcode . ".php")) {
         include_once($slash . "_config/_" . $langcode . ".php");
-    } else {
+    } else if (file_exists($slash . "_config/_en.php")) {
         include_once($slash . "_config/_en.php");
     }
 
@@ -455,7 +430,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
     $zSmarty->cache_dir = $slash . "_scripts/smarty/cache";
     $zSmarty->assign("z", $z);
     $zSmarty->assign("zValidate", json_encode($zUserTools->zUserGetUsers()));
-    $zSmarty->assign("zThis", $zThis->table);
+    $zSmarty->assign("zThis", $zThis);
     $zSmarty->assign("zAdmin", $zAdmin);
     if (isset($zPage)) {$zSmarty->assign("zPage", $zPage);}
     if (isset($zUser)) {$zSmarty->assign("zUser", $zUser);}
