@@ -26,6 +26,9 @@ class zPage {
     public $area;
     public $url;
     public $meta;
+    public $subpageOf;
+    public $isSubpage;
+    public $status;
 
     # connect to database
     public function __construct($id_page = NULL, $id_lang = NULL) {
@@ -50,6 +53,12 @@ class zPage {
 
         if($query[0])$this->url=$query[0]["url"];
         if($query[0])$this->area=$query[0]["area"];
+        if($query[0])$this->subpageOf=$query[0]["subpage"];
+        if($query[0])$this->status=$query[0]["status"];
+
+        if ($this->subpageOf > 0) {
+            $this->isSubpage = true;
+        }
 
         if (isset($id_lang) && isset($this->id_template)) {
             $this->template = new zTemplate($this->id_template, $id_lang);
@@ -101,7 +110,7 @@ class zPage {
 
         $finalDir = "_starters/" . ($this->area == "front" ? "front" : "back");
         foreach ($tree as $dir) {
-            $finalDir .= ($dir == "_admin" ? "" : $dir) . ($dir !== "" ? "/" : "home/");
+            $finalDir .= ($dir == "_admin" ? "" : ($this->area == "front" ? "/" : "") . $dir) . ($dir !== "" ? "/" : "/home/");
         }
         array_push($result, $finalDir . "_starter.php");
 
@@ -175,6 +184,23 @@ class zPage {
             foreach ($total as $i) {
                 $zCategory = new zCategory($i["id_category"], $id_lang);
                 array_push($value, $zCategory);
+            }
+        }
+
+        return $value;
+    }
+
+    public function zPageGetSubpages($id_lang = NULL) {
+        $db = zDB::get();
+
+        $total = $db->select("SELECT * FROM zPages WHERE subpage = '$this->id' ORDER BY id_page");
+
+        $value = array();
+
+        if (!empty($total)) {
+            foreach ($total as $i) {
+                $zPage = new zPage($i["id_page"], $id_lang);
+                array_push($value, $zPage);
             }
         }
 

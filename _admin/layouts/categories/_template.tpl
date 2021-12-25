@@ -15,7 +15,7 @@
 
 {extends file="_main.tpl"}
 
-{block name="zHead" append}
+{block name="zTop" append}
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/simple-datatables/style.css">
 {/block}
 
@@ -24,7 +24,7 @@
         <div class="whiteBack rad-15 pad-20 font-16">
             <h4 class="font-19 top-0 text4 boldText">{zThis z="Category List"}</h4>
             {$zTools->zToolsFormWarning($success1, $error1)}
-            <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/create/" class="zButton primary sweet font-16">
+            <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/create/" class="zButton zHov-zShadow5 primary sweet font-16">
                 <i class="fas fa-plus-square right-10"></i>
                 {zThis z="Add New Category"}
             </a>
@@ -44,7 +44,7 @@
                             <td>{$cat->id}</td>
                             <td>{$cat->name}</td>
                             <td>
-                                <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/edit/index.php?id_category={$cat->id}" class="zButton primary sweet">
+                                <a href="{$zContent->srcFull["_main"]}_admin/layouts/categories/edit/index.php?id_category={$cat->id}" class="zButton zHov-zShadow5 primary sweet">
                                      {zThis z="Edit"}
                                 </a>
                             </td>
@@ -68,11 +68,11 @@
 
 {block name="zBottom" append}
     <script>
-    var entriesPerPage = "{$zThis["entries per page"]}";
-    var searchOn = "{$zThis["Search..."]}";
-    var showingOf = "{$zThis["Showing [start] to [end] of [rows] entries"]}";
+    var entriesPerPage = "{zThis z="entries per page"}";
+    var searchOn = "{zThis z="Search..."}";
+    var showingOf = "{zThis z="Showing [start] to [end] of [rows] entries"}";
     showingOf = showingOf.replaceAll("[", "{literal}{{/literal}").replaceAll("]", "{literal}}{/literal}");
-    var noRowFound = "{$zThis["No entries found"]}";
+    var noRowFound = "{zThis z="No entries found"}";
 
     $("input[type=checkbox]").change(function() {
         var clas = $(this).attr("class").split(" ")[1];
@@ -82,33 +82,15 @@
     </script>
     <script src="{$zContent->srcFull["scripts"]}/simple-datatables/simple-datatables.js"></script>
     <script>
-        function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            let dataTable;
-            tables.forEach((item, i) => {
-                dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        { select: [2,3], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-            });
-            zDetect();
-
+        function deleteFromTable(dataTable) {
             // delete form functions
             $(".zForm").submit(function(e) {
                 e.preventDefault();
 
                 window.location.assign("#");
                 var form = $(this).clone();
-                var id_cat = form.find("input[name='id_category']").val();
-                var obj_cat = $("#zCategory-"+id_cat);
+                var id_page = form.find("input[name='id_category']").val();
+                var obj_page = $("#zCategory-"+id_page);
                 var post_url = form.attr("action");
                 var post_data = form.serialize();
 
@@ -117,9 +99,10 @@
                     url: post_url,
                     data: post_data,
                     success: function(responseText) {
-                        obj_cat.remove();
-                        dataTable.rows().remove(obj_cat[0].dataIndex);
+                        obj_page.remove();
+                        dataTable.rows().remove(obj_page[0].dataIndex);
                         dataTable.update();
+                        deleteFromTable(dataTable);
                         Toastify({
                             text: responseText,
                             duration: 3000
@@ -134,6 +117,28 @@
                     },
                 });
             });
+        }
+        function zPageJS() {
+            // Simple Datatable
+            let tables = document.querySelectorAll(".zTable");
+            let dataTable;
+            tables.forEach((item, i) => {
+                dataTable = new simpleDatatables.DataTable(item, {
+                    columns: [
+                        { select: [2,3], sortable: false},
+                    ]
+                });
+                dataTable.on("datatable.page", function(page) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+                dataTable.on("datatable.sort", function(column, direction) {
+                    $("#zContent").find("a").click(magicLinks);
+                    deleteFromTable(dataTable);
+                });
+            });
+            zDetect();
+            deleteFromTable(dataTable);
         }
 
         document.addEventListener("DOMContentLoaded", function(event) {

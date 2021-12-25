@@ -79,24 +79,51 @@
                     var value = $(this).val();
                     var enText = $(this).parent().find(".enable").text();
                     var disText = $(this).parent().find(".disable").text();
-                    if (value == "disabled") {
-                        $(this).next("label").text(disText);
-                        $(this).val("enabled");
-                    } else {
+                    if (value == "enabled") {
                         $(this).next("label").text(enText);
                         $(this).val("disabled");
+                    } else {
+                        $(this).next("label").text(disText);
+                        $(this).val("enabled");
                     }
                 });
                 </script>
-                <button id="btnSubmit" class="zButton primary widthAll zShadow">{zThis z="Submit"}</button>
+                <button id="btnSubmit" class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </div>
         </form>
     </section>
+    <section class="whiteBack rad-15 pad-20 font-16 top-20">
+        <h4 class="font-19 top-0 text4 boldText">{zThis z="Software Update"}</h4>
+        <p class="top-0 font-1em">{zThis z="Please make sure you are accepting any possible errors when you update the software."}</p>
+        <form class="zForm zSure" method="get" role="form" action="#modalsure">
+            <button class="zButton primary widthAll zShadow5">{zThis z="Update"}</button>
+        </form>
+    </section>
+    {include file="{$zContent->src["admin"]}/_partials/modal.tpl"
+        _mLabel=update
+        _mTitle={zThis z="Updating"}
+        _mContent={zThis z="Please wait, your ultimate Z is upping..."}
+        _noClose=true
+    }
+    {include file="{$zContent->src["admin"]}/_partials/modal.tpl"
+        _mFormId="zUser-update-form"
+        _mForm=$zContent->base_uri
+        _mLabel=sure
+        _mHidden='<input type="text" name="langcode" class="displayNone" value="{$zContent->language->iso_code}">
+                  <input type="text" name="updateSite" class="displayNone" value="true">'
+        _mTitle={zThis z="Update"}
+        _mContent={zThis z="Are you sure you want to update ultimate Z?"}
+    }
 {/block}
 
 {block name="zBottom" append}
     <script>
         function zPageJS() {
+            $(".zSure").submit(function(e) {
+                e.preventDefault();
+                window.location.assign("#modalsure");
+            });
+
             // submit form functions
             $("#zUser-preferences-form").submit(function(e) {
                 e.preventDefault();
@@ -110,6 +137,36 @@
                     url: post_url,
                     data: post_data,
                     success: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000
+                        }).showToast();
+                    },
+                    error: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000,
+                            backgroundColor: "#f3616d",
+                        }).showToast();
+                    },
+                });
+            });
+            $("#zUser-update-form").submit(function(e) {
+                e.preventDefault();
+
+                var form = $(this).clone();
+                var post_url = form.attr("action");
+                var post_data = form.serialize();
+
+                window.location.assign("#modalupdate");
+                $("body").css("overflow", "hidden");
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    data: post_data,
+                    success: function(responseText) {
+                        window.location.assign("#");
+                        $("body").css("overflow", "auto");
                         Toastify({
                             text: responseText,
                             duration: 3000

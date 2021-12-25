@@ -28,6 +28,10 @@ class zThis {
         self::$instance = $this;
     }
 
+    public function value($string = NULL) {
+        return isset($string) ? (array_key_exists($string, $this->table) ? $this->table[$string] : $string) : NULL;
+    }
+
     public static function get() {
         if (self::$instance === null) {
             self::$instance = new self();

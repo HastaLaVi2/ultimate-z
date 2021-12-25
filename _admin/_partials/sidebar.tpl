@@ -18,7 +18,7 @@
         {include file="_partials/logo.tpl"}
         <div class="top-40">
             <ul class="cleanList font-16">
-                <li class="text4 padLR-1rem weight-600">{$zThis["Menu"]}</li>
+                <li class="text4 padLR-1rem weight-600">{zThis z="Menu"}</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="{zPageUrl ID="1"}" class="pad-13 rad-10 blockThis {$zTools->zToolsSideColor([1], $zPage->id)}">
@@ -30,7 +30,7 @@
                 <li class="top-0_5rem padTB-5">
                     <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 {$zTools->zToolsSideColor([4, 5, 6, 7, 8, 9, 17, 18], $zPage->id)}">
                         <i class="fas fa-layer-group {$zTools->zToolsSideIconColor([4, 5, 6, 7, 8, 9, 17, 18], $zPage->id)}"></i>
-                        <span class="padL-15">{$zThis["Layouts"]}</span>
+                        <span class="padL-15">{zThis z="Layouts"}</span>
                         <i class="fas fa-chevron-down inRight top-3 {$zTools->zToolsSideIconColor([4, 5, 6, 7, 8, 9, 17, 18], $zPage->id)}"></i>
                     </a>
                     <ul class="zShow-side1 font-13 padL-2rem left-2rem {$zTools->zToolsSideToggleOpt([4, 5, 6, 7, 8, 9, 17, 18], $zPage->id)}">
@@ -76,7 +76,7 @@
                     </a>
                 </li>
 
-                <li class="text4 padLR-1rem weight-600 padT-30">{$zThis["Advanced"]}</li>
+                <li class="text4 padLR-1rem weight-600 padT-30">{zThis z="Advanced"}</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="{zPageUrl ID="13"}" class="pad-13 rad-10 blockThis {$zTools->zToolsSideColor([13, 14], $zPage->id)}">

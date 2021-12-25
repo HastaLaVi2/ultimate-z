@@ -45,7 +45,7 @@ class zDB {
         $result = array();
 
         if ($this->conn) {
-            $run = mysqli_query($this->conn, "SET CHARACTER SET utf8");
+            $run = mysqli_query($this->conn, "SET CHARACTER SET utf8mb4");
             $run = mysqli_query($this->conn, $query);
         }
 
@@ -60,7 +60,9 @@ class zDB {
 
     public function execute($query) {
         if ($this->conn) {
-            $run = mysqli_query($this->conn, "SET CHARACTER SET utf8");
+            $run = mysqli_query($this->conn, "SET CHARACTER SET utf8mb4");
+            $run = mysqli_query($this->conn, "SET character_set_connection = utf8mb4");
+            $run = mysqli_query($this->conn, "SET character_set_results = utf8mb4");
             $run = mysqli_multi_query($this->conn, $query);
         }
 
@@ -76,7 +78,7 @@ class zDB {
     }
 
     public function all() {
-        mysqli_query($this->conn, "SET CHARACTER SET utf8");
+        mysqli_query($this->conn, "SET CHARACTER SET utf8mb4");
         $all = mysqli_query($this->conn, "SHOW TABLES FROM `" . DABASE . "`");
 
         $result = array();

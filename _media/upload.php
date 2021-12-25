@@ -55,6 +55,20 @@ while (file_exists($target_file)) {
     $target_file = $target_dir . $newName;
 }
 
+if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
+    $target_file = preg_replace("/\.".$imageFileType."$/", ".webp", $target_file);
+
+    // Check if file already exists for these types
+    while (file_exists($target_file)) {
+        $newName = strtolower(pathinfo($target_file,PATHINFO_FILENAME)) . "_new.webp";
+        $_FILES["fileToUpload"]["name"] = $newName;
+        $target_file = $target_dir . $newName;
+    }
+
+    $_FILES["fileToUpload"]["name"] = preg_replace("/\.webp$/", ".".$imageFileType, $_FILES["fileToUpload"]["name"]);
+    $target_file = preg_replace("/\.webp$/", ".".$imageFileType, $target_file);
+}
+
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 20000000) {
     $error = $lang["Sorry, your file is too large."];
@@ -76,7 +90,23 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
+        if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
+            $file = $target_file;
+            $image = imagecreatefromjpeg($file);
+            ob_start();
+            imagejpeg($image, NULL, 100);
+            $cont = ob_get_contents();
+            ob_end_clean();
+            imagedestroy($image);
+            $content = imagecreatefromstring($cont);
+            imagewebp($content, preg_replace("/\.".$imageFileType."$/", ".webp", $target_file), 50);
+            imagedestroy($content);
+            unlink($target_file);
+
+            echo htmlspecialchars(preg_replace("/\.".$imageFileType."$/", ".webp", basename($_FILES["fileToUpload"]["name"])));
+        } else {
+            echo htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
+        }
     } else {
         header("Content-Type: application/json; charset=UTF-8");
         die($target_file . "||" . $_FILES["fileToUpload"]["tmp_name"]);

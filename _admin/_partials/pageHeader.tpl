@@ -22,7 +22,7 @@
     <a href="{$zContent->srcFull["_main"]}" target="_blank" class="inLine colTop pointThis right-30 rightText index-10">
         <div class="no zMob768-displayNone">
             <div class="inLine verMid font-15">
-                {$zThis["View"]}
+                {zThis z="View"}
                 <div class="font-12">{$z->name}</div>
             </div>
             <div class="inLine verMid">
@@ -41,14 +41,14 @@
     </div>
     <div class="zShow-userMenu displayNone">
         <div class="floatingTheRight whiteBack rad-15 pad-20 index-10 width-250 zShadow font-16">
-            <div class="font-14 weight-700 gray3 bottom-10">{$zThis["Hello"]}, {$zUser->name}!</div>
+            <div class="font-14 weight-700 gray3 bottom-10">{zThis z="Hello"}, {$zUser->name}!</div>
             <a href="{$zContent->srcFull["_main"]}" target="_blank" class="displayNone zMob768-no">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoT boldMin-1">
                     <div class="inLine verMid">
                         <i class="fas fa-home padR-10"></i>
                     </div>
                     <div class="inLine verMid font-15">
-                        {$zThis["View"]}
+                        {zThis z="View"}
                         <div class="font-12">{$z->name}</div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
             <a href="{$zContent->srcFull["_main"]}_admin/logout/" class="forceLink">
                 <div class="left--20 right--20 bottom--20 rad-b-15 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoB boldMin-1">
                     <i class="fas fa-sign-out-alt padR-10"></i>
-                    {$zThis["Log out"]}
+                    {zThis z="Log out"}
                 </div>
             </a>
         </div>

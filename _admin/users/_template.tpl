@@ -15,7 +15,7 @@
 
 {extends file="_main.tpl"}
 
-{block name="zHead" append}
+{block name="zTop" append}
     {include file="{$zContent->src["holders"]}/validate.tpl"}
 {/block}
 
@@ -53,7 +53,7 @@
             </div>
         {/foreach}
     </div>
-    <a class="zButton primary zShadow sweet font-16 index-2 widthAll" href="#modalzCreate">
+    <a class="zButton zShadow5 primary sweet font-16 index-2 widthAll" href="#modalzCreate">
         {zThis z="Add a User"}
     </a>
     {foreach from=$allUsers item=user}

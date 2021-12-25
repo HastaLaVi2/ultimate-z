@@ -102,7 +102,7 @@
                         });
                     </script>
                 </div>
-                <button class="zButton primary widthAll zShadow">{zThis z="Submit"}</button>
+                <button class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </form>
         </div>
     </div>
@@ -122,7 +122,7 @@
                         {$zTools->zToolsGetLanguages($editUser->id_lang)}
                     </select>
                 </div>
-                <button class="zButton primary widthAll zShadow">{zThis z="Submit"}</button>
+                <button class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </form>
         </div>
         <div class="whiteBack rad-15 pad-20 font-16 top-20">
@@ -137,7 +137,7 @@
                         <i class="far fa-envelope"></i>
                     </div>
                 </div>
-                <button class="zButton primary widthAll zShadow">{zThis z="Submit"}</button>
+                <button class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </form>
         </div>
         <div class="whiteBack rad-15 pad-20 font-16 top-20">
@@ -158,7 +158,7 @@
                         <i class="far fa-user"></i>
                     </div>
                 </div>
-                <button class="zButton primary widthAll zShadow">{zThis z="Submit"}</button>
+                <button class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </form>
         </div>
         <div class="whiteBack rad-15 pad-20 font-16 top-20">
@@ -179,7 +179,7 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                 </div>
-                <button class="zButton primary widthAll zShadow">{zThis z="Submit"}</button>
+                <button class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </form>
         </div>
     </div>

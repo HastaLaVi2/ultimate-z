@@ -33,8 +33,6 @@
 
 <!-- jquery -->
 <script src="{$zContent->srcFull["scripts"]}/jquery/jquery-3.6.0.min.js"></script>
-<script src="{$zContent->srcFull["scripts"]}/jquery/jquery.lazy.min.js"></script>
-<script src="{$zContent->srcFull["scripts"]}/jquery/jquery.lazy.plugins.min.js"></script>
 
 <!-- font-awesome -->
 <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/fontawesome/css/all.min.css"/>
@@ -44,41 +42,34 @@
 <script src="{$zContent->srcFull["scripts"]}/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
-<link href="{$zContent->srcFull["scripts"]}/owl.carousel/owl.carousel.css" rel="stylesheet"/>
-<link href="{$zContent->srcFull["scripts"]}/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-<script src="{$zContent->srcFull["scripts"]}/owl.carousel/owl.carousel.min.js"></script>
-
-<!-- favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="{$zContent->srcFull["favicon"]}/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{$zContent->srcFull["favicon"]}/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="{$zContent->srcFull["favicon"]}/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{$zContent->srcFull["favicon"]}/favicon-16x16.png">
-<link rel="manifest" href="{$zContent->srcFull["favicon"]}/site.webmanifest">
-<link rel="mask-icon" href="{$zContent->srcFull["favicon"]}/safari-pinned-tab.svg" color="#2d89ef">
-<link rel="shortcut icon" href="{$zContent->srcFull["favicon"]}/favicon.ico">
-<meta name="msapplication-TileColor" content="#2d89ef">
-<meta name="msapplication-TileImage" content="{$zContent->srcFull["favicon"]}/mstile-144x144.png">
-<meta name="msapplication-config" content="{$zContent->srcFull["favicon"]}/browserconfig.xml">
-<meta name="theme-color" content="#2d89ef">
-
-{if !$zAdmin}
-    <!-- font libraries -->
-    <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/fonts/stylesheet.css" type="text/css" charset="utf-8" />
-
-    <!-- custom css/javascript libraries -->
-    {if file_exists("{$zContent->srcFull["templates"]}/assets/styles.css")}
-        <link rel="stylesheet" type="text/css" href="{$zContent->srcFull["templates"]}/assets/styles.css"/>
-    {/if}
-    {if file_exists("{$zContent->srcFull["templates"]}/assets/javascript.js")}
-        <script src="{$zContent->srcFull["templates"]}/assets/javascript.js"></script>
-    {/if}
-    {if file_exists("{$tempDirectory}assets/styles.css")}
-        <link rel="stylesheet" type="text/css" href="{$zContent->srcFull["_main"]}{$tempDirectory}assets/styles.css"/>
-    {/if}
-    {if file_exists("{$tempDirectory}assets/javascript.js")}
-        <script src="{$zContent->srcFull["_main"]}{$tempDirectory}assets/javascript.js"></script>
-    {/if}
+{if file_exists("{$tempDirectory}assets/owl.carousel.css")}
+    <link rel="stylesheet" href="{$zContent->srcFull["_main"]}{$tempDirectory}assets/owl.carousel.css"/>
+{else}
+    <link href="{$zContent->srcFull["scripts"]}/owl.carousel/owl.carousel.css" rel="stylesheet"/>
 {/if}
+{if file_exists("{$tempDirectory}assets/owl.theme.default.css")}
+    <link rel="stylesheet" href="{$zContent->srcFull["_main"]}{$tempDirectory}assets/owl.theme.default.css"/>
+{else}
+    <link href="{$zContent->srcFull["scripts"]}/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
+{/if}
+{if file_exists("{$tempDirectory}assets/owl.carousel.min.js")}
+    <script src="{$zContent->srcFull["_main"]}{$tempDirectory}assets/owl.carousel.min.js"></script>
+{else}
+    <script src="{$zContent->srcFull["scripts"]}/owl.carousel/owl.carousel.min.js"></script>
+{/if}
+
+{if $zAdmin}
+    {include file="../_holders/favicon.tpl"}
+{else}
+    {include file="_holders/favicon.tpl"}
+{/if}
+
+<!-- lazysizes -->
+<script src="{$zContent->srcFull["scripts"]}/lazysizes/lazysizes.min.js" async=""></script>
+
+<!-- single-page application functions -->
+{if $zAdmin}<script>window.zAdmin = true</script>{/if}
+<script src="{$zContent->srcFull["scripts"]}/spa.js"></script>
 
 {if $zAdmin}
     <!-- dragula -->
@@ -93,7 +84,4 @@
 
     <!-- html2canvas -->
     <script src="{$zContent->srcFull["scripts"]}/html2canvas/html2canvas.min.js"></script>
-
-    <!-- admin javascript functions -->
-    <script src="{$zContent->srcFull["scripts"]}/admin.js"></script>
 {/if}

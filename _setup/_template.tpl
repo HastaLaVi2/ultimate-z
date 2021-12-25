@@ -14,7 +14,7 @@
  *}
 
 <!DOCTYPE html>
-<html lang="{$zThis["iso_code"]}">
+<html lang="{$zContent->language->iso_code}">
 <head>
     <title>ultimate Z</title>
     {include file="../_holders/head.tpl"}

@@ -43,6 +43,7 @@ $lang["Page created."] = "Page created.";
 $lang["Page deleted."] = "Page deleted.";
 $lang["Category created."] = "Category created.";
 $lang["Category deleted."] = "Category deleted.";
+$lang["Now go to the edit page."] = "Now go to the edit page.";
 
 # MEDIA ISSUES
 $lang["File is not an image nor a video."] = "File is not an image nor a video.";
@@ -119,6 +120,7 @@ $lang["Host"] = "Host";
 $lang["Database"] = "Database";
 $lang["New Database"] = "Database";
 $lang["Category"] = "Category";
+$lang["Update"] = "Update";
 
 # zLOGIN
 $lang["Log in with your data that you entered during installation."] = "Log in with your data that you entered during installation.";
@@ -126,6 +128,16 @@ $lang["Log in with your data that you entered during installation."] = "Log in w
 # zFORGOT
 $lang["Forgot Password"] = "Forgot Password";
 $lang["Input your email and we will send you reset password link."] = "Input your email and we will send you reset password link.";
+$lang["Enter a new password for your account."] = "Enter a new password for your account.";
+$lang["A renew link has been sent to your e-mail."] = "A renew link has been sent to your e-mail.";
+$lang["Message could not be sent. Mailer Error: "] = "Message could not be sent. Mailer Error: ";
+$lang["You are using unauthorised ultimate Z account. Please contact your provider."] = "You are using unauthorised ultimate Z account. Please contact your provider.";
+$lang["No account found for this e-mail."] = "No account found for this e-mail.";
+$lang["Password updated."] = "Password updated.";
+$lang["Password Renew Link"] = "Password Renew Link";
+$lang["You requested to change your password, if this is not your doing, you can dismiss this e-mail."] = "You requested to change your password, if this is not your doing, you can dismiss this e-mail.";
+$lang["Click here"] = "Click here";
+$lang["to change your password"] = "to change your password";
 
 # zDASHBOARD
 $lang["Welcome to the ultimate Z!"] = "Welcome to the ultimate Z!";
@@ -154,6 +166,11 @@ $lang["Enable 404 error page"] = "Enable 404 error page";
 $lang["Disable 404 error page"] = "Disable 404 error page";
 $lang["This option will determine whether your website should display a 404 error page, or redirect to homepage when an unknown url entered."] = "This option will determine whether your website should display a 404 error page, or redirect to homepage when an unknown url entered.";
 $lang["Enable or Disable Languages on Frontend"] = "Enable or Disable Languages on Frontend";
+$lang["Software Update"] = "Software Update";
+$lang["Please make sure you are accepting any possible errors when you update the software."] = "Please make sure you are accepting any possible errors when you update the software.";
+$lang["Updating"] = "Updating";
+$lang["Please wait, your ultimate Z is upping..."] = "Please wait, your ultimate Z is upping...";
+$lang["Are you sure you want to update ultimate Z?"] = "Are you sure you want to update ultimate Z?";
 
 # zPAGE EDIT
 $lang["View Page"] = "View Page";
@@ -177,6 +194,14 @@ $lang["Are you sure you want to delete this holder?"] = "Are you sure you want t
 $lang["Meta Description"] = "Meta Description";
 $lang["If you do not enter a meta description, the first text on the page will be used."] = "If you do not enter a meta description, the first text on the page will be used.";
 $lang["Block"] = "Block";
+$lang["Subpage"] = "Subpage";
+$lang["Not a subpage."] = "Not a subpage.";
+$lang["Uncheck this switch, if you want this page to be a subpage of another."] = "Uncheck this switch, if you want this page to be a subpage of another.";
+$lang["Status"] = "Status";
+$lang["Page status"] = "Page status";
+$lang["Determine whether the page should active or not."] = "Determine whether the page should active or not.";
+$lang["Hide upload panel."] = "Hide upload panel.";
+$lang["Click to upload your media."] = "Click to upload your media.";
 
 # zCATEGORY EDIT
 $lang["Category List"] = "Category List";
@@ -219,6 +244,8 @@ $lang["Pinned Tab, No Focus"] = "Pinned Tab, No Focus";
 $lang["Pinned Tab, With Focus"] = "Pinned Tab, With Focus";
 $lang["Touch Bar"] = "Touch Bar";
 $lang["Theme Color"] = "Theme Color";
+$lang["Creating Files"] = "Creating Files";
+$lang["Wait until your files created..."] = "Wait until your files created...";
 
 # SCRIPT: simple-datatables
 $lang["entries per page"] = "entries per page";

@@ -49,21 +49,22 @@ function createForVendor(vendor, rest) {
     return final;
 }
 
-function createStyleTag(zClass, property, value, pseudo, vendor) {
+function createStyleTag(zClass, property, value, pseudo, vendor, noImportant) {
     var inside = "";
+    var noClass = zClass.includes("[") ? true : false;
 
     if (typeof(property) == "object") {
         property.forEach(function(v, i) {
-            inside += createForVendor(vendor, v + ":" + value + " !important" + ";");
-            inside += v + ":" + value + " !important" + ";";
+            inside += createForVendor(vendor, v + ":" + value + (noImportant ? "" : " !important") + ";");
+            inside += v + ":" + value + (noImportant ? "" : " !important") + ";";
         });
     } else {
-        inside += createForVendor(vendor, property + ":" + value + " !important" + ";");
-        inside += property + ":" + value + " !important";
+        inside += createForVendor(vendor, property + ":" + value + (noImportant ? "" : " !important") + ";");
+        inside += property + ":" + value + (noImportant ? "" : " !important");
     }
 
     if (value) {
-        newStyle("." + zClass, inside, pseudo);
+        newStyle((noClass ? "" : ".") + (noImportant ? "_" : "") + zClass, inside, pseudo);
     }
 }
 
@@ -152,6 +153,27 @@ function detectAfterDash(className, detectClass) {
     return zProperty;
 }
 
+/*
+    Determines if the passed element is overflowing its bounds,
+    either vertically or horizontally.
+    Will temporarily modify the "overflow" style to detect this
+    if necessary.
+    copied from: https://stackoverflow.com/questions/143815/determine-if-an-html-elements-content-overflows
+*/
+function checkOverflow(el) {
+   var curOverflow = el.style.overflow;
+
+   if ( !curOverflow || curOverflow === "visible" )
+      el.style.overflow = "hidden";
+
+   var isOverflowing = el.clientWidth < el.scrollWidth
+      || el.clientHeight < el.scrollHeight;
+
+   el.style.overflow = curOverflow;
+
+   return isOverflowing;
+}
+
 /********************/
 /***** zDetect *****/
 /******************/
@@ -178,99 +200,105 @@ function detecting(zClass, property, pseudo, vendor) {
     }
 
     // start to do the same thing for all classes.
-    all.forEach(function(v) {
-        var sth = v.className.split(" ");
-        var repeat = [];
+    if (all && all.length > 0) {
+        all.forEach(function(v) {
+            var sth = v.className.split(" ");
+            var repeat = [];
 
-        sth.forEach(function(s) {
-            if (s.startsWith(zClass) || s.startsWith("zHov-"+zClass)) {
-                repeat.push(s);
+            sth.forEach(function(s) {
+                if (s.startsWith(zClass) || s.startsWith("_" + zClass) || s.startsWith("zHov-"+zClass)) {
+                    repeat.push(s);
+                }
+            });
+
+            for (let d = 0; d < repeat.length; d++) {
+                var i = repeat[d];
+
+                // defaults
+                var minus = false;
+                var pseudo = null;
+                var dotExists = false;
+                var notPx = true;
+                var noImportant = false;
+
+                if (typeof(i) == "string") {
+                    i = i.replace("zHov-", "");
+
+                    /* look for a number value first */
+
+                    // detect if a negative number is being used.
+                    if (i.match(zClass+"--")) {i = i.replace(zClass+"--", zClass+"-"); minus = true;}
+
+                    // should we use !important or not?
+                    if (i.match("_"+zClass)) {noImportant = true}
+
+                    // try to define if another unit besides "px" is being used.
+                    // these units could be: em, ex, ch, px, cm, mm, in, pt, pc, vh, vw, rem, vmax and vmin.
+                    var value = i.match("(?:^| )(?:|_)"+zClass+"-[0-9]+(?:|_)(?:|[0-9]+)(?:|em|:|ex|:|ch|:|px|:|cm|:|mm|:|in|:|pt|:|pc|:|vh|:|vw|:|rem|:|vmax|:|vmin|:|%)(?:$| )");
+
+                    // check if we have a dot on our number or have a unit other than px
+                    if (value && value[0].trim().includes("_")) {dotExists = true}
+                    if (value && value[0].trim().match(/[0-9]$/)) {notPx = false}
+
+                    /* look for a color value */
+
+                    // looking for a number so for, but maybe it is a color?
+                    if (!value) {value = i.match("(?:^| )"+zClass+"-[a-z]+(?:$| )");}
+
+                    // catched any value yet? remove the spaces.
+                    if (value) {value = value[0].replace(/ /g,''); value = value.replace("_"+zClass+"-", "").replace(zClass+"-", "");}
+
+                    /* properties that do not use px */
+
+                    // if catched a color or a z-index value, then notPx is true, because
+                    // there should not be a px at the end of a color or a z-index value
+                    if (value && (
+                        cssColors.includes(value) ||
+                        property == "z-index" ||
+                        property == "background" ||
+                        zClass.startsWith("mortal") ||
+                        (typeof(property) == "string" && property.startsWith("transform-")) ||
+                        property == "font-weight"))
+                        {notPx = true}
+
+                    // remove the prefix, so that we have our value only.
+                    if (value) {value = (minus ? "-" : "") + value + (notPx ? "" : "px");}
+
+                    // if zClass has "px" at the end, this is wrong
+                    if (value) {catchedClass = zClass + "-" + value.replace(/px$/, "");}
+
+                    // replace all "_" with "."
+                    if (value && dotExists) {value = value.replace("_", ".");}
+
+                    // mortals (transparent backgrounds and colors)
+                    if (value && zClass.startsWith("mortal") && zClass.endsWith("W")) {value = "rgba(255, 255, 255, 0."+value+")"}
+                    if (value && zClass.startsWith("mortal") && zClass.endsWith("B")) {value = "rgba(0, 0, 0, 0."+value+")"}
+
+                    // text & box shadows
+                    if (value && zClass == "Tshaw") {value = "0 0 "+value+" rgba(0,0,0,0.35)"}
+                    if (value && (zClass == "superow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
+                    if (value && (zClass == "shadow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
+
+                    // detect if zHov is used.
+                    if (repeat[d].includes("zHov-" + catchedClass)) {pseudo = "hover"; catchedClass = "zHov-" + catchedClass;}
+
+                    // filters
+                    if (value && typeof(property) == "string" && property.startsWith("filter-")) {
+                        value = property.replace("filter-", "") + "(" + value + ")";catchedProperty = "filter"
+                    }
+                    // transforms
+                    if (value && typeof(property) == "string" && property.startsWith("transform-")) {
+                        value = property.replace("transform-", "") + "(" + value + "deg)";catchedProperty = "transform"
+                    }
+
+                    if (catchedProperty == "") {catchedProperty = property}
+
+                    // finally, set the style
+                    createStyleTag(catchedClass, catchedProperty, value, pseudo, vendor, noImportant);
+                }
             }
         });
-
-        for (let d = 0; d < repeat.length; d++) {
-            var i = repeat[d];
-
-            // defaults
-            var minus = false;
-            var pseudo = null;
-            var dotExists = false;
-            var notPx = true;
-
-            if (typeof(i) == "string") {
-                i = i.replace("zHov-", "");
-
-                /* look for a number value first */
-
-                // detect if a negative number is being used.
-                if (i.match(zClass+"--")) {i = i.replace(zClass+"--", zClass+"-"); minus = true;}
-
-                // try to define if another unit besides "px" is being used.
-                // these units could be: em, ex, ch, px, cm, mm, in, pt, pc, vh, vw, rem, vmax and vmin.
-                var value = i.match("(?:^| )"+zClass+"-[0-9]+(?:|_)(?:|[0-9]+)(?:|em|:|ex|:|ch|:|px|:|cm|:|mm|:|in|:|pt|:|pc|:|vh|:|vw|:|rem|:|vmax|:|vmin|:|%)(?:$| )");
-
-                // check if we have a dot on our number or have a unit other than px
-                if (value && value[0].trim().includes("_")) {dotExists = true}
-                if (value && value[0].trim().match(/[0-9]$/)) {notPx = false}
-
-                /* look for a color value */
-
-                // looking for a number so for, but maybe it is a color?
-                if (!value) {value = i.match("(?:^| )"+zClass+"-[a-z]+(?:$| )");}
-
-                // catched any value yet? remove the spaces.
-                if (value) {value = value[0].replace(/ /g,''); value = value.replace(zClass+"-", "");}
-
-                /* properties that do not use px */
-
-                // if catched a color or a z-index value, then notPx is true, because
-                // there should not be a px at the end of a color or a z-index value
-                if (value && (
-                    cssColors.includes(value) ||
-                    property == "z-index" ||
-                    property == "background" ||
-                    zClass.startsWith("mortal") ||
-                    (typeof(property) == "string" && property.startsWith("transform-")) ||
-                    property == "font-weight"))
-                    {notPx = true}
-
-                // remove the prefix, so that we have our value only.
-                if (value) {value = (minus ? "-" : "") + value + (notPx ? "" : "px");}
-
-                // if zClass has "px" at the end, this is wrong
-                if (value) {catchedClass = zClass + "-" + value.replace(/px$/, "");}
-
-                // replace all "_" with "."
-                if (value && dotExists) {value = value.replace("_", ".");}
-
-                // mortals (transparent backgrounds and colors)
-                if (value && zClass.startsWith("mortal") && zClass.endsWith("W")) {value = "rgba(255, 255, 255, 0."+value+")"}
-                if (value && zClass.startsWith("mortal") && zClass.endsWith("B")) {value = "rgba(0, 0, 0, 0."+value+")"}
-
-                // text & box shadows
-                if (value && zClass == "Tshaw") {value = "0 0 "+value+" rgba(0,0,0,0.35)"}
-                if (value && (zClass == "superow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
-                if (value && (zClass == "shadow")) {value = "0 0 "+value+" rgba(0,0,0,1)"}
-
-                // detect if zHov is used.
-                if (repeat[d].includes("zHov-" + catchedClass)) {pseudo = "hover"; catchedClass = "zHov-" + catchedClass;}
-
-                // filters
-                if (value && typeof(property) == "string" && property.startsWith("filter-")) {
-                    value = property.replace("filter-", "") + "(" + value + ")";catchedProperty = "filter"
-                }
-                // transforms
-                if (value && typeof(property) == "string" && property.startsWith("transform-")) {
-                    value = property.replace("transform-", "") + "(" + value + "deg)";catchedProperty = "transform"
-                }
-
-                if (catchedProperty == "") {catchedProperty = property}
-
-                // finally, set the style
-                createStyleTag(catchedClass, catchedProperty, value, pseudo, vendor);
-            }
-        }
-    });
+    }
 }
 
 function zBetween() {
@@ -354,11 +382,6 @@ function zDetect() {
     inLine.forEach(function(value) {
         value.parentElement.classList.add("font0");
     });
-    var allSqu = document.querySelectorAll(".specSquare");
-    allSqu.forEach(function(value) {
-        var ourWidth = width(value);
-        value.style.cssText = value.style.cssText + "height: " + ourWidth + "px;";
-    });
     detecting("font", "font-size");
     detecting("color");
     detecting("mortalTextW", "color");
@@ -408,8 +431,15 @@ function zDetect() {
     detecting("shadow", "box-shadow");
     detecting("blur", "filter-blur", null, "o");
     detecting("rotate", "transform-rotate");
+    detecting("fadeIn", "animation", null, ["webkit", "moz", "ms", "o"], "ease-out forwards");
     zBetween();
+    zHorizon();
 
+    var allSqu = document.querySelectorAll(".specSquare");
+    allSqu.forEach(function(value) {
+        var ourWidth = width(value);
+        value.style.cssText = value.style.cssText + "height: " + ourWidth + "px;";
+    });
     var widthRest = document.querySelectorAll(".widthRest");
     widthRest.forEach(function(value) {
         var prev = width(value.previousElementSibling);
@@ -517,7 +547,7 @@ function zMobVSzWeb() {
             var zWeb = value.getAttribute("zWeb").trim().split(" ");
         }
 
-        // extort the attribute names
+        // export the attribute names
         var allAttr = value.getAttributeNames();
 
         allAttr.forEach(function(vAttr, kAttr) {
@@ -533,7 +563,7 @@ function zMobVSzWeb() {
         });
 
         // check which classes we currently have on the element
-        var alreadyClasses = value.getAttribute("class") ? value.getAttribute("class").trim().split(" ") : [];
+        var alreadyClasses = value.getAttribute("zWeb") ? value.getAttribute("zWeb").trim().split(" ") : [];
         // sort zLevels by their window sizes, because the first element
         // in the arrays are the window sizes
         zLevels.sort(sortByFirst);
@@ -542,8 +572,10 @@ function zMobVSzWeb() {
         for (const [i, v] of zLevels.entries()){
             // get a copy of zMob classes
             var classes = [...v];
+
             // remove the first item, because it is the window size
             classes.shift();
+
             for (const [iCla, vCla] of classes.entries()) {
                 // get the class name and "-" after, because all zClasses have "-" before their value
                 var zClass = vCla.substr(0, vCla.indexOf("-")) + "-";
@@ -551,28 +583,31 @@ function zMobVSzWeb() {
                 // for example, if we have pad-10 in our element and our zMob class is pad-20
                 // we should remove pad-10 and add pad-20 instead
                 var result = findIn(alreadyClasses, zClass);
-                var esult = findIn(zLevels[i-1], zClass);
                 // these are the catches of the system,
                 // when we have multiple zMob attributes, we should always check
                 // the upper or below stage classes to see if they have the same
                 // type of zClasses on them
-                if (zLevels[i-1] && winW <= zLevels[i-1][0] && zLevels[i-1][esult]) {}
-                // here we can set and remove classes
-                else {
-                    if (winW <= v[0]) {
-                        // if our window width smaller than our zMob's window width
-                        if (alreadyClasses[result]) {
-                            value.classList.remove(alreadyClasses[result]);
-                        }
+                if (winW <= v[0]) {
+                    // if our window width smaller than our zMob's window width
+                    if (alreadyClasses[result]) {
+                        value.classList.remove(alreadyClasses[result]);
+                    }
+                    if (vCla) {
                         value.classList.add(vCla);
-                    } else if (winW > zLevels[zLevels.length - 1][0]) {
-                        // if we are not under any obligation of a zMob,
-                        // go back to the things they were
-                        if (zWeb) {
-                            value.setAttribute("class", zWeb.join(" "));
-                        }
-                    } else {
+                    }
+                } else if (winW > zLevels[zLevels.length - 1][0]) {
+                    // if we are not under any obligation of a zMob,
+                    // go back to the things they were
+                    if (zWeb) {
+                        value.setAttribute("class", zWeb.join(" "));
+                    }
+                } else {
+                    if (vCla) {
                         value.classList.remove(vCla);
+                    }
+                    if (alreadyClasses[result]) {
+                        console.log("bu eklendi: "+ alreadyClasses);
+                        value.classList.add(alreadyClasses[result]);
                     }
                 }
             }
@@ -690,19 +725,21 @@ function zTogglePath(path) {
         let sidebarItem = sidebarItems[i];
         let zProperty = detectAfterDash(sidebarItem.className, "zTog"+(path ? path : ""));
 
-    	sidebarItem.addEventListener("click", function(e) {
-            e.preventDefault();
+        if (sidebarItem.getAttribute("zToggle-" + zProperty) !== "true") {
+        	sidebarItem.addEventListener("click", function(e) {
+                e.preventDefault();
 
-            let submenu = document.querySelectorAll(".zShow-" + zProperty);
-            submenu.forEach(function(menu) {
-                if (path && path == "Down") {
-                    slideToggle(menu, 300);
-                } else {
-                    menu.classList.toggle("displayNone");
-                }
-
+                let submenu = document.querySelectorAll(".zShow-" + zProperty);
+                submenu.forEach(function(menu) {
+                    if (path && path == "Down") {
+                        slideToggle(menu, 300);
+                    } else {
+                        menu.classList.toggle("displayNone");
+                    }
+                });
             });
-        })
+        }
+        sidebarItem.setAttribute("zToggle-" + zProperty, "true");
     }
 }
 
@@ -721,33 +758,170 @@ function zRemove() {
         let removeItem = removeItems[i];
         let zProperty = detectAfterDash(removeItem.className, "zRemove");
 
-    	removeItem.addEventListener("click", function(e) {
-            e.preventDefault();
+        if (removeItem.getAttribute("zRemove-" + zProperty) !== "true") {
+        	removeItem.addEventListener("click", function(e) {
+                e.preventDefault();
 
-            let removingItem = document.querySelectorAll(".zDestroy-" + zProperty);
-            removingItem.forEach(function(item) {
-                item.remove();
+                let removingItem = document.querySelectorAll(".zDestroy-" + zProperty);
+                removingItem.forEach(function(item) {
+                    item.remove();
+                });
             });
-        })
+        }
+        removeItem.setAttribute("zRemove-" + zProperty, "true");
     }
+}
+
+/********************/
+/***** zShadow *****/
+/******************/
+
+// copied from https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+
+function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+function hexToRgb(hex) {
+    // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+        return r + r + g + g + b + b;
+    });
+
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+}
+
+function zShadow() {
+    for (var i = 1; i < 9; i++) {
+        var all = document.querySelectorAll("[class*='zShadow"+i+"']");
+        if (all && all.length > 0) {
+            var color = getComputedStyle(document.body).getPropertyValue("--color"+i);
+            if (color.startsWith("#")) {
+                finalColor = "rgba(" + hexToRgb(color).r + "," + hexToRgb(color).g + "," + hexToRgb(color).b + ",.4)";
+            } else {
+                finalColor = color.replace(color.match("rgb+(?:| )\\("), "rgba(").replace(")", ",.4)");
+            }
+            createStyleTag("zShadow" + i, "box-shadow", "0 1rem 3rem " + finalColor);
+            createStyleTag("zHov-zShadow" + i, "box-shadow", "0 1rem 3rem " + finalColor, "hover");
+        }
+    }
+}
+
+/*********************/
+/***** zHorizon *****/
+/*******************/
+
+function zHorizon() {
+    const element = document.querySelectorAll(".zHorizon");
+
+    element.forEach(function(item) {
+        item.addEventListener("wheel", (event) => {
+            event.preventDefault();
+
+            item.scrollBy({
+                left: event.deltaY < 0 ? -30 : 30,
+            });
+        });
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        item.addEventListener("mousedown", (e) => {
+            isDown = true;
+            item.classList.add("active");
+            startX = e.pageX - item.offsetLeft;
+            scrollLeft = item.scrollLeft;
+        });
+        item.addEventListener("mouseleave", () => {
+            isDown = false;
+            item.classList.remove("active");
+        });
+        item.addEventListener("mouseup", () => {
+            isDown = false;
+            item.classList.remove('active');
+        });
+        item.addEventListener("mousemove", (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - item.offsetLeft;
+            const walk = (x - startX) * 3; //scroll-fast
+            item.scrollLeft = scrollLeft - walk;
+        });
+    });
+}
+
+/*********************/
+/***** zAnimate *****/
+/*******************/
+
+function zAnimate() {
+    const inViewport = (entries, observer) => {
+        entries.forEach(entry => {
+            entry.target.classList.toggle("zView", entry.isIntersecting);
+            var attributeList = entry.target.getAttribute("zWeb");
+            if (attributeList) {
+                if (attributeList.includes("zView")) {
+                    entry.target.setAttribute("zWeb", attributeList.replace(" zView", ""));
+                } else {
+                    entry.target.setAttribute("zWeb", attributeList + " zView");
+                }
+            }
+        });
+    };
+
+    const Obs = new IntersectionObserver(inViewport);
+    const obsOptions = {}; //see: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
+
+    // attach observer to every [data-inviewport] element:
+    const ELs_inViewport = document.querySelectorAll("[zAnimate]");
+    ELs_inViewport.forEach(EL => {
+        var children = EL.getAttribute("zAnimate").split("][");
+        Obs.observe(EL, obsOptions);
+
+        children.forEach(CHILD => {
+            var zHov = CHILD.match("zHov-") ? true : false;
+            var params = CHILD.replace("[", "").replace("]", "").replace("zHov-", "").split(":");
+
+            // this is the duration of the animation.
+            if (params[3]) {
+                createStyleTag("[zAnimate*=\""+CHILD+"\"]", "transition", params[3]+"s");
+            }
+            // this is the first state of the animation,
+            // this can be used to state filters or transforms.
+            createStyleTag("[zAnimate*=\""+CHILD+"\"]", params[0], params[1], (zHov ? "hover" : false));
+            // final state of the animation.
+            if (params[2]) {
+                createStyleTag("[zAnimate*=\""+CHILD+"\"].zView", params[0], params[2]);
+            }
+        });
+    });
 }
 
 /***********************************/
 /***** run the magical things *****/
 /*********************************/
 
-document.addEventListener('touchmove', function(event) {
+document.addEventListener("touchmove", function(event) {
         event.preventDefault();
     },
     false
 );
 
-document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener("DOMContentLoaded", function(event) {
+    zAnimate();
     newSystemPre();
     zMobVSzWeb();
     zDetect();
     zTog();
     zRemove();
+    zShadow();
     preMagic();
     magic();
 });

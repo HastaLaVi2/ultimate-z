@@ -26,19 +26,55 @@
             <div class="padLR-128 zMob768-padLR-40 padTB-80">
                 {include file="{$zContent->src["admin"]}/_partials/logo.tpl"}
                 <h1 class="font-64 boldText">{zThis z="Forgot Password"}.</h1>
-                <p class="font-27_2 gray2 bottom-48">{zThis z="Input your email and we will send you reset password link."}</p>
-
-                <form id="zUser-login-form" class="zForm" method="POST" role="form" action="{$zContent->base_uri}">
-                    {$zTools->zToolsFormWarning($success, $error)}
-                    <div>
-                        <input name="email" id="email" type="email" class="padL-45" placeholder="{zThis z="Email"}">
-                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                            <i class="fas fa-envelope"></i>
+                {if $changeToken}
+                    <p class="font-27_2 gray2 bottom-48">{zThis z="Enter a new password for your account."}</p>
+                    <form id="zUser-forgot-form" class="zForm" method="POST" role="form" action="{$zContent->base_uri}">
+                        {$zTools->zToolsFormWarning($success, $error)}
+                        <div class="help-box zShow-DBHelp whiteText animation pad-16 rad-4 bottom-10 displayNone">
+                            <span class="padR-50"></span>
+                            <div class="zTog-DBHelp pointThis floatingTheRight row-12 pad-13 font-25_6">
+                                <i class="far fa-times"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="help-box top-10 bottom-25 rad-4"></div>
-                    <button id="btnSubmit" class="zButton primary widthAll zShadow">{zThis z="Send"}</button>
-                </form>
+                        <input name="email" type="text" class="display-none" value="{$smarty.get.email}">
+                        <input name="token" type="text" class="display-none" value="{$smarty.get.token}">
+                        <div>
+                            <input name="password" id="password" type="password" class="padL-45" placeholder="{zThis z="Password"}">
+                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="help-box top-10 bottom-25 rad-4"></div>
+                        <div>
+                            <input name="confirm_password" id="confirm_password" type="password" class="padL-45" placeholder="{zThis z="Confirm Password"}">
+                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="help-box top-10 bottom-25 rad-4"></div>
+                        <button id="btnSubmit" class="zButton primary widthAll zShadow5">{zThis z="Send"}</button>
+                    </form>
+                {else}
+                    <p class="font-27_2 gray2 bottom-48">{zThis z="Input your email and we will send you reset password link."}</p>
+                    <form id="zUser-forgot-form" class="zForm" method="POST" role="form" action="{$zContent->base_uri}">
+                        {$zTools->zToolsFormWarning($success, $error)}
+                        <div class="help-box zShow-DBHelp whiteText animation pad-16 rad-4 bottom-10 displayNone">
+                            <span class="padR-50"></span>
+                            <div class="zTog-DBHelp pointThis floatingTheRight row-12 pad-13 font-25_6">
+                                <i class="far fa-times"></i>
+                            </div>
+                        </div>
+                        <input name="langcode" id="langcode" type="text" class="display-none" value="{$zContent->language->iso_code}">
+                        <div>
+                            <input name="email" id="email" type="email" class="padL-45" placeholder="{zThis z="Email"}">
+                            <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="help-box top-10 bottom-25 rad-4"></div>
+                        <button id="btnSubmit" class="zButton primary widthAll zShadow5">{zThis z="Send"}</button>
+                    </form>
+                {/if}
                 <p class="font-27_2 gray2 top-20 bottom-48">
                     <a href="{$zContent->srcFull["main"]}_admin/login/" class="forceLink">{zThis z="Remember your account?"}</a>
                 </p>
@@ -48,5 +84,27 @@
             </div>
         </div>
     </div>
+    <script>
+    $(".zForm").submit(function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: $(this).serialize(),
+            success: function(responseText) {
+                var helpBox = $(".help-box");
+                if (responseText.includes("A renew link has been sent") || responseText.includes("Password updated")
+                    || responseText.includes("bir yenileme bağlantısı gönderildi") || responseText.includes("Şifre güncellendi")) {
+                    helpBox.removeClass("displayNone").removeClass("alertBack").addClass("succBack");
+                    helpBox.find("span").text(responseText.split("~").pop());
+                } else {
+                    helpBox.removeClass("displayNone").removeClass("succBack").addClass("alertBack");
+                    helpBox.find("span").text(responseText.split("~").pop());
+                }
+            }
+        });
+    });
+    </script>
 </body>
 </html>

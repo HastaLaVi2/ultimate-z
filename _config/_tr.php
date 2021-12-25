@@ -43,6 +43,7 @@ $lang["Page created."] = "Sayfa oluşturuldu.";
 $lang["Page deleted."] = "Sayfa silindi.";
 $lang["Category created."] = "Kategori oluşturuldu.";
 $lang["Category deleted."] = "Kategori silindi.";
+$lang["Now go to the edit page."] = "Şimdi düzenleme sayfasına gidin.";
 
 # MEDIA ISSUES
 $lang["File is not an image nor a video."] = "Dosya bir fotoğraf veya video değil.";
@@ -118,6 +119,7 @@ $lang["Host"] = "Host";
 $lang["Database"] = "Veritabanı";
 $lang["New Database"] = "Yeni Veritabanı";
 $lang["Category"] = "Kategori";
+$lang["Update"] = "Güncelle";
 
 # zLOGIN
 $lang["Log in with your data that you entered during installation."] = "Kurulum sırasında girdiğiniz bildileri kullanarak giriş yapın.";
@@ -125,6 +127,16 @@ $lang["Log in with your data that you entered during installation."] = "Kurulum 
 # zFORGOT
 $lang["Forgot Password"] = "Şifremi Unuttum";
 $lang["Input your email and we will send you reset password link."] = "Şifre sıfırlama bağlantısı için epostanızı girin.";
+$lang["Enter a new password for your account."] = "Hesabınız için yeni bir şifre girin.";
+$lang["A renew link has been sent to your e-mail."] = "E-posta hesabınıza bir yenileme bağlantısı gönderildi.";
+$lang["Message could not be sent. Mailer Error: "] = "Mesaj gönderilemedi. Posta hatası: ";
+$lang["You are using unauthorised ultimate Z account. Please contact your provider."] = "İzin verilmemiş bir ultimate Z hesabı kullanıyorsunuz. Lütfen sağlayıcınıza danışın.";
+$lang["No account found for this e-mail."] = "Bu e-postaya bağlı bir hesap bulunamadı.";
+$lang["Password updated."] = "Şifre güncellendi.";
+$lang["Password Renew Link"] = "Şifre Yenileme Bağlantısı";
+$lang["You requested to change your password, if this is not your doing, you can dismiss this e-mail."] = "Şifrenizi değiştirmek istediğinizi belirttiniz, eğer bunu siz yapmadıysanız bu e-postayı görmezden gelebilirsiniz.";
+$lang["Click here"] = "Buraya tıklayarak";
+$lang["to change your password"] = "şifrenizi değiştirin";
 
 # zDASHBOARD
 $lang["Welcome to the ultimate Z!"] = "ultimate Z'ye hoş geldiniz!";
@@ -153,6 +165,11 @@ $lang["Enable 404 error page"] = "404 hata sayfasını etkinleştir";
 $lang["Disable 404 error page"] = "404 hata sayfasını devre dışı bırak";
 $lang["This option will determine whether your website should display a 404 error page, or redirect to homepage when an unknown url entered."] = "Bu seçenek var olmayan bir url girildiğinde bir 404 hata sayfasının mı görüntüleneceğini yoksa anasayfaya mı yönlendirileceğini belirler.";
 $lang["Enable or Disable Languages on Frontend"] = "Frontend'de Dilleri Etkinleştir veya Devre Dışı Bırak";
+$lang["Software Update"] = "Yazılım Güncellemesi";
+$lang["Please make sure you are accepting any possible errors when you update the software."] = "Lütfen güncelleme sonrası olası hataların çıkabileceğini kabul ederek güncelleyin.";
+$lang["Updating"] = "Güncelleniyor";
+$lang["Please wait, your ultimate Z is upping..."] = "Lütfen bekleyin, ultimate Z'niz yükseltiliyor...";
+$lang["Are you sure you want to update ultimate Z?"] = "ultimate Z'yi güncellemek istediğinize emin misiniz?";
 
 # zPAGE EDIT
 $lang["View Page"] = "Sayfayı Görüntüle";
@@ -177,6 +194,14 @@ $lang["Are you sure you want to delete this holder?"] = "Bu tutucuyu silmek iste
 $lang["Meta Description"] = "Meta Açıklaması";
 $lang["If you do not enter a meta description, the first text on the page will be used."] = "Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.";
 $lang["Block"] = "Blok";
+$lang["Subpage"] = "Alt Sayfa";
+$lang["Not a subpage."] = "Bir alt sayfa değil.";
+$lang["Uncheck this switch, if you want this page to be a subpage of another."] = "Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.";
+$lang["Status"] = "Durum";
+$lang["Page status"] = "Sayfa durumu";
+$lang["Determine whether the page should active or not."] = "Sayfanın aktif olarak görüntülenip görüntülenemeyeceğini belirleyin.";
+$lang["Hide upload panel."] = "Yükleme ekranını gizle.";
+$lang["Click to upload your media."] = "Medya yüklemek için tıklayın.";
 
 # zCATEGORY EDIT
 $lang["Category List"] = "Kategori Listesi";
@@ -219,6 +244,8 @@ $lang["Pinned Tab, No Focus"] = "Sabit Sekme, Açılmamış";
 $lang["Pinned Tab, With Focus"] = "Sabit Sekme, Açılmış";
 $lang["Touch Bar"] = "Touch Bar";
 $lang["Theme Color"] = "Tema Rengi";
+$lang["Creating Files"] = "Dosyalar Oluşturuluyor";
+$lang["Wait until your files created..."] = "Lütfen dosyalarınız oluşturulurken biraz bekleyin...";
 
 # SCRIPT: simple-datatables
 $lang["entries per page"] = "gösterilen öge sayısı";

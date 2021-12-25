@@ -14,7 +14,7 @@
  *}
 
 <div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
-<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 padL-332 zMob1200-padL-0">
+<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 {if $zAdmin}padL-332 zMob1200-padL-0{/if}">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -27,8 +27,8 @@
     </div>
 </div>
 
-<div id="zLoad0_1" class="floatingSpace mortalW-8 widthAll heightAll fixed font-24 index-100"></div>
-<div id="zLoad0_2" class="floatingSpace back7 widthAll heightAll fixed font-24 index-101">
+<div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
+<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -38,7 +38,7 @@
                 <div class="back7 widthAll row-12 rad-17"></div>
             </div>
             <div class="padT-20 text1">
-                ultimate Z
+                {if $zAdmin}ultimate Z{else}{$z->name}{/if}
             </div>
         </center>
     </div>
