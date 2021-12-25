@@ -356,6 +356,7 @@ class zTools {
             # seperate each data
             $name = $db->trim($trimmedData["site_name"]);
             $cookie_key = $this->generateRandomString();
+            $hidden_key = $this->generateRandomString(30);
 
             if((!$name)) {
 				throw new Exception($zThis["The information is missing."]);
@@ -367,7 +368,7 @@ class zTools {
             if($check[0]["id_z"]) {
                 throw new Exception($zThis["A site with the exact name provided already exists."]);
             }
-            $query = $db->execute("INSERT INTO `z` (name, cookie_key, status, error) VALUES ('$name', '$cookie_key', 'enabled', 'enabled')");
+            $query = $db->execute("INSERT INTO `z` (name, create_date, cookie_key, status, error, hidden_key) VALUES ('$name', CURRENT_TIMESTAMP, '$cookie_key', 'enabled', 'enabled', '$hidden_key')");
             if($query) {} else {
                 throw new Exception($zThis["Cannot connect to database."]);
             }
