@@ -563,10 +563,11 @@ function zMobVSzWeb() {
         });
 
         // check which classes we currently have on the element
-        var zWebForlLevels = value.getAttribute("zWeb") ? value.getAttribute("zWeb").trim().split(" ") : [];
-        for (const [i, v] of zWebForlLevels.entries()){
-            if (!v.includes("-")) {
-                zWebForlLevels.splice(i, 1);
+        var getzWeb = value.getAttribute("zWeb") ? value.getAttribute("zWeb").trim().split(" ") : [];
+        var zWebForlLevels = [];
+        for (const [i, v] of getzWeb.entries()){
+            if (v.includes("-") && !v.includes("zMob") && !v.includes("zShow") && !v.includes("zTog")) {
+                zWebForlLevels.push(v);
             }
         }
         zWebForlLevels.unshift("zWeb");
@@ -606,21 +607,9 @@ function zMobVSzWeb() {
                         }
                         check[zClass] = true;
                     }
-                } else if (winW > zLevels[zLevels.length - 1][0]) {
-                    // if we are not under any obligation of a zMob,
-                    // go back to the things they were
+                } else if (v[0] == "zWeb" && winW > zLevels[zLevels.length-2][0]) {
                     if (zWeb) {
                         value.setAttribute("class", zWeb.join(" "));
-                    }
-                } else if (v[0] == "zWeb") {
-                    if (!check[zClass]) {
-                        if (alreadyClasses.includes(zClass)) {
-                            value.setAttribute("class", alreadyClasses.replaceAll(new RegExp(zClass+"[0-9]+", "g"), ""));
-                        }
-                        if (vCla) {
-                            value.classList.add(vCla);
-                        }
-                        check[zClass] = true;
                     }
                 }
             }
