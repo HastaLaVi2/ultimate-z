@@ -1,48 +1,48 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:30:04
+/* Smarty version 3.1.40, created on 2021-12-25 14:20:00
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6d68c6da758_69280680',
+  'unifunc' => 'content_61c72890d81404_85794750',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40eca603e2fff03d9ede2e86dcef495b76ef25bf' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl',
-      1 => 1640290089,
+      1 => 1640422377,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1637665907,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640259430,
+      1 => 1640422377,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
-      1 => 1640259422,
+      1 => 1640422377,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1637660534,
+      1 => 1640422377,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1639138246,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -54,19 +54,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1639138316,
+      1 => 1640422377,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1639138416,
+      1 => 1640422377,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1640420923,
+      1 => 1640422377,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c6d68c6da758_69280680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c72890d81404_85794750 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">

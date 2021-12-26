@@ -563,10 +563,18 @@ function zMobVSzWeb() {
         });
 
         // check which classes we currently have on the element
-        var alreadyClasses = value.getAttribute("zWeb") ? value.getAttribute("zWeb").trim().split(" ") : [];
+        var zWebForlLevels = value.getAttribute("zWeb") ? value.getAttribute("zWeb").trim().split(" ") : [];
+        for (const [i, v] of zWebForlLevels.entries()){
+            if (!v.includes("-")) {
+                zWebForlLevels.splice(i, 1);
+            }
+        }
+        zWebForlLevels.unshift("zWeb");
+        zLevels.push(zWebForlLevels);
         // sort zLevels by their window sizes, because the first element
         // in the arrays are the window sizes
         zLevels.sort(sortByFirst);
+        var check = {};
 
         // start the loop
         for (const [i, v] of zLevels.entries()){
@@ -582,18 +590,21 @@ function zMobVSzWeb() {
                 // check if the same type of class exists on our element already
                 // for example, if we have pad-10 in our element and our zMob class is pad-20
                 // we should remove pad-10 and add pad-20 instead
-                var result = findIn(alreadyClasses, zClass);
+                var alreadyClasses = value.getAttribute("class");
                 // these are the catches of the system,
                 // when we have multiple zMob attributes, we should always check
                 // the upper or below stage classes to see if they have the same
                 // type of zClasses on them
                 if (winW <= v[0]) {
-                    // if our window width smaller than our zMob's window width
-                    if (alreadyClasses[result]) {
-                        value.classList.remove(alreadyClasses[result]);
-                    }
-                    if (vCla) {
-                        value.classList.add(vCla);
+                    if (!check[zClass]) {
+                        // if our window width smaller than our zMob's window width
+                        if (alreadyClasses.includes(zClass)) {
+                            value.setAttribute("class", alreadyClasses.replaceAll(new RegExp(zClass+"[0-9]+", "g"), ""));
+                        }
+                        if (vCla) {
+                            value.classList.add(vCla);
+                        }
+                        check[zClass] = true;
                     }
                 } else if (winW > zLevels[zLevels.length - 1][0]) {
                     // if we are not under any obligation of a zMob,
@@ -601,13 +612,15 @@ function zMobVSzWeb() {
                     if (zWeb) {
                         value.setAttribute("class", zWeb.join(" "));
                     }
-                } else {
-                    if (vCla) {
-                        value.classList.remove(vCla);
-                    }
-                    if (alreadyClasses[result]) {
-                        console.log("bu eklendi: "+ alreadyClasses);
-                        value.classList.add(alreadyClasses[result]);
+                } else if (v[0] == "zWeb") {
+                    if (!check[zClass]) {
+                        if (alreadyClasses.includes(zClass)) {
+                            value.setAttribute("class", alreadyClasses.replaceAll(new RegExp(zClass+"[0-9]+", "g"), ""));
+                        }
+                        if (vCla) {
+                            value.classList.add(vCla);
+                        }
+                        check[zClass] = true;
                     }
                 }
             }

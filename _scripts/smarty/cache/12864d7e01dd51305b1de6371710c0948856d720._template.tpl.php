@@ -1,48 +1,48 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:30:01
+/* Smarty version 3.1.40, created on 2021-12-25 14:19:54
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6d6892651b4_54002856',
+  'unifunc' => 'content_61c7288ac1b551_16885681',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f3ce0a95b089b83ae762214d8d39d79fcd27b89' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl',
-      1 => 1639309789,
+      1 => 1640422377,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1637665907,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640259430,
+      1 => 1640422377,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
-      1 => 1640259422,
+      1 => 1640422377,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1637660534,
+      1 => 1640422377,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1639138246,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -54,25 +54,25 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1639138316,
+      1 => 1640422377,
       2 => 'file',
     ),
     '00713257cf9551af20df90b209cc4ee0ca5ac7bb' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl',
-      1 => 1639138452,
+      1 => 1640422377,
       2 => 'file',
     ),
     '3c98e242087fd8cf119847a5ffb011fca48c94fb' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/statistics.tpl',
-      1 => 1639138439,
+      1 => 1640422377,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1640420923,
+      1 => 1640422377,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -84,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c6d6892651b4_54002856 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c7288ac1b551_16885681 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -400,7 +400,7 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                372
+                                376
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
@@ -432,7 +432,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">423</h6>
+        <h6 class="top-0 bottom-0">427</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -639,12 +639,12 @@ $(window).resize(function(){
         window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["1","0","2","0","1","1","0"]);
+        apexBarCreate("#chart-profile-visit", 7, ["5","0","2","0","1","1","0"]);
                 if ($("#chart-1001").length) {
             apexLineCreate(
                 "#chart-1001",
                 12,
-                ["1","0","2","0","1","1","0","0","5","1","0","0"],
+                ["5","0","2","0","1","1","0","0","5","1","0","0"],
                 "#5350e9"            );
         }
                 if ($("#chart-1002").length) {

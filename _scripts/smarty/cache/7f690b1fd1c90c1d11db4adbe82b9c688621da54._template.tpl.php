@@ -1,42 +1,42 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:52:07
+/* Smarty version 3.1.40, created on 2021-12-26 08:43:11
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6dbb7d97b76_73416738',
+  'unifunc' => 'content_61c82b1f012c62_39894229',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1640422324,
+      1 => 1640464792,
       2 => 'file',
     ),
     '3919874f51ba2bcf80120a6cbf05a2f24c4274ce' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/_main.tpl',
-      1 => 1640421402,
+      1 => 1640422377,
       2 => 'file',
     ),
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640421401,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0731ef1aedb336563dff9b49bcc043d0fb40cf08' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
-      1 => 1640421401,
+      1 => 1640422377,
       2 => 'file',
     ),
     '18f8a920c20cf5861af48cf7129f48b957c6f487' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1640421401,
+      1 => 1640422377,
       2 => 'file',
     ),
     '37b0e39aed323c9a8a0278f28ec8e347d4af9913' => 
@@ -48,7 +48,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c6dbb7d97b76_73416738 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c82b1f012c62_39894229 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -161,6 +161,18 @@ function content_61c6dbb7d97b76_73416738 (Smarty_Internal_Template $_smarty_tpl)
     <div id="zContent">
         
         
+    <div class="rightText pad-60" zMob-1024="pad-50" zMob-768="pad-20">
+        <div class="font-25 text1 padB-10 displayNone zMob768-no">
+            <i class="fas fa-bars zTog-MEnuu pointThis"></i>
+        </div>
+        <div class="font-12">
+            <ul class="menu2 cleanList nextToEach toSpan padR-20">
+                                                <li class="padT-0"><a href="http://localhost/ultimate-z/en/" class="text1 animation zHov-text1">en</a></li>
+                                                                <li class="text2 padT-0"><b>tr</b></li>
+                                        </ul>
+            <div class="height-2 back1 inLine verMid width-30"></div>
+        </div>
+    </div>
     <!--<div class="back7 pad-20">
         <div class="whiteBack rad-20 width-280 hideRest zShadow">
             <div class="pad-20 padB-10">

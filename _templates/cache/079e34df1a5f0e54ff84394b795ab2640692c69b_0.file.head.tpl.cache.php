@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:52:07
+/* Smarty version 3.1.40, created on 2021-12-26 08:43:10
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6dbb7d70645_61741655',
+  'unifunc' => 'content_61c82b1ef28c73_88741211',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640421401,
+      1 => 1640422377,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_holders/favicon.tpl' => 1,
   ),
 ),false)) {
-function content_61c6dbb7d70645_61741655 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '36679153461c6dbb7d5acc2_69533082';
+function content_61c82b1ef28c73_88741211 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '210089753161c82b1ef16e58_70501005';
 ?>
 
 <meta charset="utf-8">
