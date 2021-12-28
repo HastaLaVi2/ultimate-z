@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 14:19:54
+/* Smarty version 3.1.40, created on 2021-12-28 15:29:29
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/statistics.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c7288abbefb2_03988013',
+  'unifunc' => 'content_61cb2d590be576_13755719',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61c7288abbefb2_03988013 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61cb2d590be576_13755719 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '15272622961c7288abbbc12_63834049';
+$_smarty_tpl->compiled->nocache_hash = '179365816261cb2d590ba5f2_06130471';
 ?>
 
 <div class="col-4 colTop padLR-20 zMob-padB-20 font-24">

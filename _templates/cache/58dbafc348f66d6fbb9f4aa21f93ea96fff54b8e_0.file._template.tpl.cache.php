@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 08:15:58
+/* Smarty version 3.1.40, created on 2021-12-28 16:02:59
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c6d33e84b8d1_99476806',
+  'unifunc' => 'content_61cb3533dd8588_07341511',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1640283363,
+      1 => 1640707365,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/modal.tpl' => 1,
   ),
 ),false)) {
-function content_61c6d33e84b8d1_99476806 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61cb3533dd8588_07341511 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '168351447561c6d33e7e6cd5_66767489';
+$_smarty_tpl->compiled->nocache_hash = '125759714961cb3533d74380_16802009';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_32277067361c6d33e802f00_70656171', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_188745879061cb3533d8b0a7_61022545', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_113013009261c6d33e807a70_17981401', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_143690042561cb3533d8ffe2_08585330', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_209028051361c6d33e83b808_06730944', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4292894361cb3533dc6ad9_72341763', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_32277067361c6d33e802f00_70656171 extends Smarty_Internal_Block
+class Block_188745879061cb3533d8b0a7_61022545 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_32277067361c6d33e802f00_70656171',
+    0 => 'Block_188745879061cb3533d8b0a7_61022545',
   ),
 );
 public $append = 'true';
@@ -78,12 +78,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_113013009261c6d33e807a70_17981401 extends Smarty_Internal_Block
+class Block_143690042561cb3533d8ffe2_08585330 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_113013009261c6d33e807a70_17981401',
+    0 => 'Block_143690042561cb3533d8ffe2_08585330',
   ),
 );
 public $append = 'true';
@@ -299,12 +299,12 @@ $_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_209028051361c6d33e83b808_06730944 extends Smarty_Internal_Block
+class Block_4292894361cb3533dc6ad9_72341763 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_209028051361c6d33e83b808_06730944',
+    0 => 'Block_4292894361cb3533dc6ad9_72341763',
   ),
 );
 public $append = 'true';
@@ -526,7 +526,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
         // this is to upload an image to server,
         // used both by summernote and filepond
-        function uploadImage(image, summernote, filepond, filepondID) {
+        function uploadImage(image, summernote, filepond, e) {
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
@@ -558,30 +558,10 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
                     } else if (filepond) {
-                        // if a filepond uploads a file, we have hidden fields named "images[]"
-                        // instead of "content[]", normally storingData() function stores
-                        // all hidden content but images, so files uploaded with filepond will be
-                        // stored through here
-                        $(filepond).closest(".top-20").prev().children().each(function () {
-                            // get the hidden content's current value
-                            var already = $(this).val();
-                            var alreO = [];
-                            // split the value by ';', because
-                            // sometimes there is more than one file
-                            already = already.split(";");
-                            // update the one we are currently uploading
-                            // or we don't have any, insert a new one
-                            already.forEach(function(val, key) {
-                                alreO[key+1] = val.trim();
-                            });
-                            alreO[0] = filename.trim();
-                            // join them again by ';'
-                            already = alreO.join(";");
-                            // update the value, store the data
-                            $(this).val(already);
-                        });
+                        var filepondID = e.detail.file.id;
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
+                        updateFilepond(e);
                     }
                 },
                 error: function(data) {
@@ -652,92 +632,40 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             }
         }
 
+        function updateFilepond(e) {
+            var elem = $(e.detail.pond.element.get());
+            // getting the files
+            var files = e.detail.pond.getFiles();
+            var finalOrder = [];
+
+            files.forEach(function(item) {
+                var filename = $(e.target).find("#filepond--item-" + item.id).find("legend").text();
+                finalOrder.push(filename);
+            });
+            console.log(finalOrder);
+
+            elem.closest(".top-20").prev().children().each(function () {
+                $(this).val(finalOrder.join(";"));
+            });
+        }
+
         // callbacks for filepond
         function filepondCallbacks() {
             $("#dragula").find("div.filepond").each(function() {
                 var firstID = $(this).find(".filepond--assistant").attr("id");
 
                 if (!window.pondIDS.includes(firstID)) {
-                    // when a filepond loaded, if we got already uploaded files to display
-                    // from the database, we will store their ids and indexes on the window
-                    // object, as we will need them late
-                    $(this).on("FilePond:init", function(e) {
-                        // filepond root object
-                        var parent = $(e.target);
-                        // find the current filepond's children and their ids
-                        parent.find(".filepond--list").children().each(function() {
-                            var id = $(this).attr("id").replace("filepond--item-", "");
-                            // this is an array to store their indexes
-                            window.pondNS[id] = $(this).index();
-                        });
-                    });
-
                     // when a file added in a filepond, we will have to upload it
                     // to server
                     $(this).on("FilePond:processfilestart", function(e) {
                         // getting the files
                         var files = e.detail.pond.getFiles();
                         // calling the uploading service
-                        uploadImage(e.detail.file.file, null, e.target, e.detail.file.id);
-                        // let's update keys
-                        for (let i=0; i < files.length; i++) {
-                            // and when a new upload has been made, all the indexes
-                            // in particular filepond shifts, so we will update our array
-                            window.pondNS[files[0].id] = i;
-                        }
+                        uploadImage(e.detail.file.file, null, e.target, e);
                     });
 
-                    $(this).on("FilePond:removefile", function(e) {
-                        var elem = $(e.detail.pond.element.get());
-                        var elemID = e.detail.file.id;
-                        var files = e.detail.pond.getFiles();
-
-                        elem.closest(".top-20").prev().children().each(function () {
-                            var already = $(this).val();
-                            already = already.split(";");
-                            already.splice(window.pondNS[elemID], 1);
-                            already = already.join(";");
-                            $(this).val(already);
-                        });
-
-                        // let's update keys
-                        for (let i=0; i < files.length; i++) {
-                            // and when a file has been removed, all the indexes
-                            // in particular filepond shifts, so we will update our array
-                            window.pondNS[files[i].id] = i;
-                        }
-                    });
-
-                    $(this).on("FilePond:reorderfiles", function(e) {
-                        var elem = $(e.detail.pond.element.get());
-                        var elemID = e.detail.pond.getFile().id;
-                        var files = e.detail.pond.getFiles();
-
-                        elem.closest(".top-20").prev().children().each(function () {
-                            var already = $(this).val().trim();
-                            already = already.split(";");
-                            var newAlre = [];
-
-                            already.forEach(function(val, ind) {
-                                for (let i=0; i < files.length; i++) {
-                                    var filename = elem.find("#filepond--item-" + files[i].id).find("legend");
-                                    if (val.trim() == filename.text().trim()) {
-                                        newAlre[ind] = already[i];
-                                    }
-                                }
-                            });
-
-                            newAlre = newAlre.join(";");
-                            $(this).val(newAlre);
-                        });
-
-                        // let's update keys
-                        for (let i=0; i < files.length; i++) {
-                            // and when a file has been moved to another index, all the indexes
-                            // in particular filepond shifts, so we will update our array
-                            window.pondNS[files[i].id] = i;
-                        }
-                    });
+                    $(this).on("FilePond:removefile", updateFilepond);
+                    $(this).on("FilePond:reorderfiles", updateFilepond);
                 }
 
                 if (firstID) {
@@ -824,7 +752,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             FilePond.setOptions(window["<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->four_code;?>
 "]);
 
-            window.pondNS = [];
             window.pondIDS = [];
 
             runFilePond();

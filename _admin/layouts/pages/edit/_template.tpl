@@ -349,7 +349,7 @@
 
         // this is to upload an image to server,
         // used both by summernote and filepond
-        function uploadImage(image, summernote, filepond, filepondID) {
+        function uploadImage(image, summernote, filepond, e) {
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
@@ -376,30 +376,10 @@
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
                     } else if (filepond) {
-                        // if a filepond uploads a file, we have hidden fields named "images[]"
-                        // instead of "content[]", normally storingData() function stores
-                        // all hidden content but images, so files uploaded with filepond will be
-                        // stored through here
-                        $(filepond).closest(".top-20").prev().children().each(function () {
-                            // get the hidden content's current value
-                            var already = $(this).val();
-                            var alreO = [];
-                            // split the value by ';', because
-                            // sometimes there is more than one file
-                            already = already.split(";");
-                            // update the one we are currently uploading
-                            // or we don't have any, insert a new one
-                            already.forEach(function(val, key) {
-                                alreO[key+1] = val.trim();
-                            });
-                            alreO[0] = filename.trim();
-                            // join them again by ';'
-                            already = alreO.join(";");
-                            // update the value, store the data
-                            $(this).val(already);
-                        });
+                        var filepondID = e.detail.file.id;
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
+                        updateFilepond(e);
                     }
                 },
                 error: function(data) {
@@ -468,92 +448,40 @@
             }
         }
 
+        function updateFilepond(e) {
+            var elem = $(e.detail.pond.element.get());
+            // getting the files
+            var files = e.detail.pond.getFiles();
+            var finalOrder = [];
+
+            files.forEach(function(item) {
+                var filename = $(e.target).find("#filepond--item-" + item.id).find("legend").text();
+                finalOrder.push(filename);
+            });
+            console.log(finalOrder);
+
+            elem.closest(".top-20").prev().children().each(function () {
+                $(this).val(finalOrder.join(";"));
+            });
+        }
+
         // callbacks for filepond
         function filepondCallbacks() {
             $("#dragula").find("div.filepond").each(function() {
                 var firstID = $(this).find(".filepond--assistant").attr("id");
 
                 if (!window.pondIDS.includes(firstID)) {
-                    // when a filepond loaded, if we got already uploaded files to display
-                    // from the database, we will store their ids and indexes on the window
-                    // object, as we will need them late
-                    $(this).on("FilePond:init", function(e) {
-                        // filepond root object
-                        var parent = $(e.target);
-                        // find the current filepond's children and their ids
-                        parent.find(".filepond--list").children().each(function() {
-                            var id = $(this).attr("id").replace("filepond--item-", "");
-                            // this is an array to store their indexes
-                            window.pondNS[id] = $(this).index();
-                        });
-                    });
-
                     // when a file added in a filepond, we will have to upload it
                     // to server
                     $(this).on("FilePond:processfilestart", function(e) {
                         // getting the files
                         var files = e.detail.pond.getFiles();
                         // calling the uploading service
-                        uploadImage(e.detail.file.file, null, e.target, e.detail.file.id);
-                        // let's update keys
-                        for (let i=0; i < files.length; i++) {
-                            // and when a new upload has been made, all the indexes
-                            // in particular filepond shifts, so we will update our array
-                            window.pondNS[files[0].id] = i;
-                        }
+                        uploadImage(e.detail.file.file, null, e.target, e);
                     });
 
-                    $(this).on("FilePond:removefile", function(e) {
-                        var elem = $(e.detail.pond.element.get());
-                        var elemID = e.detail.file.id;
-                        var files = e.detail.pond.getFiles();
-
-                        elem.closest(".top-20").prev().children().each(function () {
-                            var already = $(this).val();
-                            already = already.split(";");
-                            already.splice(window.pondNS[elemID], 1);
-                            already = already.join(";");
-                            $(this).val(already);
-                        });
-
-                        // let's update keys
-                        for (let i=0; i < files.length; i++) {
-                            // and when a file has been removed, all the indexes
-                            // in particular filepond shifts, so we will update our array
-                            window.pondNS[files[i].id] = i;
-                        }
-                    });
-
-                    $(this).on("FilePond:reorderfiles", function(e) {
-                        var elem = $(e.detail.pond.element.get());
-                        var elemID = e.detail.pond.getFile().id;
-                        var files = e.detail.pond.getFiles();
-
-                        elem.closest(".top-20").prev().children().each(function () {
-                            var already = $(this).val().trim();
-                            already = already.split(";");
-                            var newAlre = [];
-
-                            already.forEach(function(val, ind) {
-                                for (let i=0; i < files.length; i++) {
-                                    var filename = elem.find("#filepond--item-" + files[i].id).find("legend");
-                                    if (val.trim() == filename.text().trim()) {
-                                        newAlre[ind] = already[i];
-                                    }
-                                }
-                            });
-
-                            newAlre = newAlre.join(";");
-                            $(this).val(newAlre);
-                        });
-
-                        // let's update keys
-                        for (let i=0; i < files.length; i++) {
-                            // and when a file has been moved to another index, all the indexes
-                            // in particular filepond shifts, so we will update our array
-                            window.pondNS[files[i].id] = i;
-                        }
-                    });
+                    $(this).on("FilePond:removefile", updateFilepond);
+                    $(this).on("FilePond:reorderfiles", updateFilepond);
                 }
 
                 if (firstID) {
@@ -637,7 +565,6 @@
             // set filepond language
             FilePond.setOptions(window["{$zContent->language->four_code}"]);
 
-            window.pondNS = [];
             window.pondIDS = [];
 
             runFilePond();

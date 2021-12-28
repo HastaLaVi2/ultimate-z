@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 14:19:54
+/* Smarty version 3.1.40, created on 2021-12-28 15:29:29
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c7288ac1b551_16885681',
+  'unifunc' => 'content_61cb2d59243997_62249233',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -84,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c7288ac1b551_16885681 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61cb2d59243997_62249233 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -400,7 +400,7 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                376
+                                426
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
@@ -432,7 +432,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">427</h6>
+        <h6 class="top-0 bottom-0">477</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -495,7 +495,7 @@ $(window).resize(function(){
     function dateTable(period, start) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
-        var date = new Date("2021/12/25");
+        var date = new Date("2021/12/28");
         if (start) {
             date.setDate(date.getDate() - start);
         }
@@ -639,12 +639,12 @@ $(window).resize(function(){
         window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["5","0","2","0","1","1","0"]);
+        apexBarCreate("#chart-profile-visit", 7, ["1","1","44","9","0","2","0"]);
                 if ($("#chart-1001").length) {
             apexLineCreate(
                 "#chart-1001",
                 12,
-                ["5","0","2","0","1","1","0","0","5","1","0","0"],
+                ["1","1","44","9","0","2","0","1","1","0","0","5"],
                 "#5350e9"            );
         }
                 if ($("#chart-1002").length) {

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 14:20:00
+/* Smarty version 3.1.40, created on 2021-12-28 16:02:59
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c72890c33413_31072453',
+  'unifunc' => 'content_61cb3533e1f107_41355365',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61c72890c33413_31072453 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '142622417861c72890c31055_34731157';
+function content_61cb3533e1f107_41355365 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '76807883461cb3533e1ce02_36337589';
 ?>
 
 <div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-28 15:29:32
-  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
+/* Smarty version 3.1.40, created on 2021-12-27 20:10:05
+  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61cb2d5cb7ab23_31598963',
+  'unifunc' => 'content_61ca1d9d827e04_46737265',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'e3e1152df841f7cec2c5ff34d7e9e78e3783197e' => 
+    '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl',
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
       1 => 1640422377,
       2 => 'file',
     ),
@@ -78,21 +78,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61cb2d5cb7ab23_31598963 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ca1d9d827e04_46737265 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Sayfalar | zAdmin</title>
+    <title>Medya | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/_admin/layouts/pages/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages" />
+<link rel="alternate" href="http://localhost/ultimate-z/_admin/media/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/media" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/media" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,7 +185,10 @@ function content_61cb2d5cb7ab23_31598963 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
     <div id="zTop">
-    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/simple-datatables/style.css">
+    <!-- filepond -->
+    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond.css">
+    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-image-preview.css">
+    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.css">
 </div>
 
     
@@ -208,19 +211,19 @@ function content_61cb2d5cb7ab23_31598963 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
 
                 <li class="top-0_5rem padTB-5">
-                    <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 back5 color-white">
-                        <i class="fas fa-layer-group whiteText"></i>
+                    <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 zHov-grayBack1 animSlow text4">
+                        <i class="fas fa-layer-group text6"></i>
                         <span class="padL-15">Düzen</span>
-                        <i class="fas fa-chevron-down inRight top-3 whiteText"></i>
+                        <i class="fas fa-chevron-down inRight top-3 text6"></i>
                     </a>
-                    <ul class="zShow-side1 font-13 padL-2rem left-2rem toggled">
+                    <ul class="zShow-side1 font-13 padL-2rem left-2rem displayNone">
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/design" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
                                 Tasarım
                             </a>
                         </li>
                         <li class="weight-600">
-                            <a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="weight-700 text5">
+                            <a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
                                 Sayfalar
                             </a>
                         </li>
@@ -233,8 +236,8 @@ function content_61cb2d5cb7ab23_31598963 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
 
                 <li class="top-0_5rem padTB-5">
-                    <a href="http://localhost/ultimate-z/_admin/media" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
-                        <i class="fas fa-photo-video text6"></i>
+                    <a href="http://localhost/ultimate-z/_admin/media" class="pad-13 rad-10 blockThis back5 color-white">
+                        <i class="fas fa-photo-video whiteText"></i>
                         <span class="padL-15">Medya</span>
                     </a>
                 </li>
@@ -363,131 +366,102 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Sayfalar</h3>
+            <h3 class="boldText top-10">Medya</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
             
             
-    <div class="col-12">
-        <div class="whiteBack rad-15 pad-20 font-16">
-            <h4 class="font-19 top-0 text4 boldText">Sayfa Listesi</h4>
-            
-            <a href="http://localhost/ultimate-z/_admin/layouts/pages/create/" class="zButton zHov-zShadow5 primary sweet font-16">
-                <i class="fas fa-plus-square right-10"></i>
-                Yeni Sayfa Ekle
-            </a>
-            <div class="top-20"></div>
-            <table class="zTable">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Ad</th>
-                        <th>Şablon</th>
-                        <th>Düzenle</th>
-                        <th>Sil</th>
-                    </tr>
-                </thead>
-                <tbody>
-                                            <tr id="zPage-1001">
-                            <td>1</td>
-                            <td>Anasayfa</td>
-                            <td>zAna</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001" class="zButton zHov-zShadow5 primary sweet">
-                                     Düzenle
-                                </a>
-                            </td>
-                            <td>
-                                                            </td>
-                        </tr>
-                                            <tr id="zPage-1002">
-                            <td>2</td>
-                            <td>Moda</td>
-                            <td>zAna</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002" class="zButton zHov-zShadow5 primary sweet">
-                                     Düzenle
-                                </a>
-                            </td>
-                            <td>
-                                                                
-<a href="#modal1002" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
-
-<div class="zModal" id="modal1002">
-    <a class="zCancel" href="#"></a>
-    <div class="zModalContent rad-15" zMob-768="zCol-11">
-        <div class="pad-20">
-                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
-                            <div class="modal-header bg-primary">
-                    <h5 class="top-0 bottom-0 font-18">
-                        Sayfayı Sil
-                    </h5>
-                </div>
-                <div class="zInside gray2 font-15 padTB-20">
-                    <div class="displayNone"><input name='id_page' value='1002'></div>
-                    Bu sayfayı silmek istediğinize emin misiniz?
-                </div>
-                <div class="rightText">
-                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Kapat
-                    </a>
-                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>Evet</span>
-                    </button>
-                                    </div>
-                        </form>
-                    </div>
-    </div>
-</div>
-                                                            </td>
-                        </tr>
-                                            <tr id="zPage-1003">
-                            <td>3</td>
-                            <td>1001</td>
-                            <td>zAna</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1003" class="zButton zHov-zShadow5 primary sweet">
-                                     Düzenle
-                                </a>
-                            </td>
-                            <td>
-                                                                
-<a href="#modal1003" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
-
-<div class="zModal" id="modal1003">
-    <a class="zCancel" href="#"></a>
-    <div class="zModalContent rad-15" zMob-768="zCol-11">
-        <div class="pad-20">
-                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/index.php">
-                            <div class="modal-header bg-primary">
-                    <h5 class="top-0 bottom-0 font-18">
-                        Sayfayı Sil
-                    </h5>
-                </div>
-                <div class="zInside gray2 font-15 padTB-20">
-                    <div class="displayNone"><input name='id_page' value='1003'></div>
-                    Bu sayfayı silmek istediğinize emin misiniz?
-                </div>
-                <div class="rightText">
-                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Kapat
-                    </a>
-                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>Evet</span>
-                    </button>
-                                    </div>
-                        </form>
-                    </div>
-    </div>
-</div>
-                                                            </td>
-                        </tr>
-                                    </tbody>
-            </table>
+    <div class="whiteBack rad-15 pad-20 font-16">
+        <div class="top-20">
+            <input type="file" class="filepond">
         </div>
     </div>
+            
 
+<div class="zModal" id="modal0">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="deleteFile()">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Dosyayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='file_name' class='file_name' value='logo1.png'></div>
+                    Bu dosyayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+            
+
+<div class="zModal" id="modal1">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="deleteFile()">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Dosyayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='file_name' class='file_name' value='mail_link.png'></div>
+                    Bu dosyayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+            
+
+<div class="zModal" id="modal2">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="deleteFile()">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Dosyayı Sil
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input name='file_name' class='file_name' value='mail_logo.png'></div>
+                    Bu dosyayı silmek istediğinize emin misiniz?
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Evet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+    
         </div>
 
         
@@ -508,82 +482,177 @@ $(window).resize(function(){
     <script src="http://localhost/ultimate-z/_scripts/toastify/toastify.js"></script>
         
         
+    <!-- filepond plugins -->
+    <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-file-validate-size.js"></script>
+    <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-file-validate-type.js"></script>
+    <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-file-rename.js"></script>
+    <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-image-preview.js"></script>
+    <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.js"></script>
+
+    <!-- filepond -->
+    <script src="http://localhost/ultimate-z/_scripts/filepond/locale/tr-TR.js"></script>
+    <script src="http://localhost/ultimate-z/_scripts/filepond/filepond.js"></script>
+
     <script>
-    var entriesPerPage = "gösterilen öge sayısı";
-    var searchOn = "Ara...";
-    var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
-    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-    var noRowFound = "Sonuç bulunamadı";
+        // this is to upload an image to server,
+        // used both by summernote and filepond
+        function uploadImage(image, summernote, filepond, filepondID) {
+            // create a new formdata
+            var data = new FormData();
+            // send the page id to server, because we will create a folder for it
+            if (filepond) {
+                data.set("filepond", "true");
+            }
+            data.set("langcode", "tr");
+            // send the file to server
+            data.append("fileToUpload", image);
+            $.ajax({
+                url: "http://localhost/ultimate-z/_media/upload.php",
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: data,
+                type: "POST",
+                success: function(filename) {
+                    if (summernote) {
+                    } else if (filepond) {
+                        $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
+                        $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
+                    }
+                },
+                error: function(data) {
+                    // if upload gives an error,
+                    // woke the modalForUpload
+                    $("#modalForUpload").find(".zInside").text(data.responseText);
+                    window.location.assign("#modalForUpload");
+                }
+            });
+        }
 
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    </script>
-    <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
-    <script>
-        function deleteFromTable(dataTable) {
-            // delete form functions
-            $(".zForm").submit(function(e) {
-                e.preventDefault();
+        function filepondRescue() {
+            // register filepond plugins
+            FilePond.registerPlugin(
+                // validates the size of the file...
+                FilePondPluginFileValidateSize,
+                // validates the file type...
+                FilePondPluginFileValidateType,
+                // preview the image file type...
+                FilePondPluginImagePreview,
+                // preview the vide file type...
+                FilePondPluginMediaPreview,
+                // rename
+                FilePondPluginFileRename,
+            );
 
-                window.location.assign("#");
-                var form = $(this).clone();
-                var id_page = form.find("input[name='id_page']").val();
-                var obj_page = $("#zPage-"+id_page);
-                var post_url = form.attr("action");
-                var post_data = form.serialize();
+            // set filepond language
+            FilePond.setOptions(window["tr-TR"]);
 
-                $.ajax({
-                    type: "POST",
-                    url: post_url,
-                    data: post_data,
-                    success: function(responseText) {
-                        obj_page.remove();
-                        dataTable.rows().remove(obj_page[0].dataIndex);
-                        dataTable.update();
-                        deleteFromTable(dataTable);
-                        Toastify({
-                            text: responseText,
-                            duration: 3000
-                        }).showToast();
-                    },
-                    error: function(responseText) {
-                        Toastify({
-                            text: responseText,
-                            duration: 3000,
-                            backgroundColor: "#f3616d",
-                        }).showToast();
-                    },
+            // start the pond, filepond
+            var loaded = $(".filepond").prev();
+            var value = ["logo1.png","mail_link.png","mail_logo.png"];
+            if (value[0]) {
+                var files = [];
+                for (let i=0; i < value.length; i++) {
+                    files.push({
+                        source: "http://localhost/ultimate-z/_media/"+value[i],
+                        options: {
+                            type: "local"
+                        }
+                    });
+                }
+                var load = {
+                    load: (uniqueFileId, load) => {
+                        // you would get the file data from your server here
+                        fetch(uniqueFileId)
+                        .then(res => res.blob())
+                        .then(load);
+                    }
+                };
+            }
+            pond = FilePond.create(document.querySelector(".filepond"), {
+                allowImagePreview: true,
+                allowMultiple: true,
+                allowReorder: true,
+                maxFileSize: "20MB",
+                fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                    // Do custom type detection here and return with promise
+                    resolve(type);
+                }),
+                files: (files ? files : null),
+                server: (load ? load : null),
+                beforeRemoveFile: function(item) {
+                    var c = ["logo1.png","mail_link.png","mail_logo.png"];
+                    var ourKey;
+
+                    for (var key in c) {
+                        if (c[key] === item.filename) {
+                            ourKey = key;
+                        }
+                    }
+                    window.lastID = item.id;
+                    window.location.assign("#modal" + ourKey);
+                    return false;
+                }
+            });
+
+            // set filepond server
+            FilePond.setOptions({
+                server: "./",
+            });
+        }
+
+        // callbacks for filepond
+        function filepondCallbacks() {
+            $(".filepond").each(function() {
+                // when a file added in a filepond, we will have to upload it
+                // to server
+                $(this).on("FilePond:processfilestart", function(e) {
+                    // calling the uploading service
+                    uploadImage(e.detail.file.file, null, e.target, e.detail.file.id);
                 });
             });
         }
+
         function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            let dataTable;
-            tables.forEach((item, i) => {
-                dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        { select: [3,4], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    $("#zContent").find("a").click(magicLinks);
-                    deleteFromTable(dataTable);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    $("#zContent").find("a").click(magicLinks);
-                    deleteFromTable(dataTable);
-                });
-            });
-            zDetect();
-            deleteFromTable(dataTable);
+            window.lastID = "";
+            filepondRescue();
+            filepondCallbacks();
         }
 
         document.addEventListener("DOMContentLoaded", function(event) {
             zPageJS();
+        });
+
+        $(".zModalContent .zForm").submit(function(e) {
+            e.preventDefault();
+
+            // create a new formdata
+            var data = new FormData();
+            data.set("file_name", $(this).find(".file_name").val());
+
+            $.ajax({
+                url: "http://localhost/ultimate-z/_media/delete.php",
+                cache: false,
+                contentType: false,
+                processData: false,
+                data: data,
+                type: "POST",
+                success: function(data) {
+                    window.location.assign("#");
+                    pond.removeFile(window.lastID);
+                    Toastify({
+                        text: "Dosya silindi.",
+                        duration: 3000
+                    }).showToast();
+                },
+                error: function() {
+                    window.location.assign("#");
+                    Toastify({
+                        text: "Dosya silinirken bir hata oluştu.",
+                        duration: 3000
+                    }).showToast();
+                }
+            });
         });
     </script>
 

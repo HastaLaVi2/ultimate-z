@@ -600,7 +600,7 @@ function zMobVSzWeb() {
                     if (!check[zClass]) {
                         // if our window width smaller than our zMob's window width
                         if (alreadyClasses.includes(zClass)) {
-                            value.setAttribute("class", alreadyClasses.replaceAll(new RegExp(zClass+"[0-9]+", "g"), ""));
+                            value.setAttribute("class", alreadyClasses.replaceAll(new RegExp(zClass+"(.*?)(?:$| )", "g"), ""));
                         }
                         if (vCla) {
                             value.classList.add(vCla);

@@ -237,7 +237,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
     /*
         DO WE HAVE PERMISSION FOR THE PAGE?
     */
-    if (strpos($direct, "_admin") !== false) {
+    if (strpos($direct, "_admin") !== false || strpos($direct, "_mail") !== false) {
         $zAdmin = true;
     }
 
@@ -361,6 +361,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
             isset($zPage) &&
             $zPage->id !== "2" &&
             $zPage->id !== "3" &&
+            $zPage->id !== "19" &&
             !isset($_GET["view"]) &&
             $checkSetup == true && (!file_exists($slash . "_setup") && !is_dir($slash . "_setup"))
         ) {
