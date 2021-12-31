@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-28 15:29:28
+/* Smarty version 3.1.40, created on 2021-12-30 23:23:38
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61cb2d5847b989_01386009',
+  'unifunc' => 'content_61ce3f7a691948_84642895',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1640464792,
+      1 => 1640729141,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_holders/".((string)$_smarty_tpl->tpl_vars[\'holder\']->value->id)."/_holder.tpl' => 1,
   ),
 ),false)) {
-function content_61cb2d5847b989_01386009 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ce3f7a691948_84642895 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '192304381761cb2d58425e31_10234395';
+$_smarty_tpl->compiled->nocache_hash = '161140295661ce3f78204784_37974798';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_159482525061cb2d58456f59_41518868', "zHead");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3566987961ce3f79632365_75086007', "zHead");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_67255072961cb2d5845bd42_81353389', "zBefore");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_187005301961ce3f79a92718_06458942', "zBefore");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_89604532161cb2d5846a555_92480736', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_84219619561ce3f7a2ce151_13435325', "zContent");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zHead"} */
-class Block_159482525061cb2d58456f59_41518868 extends Smarty_Internal_Block
+class Block_3566987961ce3f79632365_75086007 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zHead' => 
   array (
-    0 => 'Block_159482525061cb2d58456f59_41518868',
+    0 => 'Block_3566987961ce3f79632365_75086007',
   ),
 );
 public $append = 'true';
@@ -66,12 +66,12 @@ assets/horizontal-scroll.css"/>
 }
 /* {/block "zHead"} */
 /* {block "zBefore"} */
-class Block_67255072961cb2d5845bd42_81353389 extends Smarty_Internal_Block
+class Block_187005301961ce3f79a92718_06458942 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBefore' => 
   array (
-    0 => 'Block_67255072961cb2d5845bd42_81353389',
+    0 => 'Block_187005301961ce3f79a92718_06458942',
   ),
 );
 public $append = 'true';
@@ -100,45 +100,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zBefore"} */
 /* {block "zContent"} */
-class Block_89604532161cb2d5846a555_92480736 extends Smarty_Internal_Block
+class Block_84219619561ce3f7a2ce151_13435325 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_89604532161cb2d5846a555_92480736',
+    0 => 'Block_84219619561ce3f7a2ce151_13435325',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-    <div class="rightText pad-60" zMob-1024="pad-50" zMob-768="pad-20">
-        <div class="font-25 text1 padB-10 displayNone zMob768-no">
-            <i class="fas fa-bars zTog-MEnuu pointThis"></i>
-        </div>
-        <div class="font-12">
-            <ul class="menu2 cleanList nextToEach toSpan padR-20">
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
-$_smarty_tpl->tpl_vars['l']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
-$_smarty_tpl->tpl_vars['l']->do_else = false;
-?>
-                <?php if ($_smarty_tpl->tpl_vars['l']->value->iso_code == $_smarty_tpl->tpl_vars['zThis']->value->table["iso_code"]) {?>
-                    <li class="text2 padT-0"><b><?php echo $_smarty_tpl->tpl_vars['l']->value->iso_code;?>
-</b></li>
-                <?php } else { ?>
-                    <li class="padT-0"><a href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["change_lang_".((string)$_smarty_tpl->tpl_vars['l']->value->iso_code)];?>
-" class="text1 animation zHov-text1"><?php echo $_smarty_tpl->tpl_vars['l']->value->iso_code;?>
-</a></li>
-                <?php }?>
-            <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-            </ul>
-            <div class="height-2 back1 inLine verMid width-30"></div>
-        </div>
-    </div>
     <!--<div class="back7 pad-20">
         <div class="whiteBack rad-20 width-280 hideRest zShadow">
             <div class="pad-20 padB-10">

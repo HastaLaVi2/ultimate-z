@@ -587,7 +587,7 @@ function zMobVSzWeb() {
 
             for (const [iCla, vCla] of classes.entries()) {
                 // get the class name and "-" after, because all zClasses have "-" before their value
-                var zClass = vCla.substr(0, vCla.indexOf("-")) + "-";
+                var zClass = vCla.includes("-") ? vCla.substr(0, vCla.indexOf("-")) + "-" : null;
                 // check if the same type of class exists on our element already
                 // for example, if we have pad-10 in our element and our zMob class is pad-20
                 // we should remove pad-10 and add pad-20 instead

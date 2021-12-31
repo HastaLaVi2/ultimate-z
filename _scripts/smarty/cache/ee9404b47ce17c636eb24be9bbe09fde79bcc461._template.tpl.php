@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-30 23:27:06
-  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
+/* Smarty version 3.1.40, created on 2021-12-30 14:29:23
+  from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ce404ad93cd1_21091967',
+  'unifunc' => 'content_61cdc2435b7dd4_02175064',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '5f3ce0a95b089b83ae762214d8d39d79fcd27b89' => 
+    'de0d64c50b253ec0d54e6807c216dbf8854f56ef' => 
     array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl',
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl',
       1 => 1640422377,
       2 => 'file',
     ),
@@ -57,18 +57,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1640422377,
       2 => 'file',
     ),
-    '00713257cf9551af20df90b209cc4ee0ca5ac7bb' => 
-    array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl',
-      1 => 1640422377,
-      2 => 'file',
-    ),
-    '3c98e242087fd8cf119847a5ffb011fca48c94fb' => 
-    array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/statistics.tpl',
-      1 => 1640422377,
-      2 => 'file',
-    ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
@@ -84,21 +72,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ce404ad93cd1_21091967 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61cdc2435b7dd4_02175064 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Gösterge Paneli | zAdmin</title>
+    <title>Veritabanı | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/_admin/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin" />
+<link rel="alternate" href="http://localhost/ultimate-z/_admin/advanced/database/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/advanced/database" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/advanced/database" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,7 +178,9 @@ function content_61ce404ad93cd1_21091967 (Smarty_Internal_Template $_smarty_tpl)
         <div class="height-30 widthAll specGrad" zMob-1200="height-40"></div>
     </div>
 
-    <div id="zTop"></div>
+    <div id="zTop">
+    <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/simple-datatables/style.css">
+</div>
 
     
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">
@@ -205,8 +195,8 @@ function content_61ce404ad93cd1_21091967 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="text4 padLR-1rem weight-600">Menü</li>
 
                 <li class="top-0_5rem padTB-5">
-                    <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis back5 color-white">
-                        <i class="fas fa-th-large whiteText"></i>
+                    <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
+                        <i class="fas fa-th-large text6"></i>
                         <span class="padL-15">Gösterge Paneli</span>
                     </a>
                 </li>
@@ -262,8 +252,8 @@ function content_61ce404ad93cd1_21091967 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="text4 padLR-1rem weight-600 padT-30">İleri Düzey</li>
 
                 <li class="top-0_5rem padTB-5">
-                    <a href="http://localhost/ultimate-z/_admin/advanced/database" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
-                        <i class="fas fa-server text6"></i>
+                    <a href="http://localhost/ultimate-z/_admin/advanced/database" class="pad-13 rad-10 blockThis back5 color-white">
+                        <i class="fas fa-server whiteText"></i>
                         <span class="padL-15">Veritabanı</span>
                     </a>
                 </li>
@@ -367,98 +357,234 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Gösterge Paneli</h3>
+            <h3 class="boldText top-10">Veritabanı: ultimate-z</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
             
             
-    <div class="col-3 colTop padR-10 zMob-padB-20">
-        
-<div class="whiteBack rad-15 pad-20">
-    <div class="font0 padB-20">
-        <div class="width-70">
-            <img src="http://localhost/ultimate-z/_media/user/profile/4.jpg" class="widthAll rad-half">
-        </div>
-        <div class="floatingSpace padL-85 padT-10">
-            <h5 class="top-0 bottom-0 font-20 text4">Kerimcan Ayaz</h5>
-            <h6 class="top-0 bottom-0 font-16 text6">Yönetici</h6>
-        </div>
-    </div>
-
-    <a href="http://localhost/ultimate-z/_admin/logout/" class="forceLink weight-400">
-        <div class="back5 zHov-back2 animation font-16 centerText whiteText bottom--20 left--20 right--20 pad-8 rad-c3-15 rad-c4-15 zShadow5">
-            <i class="fas fa-sign-out-alt"></i>
-            Çıkış Yap
-        </div>
-    </a>
-</div>
-        <div class="widthAll zMob-padB-20 padT-20">
-            <div class="whiteBack rad-15 pad-0 font-16">
-                <h4 class="font-19 top-0 bottom-0 text4 boldText pad-20">Sayfalara Göre Ziyaretler</h4>
-                                                                        <div class="statsTabs">
-                                            <div class="widthAll padL-20 padR-100">
-                            Anasayfa
-                            <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                445
-                            </span>
-                        </div>
-                        <div id="chart-1001" class="left--22 right--10"></div>
-                                                                                <div class="widthAll padL-20 padR-100">
-                            Moda
-                            <span class="floatingTheRight padR-20 boldText" style="color: #008b75">
-                                34
-                            </span>
-                        </div>
-                        <div id="chart-1002" class="left--22 right--10"></div>
-                                                                                <div class="widthAll padL-20 padR-100">
-                            1001
-                            <span class="floatingTheRight padR-20 boldText" style="color: #dc3545">
-                                20
-                            </span>
-                        </div>
-                        <div id="chart-1003" class="left--22 right--10"></div>
-                                        </div>
-                                                                        <div class="widthAll centerText pad-20 bottom-20 gray2">
-                    <div class="zDatePrev zCol-6 padR-5 "><div class="grayBack1 rad-5"><i class="fas fa-chevron-left"></i></div></div>
-                    <div class="zDateNext zCol-6 padL-5 "><div class="grayBack1 rad-5"><i class="fas fa-chevron-right"></i></div></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-9 colTop">
-        
-<div class="col-4 colTop padLR-20 zMob-padB-20 font-24">
-    <div class="whiteBack rad-15 pad-20 padL-2_3em">
-        <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
-        <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">499</h6>
-    </div>
-</div>
-<div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
-    <div class="whiteBack rad-15 pad-20 padL-2_3em">
-        <i class="fas fa-user floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #57caeb"></i>
-        <h6 class="text6 weight-600 top-0 bottom-10">Toplam Kullanıcı</h6>
-        <h6 class="top-0 bottom-0">1</h6>
-    </div>
-</div>
-<div class="col-4 colTop padL-20 zMob-padB-20 font-24">
-    <div class="whiteBack rad-15 pad-20 padL-2_3em">
-        <i class="fas fa-bookmark floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #ff7976"></i>
-        <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa</h6>
-        <h6 class="top-0 bottom-0">3</h6>
-    </div>
-</div>
-        <div class="widthAll padL-20 zMob-padB-20 padT-20 zMob-padT-0">
-            <div class="whiteBack rad-15 pad-20 font-16">
-                <h4 class="font-19 top-0 text4 boldText">Zamana Göre Toplam Görüntülenme</h4>
-                <div id="chart-profile-visit"></div>
-                <div class="widthAll centerText padT-20">
-                    <div class="zBarPrev zCol-6 padR-5 pointThis" onclick="barDatePrevClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-left"></i></div></div>
-                    <div class="zBarNext zCol-6 padL-5 pointThis" onclick="barDateNextClicker()"><div class="back7 rad-5"><i class="fas fa-chevron-right"></i></div></div>
-                </div>
-            </div>
-        </div>
+    <div class="whiteBack rad-15 pad-20 font-16">
+                <table class="zTable">
+            <thead>
+                <tr>
+                    <th>Tablo</th>
+                    <th>Satır Sayısı</th>
+                    <th>Düzenle</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                                                        <tr>
+                        <td>z</td>
+                        <td>1</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=z" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zCategories</td>
+                        <td>1</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zCategories" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zCategories_tr</td>
+                        <td>2</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zCategories_tr" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zHolders</td>
+                        <td>5</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zHolders" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zHolders_tr</td>
+                        <td>10</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zHolders_tr" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zLanguages</td>
+                        <td>2</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zLanguages" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zPages</td>
+                        <td>21</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPages" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zPages_tr</td>
+                        <td>42</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPages_tr" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zPagesCategories</td>
+                        <td>3</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesCategories" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zPagesHolders</td>
+                        <td>2</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesHolders" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zPagesHolders_tr</td>
+                        <td>4</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zPagesHolders_tr" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zRanks</td>
+                        <td>2</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zRanks" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zRanks_tr</td>
+                        <td>4</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zRanks_tr" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zTemplates</td>
+                        <td>1</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zTemplates" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zTemplates_tr</td>
+                        <td>2</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zTemplates_tr" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zUsers</td>
+                        <td>1</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zUsers" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zViewsPage</td>
+                        <td>48</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zViewsPageByUser</td>
+                        <td>54</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPageByUser" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                                                        <tr>
+                        <td>zViewsTotal</td>
+                        <td>33</td>
+                        <td>
+                            <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsTotal" class="zButton zHov-zShadow5 primary sweet">
+                                 Düzenle
+                            </a>
+                        </td>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </tbody>
+        </table>
     </div>
 
         </div>
@@ -481,214 +607,42 @@ $(window).resize(function(){
     <script src="http://localhost/ultimate-z/_scripts/toastify/toastify.js"></script>
         
         
-    <script src="http://localhost/ultimate-z/_scripts/apexcharts/apexcharts.min.js"></script>
     <script>
-    $.ajax({
-        "async": false,
-        "url": "http://localhost/ultimate-z/_scripts/apexcharts/locales/tr.json",
-        "dataType": "json",
-        "success": function (data) {
-            window.apexLang = data;
-        }
+    var entriesPerPage = "gösterilen öge sayısı";
+    var searchOn = "Ara...";
+    var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
+    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
+    var noRowFound = "Sonuç bulunamadı";
+
+    $("input[type=checkbox]").change(function() {
+        var clas = $(this).attr("class").split(" ")[1];
+        var checked = $(this).prop("checked");
+        $("."+clas).prop("checked", checked);
     });
-
-    function dateTable(period, start) {
-        var months = window.apexLang.options.shortMonths;
-        var days = window.apexLang.options.days;
-        var date = new Date("2021/12/30");
-        if (start) {
-            date.setDate(date.getDate() - start);
+    </script>
+    <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
+    <script>
+    
+        function zPageJS() {
+            // Simple Datatable
+            let tables = document.querySelectorAll(".zTable");
+            tables.forEach((item, i) => {
+                let dataTable = new simpleDatatables.DataTable(item, {
+                    columns: [
+                        {select: [2,3], sortable: false},
+                    ]
+                });
+                dataTable.on("datatable.page", function(page) {
+                    $("#zContent").find("a").click(magicLinks);
+                });
+                dataTable.on("datatable.sort", function(column, direction) {
+                    $("#zContent").find("a").click(magicLinks);
+                });
+            });
+            zDetect();
         }
-
-        var table = [];
-
-        for (let i = 0; i <= (period-1); i++) {
-            table.push([days[date.getDay()] + "", date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear()]);
-            date.setDate(date.getDate() - 1);
-        }
-
-        return table;
-    }
-
-    function apexBarCreate(id, period, data, start) {
-        var table = dateTable(period, start);
-
-        var options = {
-            annotations: {
-                position: "back"
-            },
-            dataLabels: {
-                enabled:false
-            },
-            chart: {
-               locales: [window.apexLang],
-               defaultLocale: "tr",
-                type: "bar",
-                height: 300
-            },
-            fill: {
-                opacity:1
-            },
-            plotOptions: {
-            },
-            series: [{
-                name: "Ziyaret",
-                data: data
-            }],
-            colors: "#435ebe",
-            xaxis: {
-                categories: table,
-            },
-        };
-        if ($(document.querySelector(id)).length) {
-            document.querySelector(id).innerHTML = "";
-            var element = new ApexCharts(document.querySelector(id), options);
-            element.render();
-        }
-    }
-
-    function apexLineCreate(id, period, data, color) {
-        var table = dateTable(period);
-
-        var options = {
-        	series: [{
-        		name: "Ziyaret",
-        		data: data
-        	}],
-        	chart: {
-        		height: 80,
-        		type: "area",
-        		toolbar: {
-        			show:false,
-        		},
-        	},
-        	colors: [color],
-        	stroke: {
-        		width: 2,
-        	},
-        	grid: {
-        		show:false,
-        	},
-        	dataLabels: {
-        		enabled: false
-        	},
-        	xaxis: {
-        		type: "date",
-        		categories: table,
-        		axisBorder: {
-        			show:false
-        		},
-        		axisTicks: {
-        			show:false
-        		},
-        		labels: {
-        			show:false,
-        		}
-        	},
-        	show:false,
-        	yaxis: {
-        		labels: {
-        			show:false,
-        		},
-        	},
-        	tooltip: {
-        		x: {
-        			format: "dd/MM/yy"
-        		},
-        	},
-        };
-
-        var element = new ApexCharts(document.querySelector(id), options);
-        element.render();
-    }
-
-    function barDateNextClicker() {
-        window.barDate = window.barDate + (window.next == null ? 7 : 0);
-        $.ajax({
-            url: "http://localhost/ultimate-z/_admin/stats.php",
-            type: "post",
-            dataType: 'json',
-            data: { barDate:window.barDate },
-            error:function(result){
-                var hey = result.responseText.replace("'", "").replace("'", "");
-                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
-                window.barDate = window.barDate + 7;
-                window.next = true;
-            }
-        });
-    }
-
-    function barDatePrevClicker() {
-        window.barDate = window.barDate - (window.barDate - 7 >= 0 ? 7 : 0);
-        window.barDate = window.barDate - ((window.next !== null && window.barDate - 7 >= 0) ? 7 : 0);
-        $.ajax({
-            url: "http://localhost/ultimate-z/_admin/stats.php",
-            type: "post",
-            dataType: 'json',
-            data: { barDate:window.barDate },
-            error:function(result){
-                var hey = result.responseText.replace("'", "").replace("'", "");
-                apexBarCreate("#chart-profile-visit", 7, JSON.parse(hey), window.barDate);
-                window.next = null;
-            }
-        });
-    }
-
-    function zPageJS() {
-        window.barDate = 7;
-        window.next = true;
-        $("[id^=SvgjsSvg]").remove();
-
-        apexBarCreate("#chart-profile-visit", 7, ["19","0","4","1","44","9","0"]);
-                if ($("#chart-1001").length) {
-            apexLineCreate(
-                "#chart-1001",
-                12,
-                ["16","0","4","1","44","9","0","2","0","1","1","0"],
-                "#5350e9"            );
-        }
-                if ($("#chart-1002").length) {
-            apexLineCreate(
-                "#chart-1002",
-                12,
-                ["2","0","0","0","0","0","0","0","0","0","0","0"],
-                "#008b75"            );
-        }
-                if ($("#chart-1003").length) {
-            apexLineCreate(
-                "#chart-1003",
-                12,
-                ["1","0","0","0","0","0","0","0","0","0","0","0"],
-                "#dc3545"            );
-        }
-        
-        let tabNum = 0;
-        $(".zDateNext").click(function() {
-            var statsTabs = $(".statsTabs");
-            if (statsTabs[tabNum+1]) {
-                $(statsTabs[tabNum]).addClass("displayNone");
-                $(statsTabs[tabNum+1]).removeClass("displayNone");
-                tabNum++;
-            }
-        });
-        $(".zDatePrev").click(function() {
-            var statsTabs = $(".statsTabs");
-            if (statsTabs[tabNum-1]) {
-                $(statsTabs[tabNum]).addClass("displayNone");
-                $(statsTabs[tabNum-1]).removeClass("displayNone");
-                tabNum--;
-            }
-        });
-
-        // remove additional apexcharts tags
-        var styleTags = $("head").find("style");
-        if (styleTags.length > 2) {
-            $(styleTags[styleTags.length-1]).remove();
-        }
-    }
-    document.addEventListener("DOMContentLoaded", function(event) {
-        zPageJS();
-    });
+    
+    zPageJS();
     </script>
 
     </div>

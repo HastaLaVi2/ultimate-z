@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-28 16:03:00
+/* Smarty version 3.1.40, created on 2021-12-30 23:28:21
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61cb353403dcc1_38642488',
+  'unifunc' => 'content_61ce40951cc793_82701966',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61cb353403dcc1_38642488 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '165716371461cb353403af47_62892031';
+function content_61ce40951cc793_82701966 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '197465427561ce40951ca517_54281452';
 ?>
 
 <?php if (!$_smarty_tpl->tpl_vars['zAdmin']->value) {?>

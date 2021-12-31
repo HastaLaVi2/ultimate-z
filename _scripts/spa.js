@@ -1,3 +1,31 @@
+// jQuery effects, before/after function names
+var before = {slide: "slideDown", fade: "fadeIn", dunk: "show"}
+var after = {slide: "slideUp", fade: "fadeOut", dunk: "hide"}
+
+// detect which effect should be used for the loader.
+function detectEffect(one, two, order, callback) {
+    // get the zEffect attribute from the tag.
+    var effectType = $(one).attr("zEffect");
+    // which one is it? before loading, or after loading effect.
+    effectType = order == "after" ? after[effectType] : before[effectType];
+
+    // if we found an existing effect.
+    if (effectType) {
+        // now, finally, the magic.
+        $(one)[effectType](500, function() {
+            $(two)[effectType](300, function() {
+                if (callback && typeof(callback) == "function") {
+                    callback();
+                }
+            });
+        });
+    } else {
+        if (callback && typeof(callback) == "function") {
+            callback();
+        }
+    }
+}
+
 
 // this function is used to get the html code from another page and,
 // update the current page partially with the code.
@@ -123,12 +151,10 @@ function updatePage(page_url) {
         }
 
         // when we are done, we can finish the loading and lift it up.
-        $("#zLoad2").slideUp(500, function() {
-            $("#zLoad1").slideUp(300, function() {
-                if (typeof window.zLoadAfter == "function") {
-                    window.zLoadAfter(page_url);
-                }
-            });
+        detectEffect("#zLoad2", "#zLoad1", "after", function() {
+            if (typeof window.zLoadAfter == "function") {
+                window.zLoadAfter(page_url);
+            }
         });
     });
 }
@@ -168,20 +194,18 @@ function magicLinks(event) {
         }
 
         // now, load the loading page while we are doing all the bad stuff on the background.
-        $("#zLoad1").slideDown(500, function() {
-            $("#zLoad2").slideDown(300, function() {
-                (function(next) {
-                    $("html, body").scrollTop(0);
-                    if (typeof window.zLoadBefore == "function") {
-                        window.zLoadBefore(page_url, event.target, next, before_url);
-                    } else {
-                        next();
-                    }
-                }(function() {
-                    // that bad stuff starts here.
-                    updatePage(page_url);
-                }));
-            });
+        detectEffect("#zLoad1", "#zLoad2", "before", function() {
+            (function(next) {
+                $("html, body").scrollTop(0);
+                if (typeof window.zLoadBefore == "function") {
+                    window.zLoadBefore(page_url, event.target, next, before_url);
+                } else {
+                    next();
+                }
+            }(function() {
+                // that bad stuff starts here.
+                updatePage(page_url);
+            }));
         });
     }
 
@@ -211,9 +235,7 @@ $(document).ready(function() {
 
 $(window).on("load", function () {
     // on page load, we should always lift our loading screen.
-    $("#zLoad0_2").slideUp(500, function() {
-        $("#zLoad0_1").slideUp(300);
-    });
+    detectEffect("#zLoad0_2", "#zLoad0_1", "after");
 });
 
 $(window).on("popstate", function (e) {

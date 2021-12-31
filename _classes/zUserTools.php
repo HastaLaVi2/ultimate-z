@@ -377,7 +377,7 @@ class zUserTools {
         $this->zUserOnCookie($key);
     }
 
-    public function zUserCheckUserLanguage(bool $zAdmin = NULL, $key) {
+    public function zUserCheckUserLanguage($zAdmin = NULL, $key) {
         $this->zUserOnCookie($key);
         $zTools = new zTools();
 

@@ -169,7 +169,7 @@ class zTools {
     }
 
     # page view counter
-    public function zToolsViewCounter($id_page, object $zUser = NULL) {
+    public function zToolsViewCounter($id_page, $zUser = NULL) {
         $db = zDB::get();
         $date = date("Y-m-d");
 
@@ -326,7 +326,7 @@ class zTools {
     }
 
     # get total user number
-    public function zToolsIssetVariables(array $data = NULL) {
+    public function zToolsIssetVariables($data = NULL) {
         foreach ($data as $in) {
             if (!isset($in)) {
                 $in = "";
@@ -345,7 +345,7 @@ class zTools {
         return $randomString;
     }
 
-    public function zToolsCreate(array $data) {
+    public function zToolsCreate($data) {
         $db = zDB::get();
         $zThis = zThis::get()->table;
 
@@ -356,7 +356,6 @@ class zTools {
             # seperate each data
             $name = $db->trim($trimmedData["site_name"]);
             $cookie_key = $this->generateRandomString();
-            $hidden_key = $this->generateRandomString(30);
 
             if((!$name)) {
 				throw new Exception($zThis["The information is missing."]);
@@ -368,7 +367,7 @@ class zTools {
             if($check[0]["id_z"]) {
                 throw new Exception($zThis["A site with the exact name provided already exists."]);
             }
-            $query = $db->execute("INSERT INTO `z` (name, create_date, cookie_key, status, error, hidden_key) VALUES ('$name', CURRENT_TIMESTAMP, '$cookie_key', 'enabled', 'enabled', '$hidden_key')");
+            $query = $db->execute("INSERT INTO `z` (name, cookie_key, status, error) VALUES ('$name', '$cookie_key', 'enabled', 'enabled')");
             if($query) {} else {
                 throw new Exception($zThis["Cannot connect to database."]);
             }
@@ -393,7 +392,7 @@ class zTools {
         return $result;
     }
 
-    private function zToolsSideAutomate(array $cond, string $id, string $classes1, string $classes2) {
+    private function zToolsSideAutomate($cond, $id, $classes1, $classes2) {
         $condition = "";
 
         foreach ($cond as $c) {
@@ -407,19 +406,19 @@ class zTools {
         }
     }
 
-    public function zToolsSideColor(array $cond, string $id) {
+    public function zToolsSideColor($cond, $id) {
         return $this->zToolsSideAutomate($cond, $id, "back5 color-white", "zHov-grayBack1 animSlow text4");
     }
 
-    public function zToolsSideIconColor(array $cond, string $id) {
+    public function zToolsSideIconColor($cond, $id) {
         return $this->zToolsSideAutomate($cond, $id, "whiteText", "text6");
     }
 
-    public function zToolsSideLinkItem(array $cond, string $id) {
+    public function zToolsSideLinkItem($cond, $id) {
         return $this->zToolsSideAutomate($cond, $id, "text5", "animSlow text4 zHov-text5 zHov-padL-5");
     }
 
-    public function zToolsSideToggleOpt(array $cond, string $id) {
+    public function zToolsSideToggleOpt($cond, $id) {
         return $this->zToolsSideAutomate($cond, $id, "toggled", "displayNone");
     }
 }

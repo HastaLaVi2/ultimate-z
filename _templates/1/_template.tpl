@@ -30,23 +30,6 @@
 {/block}
 
 {block name="zContent" append}
-    <div class="rightText pad-60" zMob-1024="pad-50" zMob-768="pad-20">
-        <div class="font-25 text1 padB-10 displayNone zMob768-no">
-            <i class="fas fa-bars zTog-MEnuu pointThis"></i>
-        </div>
-        <div class="font-12">
-            <ul class="menu2 cleanList nextToEach toSpan padR-20">
-            {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                {if $l->iso_code == $zThis->table["iso_code"]}
-                    <li class="text2 padT-0"><b>{$l->iso_code}</b></li>
-                {else}
-                    <li class="padT-0"><a href="{$zContent->srcFull["change_lang_{$l->iso_code}"]}" class="text1 animation zHov-text1">{$l->iso_code}</a></li>
-                {/if}
-            {/foreach}
-            </ul>
-            <div class="height-2 back1 inLine verMid width-30"></div>
-        </div>
-    </div>
     <!--<div class="back7 pad-20">
         <div class="whiteBack rad-20 width-280 hideRest zShadow">
             <div class="pad-20 padB-10">

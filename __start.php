@@ -373,7 +373,7 @@ if(isset($_SERVER["REQUEST_URI"])) {
         $zUser = new zUser($_SESSION["zUser-" . $z->key]);
 
         $userIP = $_SERVER["REMOTE_ADDR"];
-        $updateIP = zDB::get()->execute("UPDATE zUser SET ip_user = '$userIP' WHERE id_user = '$zUser->id'");
+        $updateIP = zDB::get()->execute("UPDATE zUsers SET ip_user = '$userIP' WHERE id_user = '$zUser->id'");
     }
 
     // if 404 error page is disabled

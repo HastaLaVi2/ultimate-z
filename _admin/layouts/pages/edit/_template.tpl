@@ -424,7 +424,7 @@
                             allowMultiple: (multi == "true" ? true : false),
                             allowReorder: (multi == "true" ? true : false),
                             maxFileSize: "20MB",
-                            acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
+                            acceptedFileTypes: ["image/webp", "image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
                             fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
                                 // Do custom type detection here and return with promise
                                 resolve(type);

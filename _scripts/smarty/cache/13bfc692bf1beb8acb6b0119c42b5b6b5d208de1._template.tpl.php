@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-25 14:20:00
+/* Smarty version 3.1.40, created on 2021-12-30 23:28:11
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c72890d81404_85794750',
+  'unifunc' => 'content_61ce408b15cd34_85239595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1640422377,
+      1 => 1640874529,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c72890d81404_85794750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ce408b15cd34_85239595 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -149,8 +149,8 @@ function content_61c72890d81404_85794750 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body class="back7">
     
-<div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
-<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 padL-332 zMob1200-padL-0">
+<div id="zLoad1" zEffect="slide" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
+<div id="zLoad2" zEffect="slide" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 padL-332 zMob1200-padL-0">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -163,8 +163,8 @@ function content_61c72890d81404_85794750 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </div>
 
-<div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
+<div id="zLoad0_1" zEffect="slide" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
+<div id="zLoad0_2" zEffect="slide" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">

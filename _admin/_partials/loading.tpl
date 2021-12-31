@@ -13,8 +13,8 @@
  *
  *}
 
-<div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
-<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 {if $zAdmin}padL-332 zMob1200-padL-0{/if}">
+<div id="zLoad1" zEffect="slide" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
+<div id="zLoad2" zEffect="slide" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 {if $zAdmin}padL-332 zMob1200-padL-0{/if}">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -27,8 +27,8 @@
     </div>
 </div>
 
-<div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
+<div id="zLoad0_1" zEffect="slide" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
+<div id="zLoad0_2" zEffect="slide" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">

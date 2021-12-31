@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-28 15:29:28
+/* Smarty version 3.1.40, created on 2021-12-30 23:23:39
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61cb2d584e7c05_55938710',
+  'unifunc' => 'content_61ce3f7b9b8c69_96890300',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1640464792,
+      1 => 1640729141,
       2 => 'file',
     ),
     '3919874f51ba2bcf80120a6cbf05a2f24c4274ce' => 
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '18f8a920c20cf5861af48cf7129f48b957c6f487' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1640422377,
+      1 => 1640874529,
       2 => 'file',
     ),
     '37b0e39aed323c9a8a0278f28ec8e347d4af9913' => 
@@ -48,7 +48,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61cb2d584e7c05_55938710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ce3f7b9b8c69_96890300 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -118,8 +118,8 @@ function content_61cb2d584e7c05_55938710 (Smarty_Internal_Template $_smarty_tpl)
     </head>
 <body class="">
             
-<div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
-<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 ">
+<div id="zLoad1" zEffect="slide" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
+<div id="zLoad2" zEffect="slide" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 ">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -132,8 +132,8 @@ function content_61cb2d584e7c05_55938710 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </div>
 
-<div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
+<div id="zLoad0_1" zEffect="slide" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
+<div id="zLoad0_2" zEffect="slide" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -161,18 +161,6 @@ function content_61cb2d584e7c05_55938710 (Smarty_Internal_Template $_smarty_tpl)
     <div id="zContent">
         
         
-    <div class="rightText pad-60" zMob-1024="pad-50" zMob-768="pad-20">
-        <div class="font-25 text1 padB-10 displayNone zMob768-no">
-            <i class="fas fa-bars zTog-MEnuu pointThis"></i>
-        </div>
-        <div class="font-12">
-            <ul class="menu2 cleanList nextToEach toSpan padR-20">
-                                                <li class="padT-0"><a href="http://localhost/ultimate-z/en/" class="text1 animation zHov-text1">en</a></li>
-                                                                <li class="text2 padT-0"><b>tr</b></li>
-                                        </ul>
-            <div class="height-2 back1 inLine verMid width-30"></div>
-        </div>
-    </div>
     <!--<div class="back7 pad-20">
         <div class="whiteBack rad-20 width-280 hideRest zShadow">
             <div class="pad-20 padB-10">

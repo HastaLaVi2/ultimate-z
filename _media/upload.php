@@ -92,7 +92,11 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
             $file = $target_file;
-            $image = imagecreatefromjpeg($file);
+            if ($imageFileType == "png") {
+                $image = imagecreatefrompng($file);
+            } else {
+                $image = imagecreatefromjpeg($file);
+            }
             ob_start();
             imagejpeg($image, NULL, 100);
             $cont = ob_get_contents();
