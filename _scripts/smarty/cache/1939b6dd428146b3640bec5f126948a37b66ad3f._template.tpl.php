@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 17:45:34
+/* Smarty version 3.1.40, created on 2022-01-10 19:09:27
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc70bea6dc95_48335635',
+  'unifunc' => 'content_61dc8467f39460_65114668',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1641810036,
+      1 => 1641841766,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61dc70bea6dc95_48335635 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc8467f39460_65114668 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -674,7 +674,11 @@ function zPageJS_media() {
                 $("#renaming input[name=new]").val(delAr[0].split("/").reverse()[0]);
             }
             copy.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
-            cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            if (theresIsDelete == false) {
+                cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            } else {
+                if(!cut.hasClass("pointNo")) cut.removeClass("pointThis text5").addClass("pointNo");
+            }
         } else {
            $(".hideActions").each(function() {
                if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
@@ -726,6 +730,10 @@ function zPageJS_media() {
         $("#copy_files").val(data);
         $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
                      .attr("data-action", "copy").attr("data-file", data);
+         Toastify({
+             text: 'Dosyalar başarıyla kopyalandı.',
+             duration: 3000,
+         }).showToast();
     });
 
     $("#actions").on("click", ".cut", function() {
@@ -733,6 +741,10 @@ function zPageJS_media() {
         $("#copy_files").val(data);
         $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
                      .attr("data-action", "cut").attr("data-file", data);
+        Toastify({
+            text: 'Dosyalar başarıyla kesildi.',
+            duration: 3000,
+        }).showToast();
     });
 
     $("#renaming").submit(function(e) {

@@ -55,7 +55,7 @@
             <input name="id_page_holder[]" type="text" value="{$holder->id_page_holder}" class="displayNone">
             {foreach from=$holder->content key=key item=content}
                 <div class="hiddenData displayNone">
-                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
+                    {foreach from=$zTools->zToolsGetAllLangs(true) item=l}
                         {assign var=h value=$editPage[$l->id]->zPageGetHolder($l->id, $holder->id, $id_block, $holder->order)}
                         <textarea name="{if $holder->types[$key] == 'image' || $holder->types[$key] == 'images'}images{else}content{/if}[{$l->id}][]" data-type="{$holder->types[$key]}">
                             {$h->content[$key]}
@@ -65,7 +65,7 @@
                 {if $holder->types[$key] == "no"}
                 {elseif $holder->types[$key] == "input"}
                     <div class="top-20">
-                        <input name="zContent[{$zUser->id_lang}][]" type="text" class="back-white page-title padL-45" value="{$content|escape:"html"}">
+                        <input name="zContent[{$zUser->id_lang_closest}][]" type="text" class="back-white page-title padL-45" value="{$content|escape:"html"}">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
                         </div>
@@ -90,7 +90,7 @@
                 {elseif $holder->types[$key] == "categorylist"}
                     {assign var=allcats value=$zCategoryTools->zCategoryGetAll($zContent->language->id)}
                     <div class="top-20">
-                        <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[{$zUser->id_lang}][]" style="background-color: white">
+                        <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[{$zUser->id_lang_closest}][]" style="background-color: white">
                             <option disabled>{zThis z="Choose..."}</option>
                             {foreach from=$allcats item=cat}
                                 <option value="{$cat->id}" {if $content == $cat->id}selected{/if}>{$cat->name}</option>
@@ -103,12 +103,12 @@
                         <label class="back7 borderForm boldMin-1 boldNoR pad-16 text6">
                             {zThis z="Link"}
                         </label>
-                        <input name="zContent[{$zUser->id_lang}][]" type="text" class="zLink1 back-white top-0 bottom-0" placeholder="{zThis z="Link"}" value="{$contents[0]}">
+                        <input name="zContent[{$zUser->id_lang_closest}][]" type="text" class="zLink1 back-white top-0 bottom-0" placeholder="{zThis z="Link"}" value="{$contents[0]}">
                         <input type="text" class="zLink2 back-white top-0 bottom-0" placeholder="{zThis z="Button"}" value="{$contents[1]}">
                     </div>
                 {else}
                     <div class="top-20">
-                        <textarea class="summernote" name="zContent[{$zUser->id_lang}][]">{$content}</textarea>
+                        <textarea class="summernote" name="zContent[{$zUser->id_lang_closest}][]">{$content}</textarea>
                     </div>
                 {/if}
             {/foreach}

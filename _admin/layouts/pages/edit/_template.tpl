@@ -47,8 +47,8 @@
                     <div class="inLeft index-10">
                         <h4 class="font-19 top-0 bottom-0 text6 boldText">{zThis z="Editing page:"}</h4>
                         <h4 class="font-19 top-0 text4 boldText">
-                            {$zPageTools->zPageGetPageName($smarty.get.id_page, $zUser->id_lang)}
-                            <span class="font-14"><a href="{$zContent->srcFull["main"]}{$editPage[$zUser->id_lang]->url|ltrim:'/'}" target="_blank">[{zThis z="View Page"}]</a></span>
+                            {$zPageTools->zPageGetPageName($smarty.get.id_page, $zUser->id_lang_closest)}
+                            <span class="font-14"><a href="{$zContent->srcFull["main"]}{$editPage[$zUser->id_lang_closest]->url|ltrim:'/'}" target="_blank">[{zThis z="View Page"}]</a></span>
                         </h4>
                     </div>
                     <div class="rightText padB-15">
@@ -59,7 +59,7 @@
                                 </label>
                                 <select class="zSelect pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
                                     <option disabled>{zThis z="Choose..."}</option>
-                                    {$zTools->zToolsGetLanguages($zUser->id_lang)}
+                                    {$zTools->zToolsGetLanguages($zUser->id_lang_closest, true)}
                                 </select>
                             </div>
                         </div>
@@ -69,13 +69,13 @@
                 <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
                     <h6 class="bottom-10 top-0 font-1em">{zThis z="Title"}</h6>
                     <div class="bottom-10">
-                        <input name="page_url" id="page_url" type="text" class="padL-45" value="{$editPage[$zUser->id_lang]->url}" placeholder="{zThis z="URL with / at start"}">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" value="{$editPage[$zUser->id_lang_closest]->url}" placeholder="{zThis z="URL with / at start"}">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-file-code"></i>
                         </div>
                     </div>
-                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
+                    {foreach from=$zTools->zToolsGetAllLangs(true) item=l}
+                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display: none{/if}">
                             <div><input name="id_lang[{$l->id}]" id="id_lang_{$l->id}"
                                         type="text" value="{$l->id}" style="display:none"></div>
                             <div class="bottom-10">
@@ -89,8 +89,8 @@
                     {/foreach}
                     <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
                     <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
-                    {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
+                    {foreach from=$zTools->zToolsGetAllLangs(true) item=l}
+                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display: none{/if}">
                             <div class="bottom-10">
                                 <input name="page_meta[{$l->id}]" id="page_meta_{$l->id}" type="text" class="padL-45" value="{$editPage[$l->id]->meta}">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
@@ -117,7 +117,7 @@
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 {if !$editPage[$l->id]->isSubpage}disabledInput{/if}" id="change_subpage" name="change_subpage">
                         <option selected>{zThis z="Choose..."}</option>
-                        {$zPageTools->zPageGetSubpageSelector($editPage[$l->id]->id, $zUser->id_lang)}
+                        {$zPageTools->zPageGetSubpageSelector($editPage[$l->id]->id, $zUser->id_lang_closest)}
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
@@ -125,7 +125,7 @@
                     });
                     </script>
                     <h6 class="bottom-0 top-0 font-1em">{zThis z="Category"}</h6>
-                    {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang, $editPage[$zUser->id_lang]->id)}
+                    {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang_closest, $editPage[$zUser->id_lang_closest]->id)}
                 </div>
                 <h6 class="bottom-10 top-0 font-1em">{zThis z="Holders"}</h6>
                 <div>
@@ -133,14 +133,14 @@
                         {zThis z="Add a New Holder"}
                     </div>
                     <div id="dragulaAdd" class="hideScroll col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
-                        {assign var=holders value=$zTools->zToolsGetAllHolders($zUser->id_lang)}
+                        {assign var=holders value=$zTools->zToolsGetAllHolders($zUser->id_lang_closest)}
                         {include file="{$zContent->src["admin"]}/_partials/holderEdit.tpl"}
                     </div>
                     <div id="dragula" class="hideScroll hideRest col-12 colTop between-20">
-                        {assign var=blocks value=$editPage[$zUser->id_lang]->template->blocks}
+                        {assign var=blocks value=$editPage[$zUser->id_lang_closest]->template->blocks}
                         {for $id_block=1 to $blocks}
                             <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
-                                {assign var=holders value=$editPage[$zUser->id_lang]->zPageGetHolders($zUser->id_lang, $id_block)}
+                                {assign var=holders value=$editPage[$zUser->id_lang_closest]->zPageGetHolders($zUser->id_lang_closest, $id_block)}
                                 {include file="{$zContent->src["admin"]}/_partials/holderEdit.tpl" id_block=$id_block}
                                 <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
                                     {zThis z="Block"} {$id_block}
@@ -352,7 +352,7 @@
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
-            data.set("zPage", "{$editPage[$zUser->id_lang]->id}");
+            data.set("zPage", "{$editPage[$zUser->id_lang_closest]->id}");
             if (filepond) {
                 data.set("filepond", "true");
             }
@@ -370,7 +370,7 @@
                 type: "POST",
                 success: function(filename) {
                     // this is an image tag to insert into a summernote after upload
-                    var image = $("<img>").attr("src", "{$zContent->srcFull["images"]}/uploads/{$editPage[$zUser->id_lang]->id}/" + filename).addClass("img-fluid");
+                    var image = $("<img>").attr("src", "{$zContent->srcFull["images"]}/uploads/{$editPage[$zUser->id_lang_closest]->id}/" + filename).addClass("img-fluid");
                     if (summernote) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
@@ -402,7 +402,7 @@
                         var files = [];
                         for (let i=0; i < value.split(";").length; i++) {
                             files.push({
-                                source: "{$zContent->src["images"]}/uploads/{$editPage[$zUser->id_lang]->id}/"+value.split(";")[i],
+                                source: "{$zContent->src["images"]}/uploads/{$editPage[$zUser->id_lang_closest]->id}/"+value.split(";")[i],
                                 options: {
                                     type: "local"
                                 }

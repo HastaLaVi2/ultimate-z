@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 17:45:34
+/* Smarty version 3.1.40, created on 2022-01-10 19:09:27
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc70be895471_13840665',
+  'unifunc' => 'content_61dc8467e44a03_73498252',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1641810036,
+      1 => 1641841766,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61dc70be895471_13840665 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc8467e44a03_73498252 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '143694851861dc70be854d30_87240197';
+$_smarty_tpl->compiled->nocache_hash = '81003639461dc8467e090c2_49119731';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_188204409561dc70be86f741_51641385', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_80660796061dc8467e21516_47024391', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_113546889961dc70be87a294_16200460', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_61185853261dc8467e29225_97285290', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_127506209561dc70be889d33_17863460', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_88343480561dc8467e381f0_27304687', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_188204409561dc70be86f741_51641385 extends Smarty_Internal_Block
+class Block_80660796061dc8467e21516_47024391 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_188204409561dc70be86f741_51641385',
+    0 => 'Block_80660796061dc8467e21516_47024391',
   ),
 );
 public $append = 'true';
@@ -99,12 +99,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_113546889961dc70be87a294_16200460 extends Smarty_Internal_Block
+class Block_61185853261dc8467e29225_97285290 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_113546889961dc70be87a294_16200460',
+    0 => 'Block_61185853261dc8467e29225_97285290',
   ),
 );
 public $append = 'true';
@@ -216,12 +216,12 @@ $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->va
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_127506209561dc70be889d33_17863460 extends Smarty_Internal_Block
+class Block_88343480561dc8467e381f0_27304687 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_127506209561dc70be889d33_17863460',
+    0 => 'Block_88343480561dc8467e381f0_27304687',
   ),
 );
 public $append = 'true';
@@ -354,7 +354,11 @@ function zPageJS_media() {
                 $("#renaming input[name=new]").val(delAr[0].split("/").reverse()[0]);
             }
             copy.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
-            cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            if (theresIsDelete == false) {
+                cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            } else {
+                if(!cut.hasClass("pointNo")) cut.removeClass("pointThis text5").addClass("pointNo");
+            }
         } else {
            $(".hideActions").each(function() {
                if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
@@ -408,6 +412,11 @@ function zPageJS_media() {
         $("#copy_files").val(data);
         $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
                      .attr("data-action", "copy").attr("data-file", data);
+         Toastify({
+             text: '<?php echo smarty_function_zThis(array('z'=>"Files successfully copied."),$_smarty_tpl);?>
+',
+             duration: 3000,
+         }).showToast();
     });
 
     $("#actions").on("click", ".cut", function() {
@@ -415,6 +424,11 @@ function zPageJS_media() {
         $("#copy_files").val(data);
         $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
                      .attr("data-action", "cut").attr("data-file", data);
+        Toastify({
+            text: '<?php echo smarty_function_zThis(array('z'=>"Files successfully cut."),$_smarty_tpl);?>
+',
+            duration: 3000,
+        }).showToast();
     });
 
     $("#renaming").submit(function(e) {

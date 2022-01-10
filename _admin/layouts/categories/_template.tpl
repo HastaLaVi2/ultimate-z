@@ -39,7 +39,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$zCategoryTools->zCategoryGetAll($zUser->id_lang) item=cat}
+                    {foreach from=$zCategoryTools->zCategoryGetAll($zUser->id_lang_closest) item=cat}
                         <tr id="zCategory-{$cat->id}">
                             <td>{$cat->id}</td>
                             <td>{$cat->name}</td>

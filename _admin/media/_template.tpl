@@ -253,7 +253,11 @@ function zPageJS_media() {
                 $("#renaming input[name=new]").val(delAr[0].split("/").reverse()[0]);
             }
             copy.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
-            cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            if (theresIsDelete == false) {
+                cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            } else {
+                if(!cut.hasClass("pointNo")) cut.removeClass("pointThis text5").addClass("pointNo");
+            }
         } else {
            $(".hideActions").each(function() {
                if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
@@ -305,6 +309,10 @@ function zPageJS_media() {
         $("#copy_files").val(data);
         $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
                      .attr("data-action", "copy").attr("data-file", data);
+         Toastify({
+             text: '{zThis z="Files successfully copied."}',
+             duration: 3000,
+         }).showToast();
     });
 
     $("#actions").on("click", ".cut", function() {
@@ -312,6 +320,10 @@ function zPageJS_media() {
         $("#copy_files").val(data);
         $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
                      .attr("data-action", "cut").attr("data-file", data);
+        Toastify({
+            text: '{zThis z="Files successfully cut."}',
+            duration: 3000,
+        }).showToast();
     });
 
     $("#renaming").submit(function(e) {

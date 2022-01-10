@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 14:59:20
+/* Smarty version 3.1.40, created on 2022-01-10 19:35:16
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc49c84c3e15_61232291',
+  'unifunc' => 'content_61dc8a74ac63c0_52514786',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1640422377,
+      1 => 1641843309,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,59 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61dc49c84c3e15_61232291 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc8a74ac63c0_52514786 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '179045461761dc49c84794a9_59966654';
+$_smarty_tpl->compiled->nocache_hash = '73312495061dc8a74a8d479_15916631';
 ?>
 
 
 
+<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
+$_smarty_tpl->tpl_vars['l']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
+$_smarty_tpl->tpl_vars['l']->do_else = false;
+?>
+    <?php if ($_smarty_tpl->tpl_vars['zUser']->value->id_lang == $_smarty_tpl->tpl_vars['l']->value->id) {?>
+        <?php if ($_smarty_tpl->tpl_vars['l']->value->disabled) {?>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'now');
+$_smarty_tpl->tpl_vars['now']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['now']->value) {
+$_smarty_tpl->tpl_vars['now']->do_else = false;
+?>
+                <?php if (!$_smarty_tpl->tpl_vars['now']->value->disabled) {?>
+                    <?php $_smarty_tpl->_assignInScope('showLang', $_smarty_tpl->tpl_vars['now']->value->id);?>
+                <?php }?>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+        <?php } else { ?>
+            <?php $_smarty_tpl->_assignInScope('showLang', $_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+        <?php }?>
+    <?php }
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_154977101561dc49c8493ff9_45568267', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_79296883161dc8a74aac154_71192622', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_120397168561dc49c84c2287_07671453', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_184095416061dc8a74ac52e6_59690847', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_154977101561dc49c8493ff9_45568267 extends Smarty_Internal_Block
+class Block_79296883161dc8a74aac154_71192622 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_154977101561dc49c8493ff9_45568267',
+    0 => 'Block_79296883161dc8a74aac154_71192622',
   ),
 );
 public $append = 'true';
@@ -83,7 +110,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                                 <select class="pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
                                     <option disabled><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
 </option>
-                                    <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetLanguages($_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+                                    <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetLanguages($_smarty_tpl->tpl_vars['zUser']->value->id_lang,true);?>
 
                                 </select>
                             </div>
@@ -105,7 +132,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                                 <select class="pad-10 top-0 bottom-0" id="change_template" name="change_template">
                                     <option disabled><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
 </option>
-                                    <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetTemplates($_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+                                    <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetTemplates($_smarty_tpl->tpl_vars['showLang']->value);?>
 
                                 </select>
                             </div>
@@ -137,7 +164,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
 $_smarty_tpl->tpl_vars['l']->do_else = false;
 ?>
                         <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
- divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display:none<?php }?>">
+ divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['showLang']->value) {?>display:none<?php }?>">
                             <div><input name="id_lang[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
 ]" id="id_lang_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
 "
@@ -168,7 +195,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
 $_smarty_tpl->tpl_vars['l']->do_else = false;
 ?>
                         <div class="divFor<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
- divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['zUser']->value->id_lang) {?>display: none<?php }?>">
+ divFor" style="<?php if ($_smarty_tpl->tpl_vars['l']->value->id !== $_smarty_tpl->tpl_vars['showLang']->value) {?>display: none<?php }?>">
                             <div class="bottom-10">
                                 <input name="page_meta[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
 ]" id="page_meta_<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
@@ -204,7 +231,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <select class="zSelect pad-10 top-12 bottom-20 <?php if (!$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->isSubpage) {?>disabledInput<?php }?>" id="change_subpage" name="change_subpage">
                         <option selected><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
 </option>
-                        <?php echo $_smarty_tpl->tpl_vars['zPageTools']->value->zPageGetSubpageSelector($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->id,$_smarty_tpl->tpl_vars['zUser']->value->id_lang);?>
+                        <?php echo $_smarty_tpl->tpl_vars['zPageTools']->value->zPageGetSubpageSelector($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->id,$_smarty_tpl->tpl_vars['showLang']->value);?>
 
                     </select>
                     <?php echo '<script'; ?>
@@ -216,7 +243,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
                     <h6 class="bottom-0 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Category"),$_smarty_tpl);?>
 </h6>
-                    <?php echo $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryCheckboxes($_smarty_tpl->tpl_vars['zUser']->value->id_lang,$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang]->id);?>
+                    <?php echo $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryCheckboxes($_smarty_tpl->tpl_vars['showLang']->value,$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['showLang']->value]->id);?>
 
                 </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
@@ -237,12 +264,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_120397168561dc49c84c2287_07671453 extends Smarty_Internal_Block
+class Block_184095416061dc8a74ac52e6_59690847 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_120397168561dc49c84c2287_07671453',
+    0 => 'Block_184095416061dc8a74ac52e6_59690847',
   ),
 );
 public $append = 'true';

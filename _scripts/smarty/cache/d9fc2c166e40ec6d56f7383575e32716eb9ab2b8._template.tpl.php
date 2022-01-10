@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-09 15:41:21
+/* Smarty version 3.1.40, created on 2022-01-10 20:07:27
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61db0221c43064_07297465',
+  'unifunc' => 'content_61dc91ff375c72_44069982',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1641742466,
+      1 => 1641845245,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -60,7 +60,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1640422377,
+      1 => 1641843839,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
@@ -84,12 +84,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61db0221c43064_07297465 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc91ff375c72_44069982 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <title>Sayfayı Düzenle | zAdmin</title>
+    <title>Edit Page | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
@@ -97,8 +97,8 @@ function content_61db0221c43064_07297465 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/_admin/layouts/pages/edit/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/edit" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/edit" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1001" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1001" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -214,35 +214,35 @@ function content_61db0221c43064_07297465 (Smarty_Internal_Template $_smarty_tpl)
 </div>
         <div class="top-40">
             <ul class="cleanList font-16">
-                <li class="text4 padLR-1rem weight-600">Menü</li>
+                <li class="text4 padLR-1rem weight-600">Menu</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-th-large text6"></i>
-                        <span class="padL-15">Gösterge Paneli</span>
+                        <span class="padL-15">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 back5 color-white">
                         <i class="fas fa-layer-group whiteText"></i>
-                        <span class="padL-15">Düzen</span>
+                        <span class="padL-15">Layouts</span>
                         <i class="fas fa-chevron-down inRight top-3 whiteText"></i>
                     </a>
                     <ul class="zShow-side1 font-13 padL-2rem left-2rem toggled">
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/design" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Tasarım
+                                Design
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="weight-700 text5">
-                                Sayfalar
+                                Pages
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/categories/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Kategoriler
+                                Categories
                             </a>
                         </li>
                     </ul>
@@ -251,39 +251,39 @@ function content_61db0221c43064_07297465 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/media" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-photo-video text6"></i>
-                        <span class="padL-15">Medya</span>
+                        <span class="padL-15">Media</span>
                     </a>
                 </li>
 
-                                <li class="text4 padLR-1rem weight-600 padT-30">Seçenekler</li>
+                                <li class="text4 padLR-1rem weight-600 padT-30">Preferences</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/preferences" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-cog text6"></i>
-                        <span class="padL-15">Seçenekler</span>
+                        <span class="padL-15">Preferences</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/users" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-users text6"></i>
-                        <span class="padL-15">Kullanıcılar</span>
+                        <span class="padL-15">Users</span>
                     </a>
                 </li>
 
-                <li class="text4 padLR-1rem weight-600 padT-30">İleri Düzey</li>
+                <li class="text4 padLR-1rem weight-600 padT-30">Advanced</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/database" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-server text6"></i>
-                        <span class="padL-15">Veritabanı</span>
+                        <span class="padL-15">Database</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/run-queries" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-terminal text6"></i>
-                        <span class="padL-15">Sorgu Çalıştır</span>
+                        <span class="padL-15">Run Queries</span>
                     </a>
                 </li>
                 
@@ -330,7 +330,7 @@ $(window).resize(function(){
     <a href="http://localhost/ultimate-z/" target="_blank" class="inLine colTop pointThis right-30 rightText index-10">
         <div class="no zMob768-displayNone">
             <div class="inLine verMid font-15">
-                Görüntüle
+                View
                 <div class="font-12">ultimate Z</div>
             </div>
             <div class="inLine verMid">
@@ -341,7 +341,7 @@ $(window).resize(function(){
     <div id="zUser" class="inLine colTop pointThis zTog-userMenu index-10">
         <div class="inLine colTop rightText padR-15">
             <h5 class="top-0 bottom-0">Kerimcan Ayaz</h5>
-            <h6 class="top-0 bottom-0">Yönetici</h6>
+            <h6 class="top-0 bottom-0">Administrator</h6>
         </div>
         <div class="inLine width-39">
             <img src="http://localhost/ultimate-z/_media/user/profile/4.jpg" class="pagePic widthAll rad-half">
@@ -349,14 +349,14 @@ $(window).resize(function(){
     </div>
     <div class="zShow-userMenu displayNone">
         <div class="floatingTheRight whiteBack rad-15 pad-20 index-10 width-250 zShadow font-16">
-            <div class="font-14 weight-700 gray3 bottom-10">Merhaba, Kerimcan!</div>
+            <div class="font-14 weight-700 gray3 bottom-10">Hello, Kerimcan!</div>
             <a href="http://localhost/ultimate-z/" target="_blank" class="displayNone zMob768-no">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoT boldMin-1">
                     <div class="inLine verMid">
                         <i class="fas fa-home padR-10"></i>
                     </div>
                     <div class="inLine verMid font-15">
-                        Görüntüle
+                        View
                         <div class="font-12">ultimate Z</div>
                     </div>
                 </div>
@@ -364,13 +364,13 @@ $(window).resize(function(){
             <a href="http://localhost/ultimate-z/_admin/profile/">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3">
                     <i class="fas fa-id-badge padR-10"></i>
-                    Profil
+                    Profile
                 </div>
             </a>
             <a href="http://localhost/ultimate-z/_admin/logout/" class="forceLink">
                 <div class="left--20 right--20 bottom--20 rad-b-15 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoB boldMin-1">
                     <i class="fas fa-sign-out-alt padR-10"></i>
-                    Çıkış Yap
+                    Log out
                 </div>
             </a>
         </div>
@@ -379,7 +379,7 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Sayfayı Düzenle</h3>
+            <h3 class="boldText top-10">Edit Page</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
@@ -390,80 +390,61 @@ $(window).resize(function(){
             <ol class="cleanList">
                 <li><a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="inLine font-16">
                     <i class="fas fa-caret-left"></i>
-                    Sayfalar
+                    Pages
                 </a></li>
             </ol>
         </nav>
 
         <div class="whiteBack rad-15 pad-20 font-16">
-            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php">
+            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001">
                 
                 <div>
                     <div class="inLeft index-10">
-                        <h4 class="font-19 top-0 bottom-0 text6 boldText">Bu sayfayı düzenliyorsunuz:</h4>
+                        <h4 class="font-19 top-0 bottom-0 text6 boldText">Editing page:</h4>
                         <h4 class="font-19 top-0 text4 boldText">
-                            
-                            <span class="font-14"><a href="http://localhost/ultimate-z/tr/" target="_blank">[Sayfayı Görüntüle]</a></span>
+                            Anasayfa
+                            <span class="font-14"><a href="http://localhost/ultimate-z/en/" target="_blank">[View Page]</a></span>
                         </h4>
                     </div>
                     <div class="rightText padB-15">
                         <div class="inLine width-350 zMob-widthAll">
                             <div class="zGroup bottom-20">
                                 <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6" for="id_lang">
-                                    Bir Dil Seç
+                                    Select Language
                                 </label>
                                 <select class="zSelect pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
-                                    <option disabled>Seç...</option>
-                                    <option value='1'>English</option><option value='2'selected>Türkçe</option>
+                                    <option disabled>Choose...</option>
+                                    <option value='2'selected>Türkçe</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div><input name="id_page" id="id_page" type="text" value="" style="display:none"></div>
+                <div><input name="id_page" id="id_page" type="text" value="1001" style="display:none"></div>
                 <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
-                    <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
+                    <h6 class="bottom-10 top-0 font-1em">Title</h6>
                     <div class="bottom-10">
-                        <input name="page_url" id="page_url" type="text" class="padL-45" value="" placeholder="Başında / ifadesi olan bir URL girin">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" value="/" placeholder="URL with / at start">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-file-code"></i>
                         </div>
                     </div>
-                                            <div class="divFor1 divFor" style="display: none">
-                            <div><input name="id_lang[1]" id="id_lang_1"
-                                        type="text" value="1" style="display:none"></div>
-                            <div class="bottom-10">
-                                <input name="page_name[1]" id="page_name_1" type="text"
-                                       class="padL-45" value="" placeholder="Başlık">
-                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                    <i class="fas fa-file-alt"></i>
-                                </div>
-                            </div>
-                        </div>
                                             <div class="divFor2 divFor" style="">
                             <div><input name="id_lang[2]" id="id_lang_2"
                                         type="text" value="2" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[2]" id="page_name_2" type="text"
-                                       class="padL-45" value="" placeholder="Başlık">
+                                       class="padL-45" value="Anasayfa" placeholder="Title">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
                             </div>
                         </div>
-                                        <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
-                    <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
-                                            <div class="divFor1 divFor" style="display: none">
-                            <div class="bottom-10">
-                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
-                                <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                                    <i class="fas fa-keyboard"></i>
-                                </div>
-                            </div>
-                        </div>
+                                        <h6 class="bottom-10 top-0 font-1em">Meta Description</h6>
+                    <p>If you do not enter a meta description, the first text on the page will be used.</p>
                                             <div class="divFor2 divFor" style="">
                             <div class="bottom-10">
-                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="">
+                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="ultimate Z">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-keyboard"></i>
                                 </div>
@@ -471,36 +452,36 @@ $(window).resize(function(){
                         </div>
                                     </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">Durum</h6>
+                    <h6 class="bottom-12 top-0 font-1em">Status</h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="page_status" id="page_status"
-                        >
-                        <label for="page_status">Sayfa durumu</label>
-                        <div class="font-13">Sayfanın aktif olarak görüntülenip görüntülenemeyeceğini belirleyin.</div>
+                        value="enabled" checked>
+                        <label for="page_status">Page status</label>
+                        <div class="font-13">Determine whether the page should active or not.</div>
                     </div>
-                    <h6 class="bottom-12 top-12 font-1em">Alt Sayfa</h6>
+                    <h6 class="bottom-12 top-12 font-1em">Subpage</h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
                         value="enabled" checked>
-                        <label for="not_a_subpage">Bir alt sayfa değil.</label>
-                        <div class="font-13">Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.</div>
+                        <label for="not_a_subpage">Not a subpage.</label>
+                        <div class="font-13">Uncheck this switch, if you want this page to be a subpage of another.</div>
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
-                        <option selected>Seç...</option>
-                        <option value='1001'>Anasayfa</option><option value='1002'>Moda</option><option value='1003'>1001</option>
+                        <option selected>Choose...</option>
+                        <option value='1002'>Moda</option><option value='1003'>1001</option>
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
                         $("#change_subpage").toggleClass("disabledInput");
                     });
                     </script>
-                    <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
-                    <ul class="cleanList nextToEach bottom-10"><li class="padL-0"><div><input type="checkbox" id="checkbox1" name="categories[]" value="1"><label for="checkbox1">Menü</label></div></li></ul>
+                    <h6 class="bottom-0 top-0 font-1em">Category</h6>
+                    <ul class="cleanList nextToEach bottom-10"><li class="padL-0"><div><input type="checkbox" id="checkbox1" name="categories[]" value="1"checked><label for="checkbox1">Menü</label></div></li></ul>
                 </div>
-                <h6 class="bottom-10 top-0 font-1em">Tutucular</h6>
+                <h6 class="bottom-10 top-0 font-1em">Holders</h6>
                 <div>
                     <div class="col-12 back7 bottom-20 pad-20 centerText pointThis rad-5 gray2" id="AddNewHolder">
-                        Yeni Bir Tutucu Ekle
+                        Add a New Holder
                     </div>
                     <div id="dragulaAdd" class="hideScroll col-4 colTop padR-20 zMob-padR-0 between-20 bottom-20 hideForAddTop" style="display: none">
                                                 
@@ -524,18 +505,18 @@ $(window).resize(function(){
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
+                                Delete Holder
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
+                            Are you sure you want to delete this holder?
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
+                                Close
                             </a>
                             <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder1" href="#">
-                                <span>Evet</span>
+                                <span>Accept</span>
                             </a>
                         </div>
                     </div>
@@ -544,9 +525,6 @@ $(window).resize(function(){
             <input name="id_holder[]" type="text" value="1" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
                             <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="text">
-                            
-                        </textarea>
                                                                     <textarea name="content[2][]" data-type="text">
                             
                         </textarea>
@@ -576,18 +554,18 @@ $(window).resize(function(){
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
+                                Delete Holder
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
+                            Are you sure you want to delete this holder?
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
+                                Close
                             </a>
                             <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder2" href="#">
-                                <span>Evet</span>
+                                <span>Accept</span>
                             </a>
                         </div>
                     </div>
@@ -596,17 +574,14 @@ $(window).resize(function(){
             <input name="id_holder[]" type="text" value="2" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
                             <div class="hiddenData displayNone">
-                                                                    <textarea name="images[1][]" data-type="images">
-                            
-                        </textarea>
                                                                     <textarea name="images[2][]" data-type="images">
                             
                         </textarea>
                                     </div>
                                     <div class="top-20">
                         <div class="zTog-imagesFor2 pad-10 rad-5 pointThis" style="background:#f0efee">
-                            <div class="zShow-imagesFor2">Medya yüklemek için tıklayın.</div>
-                            <div class="zShow-imagesFor2 displayNone">Yükleme ekranını gizle.</div>
+                            <div class="zShow-imagesFor2">Click to upload your media.</div>
+                            <div class="zShow-imagesFor2 displayNone">Hide upload panel.</div>
                         </div>
                         <div class="displayNone zShow-imagesFor2 _top--5">
                             <div class="floatingSpace widthAll height-10 boldMin-1 boldSoG2 boldNoL boldNoR boldNoB index-10" style="background:#f0efee"></div>
@@ -636,18 +611,18 @@ $(window).resize(function(){
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
+                                Delete Holder
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
+                            Are you sure you want to delete this holder?
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
+                                Close
                             </a>
                             <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder3" href="#">
-                                <span>Evet</span>
+                                <span>Accept</span>
                             </a>
                         </div>
                     </div>
@@ -656,17 +631,14 @@ $(window).resize(function(){
             <input name="id_holder[]" type="text" value="3" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
                             <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="categorylist">
-                            
-                        </textarea>
                                                                     <textarea name="content[2][]" data-type="categorylist">
                             
                         </textarea>
                                     </div>
                                                         <div class="top-20">
                         <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[2][]" style="background-color: white">
-                            <option disabled>Seç...</option>
-                                                            <option value="1" >Menü</option>
+                            <option disabled>Choose...</option>
+                                                            <option value="1" >Untitled</option>
                                                     </select>
                     </div>
                                     </div>
@@ -691,18 +663,18 @@ $(window).resize(function(){
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
+                                Delete Holder
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
+                            Are you sure you want to delete this holder?
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
+                                Close
                             </a>
                             <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder4" href="#">
-                                <span>Evet</span>
+                                <span>Accept</span>
                             </a>
                         </div>
                     </div>
@@ -711,9 +683,6 @@ $(window).resize(function(){
             <input name="id_holder[]" type="text" value="4" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
                             <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="input">
-                            
-                        </textarea>
                                                                     <textarea name="content[2][]" data-type="input">
                             
                         </textarea>
@@ -746,18 +715,18 @@ $(window).resize(function(){
                     <div class="pad-20">
                         <div class="modal-header bg-primary">
                             <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
+                                Delete Holder
                             </h5>
                         </div>
                         <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
+                            Are you sure you want to delete this holder?
                         </div>
                         <div class="rightText">
                             <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
+                                Close
                             </a>
                             <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder5" href="#">
-                                <span>Evet</span>
+                                <span>Accept</span>
                             </a>
                         </div>
                     </div>
@@ -766,9 +735,6 @@ $(window).resize(function(){
             <input name="id_holder[]" type="text" value="5" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
                             <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="input">
-                            
-                        </textarea>
                                                                     <textarea name="content[2][]" data-type="input">
                             
                         </textarea>
@@ -780,9 +746,6 @@ $(window).resize(function(){
                         </div>
                     </div>
                                             <div class="hiddenData displayNone">
-                                                                    <textarea name="images[1][]" data-type="image">
-                            
-                        </textarea>
                                                                     <textarea name="images[2][]" data-type="image">
                             
                         </textarea>
@@ -792,9 +755,6 @@ $(window).resize(function(){
                         <input type="file" class="filepond">
                     </div>
                                             <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="text">
-                            
-                        </textarea>
                                                                     <textarea name="content[2][]" data-type="text">
                             
                         </textarea>
@@ -806,15 +766,73 @@ $(window).resize(function(){
     </div>
                         </div>
                     <div id="dragula" class="hideScroll hideRest col-12 colTop between-20">
-                                                                    </div>
+                                                                            <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
+                                                                
+    <div class="zDestroy-holder6 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="6">
+        <h6 class="bottom--10 top--10 left--10 right--10 font-1_5em thinText">
+            Etiket
+        </h6>
+        <div class="text5 font-25 floatingTheRight pad-32 zMob-pad-20 index-10 top--10 right--10 hideForAdd">
+            <span class="pointThis toggleParentNext">
+                <i class="fas fa-chevron-down arrows" style="display:none"></i>
+                <i class="fas fa-chevron-up arrows"></i>
+            </span>
+            <a href="#modal6" class="zModalLink">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+        <div class="padT-20 hideForAdd">
+            <div class="zModal" id="modal6">
+                <a class="zCancel" href="#"></a>
+                <div class="zModalContent rad-15">
+                    <div class="pad-20">
+                        <div class="modal-header bg-primary">
+                            <h5 class="top-0 bottom-0 font-18">
+                                Delete Holder
+                            </h5>
+                        </div>
+                        <div class="gray2 font-15 padTB-20">
+                            Are you sure you want to delete this holder?
+                        </div>
+                        <div class="rightText">
+                            <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                                Close
+                            </a>
+                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder6" href="#">
+                                <span>Accept</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input name="id_holder[]" type="text" value="4" class="displayNone">
+            <input name="id_page_holder[]" type="text" value="1" class="displayNone">
+                            <div class="hiddenData displayNone">
+                                                                    <textarea name="content[2][]" data-type="input">
+                            ultimate Z'ye hoş geldiniz! Deneme.
+                        </textarea>
+                                    </div>
+                                    <div class="top-20">
+                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="ultimate Z&#039;ye hoş geldiniz! Deneme.">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                            <i class="far fa-square"></i>
+                        </div>
+                    </div>
+                                    </div>
+    </div>
+                                    <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
+                                    Block 1
+                                </div>
+                            </div>
+                                            </div>
                 </div>
                 <div class="ButtonPos1 IWantItDownR padR-32 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="padB-20 padLR-20 whiteBack">
-                        <button class="zButton primary widthAll zShadow5">Kaydet</button>
+                        <button class="zButton primary widthAll zShadow5">Save</button>
                     </div>
                 </div>
                 <div class="ButtonPos2">
-                    <button class="zButton primary widthAll zShadow5 top-20">Kaydet</button>
+                    <button class="zButton primary widthAll zShadow5 top-20">Save</button>
                 </div>
             </form>
         </div>
@@ -827,7 +845,7 @@ $(window).resize(function(){
         <div class="pad-20">
                             <div class="modal-header bg-primary">
                     <h5 class="top-0 bottom-0 font-18">
-                        Hata
+                        Error
                     </h5>
                 </div>
                 <div class="zInside gray2 font-15 padTB-20">
@@ -836,7 +854,7 @@ $(window).resize(function(){
                 </div>
                 <div class="rightText">
                                         <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Kapat
+                        Close
                     </a>
                                                         </div>
                     </div>
@@ -865,7 +883,6 @@ $(window).resize(function(){
         
     <!-- summernote -->
     <script src="http://localhost/ultimate-z/_scripts/summernote/summernote-lite.min.js"></script>
-        <script src="http://localhost/ultimate-z/_scripts/summernote/lang/summernote-tr-TR.min.js"></script>
     
     <!-- filepond plugins -->
     <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-file-validate-size.js"></script>
@@ -875,7 +892,7 @@ $(window).resize(function(){
     <script src="http://localhost/ultimate-z/_scripts/filepond/filepond-plugin-media-preview/filepond-plugin-media-preview.min.js"></script>
 
     <!-- filepond -->
-    <script src="http://localhost/ultimate-z/_scripts/filepond/locale/tr-TR.js"></script>
+    <script src="http://localhost/ultimate-z/_scripts/filepond/locale/en-EN.js"></script>
     <script src="http://localhost/ultimate-z/_scripts/filepond/filepond.js"></script>
 
     <script>
@@ -1049,11 +1066,11 @@ $(window).resize(function(){
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
-            data.set("zPage", "");
+            data.set("zPage", "1001");
             if (filepond) {
                 data.set("filepond", "true");
             }
-            data.set("langcode", "tr");
+            data.set("langcode", "en");
             // send the file to server
             var newName = slug(image.name.replace(/\.[^/.]+$/, "")) + "." + image.name.replace(/^[^/.]+\./, "");
             var newFile = new File([image], newName, { type: image.type});
@@ -1067,7 +1084,7 @@ $(window).resize(function(){
                 type: "POST",
                 success: function(filename) {
                     // this is an image tag to insert into a summernote after upload
-                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads//" + filename).addClass("img-fluid");
+                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1001/" + filename).addClass("img-fluid");
                     if (summernote) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
@@ -1099,7 +1116,7 @@ $(window).resize(function(){
                         var files = [];
                         for (let i=0; i < value.split(";").length; i++) {
                             files.push({
-                                source: "../../../../_media/uploads//"+value.split(";")[i],
+                                source: "../../../../_media/uploads/1001/"+value.split(";")[i],
                                 options: {
                                     type: "local"
                                 }
@@ -1196,7 +1213,7 @@ $(window).resize(function(){
         // start all summernotes
         function summernoteStart(element) {
             element.summernote({
-                lang: "tr-TR",
+                lang: "en-EN",
                 fontSizes: ['8', '9', '10', '11', '12', '14', '18', '24', '36', '48' , '64', '82', '150'],
                 toolbar: [
                     // [groupName, [list of button]]
@@ -1220,7 +1237,7 @@ $(window).resize(function(){
 
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
-        var modalNumber = "6";
+        var modalNumber = "7";
 
         function zPageJS() {
             toggleParentNext($(".toggleParentNext"));
@@ -1259,7 +1276,7 @@ $(window).resize(function(){
             );
 
             // set filepond language
-            FilePond.setOptions(window["tr-TR"]);
+            FilePond.setOptions(window["en-EN"]);
 
             window.pondIDS = [];
 

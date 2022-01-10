@@ -19,6 +19,18 @@ if (strpos("$_SERVER[REQUEST_URI]", "zTools.php") !== false) {
 }
 
 class zTools {
+    public static $instance;
+
+    public function __construct() {
+        self::$instance = $this;
+    }
+
+    public static function get() {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
 
     # get languages by id
     public function zToolsGetLangById($id_lang) {
@@ -57,18 +69,20 @@ class zTools {
     }
 
     # get all language objects
-    public function zToolsGetAllLangs() {
+    public function zToolsGetAllLangs($onlyActive = NULL) {
         $db = zDB::get();
 
         $languages = array();
 
         // languages table
-        $language_result = $db->select("SELECT * FROM zLanguages");
+        $language_result = $db->select("SELECT * FROM zLanguages ORDER BY id_lang");
 
         if (!empty($language_result)) {
             foreach ($language_result as $l){
                 $lang = new zLanguage($l["id_lang"]);
-                array_push($languages, $lang);
+                if (isset($onlyActive) && $onlyActive == true && $lang->disabled) {} else {
+                    array_push($languages, $lang);
+                }
             }
         }
 
@@ -96,16 +110,20 @@ class zTools {
 	}
 
     # get languages and their names from database
-    public function zToolsGetLanguages($id_lang = NULL) {
+    public function zToolsGetLanguages($id_lang = NULL, $onlyActive = NULL) {
         $db = zDB::get();
 
         $query = $db->select("SELECT * FROM zLanguages");
 
         if (!empty($query)) {
             foreach ($query as $l){
-                echo "<option value='" . $l["id_lang"] . "'"
-                    . ((isset($id_lang) && $id_lang == $l["id_lang"]) ? "selected" : "") . ">"
-                    .$l["name"]."</option>";
+                $zLanguage = new zLanguage($l["id_lang"]);
+
+                if (isset($onlyActive) && $onlyActive == true && $zLanguage->disabled) {} else {
+                    echo "<option value='" . $l["id_lang"] . "'"
+                        . ((isset($id_lang) && $id_lang == $l["id_lang"]) ? "selected" : "") . ">"
+                        .$l["name"]."</option>";
+                }
             }
         }
     }

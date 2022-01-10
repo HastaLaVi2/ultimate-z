@@ -269,6 +269,8 @@ $lang["Not a directory."] = "Bir klasör değil.";
 $lang["File with the same name already exists on this folder."] = "Aynı ada sahip bir dosya bu klasörde zaten mevcut.";
 $lang["Files of this type are not allowed."] = "Bu uzantıya sahip dosyalara izin yoktur.";
 $lang["Enter a New Name"] = "Yeni Bir Ad Girin";
+$lang["Files successfully copied."] = "Dosyalar başarıyla kopyalandı.";
+$lang["Files successfully cut."] = "Dosyalar başarıyla kesildi.";
 
 # SCRIPT: simple-datatables
 $lang["entries per page"] = "gösterilen öge sayısı";

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-09 15:41:21
+/* Smarty version 3.1.40, created on 2022-01-10 20:07:27
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61db0221bf3bc7_76978229',
+  'unifunc' => 'content_61dc91ff337599_58973095',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1640422377,
+      1 => 1641843839,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61db0221bf3bc7_76978229 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc91ff337599_58973095 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '163646849661db0221bd4515_07055584';
+$_smarty_tpl->compiled->nocache_hash = '168154472161dc91ff31c4f7_65366550';
 ?>
 
 <?php
@@ -90,7 +90,7 @@ $_smarty_tpl->tpl_vars['content']->do_else = false;
 ?>
                 <div class="hiddenData displayNone">
                     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(true), 'l');
 $_smarty_tpl->tpl_vars['l']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['l']->value) {
 $_smarty_tpl->tpl_vars['l']->do_else = false;
@@ -109,7 +109,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php if ($_smarty_tpl->tpl_vars['holder']->value->types[$_smarty_tpl->tpl_vars['key']->value] == "no") {?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['holder']->value->types[$_smarty_tpl->tpl_vars['key']->value] == "input") {?>
                     <div class="top-20">
-                        <input name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang;?>
+                        <input name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]" type="text" class="back-white page-title padL-45" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['content']->value, ENT_QUOTES, 'UTF-8', true);?>
 ">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
@@ -144,7 +144,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['holder']->value->types[$_smarty_tpl->tpl_vars['key']->value] == "categorylist") {?>
                     <?php $_smarty_tpl->_assignInScope('allcats', $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryGetAll($_smarty_tpl->tpl_vars['zContent']->value->language->id));?>
                     <div class="top-20">
-                        <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang;?>
+                        <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]" style="background-color: white">
                             <option disabled><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
 </option>
@@ -169,7 +169,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <?php echo smarty_function_zThis(array('z'=>"Link"),$_smarty_tpl);?>
 
                         </label>
-                        <input name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang;?>
+                        <input name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]" type="text" class="zLink1 back-white top-0 bottom-0" placeholder="<?php echo smarty_function_zThis(array('z'=>"Link"),$_smarty_tpl);?>
 " value="<?php echo $_smarty_tpl->tpl_vars['contents']->value[0];?>
 ">
@@ -179,7 +179,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
                 <?php } else { ?>
                     <div class="top-20">
-                        <textarea class="summernote" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang;?>
+                        <textarea class="summernote" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]"><?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 </textarea>
                     </div>

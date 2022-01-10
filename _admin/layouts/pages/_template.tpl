@@ -40,7 +40,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$zPageTools->zPageGetAll($zUser->id_lang, "front") item=page}
+                    {foreach from=$zPageTools->zPageGetAll($zUser->id_lang_closest, "front") item=page}
                         <tr id="zPage-{$page->id}">
                             <td>{$page->id-1000}</td>
                             <td>{$page->name}</td>

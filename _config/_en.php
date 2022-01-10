@@ -269,6 +269,8 @@ $lang["Not a directory."] = "Not a directory.";
 $lang["File with the same name already exists on this folder."] = "File with the same name already exists on this folder.";
 $lang["Files of this type are not allowed."] = "Files of this type are not allowed.";
 $lang["Enter a New Name"] = "Enter a New Name";
+$lang["Files successfully copied."] = "Files successfully copied.";
+$lang["Files successfully cut."] = "Files successfully cut.";
 
 # SCRIPT: simple-datatables
 $lang["entries per page"] = "entries per page";

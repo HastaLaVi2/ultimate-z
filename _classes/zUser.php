@@ -28,6 +28,7 @@ class zUser {
     public $id_rank;
     public $id_picture;
     public $id_lang;
+    public $id_lang_closest;
     public $rank_name;
     public $token;
     public $token_expire;
@@ -35,6 +36,7 @@ class zUser {
     # connect to database
     public function __construct(array $data = NULL) {
         $db = zDB::get();
+        $zTools = zTools::get();
 
         $this->id = $data["id_user"];
 
@@ -50,6 +52,18 @@ class zUser {
             $this->id_lang = $query[0]["id_lang"];
             $this->token = $query[0]["token"];
             $this->token_expire = $query[0]["token_expire"];
+
+            $zLanguage = new zLanguage($this->id_lang);
+
+            if ($zLanguage->disabled) {
+                foreach ($zTools->zToolsGetAllLangs() as $l) {
+                    if (!$now->disabled) {
+                        $this->id_lang_closest = $l->id;
+                    }
+                }
+            } else {
+                $this->id_lang_closest = $this->id_lang;
+            }
         }
 
         # get the rank name

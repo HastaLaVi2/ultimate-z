@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-05 17:42:05
+/* Smarty version 3.1.40, created on 2022-01-10 19:15:08
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61d5d86d3e1086_99388164',
+  'unifunc' => 'content_61dc85bcd312a8_66166287',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -60,7 +60,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
-      1 => 1640422377,
+      1 => 1641644877,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61d5d86d3e1086_99388164 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc85bcd312a8_66166287 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">

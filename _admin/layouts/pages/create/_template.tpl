@@ -39,7 +39,7 @@
                                 </label>
                                 <select class="pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
                                     <option disabled>{zThis z="Choose..."}</option>
-                                    {$zTools->zToolsGetLanguages($zUser->id_lang)}
+                                    {$zTools->zToolsGetLanguages($zUser->id_lang, true)}
                                 </select>
                             </div>
                             <script>
@@ -56,7 +56,7 @@
                                 </label>
                                 <select class="pad-10 top-0 bottom-0" id="change_template" name="change_template">
                                     <option disabled>{zThis z="Choose..."}</option>
-                                    {$zTools->zToolsGetTemplates($zUser->id_lang)}
+                                    {$zTools->zToolsGetTemplates($zUser->id_lang_closest)}
                                 </select>
                             </div>
                             <script>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display:none{/if}">
+                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display:none{/if}">
                             <div><input name="id_lang[{$l->id}]" id="id_lang_{$l->id}"
                                         type="text" value="{$l->id}" style="display:none"></div>
                             <div class="bottom-10">
@@ -92,7 +92,7 @@
                     <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
                     <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
                     {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display: none{/if}">
+                        <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display: none{/if}">
                             <div class="bottom-10">
                                 <input name="page_meta[{$l->id}]" id="page_meta_{$l->id}" type="text" class="padL-45" value="{$editPage[$l->id]->meta}">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
@@ -117,7 +117,7 @@
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 {if !$editPage[$l->id]->isSubpage}disabledInput{/if}" id="change_subpage" name="change_subpage">
                         <option selected>{zThis z="Choose..."}</option>
-                        {$zPageTools->zPageGetSubpageSelector($editPage[$l->id]->id, $zUser->id_lang)}
+                        {$zPageTools->zPageGetSubpageSelector($editPage[$l->id]->id, $zUser->id_lang_closest)}
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
@@ -125,7 +125,7 @@
                     });
                     </script>
                     <h6 class="bottom-0 top-0 font-1em">{zThis z="Category"}</h6>
-                    {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang, $editPage[$zUser->id_lang]->id)}
+                    {$zCategoryTools->zCategoryCheckboxes($zUser->id_lang_closest, $editPage[$zUser->id_lang_closest]->id)}
                 </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">

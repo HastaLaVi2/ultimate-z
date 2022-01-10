@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 14:59:20
+/* Smarty version 3.1.40, created on 2022-01-10 19:35:16
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc49c85f93e4_26630999',
+  'unifunc' => 'content_61dc8a74bdb309_99859221',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1640422377,
+      1 => 1641843309,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -72,12 +72,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61dc49c85f93e4_26630999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc8a74bdb309_99859221 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <title>Sayfa Oluştur | zAdmin</title>
+    <title>Create Page | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
@@ -190,35 +190,35 @@ function content_61dc49c85f93e4_26630999 (Smarty_Internal_Template $_smarty_tpl)
 </div>
         <div class="top-40">
             <ul class="cleanList font-16">
-                <li class="text4 padLR-1rem weight-600">Menü</li>
+                <li class="text4 padLR-1rem weight-600">Menu</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-th-large text6"></i>
-                        <span class="padL-15">Gösterge Paneli</span>
+                        <span class="padL-15">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 back5 color-white">
                         <i class="fas fa-layer-group whiteText"></i>
-                        <span class="padL-15">Düzen</span>
+                        <span class="padL-15">Layouts</span>
                         <i class="fas fa-chevron-down inRight top-3 whiteText"></i>
                     </a>
                     <ul class="zShow-side1 font-13 padL-2rem left-2rem toggled">
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/design" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Tasarım
+                                Design
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="weight-700 text5">
-                                Sayfalar
+                                Pages
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/categories/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Kategoriler
+                                Categories
                             </a>
                         </li>
                     </ul>
@@ -227,39 +227,39 @@ function content_61dc49c85f93e4_26630999 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/media" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-photo-video text6"></i>
-                        <span class="padL-15">Medya</span>
+                        <span class="padL-15">Media</span>
                     </a>
                 </li>
 
-                                <li class="text4 padLR-1rem weight-600 padT-30">Seçenekler</li>
+                                <li class="text4 padLR-1rem weight-600 padT-30">Preferences</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/preferences" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-cog text6"></i>
-                        <span class="padL-15">Seçenekler</span>
+                        <span class="padL-15">Preferences</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/users" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-users text6"></i>
-                        <span class="padL-15">Kullanıcılar</span>
+                        <span class="padL-15">Users</span>
                     </a>
                 </li>
 
-                <li class="text4 padLR-1rem weight-600 padT-30">İleri Düzey</li>
+                <li class="text4 padLR-1rem weight-600 padT-30">Advanced</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/database" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-server text6"></i>
-                        <span class="padL-15">Veritabanı</span>
+                        <span class="padL-15">Database</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/run-queries" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-terminal text6"></i>
-                        <span class="padL-15">Sorgu Çalıştır</span>
+                        <span class="padL-15">Run Queries</span>
                     </a>
                 </li>
                 
@@ -306,7 +306,7 @@ $(window).resize(function(){
     <a href="http://localhost/ultimate-z/" target="_blank" class="inLine colTop pointThis right-30 rightText index-10">
         <div class="no zMob768-displayNone">
             <div class="inLine verMid font-15">
-                Görüntüle
+                View
                 <div class="font-12">ultimate Z</div>
             </div>
             <div class="inLine verMid">
@@ -317,7 +317,7 @@ $(window).resize(function(){
     <div id="zUser" class="inLine colTop pointThis zTog-userMenu index-10">
         <div class="inLine colTop rightText padR-15">
             <h5 class="top-0 bottom-0">Kerimcan Ayaz</h5>
-            <h6 class="top-0 bottom-0">Yönetici</h6>
+            <h6 class="top-0 bottom-0">Administrator</h6>
         </div>
         <div class="inLine width-39">
             <img src="http://localhost/ultimate-z/_media/user/profile/4.jpg" class="pagePic widthAll rad-half">
@@ -325,14 +325,14 @@ $(window).resize(function(){
     </div>
     <div class="zShow-userMenu displayNone">
         <div class="floatingTheRight whiteBack rad-15 pad-20 index-10 width-250 zShadow font-16">
-            <div class="font-14 weight-700 gray3 bottom-10">Merhaba, Kerimcan!</div>
+            <div class="font-14 weight-700 gray3 bottom-10">Hello, Kerimcan!</div>
             <a href="http://localhost/ultimate-z/" target="_blank" class="displayNone zMob768-no">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoT boldMin-1">
                     <div class="inLine verMid">
                         <i class="fas fa-home padR-10"></i>
                     </div>
                     <div class="inLine verMid font-15">
-                        Görüntüle
+                        View
                         <div class="font-12">ultimate Z</div>
                     </div>
                 </div>
@@ -340,13 +340,13 @@ $(window).resize(function(){
             <a href="http://localhost/ultimate-z/_admin/profile/">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3">
                     <i class="fas fa-id-badge padR-10"></i>
-                    Profil
+                    Profile
                 </div>
             </a>
             <a href="http://localhost/ultimate-z/_admin/logout/" class="forceLink">
                 <div class="left--20 right--20 bottom--20 rad-b-15 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoB boldMin-1">
                     <i class="fas fa-sign-out-alt padR-10"></i>
-                    Çıkış Yap
+                    Log out
                 </div>
             </a>
         </div>
@@ -355,7 +355,7 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Sayfa Oluştur</h3>
+            <h3 class="boldText top-10">Create Page</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
@@ -366,7 +366,7 @@ $(window).resize(function(){
             <ol class="cleanList">
                 <li><a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="inLine font-16">
                     <i class="fas fa-caret-left"></i>
-                    Sayfalar
+                    Pages
                 </a></li>
             </ol>
         </nav>
@@ -375,16 +375,16 @@ $(window).resize(function(){
             <form id="zPage-edit-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/pages/create/index.php">
                 
                 <div>
-                    <h4 class="inLeft font-19 top-0 text4 boldText">Yeni Sayfa Ekle</h4>
+                    <h4 class="inLeft font-19 top-0 text4 boldText">Add New Page</h4>
                     <div class="rightText">
                         <div class="inLine width-350 zMob-widthAll">
                             <div class="zGroup bottom-20">
                                 <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6" for="change_lang">
-                                    Bir Dil Seç
+                                    Select Language
                                 </label>
                                 <select class="pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
-                                    <option disabled>Seç...</option>
-                                    <option value='1'>English</option><option value='2'selected>Türkçe</option>
+                                    <option disabled>Choose...</option>
+                                    <option value='2'>Türkçe</option>
                                 </select>
                             </div>
                             <script>
@@ -397,10 +397,10 @@ $(window).resize(function(){
                         <div class="inLine width-350 zMob-widthAll">
                             <div class="zGroup bottom-20 padL-20 zMob-padL-0">
                                 <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6" for="change_template">
-                                    Bir Şablon Seç
+                                    Choose a Template
                                 </label>
                                 <select class="pad-10 top-0 bottom-0" id="change_template" name="change_template">
-                                    <option disabled>Seç...</option>
+                                    <option disabled>Choose...</option>
                                     <option value='1'>zAna</option>
                                 </select>
                             </div>
@@ -414,9 +414,9 @@ $(window).resize(function(){
                     </div>
                 </div>
                 <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
-                    <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
+                    <h6 class="bottom-10 top-0 font-1em">Title</h6>
                     <div class="bottom-10">
-                        <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="Başında / ifadesi olan bir URL girin">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" placeholder="URL with / at start">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-file-code"></i>
                         </div>
@@ -426,7 +426,7 @@ $(window).resize(function(){
                                         type="text" value="1" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[1]" id="page_name_1" type="text"
-                                       class="page-title padL-45" placeholder="Başlık">
+                                       class="page-title padL-45" placeholder="Title">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -437,14 +437,14 @@ $(window).resize(function(){
                                         type="text" value="2" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[2]" id="page_name_2" type="text"
-                                       class="page-title padL-45" placeholder="Başlık">
+                                       class="page-title padL-45" placeholder="Title">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
                             </div>
                         </div>
-                                        <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
-                    <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
+                                        <h6 class="bottom-10 top-0 font-1em">Meta Description</h6>
+                    <p>If you do not enter a meta description, the first text on the page will be used.</p>
                                             <div class="divFor1 divFor" style="display: none">
                             <div class="bottom-10">
                                 <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
@@ -468,15 +468,15 @@ $(window).resize(function(){
                     </script>
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">Alt Sayfa</h6>
+                    <h6 class="bottom-12 top-0 font-1em">Subpage</h6>
                     <div>
                         <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
                         value="enabled" checked>
-                        <label for="not_a_subpage">Bir alt sayfa değil.</label>
-                        <div class="font-13">Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.</div>
+                        <label for="not_a_subpage">Not a subpage.</label>
+                        <div class="font-13">Uncheck this switch, if you want this page to be a subpage of another.</div>
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
-                        <option selected>Seç...</option>
+                        <option selected>Choose...</option>
                         <option value='1001'>Anasayfa</option><option value='1002'>Moda</option><option value='1003'>1001</option>
                     </select>
                     <script>
@@ -484,16 +484,16 @@ $(window).resize(function(){
                         $("#change_subpage").toggleClass("disabledInput");
                     });
                     </script>
-                    <h6 class="bottom-0 top-0 font-1em">Kategori</h6>
+                    <h6 class="bottom-0 top-0 font-1em">Category</h6>
                     <ul class="cleanList nextToEach bottom-10"><li class="padL-0"><div><input type="checkbox" id="checkbox1" name="categories[]" value="1"><label for="checkbox1">Menü</label></div></li></ul>
                 </div>
                 <div class="ButtonPos1 IWantItDownR padR-30 widthAll fixed index-10 padL-332" zMob-1200="padL-32">
                     <div class="pad-20 gradYouToWhite">
-                        <button class="zButton primary widthAll zShadow5 top-20">Oluştur</button>
+                        <button class="zButton primary widthAll zShadow5 top-20">Create</button>
                     </div>
                 </div>
                 <div class="ButtonPos2">
-                    <button class="zButton primary widthAll zShadow5 top-20">Oluştur</button>
+                    <button class="zButton primary widthAll zShadow5 top-20">Create</button>
                 </div>
             </form>
         </div>

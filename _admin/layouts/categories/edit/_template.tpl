@@ -38,7 +38,7 @@
                             </label>
                             <select class="pad-10 top-0 bottom-0" id="change_lang" name="change_lang">
                                 <option disabled>{zThis z="Choose..."}</option>
-                                {$zTools->zToolsGetLanguages($zUser->id_lang)}
+                                {$zTools->zToolsGetLanguages($zUser->id_lang, true)}
                             </select>
                         </div>
                         <script>
@@ -51,7 +51,7 @@
                 </div>
                 <div><input name="id_category" id="id_category" type="text" value="{$smarty.get.id_category}" style="display:none"></div>
                 {foreach from=$zTools->zToolsGetAllLangs() item=l}
-                    <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang}display:none{/if}">
+                    <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display:none{/if}">
                         <div><input name="id_lang[{$l->id}]" id="id_lang_{$l->id}"
                                     type="text" value="{$l->id}" style="display:none"></div>
                         <div class="bottom-10">
