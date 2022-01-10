@@ -20,7 +20,9 @@ if (isset($_POST["zPage"])) {
     $target_dir = "";
 }
 
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$allowed_formats = array("jpg", "bmp", "xbm", "wbmp", "webp", "png", "jpeg", "gif", "mp4", "m4v");
+
+$target_file = $target_dir . htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if (isset($_POST["langcode"])) {
@@ -55,19 +57,17 @@ while (file_exists($target_file)) {
     $target_file = $target_dir . $newName;
 }
 
-if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
-    $target_file = preg_replace("/\.".$imageFileType."$/", ".webp", $target_file);
+$target_file = preg_replace("/\.".$imageFileType."$/", ".webp", $target_file);
 
-    // Check if file already exists for these types
-    while (file_exists($target_file)) {
-        $newName = strtolower(pathinfo($target_file,PATHINFO_FILENAME)) . "_new.webp";
-        $_FILES["fileToUpload"]["name"] = $newName;
-        $target_file = $target_dir . $newName;
-    }
-
-    $_FILES["fileToUpload"]["name"] = preg_replace("/\.webp$/", ".".$imageFileType, $_FILES["fileToUpload"]["name"]);
-    $target_file = preg_replace("/\.webp$/", ".".$imageFileType, $target_file);
+// Check if file already exists for these types
+while (file_exists($target_file)) {
+    $newName = strtolower(pathinfo($target_file,PATHINFO_FILENAME)) . "_new.webp";
+    $_FILES["fileToUpload"]["name"] = $newName;
+    $target_file = $target_dir . $newName;
 }
+
+$_FILES["fileToUpload"]["name"] = preg_replace("/\.webp$/", ".".$imageFileType, $_FILES["fileToUpload"]["name"]);
+$target_file = preg_replace("/\.webp$/", ".".$imageFileType, $target_file);
 
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 20000000) {
@@ -75,12 +75,93 @@ if ($_FILES["fileToUpload"]["size"] > 20000000) {
     $uploadOk = 0;
 }
 
+if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
+    if ($_FILES["fileToUpload"]["size"] > 1000000) {
+        $quality = 50;
+    } else {
+        $quality = 100;
+    }
+}
+
 // Allow certain file formats
 if (!isset($_POST["filepond"])) {
-    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" && $imageFileType != "mp4" && $imageFileType != "m4v") {
+    if (!in_array($imageFileType, $allowed_formats)) {
         $error = $lang["Sorry, only JPG, JPEG, PNG, GIF, MP4 & M4V files are allowed."];
         $uploadOk = 0;
     }
+}
+
+// copied from: https://stackoverflow.com/questions/26314508/convert-jpg-to-webp-using-imagewebp
+function webpConvert2($file, $type, $compression_quality = 80) {
+    // check if file exists
+    if (!file_exists($file)) {
+        return false;
+    }
+    $file_type = exif_imagetype($file);
+    //https://www.php.net/manual/en/function.exif-imagetype.php
+    //exif_imagetype($file);
+    // 1    IMAGETYPE_GIF
+    // 2    IMAGETYPE_JPEG
+    // 3    IMAGETYPE_PNG
+    // 6    IMAGETYPE_BMP
+    // 15   IMAGETYPE_WBMP
+    // 16   IMAGETYPE_XBM
+    $output_file = $file_type != "1" ? preg_replace("/\.".$type."$/", ".webp", $file) : $file;
+    if (function_exists("imagewebp")) {
+        switch ($file_type) {
+            case '1': //IMAGETYPE_GIF
+                $image = imagecreatefromgif($file);
+                break;
+            case '2': //IMAGETYPE_JPEG
+                $image = imagecreatefromjpeg($file);
+                break;
+            case '3': //IMAGETYPE_PNG
+                    $image = imagecreatefrompng($file);
+                    imagepalettetotruecolor($image);
+                    imagealphablending($image, true);
+                    imagesavealpha($image, true);
+                    break;
+            case '6': // IMAGETYPE_BMP
+                $image = imagecreatefrombmp($file);
+                break;
+            case '15': //IMAGETYPE_WBMP
+               return false;
+                break;
+            case '16': //IMAGETYPE_XBM
+                $image = imagecreatefromxbm($file);
+                break;
+            case '18': //IMAGETYPE_WEBP
+                break;
+            default:
+                return false;
+        }
+        if (getimagesize($file)[0] > 2000) {
+            $image = imagescale($image, 2000);
+        }
+        if ($file_type != "1" && $file_type != "18") {
+            // Save the image
+            $result = imagewebp($image, $output_file, $compression_quality);
+            if (false === $result) {
+                return false;
+            }
+            // Free up memory
+            imagedestroy($image);
+            unlink($file);
+        }
+        return basename($output_file);
+    } elseif (class_exists("Imagick")) {
+        $image = new Imagick();
+        $image->readImage($file);
+        if ($file_type === "3") {
+            $image->setImageFormat("webp");
+            $image->setImageCompressionQuality($compression_quality);
+            $image->setOption("webp:lossless", "true");
+        }
+        $image->writeImage($output_file);
+        unlink($file);
+        return basename($output_file);
+    }
+    return false;
 }
 
 // Check if $uploadOk is set to 0 by an error
@@ -90,27 +171,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
-            $file = $target_file;
-            if ($imageFileType == "png") {
-                $image = imagecreatefrompng($file);
-            } else {
-                $image = imagecreatefromjpeg($file);
-            }
-            ob_start();
-            imagejpeg($image, NULL, 100);
-            $cont = ob_get_contents();
-            ob_end_clean();
-            imagedestroy($image);
-            $content = imagecreatefromstring($cont);
-            imagewebp($content, preg_replace("/\.".$imageFileType."$/", ".webp", $target_file), 50);
-            imagedestroy($content);
-            unlink($target_file);
-
-            echo htmlspecialchars(preg_replace("/\.".$imageFileType."$/", ".webp", basename($_FILES["fileToUpload"]["name"])));
-        } else {
-            echo htmlspecialchars(basename($_FILES["fileToUpload"]["name"]));
-        }
+        echo ($imageFileType != "mp4" && $imageFileType != "m4v") ? webpConvert2($target_file, $imageFileType) : basename($target_file);
     } else {
         header("Content-Type: application/json; charset=UTF-8");
         die($target_file . "||" . $_FILES["fileToUpload"]["tmp_name"]);

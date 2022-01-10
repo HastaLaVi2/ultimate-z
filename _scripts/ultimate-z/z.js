@@ -943,6 +943,7 @@ document.addEventListener("scroll", function(event) {
 
 window.addEventListener("resize", function(event) {
     zMobVSzWeb();
+    zAnimate();
     zDetect();
     magic();
 });

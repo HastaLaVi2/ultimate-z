@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-23 22:14:20
+/* Smarty version 3.1.40, created on 2022-01-07 17:06:05
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/design/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61c4f4bc3bbec2_40687799',
+  'unifunc' => 'content_61d872fdbfb879_44018133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,31 +18,31 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1637665907,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640259430,
+      1 => 1640422377,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl',
-      1 => 1640259422,
+      1 => 1640422377,
       2 => 'file',
     ),
     'a1024cb52edf47d66bf10c48f378e40c156099d3' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/loading.tpl',
-      1 => 1637660534,
+      1 => 1640874529,
       2 => 'file',
     ),
     'ee145e4b305193bfa0799dbe5399d0e2b0bf7047' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl',
-      1 => 1639138246,
+      1 => 1640422377,
       2 => 'file',
     ),
     '0858768a9f44129c1b02f0fefb43d98e29f9ca91' => 
@@ -54,13 +54,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '67a4baec2d8f0389261da3ebe9486ae621a65e05' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/pageHeader.tpl',
-      1 => 1639138316,
+      1 => 1640422377,
       2 => 'file',
     ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1637666153,
+      1 => 1641388364,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -72,7 +72,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61c4f4bc3bbec2_40687799 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61d872fdbfb879_44018133 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -143,8 +143,8 @@ function content_61c4f4bc3bbec2_40687799 (Smarty_Internal_Template $_smarty_tpl)
 </head>
 <body class="back7">
     
-<div id="zLoad1" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
-<div id="zLoad2" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 padL-332 zMob1200-padL-0">
+<div id="zLoad1" zEffect="slide" class="floatingSpace displayNone mortalW-8 widthAll heightAll fixed font-24 index-12"></div>
+<div id="zLoad2" zEffect="slide" class="floatingSpace displayNone back7 widthAll heightAll fixed font-24 index-13 padL-332 zMob1200-padL-0">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -157,8 +157,8 @@ function content_61c4f4bc3bbec2_40687799 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 </div>
 
-<div id="zLoad0_1" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
-<div id="zLoad0_2" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
+<div id="zLoad0_1" zEffect="slide" class="zPreLoadOut floatingSpace widthAll heightAll"></div>
+<div id="zLoad0_2" zEffect="slide" class="zPreLoadIn back7 floatingSpace widthAll heightAll">
     <div class="hollyMid">
         <center>
             <div class="clockInfinite back6 square-90 rad-20 pad-3">
@@ -375,7 +375,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.1</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
     </div>
 </footer>
     </div>

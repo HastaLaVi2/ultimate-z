@@ -247,6 +247,29 @@ $lang["Theme Color"] = "Tema Rengi";
 $lang["Creating Files"] = "Dosyalar Oluşturuluyor";
 $lang["Wait until your files created..."] = "Lütfen dosyalarınız oluşturulurken biraz bekleyin...";
 
+# zMedia
+$lang["Create New Folder"] = "Yeni Klasör Oluştur";
+$lang["Size"] = "Boyut";
+$lang["Modified"] = "Son değiştirilme";
+$lang["Permissions"] = "İzinler";
+$lang["upload files"] = "dosya yükle";
+$lang["create folder"] = "yeni klasör";
+$lang["copy"] = "kopyala";
+$lang["cut"] = "kes";
+$lang["paste"] = "yapıştır";
+$lang["download"] = "indir";
+$lang["rename"] = "yeniden adlandır";
+$lang["delete"] = "sil";
+$lang["This folder is empty."] = "Bu klasör boş.";
+$lang["Hidden drive"] = "Gizli bellek";
+$lang["File or directory not found."] = "Dosya veya klasör bulunamadı.";
+$lang["Forbidden"] = "Yasaklandı";
+$lang["XSRF Failure"] = "XSRF Hatası";
+$lang["Not a directory."] = "Bir klasör değil.";
+$lang["File with the same name already exists on this folder."] = "Aynı ada sahip bir dosya bu klasörde zaten mevcut.";
+$lang["Files of this type are not allowed."] = "Bu uzantıya sahip dosyalara izin yoktur.";
+$lang["Enter a New Name"] = "Yeni Bir Ad Girin";
+
 # SCRIPT: simple-datatables
 $lang["entries per page"] = "gösterilen öge sayısı";
 $lang["Showing [start] to [end] of [rows] entries"] = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";

@@ -374,6 +374,10 @@ if(isset($_SERVER["REQUEST_URI"])) {
 
         $userIP = $_SERVER["REMOTE_ADDR"];
         $updateIP = zDB::get()->execute("UPDATE zUsers SET ip_user = '$userIP' WHERE id_user = '$zUser->id'");
+
+        if (!$_COOKIE["_z_xsrf"]) {
+            setcookie("_z_xsrf", bin2hex($z->hidden_key));
+        }
     }
 
     // if 404 error page is disabled

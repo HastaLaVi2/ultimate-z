@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-30 23:28:21
+/* Smarty version 3.1.40, created on 2022-01-10 17:45:38
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ce40951c6af8_02457259',
+  'unifunc' => 'content_61dc70c22d2f45_04009133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1640422377,
+      1 => 1641388364,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61ce40951c6af8_02457259 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '97797539561ce40951c5f56_51517497';
+function content_61dc70c22d2f45_04009133 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '102682905061dc70c22d24e3_64532116';
 ?>
 
 <footer class="font-16 text6 padT-40 bottom-50">
@@ -29,7 +29,7 @@ $_smarty_tpl->compiled->nocache_hash = '97797539561ce40951c5f56_51517497';
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.2</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
     </div>
 </footer>
 <?php }

@@ -234,7 +234,6 @@
                 // modalNumber values, but when they are copied to the actual page,
                 // we need to change it with a new modalNumber
                 var data = el.getAttribute("data");
-                console.log(modalNumber);
 
                 if (el.getAttribute("update") == "true") {
                     $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
@@ -380,6 +379,7 @@
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
                         updateFilepond(e);
+                        console.log(filename);
                     }
                 },
                 error: function(data) {
@@ -458,7 +458,6 @@
                 var filename = $(e.target).find("#filepond--item-" + item.id).find("legend").text();
                 finalOrder.push(filename);
             });
-            console.log(finalOrder);
 
             elem.closest(".top-20").prev().children().each(function () {
                 $(this).val(finalOrder.join(";"));

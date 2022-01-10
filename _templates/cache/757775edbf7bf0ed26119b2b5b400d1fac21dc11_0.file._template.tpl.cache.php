@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-30 23:28:21
+/* Smarty version 3.1.40, created on 2022-01-10 17:45:34
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ce40950ecd81_06056648',
+  'unifunc' => 'content_61dc70be895471_13840665',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1640848692,
+      1 => 1641810036,
       2 => 'file',
     ),
   ),
@@ -20,385 +20,661 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61ce40950ecd81_06056648 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc70be895471_13840665 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '54309490661ce40950c0be4_83471970';
+$_smarty_tpl->compiled->nocache_hash = '143694851861dc70be854d30_87240197';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15400062561ce40950e1780_20099789', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_188204409561dc70be86f741_51641385', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_54850254161ce40950eb0b9_96283020', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_113546889961dc70be87a294_16200460', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_152154759461ce40950ec6f7_27357597', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_127506209561dc70be889d33_17863460', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_15400062561ce40950e1780_20099789 extends Smarty_Internal_Block
+class Block_188204409561dc70be86f741_51641385 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_15400062561ce40950e1780_20099789',
+    0 => 'Block_188204409561dc70be86f741_51641385',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
 ?>
 
     <style>
-    th { font-weight: normal; color: #1F75CC; background-color: #F0F9FF; padding:.5em 1em .5em .2em;
-        text-align: left;cursor:pointer;user-select: none;}
-    th .indicator { margin-left: 6px }
-    thead { border-top: 1px solid #82CFFA; border-bottom: 1px solid #96C4EA;border-left: 1px solid #E7F2FB;
-        border-right: 1px solid #E7F2FB; }
-    #top { height:52px;}
-    #mkdir { display:inline-block;float:right;padding-top:16px;}
-    label { display:block; font-size:11px; color:#555;}
-    #file_drop_target { width:500px; padding:12px 0; border: 4px dashed #ccc;font-size:12px;color:#ccc;
-        text-align: center;float:right;margin-right:20px;}
-    #file_drop_target.drag_over { border: 4px dashed #96C4EA; color: #96C4EA;}
     #upload_progress { padding: 4px 0;}
-    #upload_progress .error { color:#a00;}
     #upload_progress > div { padding:3px 0;}
-    .no_write #mkdir, .no_write #file_drop_target { display: none}
     .progress_track { display:inline-block;width:200px;height:10px;border:1px solid #333;margin: 0 4px 0 10px;}
     .progress { background-color: #82CFFA;height:10px; }
-    #breadcrumb { padding-top:34px; font-size:15px; color:#aaa;display:inline-block;float:left;}
-    #folder_actions { width: 50%;float:right;}
-    .sort_hide{ display:none;}
-    table { border-collapse: collapse;width:100%;}
-    thead { max-width: 1024px}
-    td { padding:.2em 1em .2em .2em; border-bottom:1px solid #def;height:30px; font-size:12px;white-space: nowrap;}
-    td.first { font-size:14px;white-space: normal;}
-    td.empty { color:#777; font-style: italic; text-align: center;padding:3em 0;}
     .is_dir .size { color:transparent;font-size:0;}
     .is_dir .size:before { content: "--"; font-size:14px;color:#333;}
     .is_dir .download{ visibility: hidden}
-    a.delete { display:inline-block;
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADtSURBVHjajFC7DkFREJy9iXg0t+EHRKJDJSqRuIVaJT7AF+jR+xuNRiJyS8WlRaHWeOU+kBy7eyKhs8lkJrOzZ3OWzMAD15gxYhB+yzAm0ndez+eYMYLngdkIf2vpSYbCfsNkOx07n8kgWa1UpptNII5VR/M56Nyt6Qq33bbhQsHy6aR0WSyEyEmiCG6vR2ffB65X4HCwYC2e9CTjJGGok4/7Hcjl+ImLBWv1uCRDu3peV5eGQ2C5/P1zq4X9dGpXP+LYhmYz4HbDMQgUosWTnmQoKKf0htVKBZvtFsx6S9bm48ktaV3EXwd/CzAAVjt+gHT5me0AAAAASUVORK5CYII=) no-repeat scroll 0 2px;
-        color:#d00;	margin-left: 15px;font-size:11px;padding:0 0 0 13px;
-    }
-    .name {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABAklEQVRIie2UMW6DMBSG/4cYkJClIhauwMgx8CnSC9EjJKcwd2HGYmAwEoMREtClEJxYakmcoWq/yX623veebZmWZcFKWZbXyTHeOeeXfWDN69/uzPP8x1mVUmiaBlLKsxACAC6cc2OPd7zYK1EUYRgGZFkG3/fPAE5fIjcCAJimCXEcGxKnAiICERkSIcQmeVoQhiHatoWUEkopJEkCAB/r+t0lHyVN023c9z201qiq6s2ZYA9jDIwx1HW9xZ4+Ihta69cK9vwLvsX6ivYf4FGIyJj/rg5uqwccd2Ar7OUdOL/kPyKY5/mhZJ53/2asgiAIHhLYMARd16EoCozj6EzwCYrrX5dC9FQIAAAAAElFTkSuQmCC) no-repeat scroll 0px 12px;
-        padding:15px 0 10px 40px;
-    }
-    .is_dir .name {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAI0SURBVFiF7Vctb1RRED1nZu5977VQVBEQBKZ1GCDBEwy+ISgCBsMPwOH4CUXgsKQOAxq5CaKChEBqShNK222327f79n0MgpRQ2qC2twKOGjE352TO3Jl76e44S8iZsgOww+Dhi/V3nePOsQRFv679/qsnV96ehgAeWvBged3vXi+OJewMW/Q+T8YCLr18fPnNqQq4fS0/MWlQdviwVqNpp9Mvs7l8Wn50aRH4zQIAqOruxANZAG4thKmQA8D7j5OFw/iIgLXvo6mR/B36K+LNp71vVd1cTMR8BFmwTesc88/uLQ5FKO4+k4aarbuPnq98mbdo2q70hmU0VREkEeCOtqrbMprmFqM1psoYAsg0U9EBtB0YozUWzWpVZQgBxMm3YPoCiLpxRrPaYrBKRSUL5qn2AgFU0koMVlkMOo6G2SIymQCAGE/AGHRsWbCRKc8VmaBN4wBIwkZkFmxkWZDSFCwyommZSABgCmZBSsuiHahA8kA2iZYzSapAsmgHlgfdVyGLTFg3iZqQhAqZB923GGUgQhYRVElmAUXIGGVgedQ9AJJnAkqyClCEkkfdM1Pt13VHdxDpnof0jgxB+mYqO5PaCSDRIAbgDgdpKjtmwm13irsnq4ATdKeYcNvUZAt0dg5NVwEQFKrJlpn45lwh/LpbWdela4K5QsXEN61tytWr81l5YSY/n4wdQH84qjd2J6vEz+W0BOAGgLlE/AMAPQCv6e4gmWYC/QF3d/7zf8P/An4AWL/T1+B2nyIAAAAASUVORK5CYII=) no-repeat scroll 0px 10px;
-        padding:15px 0 10px 40px;
-    }
-    .download {
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB2klEQVR4nJ2ST2sTQRiHn5mdmj92t9XmUJIWJGq9NHrRgxQiCtqbl97FqxgaL34CP0FD8Qv07EHEU0Ew6EXEk6ci8Q9JtcXEkHR3k+zujIdUqMkmiANzmJdnHn7vzCuIWbe291tSkvhz1pr+q1L2bBwrRgvFrcZKKinfP9zI2EoKmm7Azstf3V7fXK2Wc3ujvIqzAhglwRJoS2ImQZMEBjgyoDS4hv8QGHA1WICvp9yelsA7ITBTIkwWhGBZ0Iv+MUF+c/cB8PTHt08snb+AGAACZDj8qIN6bSe/uWsBb2qV24/GBLn8yl0plY9AJ9NKeL5ICyEIQkkiZenF5XwBDAZzWItLIIR6LGfk26VVxzltJ2gFw2a0FmQLZ+bcbo/DPbcd+PrDyRb+GqRipbGlZtX92UvzjmUpEGC0JgpC3M9dL+qGz16XsvcmCgCK2/vPtTNzJ1x2kkZIRBSivh8Z2Q4+VkvZy6O8HHvWyGyITvA1qndNpxfguQNkc2CIzM0xNk5QLedCEZm1VKsf2XrAXMNrA2vVcq4ZJ4DhvCSAeSALXASuLBTW129U6oPrT969AK4Bq0AeWARs4BRgieMUEkgDmeO9ANipzDnH//nFB0KgAxwATaAFeID5DQNatLGdaXOWAAAAAElFTkSuQmCC) no-repeat scroll 0px 5px;
-        padding:4px 0 4px 20px;
-    }
+    .custom-menu li { padding: 8px 12px;cursor: pointer;}
+    .custom-menu li:hover { background-color: var(--color7);}
     </style>
+    <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/simple-datatables/style.css">
     <?php echo '<script'; ?>
 >
-    function zPageJS_media() {
-        $.fn.tablesorter = function() {
-            var $table = this;
-            this.find('th').click(function() {
-                var idx = $(this).index();
-                var direction = $(this).hasClass('sort_asc');
-                $table.tablesortby(idx,direction);
-            });
-            return this;
-        };
-        $.fn.tablesortby = function(idx,direction) {
-            var $rows = this.find('tbody tr');
-            function elementToVal(a) {
-                var $a_elem = $(a).find('td:nth-child('+(idx+1)+')');
-                var a_val = $a_elem.attr('data-sort') || $a_elem.text();
-                return (a_val == parseInt(a_val) ? parseInt(a_val) : a_val);
-            }
-            $rows.sort(function(a,b){
-                var a_val = elementToVal(a), b_val = elementToVal(b);
-                return (a_val > b_val ? 1 : (a_val == b_val ? 0 : -1)) * (direction ? 1 : -1);
-            })
-            this.find('th').removeClass('sort_asc sort_desc');
-            $(this).find('thead th:nth-child('+(idx+1)+')').addClass(direction ? 'sort_desc' : 'sort_asc');
-            for(var i =0;i<$rows.length;i++)
-                this.append($rows[i]);
-            this.settablesortmarkers();
-            return this;
-        }
-        $.fn.retablesort = function() {
-            var $e = this.find('thead th.sort_asc, thead th.sort_desc');
-            if($e.length)
-                this.tablesortby($e.index(), $e.hasClass('sort_desc') );
+    var entriesPerPage = "<?php echo smarty_function_zThis(array('z'=>"entries per page"),$_smarty_tpl);?>
+";
+    var searchOn = "<?php echo smarty_function_zThis(array('z'=>"Search..."),$_smarty_tpl);?>
+";
+    var showingOf = "<?php echo smarty_function_zThis(array('z'=>"Showing [start] to [end] of [rows] entries"),$_smarty_tpl);?>
+";
+    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
+    var noRowFound = "<?php echo smarty_function_zThis(array('z'=>"No entries found"),$_smarty_tpl);?>
+";
 
-            return this;
-        }
-        $.fn.settablesortmarkers = function() {
-            this.find('thead th span.indicator').remove();
-            this.find('thead th.sort_asc').append('<span class="indicator">&darr;<span>');
-            this.find('thead th.sort_desc').append('<span class="indicator">&uarr;<span>');
-            return this;
-        }
-
-        var XSRF = (document.cookie.match('(^|; )_z_xsrf=([^;]*)')||0)[2];
-        var MAX_UPLOAD_SIZE = <?php echo $_smarty_tpl->tpl_vars['MAX_UPLOAD_SIZE']->value;?>
-;
-        var $tbody = $('#list');
-        $(window).on('hashchange',list).trigger('hashchange');
-        $('#table').tablesorter();
-
-        $('#table').on('click', '.delete', function(data) {
-            $.ajax({
-                type: "POST",
-                url: "",
-                data: { 'do':'delete',file:$(this).attr('data-file'),xsrf:XSRF},
-                success: function() {
-                    list();
-                },
-                error: function() {
-                    list();
-                },
-                dataType: "json"
-            });
-            return false;
-        });
-
-        $('#mkdir').submit(function(e) {
-            var hashval = decodeURIComponent(window.location.hash.substr(1)),
-                $dir = $(this).find('[name=name]');
-            e.preventDefault();
-            if ($dir.val().length) {
-                $.ajax({
-                    type: "POST",
-                    url: "?",
-                    data: { 'do':'mkdir',name:$dir.val(),xsrf:XSRF,file:hashval},
-                    success: function() {
-                        list();
-                    },
-                    error: function() {
-                        list();
-                    },
-                    dataType: "json"
-                });
-            }
-            $dir.val('');
-            return false;
-        });
-    <?php if ($_smarty_tpl->tpl_vars['allow_upload']->value) {?>
-        // file upload stuff
-        $('#file_drop_target').on('dragover',function(){
-            $(this).addClass('drag_over');
-            return false;
-        }).on('dragend',function(){
-            $(this).removeClass('drag_over');
-            return false;
-        }).on('drop',function(e){
-            e.preventDefault();
-            var files = e.originalEvent.dataTransfer.files;
-            $.each(files,function(k,file) {
-                uploadFile(file);
-            });
-            $(this).removeClass('drag_over');
-        });
-        $('input[type=file]').change(function(e) {
-            e.preventDefault();
-            $.each(this.files,function(k,file) {
-                uploadFile(file);
-            });
-        });
-
-
-        function uploadFile(file) {
-            var folder = decodeURIComponent(window.location.hash.substr(1));
-
-            if(file.size > MAX_UPLOAD_SIZE) {
-                var $error_row = renderFileSizeErrorRow(file,folder);
-                $('#upload_progress').append($error_row);
-                window.setTimeout(function(){ $error_row.fadeOut();},5000);
-                return false;
-            }
-
-            var $row = renderFileUploadRow(file,folder);
-            $('#upload_progress').append($row);
-            var fd = new FormData();
-            fd.append('file_data',file);
-            fd.append('file',folder);
-            fd.append('xsrf',XSRF);
-            fd.append('do','upload');
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '?');
-            xhr.onload = function() {
-                $row.remove();
-                list();
-            };
-            xhr.upload.onprogress = function(e){
-                if(e.lengthComputable) {
-                    $row.find('.progress').css('width',(e.loaded/e.total*100 | 0)+'%' );
-                }
-            };
-            xhr.send(fd);
-        }
-        function renderFileUploadRow(file,folder) {
-            return $row = $('<div/>')
-                .append( $('<span class="fileuploadname" />').text( (folder ? folder+'/':'')+file.name))
-                .append( $('<div class="progress_track"><div class="progress"></div></div>')  )
-                .append( $('<span class="size" />').text(formatFileSize(file.size)) )
-        };
-        function renderFileSizeErrorRow(file,folder) {
-            return $row = $('<div class="error" />')
-                .append( $('<span class="fileuploadname" />').text( 'Error: ' + (folder ? folder+'/':'')+file.name))
-                .append( $('<span/>').html(' file size - <b>' + formatFileSize(file.size) + '</b>'
-                    +' exceeds max upload size of <b>' + formatFileSize(MAX_UPLOAD_SIZE) + '</b>')  );
-        }
-    <?php }?>
-        function list() {
-            var hashval = window.location.hash.substr(1);
-            $.get('?do=list&file='+ hashval,function(data) {
-                $tbody.empty();
-                $('#breadcrumb').empty().html(renderBreadcrumbs(hashval));
-                if(data.success) {
-                    $.each(data.results,function(k,v){
-                        $tbody.append(renderFileRow(v));
-                    });
-                    !data.results.length && $tbody.append('<tr><td class="empty" colspan=5>This folder is empty</td></tr>')
-                    data.is_writable ? $('body').removeClass('no_write') : $('body').addClass('no_write');
-                } else {
-                    console.warn(data.error.msg);
-                }
-                $('#table').retablesort();
-            },'json');
-        }
-        function renderFileRow(data) {
-            var $link = $('<a class="name" />')
-                .attr('href', data.is_dir ? '#' + encodeURIComponent(data.path) : './' + data.path)
-                .text(data.name);
-            var allow_direct_link = '<?php if ($_smarty_tpl->tpl_vars['allow_direct_link']->value) {?>true<?php } else { ?>false<?php }?>'
-                if (!data.is_dir && !allow_direct_link)  $link.css('pointer-events','none');
-            var $dl_link = $('<a/>').attr('href','?do=download&file='+ encodeURIComponent(data.path))
-                .addClass('download').text('download');
-            var $delete_link = $('<a href="#" />').attr('data-file',data.path).addClass('delete').text('delete');
-            var perms = [];
-            if(data.is_readable) perms.push('read');
-            if(data.is_writable) perms.push('write');
-            if(data.is_executable) perms.push('exec');
-            var $html = $('<tr />')
-                .addClass(data.is_dir ? 'is_dir' : '')
-                .append( $('<td class="first" />').append($link) )
-                .append( $('<td/>').attr('data-sort',data.is_dir ? -1 : data.size)
-                    .html($('<span class="size" />').text(formatFileSize(data.size))) )
-                .append( $('<td/>').attr('data-sort',data.mtime).text(formatTimestamp(data.mtime)) )
-                .append( $('<td/>').text(perms.join('+')) )
-                .append( $('<td/>').append($dl_link).append( data.is_deleteable ? $delete_link : '') )
-            return $html;
-        }
-        function renderBreadcrumbs(path) {
-            var base = "",
-                $html = $('<div/>').append( $('<a href=#>Home</a></div>') );
-            $.each(path.split('%2F'),function(k,v){
-                if(v) {
-                    var v_as_text = decodeURIComponent(v);
-                    $html.append( $('<span/>').text(' ▸ ') )
-                        .append( $('<a/>').attr('href','#'+base+v).text(v_as_text) );
-                    base += v + '%2F';
-                }
-            });
-            return $html;
-        }
-        function formatTimestamp(unix_timestamp) {
-            var m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            var d = new Date(unix_timestamp*1000);
-            return [m[d.getMonth()],' ',d.getDate(),', ',d.getFullYear()," ",
-                (d.getHours() % 12 || 12),":",(d.getMinutes() < 10 ? '0' : '')+d.getMinutes(),
-                " ",d.getHours() >= 12 ? 'PM' : 'AM'].join('');
-        }
-        function formatFileSize(bytes) {
-            var s = ['bytes', 'KB','MB','GB','TB','PB','EB'];
-            for(var pos = 0;bytes >= 1000; pos++,bytes /= 1024);
-            var d = Math.round(bytes*10);
-            return pos ? [parseInt(d/10),".",d%10," ",s[pos]].join('') : bytes + ' bytes';
-        }
-    }
-    $(document).ready(function() {
-        zPageJS_media();
+    $("input[type=checkbox]").change(function() {
+        var clas = $(this).attr("class").split(" ")[1];
+        var checked = $(this).prop("checked");
+        $("."+clas).prop("checked", checked);
     });
     <?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/simple-datatables/simple-datatables.js"><?php echo '</script'; ?>
 >
 <?php
 }
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_54850254161ce40950eb0b9_96283020 extends Smarty_Internal_Block
+class Block_113546889961dc70be87a294_16200460 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_54850254161ce40950eb0b9_96283020',
+    0 => 'Block_113546889961dc70be87a294_16200460',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
 ?>
 
+    <ul class="font-15 display-none hideRest floatingSpace index-1000 noWrap whiteBack rad-10 zShadow2 cleanList">
+        <li data-action = "first">First thing</li>
+        <li data-action = "second">Second thing</li>
+        <li data-action = "third">Third thing</li>
+    </ul>
+    <nav>
+        <div id="breadcrumb" class="padB-8 font-16">&nbsp;</div>
+    </nav>
     <section class="whiteBack rad-15 pad-20 font-16">
-        <div id="top">
-           <?php if ($_smarty_tpl->tpl_vars['allow_create_folder']->value) {?>
-                <form action="?" method="post" id="mkdir" />
-                    <label for=dirname>Create New Folder</label><input id=dirname type=text name=name value="" />
-                    <input type="submit" value="create" />
-                </form>
-            <?php }?>
-
-           <?php if ($_smarty_tpl->tpl_vars['allow_upload']->value) {?>
-                <div id="file_drop_target">
-                    Drag Files Here To Upload
-                    <b>or</b>
-                    <input type="file" multiple />
-                </div>
-           <?php }?>
-            <div id="breadcrumb">&nbsp;</div>
-        </div>
-
+        <input id="hashchange" type="text" class="display-none">
+        <input id="copy_files" type="text" class="display-none">
+        <input id="cut_files" type="text" class="display-none">
         <div id="upload_progress"></div>
-        <table id="table">
+        <div id="actions" class="padB-10">
+            <?php if ($_smarty_tpl->tpl_vars['allow_upload']->value) {?>
+            <span class="upload pointThis text5 boldText padR-10">
+                <label for="fragdrop" class="pointThis">
+                    <i class="fas fa-upload padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"upload files"),$_smarty_tpl);?>
+
+                </label>
+                <input id="fragdrop" type="file" multiple class="displayNone" />
+            </span>
+            <?php }?>
+            <?php if ($_smarty_tpl->tpl_vars['allow_create_folder']->value) {?>
+            <a class="create padR-10" href="#modalForCreate">
+                <i class="fas fa-plus padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"create folder"),$_smarty_tpl);?>
+
+            </a>
+            <?php }?>
+            <span class="copy pointNo gray2 boldText padR-10">
+                <i class="fas fa-copy padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"copy"),$_smarty_tpl);?>
+
+            </span>
+            <span class="cut pointNo gray2 boldText padR-10">
+                <i class="fas fa-cut padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"cut"),$_smarty_tpl);?>
+
+            </span>
+            <span class="paste pointNo gray2 boldText padR-10">
+                <i class="fas fa-paste padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"paste"),$_smarty_tpl);?>
+
+            </span>
+            <a class="rename hideActions display-none padR-10" href="#modalForRename">
+                <i class="fas fa-pen padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"rename"),$_smarty_tpl);?>
+
+            </a>
+            <a class="download forceLink hideActions display-none padR-10">
+                <i class="fas fa-download padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"download"),$_smarty_tpl);?>
+
+            </a>
+            <span class="delete hideActions display-none pointThis text5 boldText">
+                <i class="fas fa-trash-alt padR-5"></i> <?php echo smarty_function_zThis(array('z'=>"delete"),$_smarty_tpl);?>
+
+            </span>
+        </div>
+        <table id="table" class="zTable">
             <thead>
                 <tr>
-                <th>Name</th>
-                <th>Size</th>
-                <th>Modified</th>
-                <th>Permissions</th>
-                <th>Actions</th>
-            </tr>
+                    <th class="width-20">
+                        <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
+                    </th>
+                    <th><?php echo smarty_function_zThis(array('z'=>"Name"),$_smarty_tpl);?>
+</th>
+                    <th><?php echo smarty_function_zThis(array('z'=>"Size"),$_smarty_tpl);?>
+</th>
+                    <th><?php echo smarty_function_zThis(array('z'=>"Modified"),$_smarty_tpl);?>
+</th>
+                    <th><?php echo smarty_function_zThis(array('z'=>"Permissions"),$_smarty_tpl);?>
+</th>
+                </tr>
             </thead>
             <tbody id="list">
             </tbody>
         </table>
     </section>
-<?php
+    <?php ob_start();
+echo smarty_function_zThis(array('z'=>"Preview"),$_smarty_tpl);
+$_prefixVariable1 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->value->src["admin"])."/_partials/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array('_mLabel'=>'ForView','_mTitle'=>$_prefixVariable1), 0, true);
+?>
+    <?php ob_start();
+echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;
+$_prefixVariable2 = ob_get_clean();
+ob_start();
+echo smarty_function_zThis(array('z'=>"Create"),$_smarty_tpl);
+$_prefixVariable3 = ob_get_clean();
+ob_start();
+echo smarty_function_zThis(array('z'=>"Create New Folder"),$_smarty_tpl);
+$_prefixVariable4 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->value->src["admin"])."/_partials/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array('_mLabel'=>'ForCreate','_mForm'=>$_prefixVariable2,'_mFormId'=>'mkdir','_mContent'=>'<input id="dirname" class="pad-10" type=text name=name value="" />','_mSubmit'=>$_prefixVariable3,'_mTitle'=>$_prefixVariable4), 0, true);
+?>
+    <?php ob_start();
+echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;
+$_prefixVariable5 = ob_get_clean();
+ob_start();
+echo smarty_function_zThis(array('z'=>"Submit"),$_smarty_tpl);
+$_prefixVariable6 = ob_get_clean();
+ob_start();
+echo smarty_function_zThis(array('z'=>"Enter a New Name"),$_smarty_tpl);
+$_prefixVariable7 = ob_get_clean();
+$_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->value->src["admin"])."/_partials/modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array('_mLabel'=>'ForRename','_mForm'=>$_prefixVariable5,'_mFormId'=>'renaming','_mHidden'=>'<input type=text name=file />','_mContent'=>'<input id="dirname" class="pad-10" type=text name=new value="" />','_mSubmit'=>$_prefixVariable6,'_mTitle'=>$_prefixVariable7), 0, true);
 }
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_152154759461ce40950ec6f7_27357597 extends Smarty_Internal_Block
+class Block_127506209561dc70be889d33_17863460 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_152154759461ce40950ec6f7_27357597',
+    0 => 'Block_127506209561dc70be889d33_17863460',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
 ?>
 
+<?php echo '<script'; ?>
+>
+function zPageJS_media() {
+    let dataTable;
+    var XSRF = (document.cookie.match('(^|; )_z_xsrf=([^;]*)')||0)[2];
+    var MAX_UPLOAD_SIZE = <?php echo $_smarty_tpl->tpl_vars['MAX_UPLOAD_SIZE']->value;?>
+;
+    $("#hashchange").on("change", function() {
+        list();
+    });
+    list();
 
+    function table() {
+        // Simple Datatable
+        let tables = document.querySelectorAll(".zTable");
+
+        if (dataTable && typeof(dataTable) == "object") {
+            var newFolder = $("#list").clone().html();
+            dataTable.destroy();
+            $("#list").html(newFolder);
+        }
+
+        tables.forEach((item, i) => {
+            dataTable = new simpleDatatables.DataTable(item, {
+                columns: [
+                    { select: [0], sortable: false},
+                ]
+            });
+            dataTable.on("datatable.page", function(page) {
+                $("#zContent").find("a").click(magicLinks);
+                tableFunctions();
+            });
+            dataTable.on("datatable.sort", function(column, direction) {
+                $("#zContent").find("a").click(magicLinks);
+                tableFunctions();
+            });
+        });
+
+        zDetect();
+        tableFunctions();
+
+        $(".allBoxes").click(function() {
+            var checkBoxes = $("#list .zCheckbox");
+            checkBoxes.prop("checked", $("#list .zCheckbox:checked").length != checkBoxes.length ? true : false);
+            checkboxActions();
+        });
+
+        $(".hideActions").each(function() {
+            if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
+        });
+
+        $("#breadcrumb a").click(function() {
+            $("#hashchange").val($(this).attr("data-href")).trigger("change");
+        });
+    }
+
+    function tableFunctions() {
+        $("#list a").click(function() {
+            var el = $(this);
+            if (el.attr("type") == "dir") {
+                $("#hashchange").val(el.attr("data-href")).trigger("change");
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+",
+                    data: { "do":"preview",name:el.text(),xsrf:XSRF,file:el.attr("data-file")},
+                    error: function(r) {
+                        var params = JSON.parse(r.responseText.slice(0, -1));
+                        window.location.assign("#modalForView");
+                        var title = $("#modalForView .modal-header h5").clone().text(el.text());
+                        $("#modalForView .modal-header").html(title[0].outerHTML
+                            +"<span class='font-12'>"+formatFileSize(params[2])+"</span>");
+                        var html = params[1] == "img"
+                            ? "<img src='"+params[0]+"' style='max-height: 60vh;max-width: 100%'>"
+                            : "";
+                        $("#modalForView .zInside").html(html);
+                    },
+                    dataType: "json"
+                });
+            }
+        });
+
+        $("#list .zCheckbox").change(checkboxActions);
+    }
+
+    function checkboxActions() {
+        var actions = $("#actions");
+        var count = $("#list .zCheckbox:checked");
+        var del = actions.find(".delete");
+        var dow = actions.find(".download");
+        var ren = actions.find(".rename");
+        var copy = actions.find(".copy");
+        var cut = actions.find(".cut");
+        var delAr = [], dowAr = [], allAr = [], theresIsDelete = false;
+
+        if (count.length) {
+            count.each(function() {
+                if (!$(this).hasClass("allBoxes")) {
+                    var data = $(this).parent().parent();
+                    var file = data.attr("data-file");
+                    var deletable = data.attr("data-deletable");
+                    var download = data.attr("data-download");
+
+                    if(deletable && deletable == "true") { delAr.push(file)} else { theresIsDelete = true}
+                    dowAr.push(download);
+                    allAr.push(file);
+                }
+            });
+            if (theresIsDelete == false) {
+                del.removeClass("display-none").attr("data-file", JSON.stringify(delAr));
+            } else {
+                if(!del.hasClass("display-none")) del.addClass("display-none");
+            }
+            dow.removeClass("display-none").attr("href", "?do=download&file=" + JSON.stringify(dowAr));
+            if (count.length == 1 && theresIsDelete == false) {
+                ren.removeClass("display-none");
+            } else {
+                if(!ren.hasClass("display-none")) ren.addClass("display-none");
+            }
+            if (delAr[0]) {
+                $("#renaming input[name=file]").val(delAr[0]);
+                $("#renaming input[name=new]").val(delAr[0].split("/").reverse()[0]);
+            }
+            copy.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+            cut.removeClass("pointNo").addClass("pointThis text5").attr("data-file", JSON.stringify(allAr));
+        } else {
+           $(".hideActions").each(function() {
+               if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
+           });
+           copy.addClass("pointNo").removeClass("pointThis text5");
+           cut.addClass("pointNo").removeClass("pointThis text5");
+        }
+        $(".allBoxes").prop("checked", count.length == $("#list .zCheckbox").length ? true : false);
+    }
+
+    $("#actions").on("click", ".delete", function() {
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+",
+            data: { "do": "delete", file: $(this).attr("data-file"), xsrf: XSRF},
+            error: function(e) {
+                list();
+                $(".hideActions").each(function() {
+                    if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
+                });
+            },
+            dataType: "json"
+        });
+        return false;
+    });
+
+    $("#actions").on("click", ".paste", function() {
+        var action = $(this).attr("data-action");
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+",
+            data: { "do": "paste", file: $(this).attr("data-file"), xsrf: XSRF, action: action, location: $("#hashchange").val()},
+            error: function() {
+                list();
+                $(".hideActions").each(function() {
+                    if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
+                });
+                if(action == "cut") {
+                    $("#actions").find(".paste").addClass("pointNo").removeClass("pointThis text5");
+                }
+             },
+            dataType: "json"
+        });
+        return false;
+    });
+
+    $("#actions").on("click", ".copy", function() {
+        var data = $(this).attr("data-file");
+        $("#copy_files").val(data);
+        $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
+                     .attr("data-action", "copy").attr("data-file", data);
+    });
+
+    $("#actions").on("click", ".cut", function() {
+        var data = $(this).attr("data-file");
+        $("#copy_files").val(data);
+        $("#actions").find(".paste").removeClass("pointNo").addClass("pointThis text5")
+                     .attr("data-action", "cut").attr("data-file", data);
+    });
+
+    $("#renaming").submit(function(e) {
+        var newName = $(this).find("[name=new]").val();
+        var file = $(this).find("[name=file]").val();
+        var zInside = $(this).find(".zInside");
+        e.preventDefault();
+        if (newName.length) {
+            $.ajax({
+                type: "POST",
+                url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+",
+                data: { "do": "rename", new: newName, xsrf:XSRF, file: file},
+                error: function(e) {
+                    if (IsJsonString(e.responseText)) {
+                        var res = JSON.parse(e.responseText);
+                        Toastify({
+                            text: res.error.msg,
+                            duration: 3000,
+                            backgroundColor: "#f3616d",
+                        }).showToast();
+                    } else { zInside.find(".error").remove();list();window.location.assign("#");}
+                },
+                dataType: "json"
+            });
+        }
+        return false;
+    });
+
+    $("#mkdir").submit(function(e) {
+        var hashval = $("#hashchange").val().substr(1),
+            $dir = $(this).find("[name=name]");
+        e.preventDefault();
+        if ($dir.val().length) {
+            $.ajax({
+                type: "POST",
+                url: "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+",
+                data: { "do":"mkdir",name:$dir.val(),xsrf:XSRF,file:hashval},
+                error: function() {
+                    list();
+                    window.location.assign("#");
+                },
+                dataType: "json"
+            });
+        }
+        $dir.val("");
+        return false;
+    });
+
+    <?php if ($_smarty_tpl->tpl_vars['allow_upload']->value) {?>
+    $("input[type=file]").change(function(e) {
+        e.preventDefault();
+        $.each(this.files,function(k,file) {
+            uploadFile(file);
+        });
+    });
+    function uploadFile(file) {
+        var folder = $("#hashchange").val().substr(1);
+
+        if (file.size > MAX_UPLOAD_SIZE) {
+            var $error_row = renderFileSizeErrorRow(file,folder);
+            $("#upload_progress").append($error_row);
+            window.setTimeout(function(){ $error_row.fadeOut();},5000);
+            return false;
+        }
+
+        var $row = renderFileUploadRow(file,folder);
+        $("#upload_progress").append($row);
+        var fd = new FormData();
+        fd.append("file_data",file);
+        fd.append("file",folder);
+        fd.append("xsrf",XSRF);
+        fd.append("do", "upload");
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+");
+        xhr.onload = function() {
+            $row.remove();
+            list();
+        };
+        xhr.upload.onprogress = function(e){
+            if(e.lengthComputable) {
+                $row.find(".progress").css("width", (e.loaded/e.total*100 | 0)+'%' );
+            }
+        };
+        xhr.send(fd);
+    }
+    function renderFileUploadRow(file,folder) {
+        return $row = $("<div/>")
+            .append( $('<span class="fileuploadname" />').text( (folder ? folder+'/':'')+file.name))
+            .append( $('<div class="progress_track"><div class="progress"></div></div>')  )
+            .append( $('<span class="size" />').text(formatFileSize(file.size)) )
+    };
+    function renderFileSizeErrorRow(file,folder) {
+        Toastify({
+            text: "Error: " + (folder ? folder+'/':'')+ file.name + ' file size - <b>'
+                    + formatFileSize(file.size) + '</b>'
+                    +' exceeds max upload size of <b>' + formatFileSize(MAX_UPLOAD_SIZE) + '</b>',
+            duration: 3000,
+            backgroundColor: "#f3616d",
+        }).showToast();
+    }
+    <?php }?>
+
+    function list() {
+        var $tbody = $("#list");
+        var hashval = $("#hashchange").length ? $("#hashchange").val().substr(1) : null;
+        $.get('?do=list&file='+ hashval,function(data) {
+            $tbody.empty();
+            $('#breadcrumb').empty().html(renderBreadcrumbs(hashval));
+            if(data.success) {
+                $.each(data.results,function(k,v){
+                    v.path = v.path.replace("../../_media/", "").replace("./", "");
+                    if (v.path == "hidden_drive") { v.is_deleteable = false}
+                    $tbody.append(renderFileRow(v));
+                });
+                !data.results.length && $tbody.append('<tr><td class="empty" colspan=5><?php echo smarty_function_zThis(array('z'=>"This folder is empty."),$_smarty_tpl);?>
+</td></tr>')
+                data.is_writable ? $('body').removeClass('no_write') : $("body").addClass("no_write");
+            } else {
+                console.warn(data.error.msg);
+            }
+            table();
+        }, "json");
+    }
+
+    function renderFileRow(data) {
+        var $link = $('<a class="name" />')
+            .attr("href", "#")
+            .attr("data-href", data.is_dir ? "#" + data.path : "#")
+            .text(data.name == "hidden_drive" ? "<?php echo smarty_function_zThis(array('z'=>'Hidden drive'),$_smarty_tpl);?>
+" : data.name).attr("data-file", data.path).attr("type", data.is_dir ? "dir" : "file");
+        var allow_direct_link = '<?php if ($_smarty_tpl->tpl_vars['allow_direct_link']->value) {?>true<?php } else { ?>false<?php }?>'
+            if (!data.is_dir && !allow_direct_link)  $link.css('pointer-events','none');
+        var perms = [];
+        if(data.is_readable) perms.push('read');
+        if(data.is_writable) perms.push('write');
+        if(data.is_executable) perms.push('exec');
+        var $html = $('<tr />')
+            .attr("data-file", data.path)
+            .attr("data-download", data.path)
+            .addClass(data.is_dir ? "is_dir" : "")
+            .append("<td class='select'><input type='checkbox' class='zCheckbox boldMin-2 rad-5 pad-10'></td>")
+            .append( $('<td class="first" />').append(data.is_dir ? "<i class='fas fa-folder font-24 gray2 padR-15'></i>" : "<i class='fas fa-file font-24 gray2 padR-15'></i>").append($link) )
+            .append( $('<td/>').attr('data-sort',data.is_dir ? -1 : data.size)
+                .html($('<span class="size" />').text(formatFileSize(data.size))) )
+            .append( $('<td/>').attr('data-sort',data.mtime).text(formatTimestamp(data.mtime)) )
+            .append( $('<td/>').text(perms.join('+')) );
+        if(data.is_deleteable) $html.attr("data-deletable", "true");
+        return $html;
+    }
+
+    function renderBreadcrumbs(path) {
+        var base = "",
+            $html = $('<div/>').append( $('<a href=#><?php echo $_smarty_tpl->tpl_vars['zPage']->value->name;?>
+</a></div>') );
+        $.each(path.split("/"),function(k,v){
+            if(v) {
+                var v_as_text = v;
+                $html.append( $('<span/>').html(' <i class="fas fa-caret-right"></i> ') )
+                    .append( $('<a/>').attr("href", "#").attr('data-href','#'+base+v).text(v_as_text == "hidden_drive" ? "<?php echo smarty_function_zThis(array('z'=>'Hidden drive'),$_smarty_tpl);?>
+" : v_as_text) );
+                base += v + '/';
+            }
+        });
+        return $html;
+    }
+
+    function IsJsonString(str) {
+        try {
+            JSON.parse(str);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
+
+    function formatTimestamp(unix_timestamp) {
+        $.ajax({
+            "async": false,
+            "url": "<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+/apexcharts/locales/<?php echo $_smarty_tpl->tpl_vars['zContent']->value->language->iso_code;?>
+.json",
+            "dataType": "json",
+            "success": function (data) {
+                window.apexLang = data;
+            }
+        });
+        var m = window.apexLang.options.shortMonths;
+        var d = new Date(unix_timestamp*1000);
+        return [m[d.getMonth()]," ",d.getDate(),", ",d.getFullYear()," ",
+            (d.getHours() % 12 || 12),":",(d.getMinutes() < 10 ? "0" : "")+d.getMinutes(),
+            " ",d.getHours() >= 12 ? "PM" : "AM"].join("");
+    }
+
+    function formatFileSize(bytes) {
+        var s = ["bytes", "KB","MB","GB","TB","PB","EB"];
+        for(var pos = 0;bytes >= 1000; pos++,bytes /= 1024);
+        var d = Math.round(bytes*10);
+        return pos ? [parseInt(d/10),".",d%10," ",s[pos]].join("") : bytes + " bytes";
+    }
+
+    // copied from: https://jsfiddle.net/u2kJq/241/
+    // Trigger action when the contexmenu is about to be shown
+    $("#zContent").on("contextmenu", function (event) {
+
+        // Avoid the real one
+        event.preventDefault();
+
+        // Show contextmenu
+        $(".custom-menu").finish().toggle(100).
+
+        // In the right position (the mouse)
+        css({
+            top: event.pageY - 32 + "px",
+            left: event.pageX - 332 + "px"
+        });
+    });
+
+
+    // If the document is clicked somewhere
+    $("#zContent").on("mousedown", function (e) {
+
+        // If the clicked element is not the menu
+        if (!$(e.target).parents(".custom-menu").length > 0) {
+
+            // Hide it
+            $(".custom-menu").hide(100);
+        }
+    });
+
+
+    // If the menu element is clicked
+    $(".custom-menu li").click(function(){
+        // This is the triggered action name
+        switch($(this).attr("data-action")) {
+
+            // A case for each action. Your actions here
+            case "first": alert("first"); break;
+            case "second": alert("second"); break;
+            case "third": alert("third"); break;
+        }
+
+        // Hide it AFTER the action was triggered
+        $(".custom-menu").hide(100);
+    });
+
+    functionIsRunning = true;
+}
+
+var functionIsRunning = false;
+
+$(document).ready(function() {
+    if (!functionIsRunning) {
+        zPageJS_media();
+    }
+});
+<?php echo '</script'; ?>
+>
 <?php
 }
 }

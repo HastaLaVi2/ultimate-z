@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-28 18:12:30
+/* Smarty version 3.1.40, created on 2022-01-09 15:41:21
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61cb538e143ac1_63735257',
+  'unifunc' => 'content_61db0221ad1798_40025458',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1640712800,
+      1 => 1641742466,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/modal.tpl' => 1,
   ),
 ),false)) {
-function content_61cb538e143ac1_63735257 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61db0221ad1798_40025458 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '96840739861cb538e0c4d06_90145642';
+$_smarty_tpl->compiled->nocache_hash = '172739294561db0221a667e4_99999241';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_55277660961cb538e0df736_56980042', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_164269150861db0221a82b25_30074993', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_77609367061cb538e0e5af7_09236858', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_212652426161db0221a88331_72294585', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_189936867061cb538e12be28_46575097', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_145931278261db0221ac14d5_31254826', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_55277660961cb538e0df736_56980042 extends Smarty_Internal_Block
+class Block_164269150861db0221a82b25_30074993 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_55277660961cb538e0df736_56980042',
+    0 => 'Block_164269150861db0221a82b25_30074993',
   ),
 );
 public $append = 'true';
@@ -78,12 +78,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_77609367061cb538e0e5af7_09236858 extends Smarty_Internal_Block
+class Block_212652426161db0221a88331_72294585 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_77609367061cb538e0e5af7_09236858',
+    0 => 'Block_212652426161db0221a88331_72294585',
   ),
 );
 public $append = 'true';
@@ -299,12 +299,12 @@ $_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_189936867061cb538e12be28_46575097 extends Smarty_Internal_Block
+class Block_145931278261db0221ac14d5_31254826 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_189936867061cb538e12be28_46575097',
+    0 => 'Block_145931278261db0221ac14d5_31254826',
   ),
 );
 public $append = 'true';
@@ -411,7 +411,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 // modalNumber values, but when they are copied to the actual page,
                 // we need to change it with a new modalNumber
                 var data = el.getAttribute("data");
-                console.log(modalNumber);
 
                 if (el.getAttribute("update") == "true") {
                     $(el).find(".zTog-downHolder" + data).removeClass("zTog-downHolder" + data).addClass("zTog-downHolder" + modalNumber);
@@ -562,6 +561,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
                         updateFilepond(e);
+                        console.log(filename);
                     }
                 },
                 error: function(data) {
@@ -608,7 +608,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             allowMultiple: (multi == "true" ? true : false),
                             allowReorder: (multi == "true" ? true : false),
                             maxFileSize: "20MB",
-                            acceptedFileTypes: ["image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
+                            acceptedFileTypes: ["image/webp", "image/png", "image/jpg", "image/jpeg", "image/gif", "video/mp4", "video/m4v"],
                             fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
                                 // Do custom type detection here and return with promise
                                 resolve(type);
@@ -642,7 +642,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 var filename = $(e.target).find("#filepond--item-" + item.id).find("legend").text();
                 finalOrder.push(filename);
             });
-            console.log(finalOrder);
 
             elem.closest(".top-20").prev().children().each(function () {
                 $(this).val(finalOrder.join(";"));

@@ -275,7 +275,8 @@ hr {
 .pointThis {cursor: pointer;}
 .pointRun {pointer-events: auto;}
 .pointNo {pointer-events: none;}
-.hideRest {overflow: hidden;}
+.hideRest, .hide-rest {overflow: hidden;}
+.hide-fix {overflow: initial;}
 
 /* the mobOnly! - that is */
 .mobOnly {

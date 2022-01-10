@@ -100,7 +100,7 @@ class zUserTools {
 			$result = $db->select($query);
             if(!empty($result))$data=$result[0];
 
-            $check_for_user = "SELECT * FROM zUsers WHERE name = '$name' AND surname = '$surname'";
+            $check_for_user = "SELECT * FROM zUsers WHERE BINARY name = '$name' AND surname = '$surname'";
 			$check_for_user = $db->select($check_for_user);
 
             if (empty($check_for_user)) {

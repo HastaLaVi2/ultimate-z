@@ -247,6 +247,29 @@ $lang["Theme Color"] = "Theme Color";
 $lang["Creating Files"] = "Creating Files";
 $lang["Wait until your files created..."] = "Wait until your files created...";
 
+# zMedia
+$lang["Create New Folder"] = "Create New Folder";
+$lang["Size"] = "Size";
+$lang["Modified"] = "Modified";
+$lang["Permissions"] = "Permissions";
+$lang["upload files"] = "upload files";
+$lang["create folder"] = "create folder";
+$lang["copy"] = "copy";
+$lang["cut"] = "cut";
+$lang["paste"] = "paste";
+$lang["download"] = "download";
+$lang["rename"] = "rename";
+$lang["delete"] = "delete";
+$lang["This folder is empty."] = "This folder is empty.";
+$lang["Hidden drive"] = "Hidden drive";
+$lang["File or directory not found."] = "File or directory not found.";
+$lang["Forbidden"] = "Forbidden";
+$lang["XSRF Failure"] = "XSRF Failure";
+$lang["Not a directory."] = "Not a directory.";
+$lang["File with the same name already exists on this folder."] = "File with the same name already exists on this folder.";
+$lang["Files of this type are not allowed."] = "Files of this type are not allowed.";
+$lang["Enter a New Name"] = "Enter a New Name";
+
 # SCRIPT: simple-datatables
 $lang["entries per page"] = "entries per page";
 $lang["Showing [start] to [end] of [rows] entries"] = "Showing [start] to [end] of [rows] entries";

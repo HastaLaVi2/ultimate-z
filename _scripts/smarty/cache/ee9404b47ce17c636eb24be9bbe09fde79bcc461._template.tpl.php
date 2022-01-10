@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2021-12-30 14:29:23
+/* Smarty version 3.1.40, created on 2022-01-02 08:03:26
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61cdc2435b7dd4_02175064',
+  'unifunc' => 'content_61d15c4e910771_38053175',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -72,7 +72,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61cdc2435b7dd4_02175064 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61d15c4e910771_38053175 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -552,7 +552,7 @@ $(window).resize(function(){
                     </tr>
                                                         <tr>
                         <td>zViewsPage</td>
-                        <td>48</td>
+                        <td>51</td>
                         <td>
                             <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
@@ -563,7 +563,7 @@ $(window).resize(function(){
                     </tr>
                                                         <tr>
                         <td>zViewsPageByUser</td>
-                        <td>54</td>
+                        <td>57</td>
                         <td>
                             <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPageByUser" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
@@ -574,7 +574,7 @@ $(window).resize(function(){
                     </tr>
                                                         <tr>
                         <td>zViewsTotal</td>
-                        <td>33</td>
+                        <td>35</td>
                         <td>
                             <a href="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsTotal" class="zButton zHov-zShadow5 primary sweet">
                                  Düzenle
