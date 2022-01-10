@@ -19,39 +19,57 @@ if (strpos("$_SERVER[REQUEST_URI]", "zCategory.php") !== false) {
 }
 
 class zCategory {
+    # id of the zCategory.
     public $id;
+
+    # name of the zCategory in the given zLanguage.
     public $name;
 
-    # connect to database
+    # construct the object.
     public function __construct($id_category = NULL, $id_lang = NULL) {
+        # get the database.
         $db = zDB::get();
 
+        # assign the id to the zCategory.
         $this->id = $id_category;
 
-        # get template id
+        # get the data for the zCategory for all zLanguages from the database.
 		$query = $db->select("SELECT * FROM zCategories WHERE id_category = '$this->id'");
 
-        # get name
+        # get the data for the zCategory for given zLanguage from the database.
 		$query_tr = $db->select("SELECT * FROM zCategories_tr WHERE id_category = '$this->id' AND id_lang = '$id_lang'");
 
+        # if we have a given zLanguage, let us assign the zLanguage-related properties.
         if (!empty($query_tr)) {
             $this->name = $query_tr[0]["value"];
         } else {
+            # and if we do not have information in the given zLanguage on the database,
+            # assign all zLanguage-related properties based on the default zLanguage: English.
             $query_tr = $db->select("SELECT * FROM zCategories_tr WHERE id_category = '$this->id' AND id_lang = '1'");
             $this->name = $query_tr[0]["value"];
         }
     }
 
-    # connect to database
+    /*
+        used on files     : {}
+        what does it do   : get the zPages belong to the zCategory in question.
+        returns           : PHP ARRAY
+    */
     public function zCategoryGetPages($id_lang = NULL) {
+        # get the database.
         $db = zDB::get();
 
-        # get page ids
+        # get the zPage ids belonging to this zCategory from the database.
 		$query = $db->select("SELECT * FROM zPagesCategories WHERE id_category = '$this->id' ORDER BY id_page");
 
+        # create an empty array.
         $names = array();
+
+        # our request to the database returned any zPage ids?
         if (!empty($query)) {
             foreach ($query as $i) {
+                # if so, let us create zPages out of them,
+                # then push the zPages into the $names array.
                 $id_page = $i["id_page"];
                 $zPage = new zPage($id_page, $id_lang);
                 array_push($names, $zPage);

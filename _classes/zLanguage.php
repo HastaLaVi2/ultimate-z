@@ -19,19 +19,29 @@ if (strpos("$_SERVER[REQUEST_URI]", "zLanguage.php") !== false) {
 }
 
 class zLanguage {
+    # id for the zLanguage.
     public $id;
+
+    # name of the zLanguage.
     public $name;
+
+    # iso code of the zLanguage.
     public $iso_code;
+
+    # four-letter code (for example: en-EN) of the zLanguage
     public $four_code;
+
+    # the status of the zLanguage.
+    # DEFAULT: enabled.
     public $disabled;
 
-    # connect to database
+    # construct the object.
     public function __construct($id_language = NULL) {
         $db = zDB::get();
 
         $this->id = $id_language;
 
-        # get the name
+        # get the data from the database.
         $query = $db->select("SELECT * FROM zLanguages WHERE id_lang = '$this->id'");
 
         if ($query[0]) {

@@ -19,10 +19,21 @@ if (strpos("$_SERVER[REQUEST_URI]", "zContent.php") !== false) {
 }
 
 class zContent {
+    # an array contains the necessary directories' locations in "../" kind.
     public $src;
+
+    # an array contains the necessary directories' locations in http/https.
+    # srcFull has a "_main" value, which the $src property does not have,
+    # and this value returns the domain name without the zLanguage iso code.
     public $srcFull;
+
+    # base URI for the domain.
     public $base_uri;
+
+    # current URL.
     public $current;
+
+    # zLanguage for the current zPage.
     public $language;
 
     # connect to database

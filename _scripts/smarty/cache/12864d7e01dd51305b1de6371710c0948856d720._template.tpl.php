@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 17:45:38
+/* Smarty version 3.1.40, created on 2022-01-10 20:49:35
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc70c2319019_88245703',
+  'unifunc' => 'content_61dc9bdf4c6e38_09964514',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -84,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61dc70c2319019_88245703 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dc9bdf4c6e38_09964514 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -400,14 +400,14 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                464
+                                470
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
                                                                                 <div class="widthAll padL-20 padR-100">
                             Moda
                             <span class="floatingTheRight padR-20 boldText" style="color: #008b75">
-                                35
+                                36
                             </span>
                         </div>
                         <div id="chart-1002" class="left--22 right--10"></div>
@@ -432,7 +432,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">519</h6>
+        <h6 class="top-0 bottom-0">526</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -639,19 +639,19 @@ $(window).resize(function(){
         window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["1","1","0","1","9","1","0"]);
+        apexBarCreate("#chart-profile-visit", 7, ["8","1","0","1","9","1","0"]);
                 if ($("#chart-1001").length) {
             apexLineCreate(
                 "#chart-1001",
                 12,
-                ["1","1","0","1","9","1","0","2","1","3","0","16"],
+                ["7","1","0","1","9","1","0","2","1","3","0","16"],
                 "#5350e9"            );
         }
                 if ($("#chart-1002").length) {
             apexLineCreate(
                 "#chart-1002",
                 12,
-                ["0","0","0","0","0","0","0","0","0","1","0","2"],
+                ["1","0","0","0","0","0","0","0","0","1","0","2"],
                 "#008b75"            );
         }
                 if ($("#chart-1003").length) {

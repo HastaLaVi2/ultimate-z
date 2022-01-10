@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 20:09:14
+/* Smarty version 3.1.40, created on 2022-01-10 23:04:50
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/categories/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc926a89dc57_46755218',
+  'unifunc' => 'content_61dcbb92bf5aa2_08330077',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -78,12 +78,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61dc926a89dc57_46755218 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61dcbb92bf5aa2_08330077 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <title>Categories | zAdmin</title>
+    <title>Kategoriler | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
@@ -198,35 +198,35 @@ function content_61dc926a89dc57_46755218 (Smarty_Internal_Template $_smarty_tpl)
 </div>
         <div class="top-40">
             <ul class="cleanList font-16">
-                <li class="text4 padLR-1rem weight-600">Menu</li>
+                <li class="text4 padLR-1rem weight-600">Menü</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-th-large text6"></i>
-                        <span class="padL-15">Dashboard</span>
+                        <span class="padL-15">Gösterge Paneli</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 back5 color-white">
                         <i class="fas fa-layer-group whiteText"></i>
-                        <span class="padL-15">Layouts</span>
+                        <span class="padL-15">Düzen</span>
                         <i class="fas fa-chevron-down inRight top-3 whiteText"></i>
                     </a>
                     <ul class="zShow-side1 font-13 padL-2rem left-2rem toggled">
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/design" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Design
+                                Tasarım
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Pages
+                                Sayfalar
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/categories/index.php" class="weight-700 text5">
-                                Categories
+                                Kategoriler
                             </a>
                         </li>
                     </ul>
@@ -235,39 +235,39 @@ function content_61dc926a89dc57_46755218 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/media" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-photo-video text6"></i>
-                        <span class="padL-15">Media</span>
+                        <span class="padL-15">Medya</span>
                     </a>
                 </li>
 
-                                <li class="text4 padLR-1rem weight-600 padT-30">Preferences</li>
+                                <li class="text4 padLR-1rem weight-600 padT-30">Seçenekler</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/preferences" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-cog text6"></i>
-                        <span class="padL-15">Preferences</span>
+                        <span class="padL-15">Seçenekler</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/users" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-users text6"></i>
-                        <span class="padL-15">Users</span>
+                        <span class="padL-15">Kullanıcılar</span>
                     </a>
                 </li>
 
-                <li class="text4 padLR-1rem weight-600 padT-30">Advanced</li>
+                <li class="text4 padLR-1rem weight-600 padT-30">İleri Düzey</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/database" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-server text6"></i>
-                        <span class="padL-15">Database</span>
+                        <span class="padL-15">Veritabanı</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/run-queries" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-terminal text6"></i>
-                        <span class="padL-15">Run Queries</span>
+                        <span class="padL-15">Sorgu Çalıştır</span>
                     </a>
                 </li>
                 
@@ -314,7 +314,7 @@ $(window).resize(function(){
     <a href="http://localhost/ultimate-z/" target="_blank" class="inLine colTop pointThis right-30 rightText index-10">
         <div class="no zMob768-displayNone">
             <div class="inLine verMid font-15">
-                View
+                Görüntüle
                 <div class="font-12">ultimate Z</div>
             </div>
             <div class="inLine verMid">
@@ -325,7 +325,7 @@ $(window).resize(function(){
     <div id="zUser" class="inLine colTop pointThis zTog-userMenu index-10">
         <div class="inLine colTop rightText padR-15">
             <h5 class="top-0 bottom-0">Kerimcan Ayaz</h5>
-            <h6 class="top-0 bottom-0">Administrator</h6>
+            <h6 class="top-0 bottom-0">Yönetici</h6>
         </div>
         <div class="inLine width-39">
             <img src="http://localhost/ultimate-z/_media/user/profile/4.jpg" class="pagePic widthAll rad-half">
@@ -333,14 +333,14 @@ $(window).resize(function(){
     </div>
     <div class="zShow-userMenu displayNone">
         <div class="floatingTheRight whiteBack rad-15 pad-20 index-10 width-250 zShadow font-16">
-            <div class="font-14 weight-700 gray3 bottom-10">Hello, Kerimcan!</div>
+            <div class="font-14 weight-700 gray3 bottom-10">Merhaba, Kerimcan!</div>
             <a href="http://localhost/ultimate-z/" target="_blank" class="displayNone zMob768-no">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoT boldMin-1">
                     <div class="inLine verMid">
                         <i class="fas fa-home padR-10"></i>
                     </div>
                     <div class="inLine verMid font-15">
-                        View
+                        Görüntüle
                         <div class="font-12">ultimate Z</div>
                     </div>
                 </div>
@@ -348,13 +348,13 @@ $(window).resize(function(){
             <a href="http://localhost/ultimate-z/_admin/profile/">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3">
                     <i class="fas fa-id-badge padR-10"></i>
-                    Profile
+                    Profil
                 </div>
             </a>
             <a href="http://localhost/ultimate-z/_admin/logout/" class="forceLink">
                 <div class="left--20 right--20 bottom--20 rad-b-15 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoB boldMin-1">
                     <i class="fas fa-sign-out-alt padR-10"></i>
-                    Log out
+                    Çıkış Yap
                 </div>
             </a>
         </div>
@@ -363,7 +363,7 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Categories</h3>
+            <h3 class="boldText top-10">Kategoriler</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
@@ -371,20 +371,20 @@ $(window).resize(function(){
             
     <div class="col-12">
         <div class="whiteBack rad-15 pad-20 font-16">
-            <h4 class="font-19 top-0 text4 boldText">Category List</h4>
+            <h4 class="font-19 top-0 text4 boldText">Kategori Listesi</h4>
             
             <a href="http://localhost/ultimate-z/_admin/layouts/categories/create/" class="zButton zHov-zShadow5 primary sweet font-16">
                 <i class="fas fa-plus-square right-10"></i>
-                Add New Category
+                Yeni Kategori Ekle
             </a>
             <div class="top-20"></div>
             <table class="zTable">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th>Ad</th>
+                        <th>Düzenle</th>
+                        <th>Sil</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -393,12 +393,12 @@ $(window).resize(function(){
                             <td>Menü</td>
                             <td>
                                 <a href="http://localhost/ultimate-z/_admin/layouts/categories/edit/index.php?id_category=1" class="zButton zHov-zShadow5 primary sweet">
-                                     Edit
+                                     Düzenle
                                 </a>
                             </td>
                             <td>
                                 
-<a href="#modal1" class="zButton zHov-zShadow5 primary sweet font-16">Delete</a>
+<a href="#modal1" class="zButton zHov-zShadow5 primary sweet font-16">Sil</a>
 
 <div class="zModal" id="modal1">
     <a class="zCancel" href="#"></a>
@@ -407,59 +407,19 @@ $(window).resize(function(){
                         <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/categories/index.php">
                             <div class="modal-header bg-primary">
                     <h5 class="top-0 bottom-0 font-18">
-                        Delete Category
+                        Kategoriyi Sil
                     </h5>
                 </div>
                 <div class="zInside gray2 font-15 padTB-20">
                     <div class="displayNone"><input name='id_category' value='1'></div>
-                    Are you sure you want to delete this category?
+                    Bu kategoriyi silmek istediğinize emin misiniz?
                 </div>
                 <div class="rightText">
                                         <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Close
+                        Kapat
                     </a>
                                                             <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>Accept</span>
-                    </button>
-                                    </div>
-                        </form>
-                    </div>
-    </div>
-</div>
-                            </td>
-                        </tr>
-                                            <tr id="zCategory-2">
-                            <td>2</td>
-                            <td>Heyyo</td>
-                            <td>
-                                <a href="http://localhost/ultimate-z/_admin/layouts/categories/edit/index.php?id_category=2" class="zButton zHov-zShadow5 primary sweet">
-                                     Edit
-                                </a>
-                            </td>
-                            <td>
-                                
-<a href="#modal2" class="zButton zHov-zShadow5 primary sweet font-16">Delete</a>
-
-<div class="zModal" id="modal2">
-    <a class="zCancel" href="#"></a>
-    <div class="zModalContent rad-15" zMob-768="zCol-11">
-        <div class="pad-20">
-                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/layouts/categories/index.php">
-                            <div class="modal-header bg-primary">
-                    <h5 class="top-0 bottom-0 font-18">
-                        Delete Category
-                    </h5>
-                </div>
-                <div class="zInside gray2 font-15 padTB-20">
-                    <div class="displayNone"><input name='id_category' value='2'></div>
-                    Are you sure you want to delete this category?
-                </div>
-                <div class="rightText">
-                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                        Close
-                    </a>
-                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
-                        <span>Accept</span>
+                        <span>Evet</span>
                     </button>
                                     </div>
                         </form>
@@ -494,11 +454,11 @@ $(window).resize(function(){
         
         
     <script>
-    var entriesPerPage = "entries per page";
-    var searchOn = "Search...";
-    var showingOf = "Showing [start] to [end] of [rows] entries";
+    var entriesPerPage = "gösterilen öge sayısı";
+    var searchOn = "Ara...";
+    var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
     showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-    var noRowFound = "No entries found";
+    var noRowFound = "Sonuç bulunamadı";
 
     $("input[type=checkbox]").change(function() {
         var clas = $(this).attr("class").split(" ")[1];

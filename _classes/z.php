@@ -19,23 +19,41 @@ if (strpos("$_SERVER[REQUEST_URI]", "z.php") !== false) {
 }
 
 class z {
+    # id of the Z.
     public $id;
+
+    # name of the Z.
     public $name;
+
+    # creation date in timestamp format.
     public $creation;
+
+    # the cookie key.
     public $key;
+
+    # if the website is accessible.
+    # DEFAULT: enabled.
     public $status;
+
+    # 404 zPage is enabled or not.
+    # DEFAULT: enabled.
     public $error;
+
+    # the hidden key to check the authorisation for the ultimate Z.
     public $hidden_key;
 
-    # connect to database
+    # construct the object.
     public function __construct($id_site = NULL) {
+        # get the database.
         $db = zDB::get();
 
+        # assign the id to the Z.
         $this->id = $id_site;
 
-        # get value
+        # let us get the data for the current Z from the database.
         $query = $db->select("SELECT * FROM z WHERE id_z = '$this->id'");
 
+        # assign all properties.
         if (!empty($query)) {
             $this->name = $query[0]["name"];
             $this->key = $query[0]["cookie_key"];

@@ -26,7 +26,8 @@ class zPageTools {
             "_scripts/smarty/libs/plugins/function.zPageName.php"
         }
         what does it do   : this function is called on a smarty plugin,
-                            which helps on smarty template files to get the link of a page.
+                            which helps on smarty template files to get the link of a zPage.
+        returns           : STRING
     */
     public function zPageGetPageName($id_page = NULL, $id_lang = NULL) {
         $zPage = new zPage($id_page, $id_lang);
@@ -38,7 +39,8 @@ class zPageTools {
         used on files     : {
             "_scripts/smarty/libs/plugins/function.zPageUrl.php"
         }
-        what does it do   : this function is used to get the link of a page.
+        what does it do   : this function is used to get the link of a zPage.
+        returns           : STRING
     */
     public function zPageGetPageUrl($id_page = NULL, $id_lang = NULL) {
         $zPage = new zPage($id_page, $id_lang);
@@ -51,7 +53,8 @@ class zPageTools {
             "_starters/back/layouts/pages/create/starter.php",
             "_starters/back/layouts/pages/edit/starter.php"
         }
-        what does it do   : this function is called both when creating a new page, or editing a page.
+        what does it do   : this function is called both when creating a zPage, or editing a zPage.
+        returns           : PHP BOOLEAN
     */
     public function zPageUpdate(array $data) {
         $db = zDB::get();
@@ -60,17 +63,17 @@ class zPageTools {
         $query = "";
 
         if(!empty($data)) {
-            # get page id from form.
+            # get zPage id from form.
             $id_page = $data["id_page"];
 
-            # fet page url from form.
+            # fet zPage url from form.
             $page_url = $data["page_url"];
 
             # prepare contains all the data for all languages.
             $prepare = $data["id_lang"];
 
-            # get all used holders ids and holders special ids for the current page
-            # all holders have an id of their own, and other ids on different pages.
+            # get all used holders ids and holders special ids for the current zPage
+            # all holders have an id of their own, and other ids on different zPages.
             $holder_ids = $data["id_holder"] ? $data["id_holder"] : array();
             $unique_holders = $data["id_page_holder"] ? $data["id_page_holder"] : array();
 
@@ -87,12 +90,12 @@ class zPageTools {
                 $subpage = 0;
             }
 
-            # get page status value
+            # get zPage status value
             $page_status = isset($data["page_status"]) ? 1 : 0;
 
             # check if we are on a "create page" or "edit page".
             if (!isset($id_page)) {
-                # if we are creating a page, we need to set a new id to our page.
+                # if we are creating a zPage, we need to set a new id to our zPage.
                 # check he last biggest number on the database.
                 $check_id_page = $db->select("SELECT * FROM zPages WHERE id_page > 1000 ORDER BY id_page");
                 if (!empty($check_id_page)) {
@@ -101,19 +104,19 @@ class zPageTools {
                     }
                 }
 
-                # plus one to that number and insert a new page row.
+                # plus one to that number and insert a new zPage row.
                 $id_page = $check + 1;
                 $query .= "INSERT INTO `zPages` (id_page, url, area, id_template, subpage) VALUES ('$id_page', '$page_url', 'front', '$id_template', '$subpage');";
             } else {
-                # if we are editing a page, we need to update some values.
+                # if we are editing a zPage, we need to update some values.
                 # url is always a single value, so we start with that.
                 # also, we need to update subpage parameter as well.
                 $query .= "UPDATE zPages SET url = '$page_url', subpage = '$subpage', status = '$page_status' WHERE id_page = '$id_page';";
 
-                # now, time to find out which template is used on the page.
+                # now, time to find out which template is used on the zPage.
                 $select1 = $db->select("SELECT * FROM zPages WHERE id_page = '$id_page'");
 
-                # we got our page from the table?
+                # we got our zPage from the table?
                 if (!empty($select1)) {
                     # get the template's id.
                     $id_template = $select1[0]["id_template"];
@@ -170,7 +173,7 @@ class zPageTools {
                 }
             }
 
-            # find the last holder id for the current page, we may need to insert a new holder,
+            # find the last holder id for the current zPage, we may need to insert a new holder,
             # so we might assign a new holder id.
             $lastId = $this->zPageGetHolderLastId();
 
@@ -295,7 +298,8 @@ class zPageTools {
         used on files     : {
             "_starters/back/layouts/pages/_starter.php"
         }
-        what does it do   : this function is used to delete a page.
+        what does it do   : this function is used to delete a zPage.
+        returns           : PHP BOOLEAN
     */
     public function zPageDelete(array $data) {
         $db = zDB::get();
@@ -346,7 +350,8 @@ class zPageTools {
 
     /*
         used on files     : {}
-        what does it do   : this function is used to get list of pages categorised by their templates.
+        what does it do   : this function is used to get list of zPages categorised by their templates.
+        returns           : PHP ARRAY
     */
     public function zPageGetByTemplate($id_template = NULL, $id_lang = NULL) {
         $db = zDB::get();
@@ -366,7 +371,8 @@ class zPageTools {
 
     /*
         used on files     : {}
-        what does it do   : this function is used to get list of pages categorised by their categories.
+        what does it do   : this function is used to get list of zPages categorised by their categories.
+        returns           : PHP ARRAY
     */
     public function zPageGetByCategory($id_category = NULL, $id_lang = NULL) {
         $db = zDB::get();
@@ -390,7 +396,8 @@ class zPageTools {
             "_admin/_template.tpl",
             "_admin/layouts/pages/_template.tpl"
         }
-        what does it do   : this function is used to get list of all pages.
+        what does it do   : this function is used to get list of all zPages.
+        returns           : PHP ARRAY
     */
     public function zPageGetAll($id_lang = NULL, $area = NULL) {
         $db = zDB::get();
@@ -418,7 +425,8 @@ class zPageTools {
             "_starters/back/layouts/pages/create/starter.php",
             "_starters/back/layouts/pages/edit/starter.php"
         }
-        what does it do   : this function is called both when creating a new page, or editing a page.
+        what does it do   : this function is called both when creating a new zPage, or editing a zPage.
+        returns           : HTML OUTPUT
     */
     public function zPageGetSubpageSelector($id_page = NULL, $id_lang = NULL) {
         $db = zDB::get();
@@ -444,6 +452,7 @@ class zPageTools {
 
     /*
         what does it do   : this function is used to get the id of the last saved holder to the database.
+        returns           : INTEGER
     */
     private function zPageGetHolderLastId() {
         $db = zDB::get();

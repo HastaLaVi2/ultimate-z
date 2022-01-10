@@ -19,24 +19,43 @@ if (strpos("$_SERVER[REQUEST_URI]", "zPage.php") !== false) {
 }
 
 class zPage {
+    # id of the zPage.
     public $id;
+
+    # name of the zPage in the given zLanguage.
     public $name;
+
+    # id of the zTemplate that the zPage in question created by.
     public $id_template;
+
+    # zTemplate object that the zPage in question created by.
     public $template;
+
+    # area of the zPage, two values: front or back.
     public $area;
+
+    # url of the zPage.
     public $url;
+
+    # <meta> description for the zPage.
     public $meta;
-    public $subpageOf;
+
+    # is this zPage a subpage?
+    # DEFAULT: false
     public $isSubpage;
+    # if so, which zPage that this zPage belongs to.
+    public $subpageOf;
+
+    # is this zPage accessible?
     public $status;
 
-    # connect to database
+    # construct the object.
     public function __construct($id_page = NULL, $id_lang = NULL) {
         $db = zDB::get();
 
         $this->id = $id_page;
 
-        # get the name
+        # get the name.
         $query_tr = $db->select("SELECT * FROM zPages_tr WHERE id_page = '$this->id' AND id_lang = '$id_lang'");
         if (!empty($query_tr)) {
             $this->name = $query_tr[0]["value"];
@@ -47,7 +66,7 @@ class zPage {
             $this->meta = $query_tr[0]["meta"];
         }
 
-        # get template id
+        # get template id.
 		$query = $db->select("SELECT * FROM zPages WHERE id_page = '$this->id'");
         if($query[0])$this->id_template=$query[0]["id_template"];
 
@@ -65,6 +84,13 @@ class zPage {
         }
     }
 
+    /*
+        used on files     : {
+            "__start.php"
+        }
+        what does it do   : returns the directory for the zTemplate of the zPage in question.
+        returns           : STRING
+    */
     public function zPageGetTemplateDir($slash = NULL) {
         $tree = $this->zPageGetTree();
         $finalDir = "";
@@ -81,25 +107,17 @@ class zPage {
         return $finalDir;
     }
 
-    public function zPageGetTree() {
-        $result = array();
-        $url = $this->url;
-
-        while (substr_count($url, "/") > 0) {
-            $url = ltrim($url, "/");
-            if (strpos($url, "/") > 0) {
-                array_push($result, substr($url, 0, strpos($url, "/")));
-            } else {
-                array_push($result, $url);
-            }
-            $url = substr($url, strpos($url, "/"));
+    /*
+        used on files     : {
+            "__start.php"
         }
-
-        return $result;
-    }
-
+        what does it do   : get the zStarters for the current zPage.
+        returns           : PHP ARRAY
+    */
     public function zPageGetStarters() {
+        # get the directory tree for the current zPage.
         $tree = $this->zPageGetTree();
+        # create an empty array.
         $result = array();
 
         if ($this->area == "front") {
@@ -117,6 +135,15 @@ class zPage {
         return $result;
     }
 
+    /*
+        used on files     : {
+            "_admin/_partials/holderEdit.tpl",
+            "_admin/layouts/pages/edit/_template.tpl",
+            "_classes/zPageTools.php"
+        }
+        what does it do   : get a zHolder and all of its data that belongs to the current zPage.
+        returns           : PHP OBJECT
+    */
     public function zPageGetHolder($id_lang = NULL, $id_holder = NULL, $id_block = NULL, $order = NULL) {
         $db = zDB::get();
 
@@ -132,6 +159,13 @@ class zPage {
         return $zHolder;
     }
 
+    /*
+        used on files     : {
+            "_admin/layouts/pages/edit/_template.tpl",
+        }
+        what does it do   : get a list of all zHolders for the current zPage.
+        returns           : PHP ARRAY
+    */
     public function zPageGetHolders($id_lang = NULL, $id_block = NULL) {
         $db = zDB::get();
 
@@ -157,6 +191,13 @@ class zPage {
         return $result;
     }
 
+    /*
+        used on files     : {
+            "_admin/_template.tpl",
+        }
+        what does it do   : get the view count for the current zPage.
+        returns           : INTEGER
+    */
     public function zPageGetViews() {
         $db = zDB::get();
 
@@ -173,6 +214,11 @@ class zPage {
         return $value;
     }
 
+    /*
+        used on files     : {}
+        what does it do   : get the zCategories that the current zPage belongs to.
+        returns           : PHP ARRAY
+    */
     public function zPageGetCategories($id_lang = NULL) {
         $db = zDB::get();
 
@@ -190,6 +236,15 @@ class zPage {
         return $value;
     }
 
+    /*
+        used on files     : {
+            "_admin/layouts/pages/create/_template.tpl",
+            "_admin/layouts/pages/edit/_template.tpl",
+            "_classes/zPageTools.php"
+        }
+        what does it do   : get the subpages that belongs to the current zPage.
+        returns           : PHP ARRAY
+    */
     public function zPageGetSubpages($id_lang = NULL) {
         $db = zDB::get();
 
@@ -205,5 +260,30 @@ class zPage {
         }
 
         return $value;
+    }
+
+    #
+    # internal functions
+    #
+
+    /*
+        what does it do   : returns the directory for the zTemplate of the zPage in question.
+        returns           : STRING
+    */
+    public function zPageGetTree() {
+        $result = array();
+        $url = $this->url;
+
+        while (substr_count($url, "/") > 0) {
+            $url = ltrim($url, "/");
+            if (strpos($url, "/") > 0) {
+                array_push($result, substr($url, 0, strpos($url, "/")));
+            } else {
+                array_push($result, $url);
+            }
+            $url = substr($url, strpos($url, "/"));
+        }
+
+        return $result;
     }
  }
