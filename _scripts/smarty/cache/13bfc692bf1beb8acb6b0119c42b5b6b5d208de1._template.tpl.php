@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:03:48
+/* Smarty version 3.1.40, created on 2022-01-22 09:50:26
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebc87445df06_46311202',
+  'unifunc' => 'content_61ebd362591d78_18449014',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,13 +18,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1642841872,
+      1 => 1642843802,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640422377,
+      1 => 1642844056,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -72,13 +72,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1630787909,
+      1 => 1642844528,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebc87445df06_46311202 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebd362591d78_18449014 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -132,7 +132,7 @@ function content_61ebc87445df06_46311202 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -509,48 +509,69 @@ $(window).resize(function(){
 </footer>
     </div>
 
-    <div id="zBottom">
+    <div id="zFooter">
         
 
     <!-- toastify -->
     <script src="http://localhost/ultimate-z/_scripts/toastify/toastify.js"></script>
-        <script>
-        var zTable = [];
-        var entriesPerPage = "gösterilen öge sayısı";
-        var searchOn = "Ara...";
-        var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
-        showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-        var noRowFound = "Sonuç bulunamadı";
 
-        $("input[type=checkbox]").change(function() {
-            var clas = $(this).attr("class").split(" ")[1];
-            var checked = $(this).prop("checked");
-            $("."+clas).prop("checked", checked);
-        });
-        </script>
-        <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
-        <script>
-        function zPageJS_zTable() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".sTable");
-            tables.forEach((item, i) => {
-                var jItem = $(item);
-                var columns = jItem.attr("no_sort") ? { select: jItem.attr("no_sort").split("-"), sortable: false} : {};
-                let dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [columns]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    jItem.find("a").click(magicLinks);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    jItem.find("a").click(magicLinks);
-                });
-                zTable.push(dataTable);
+    <!-- simple-datatables -->
+    <script>
+    var entriesPerPage = "gösterilen öge sayısı";
+    var searchOn = "Ara...";
+    var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
+    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
+    var noRowFound = "Sonuç bulunamadı";
+
+    $("input[type=checkbox]").change(function() {
+        var clas = $(this).attr("class").split(" ")[1];
+        var checked = $(this).prop("checked");
+        $("."+clas).prop("checked", checked);
+    });
+    </script>
+    <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
+    <script>
+    function zTable() {
+        // create simple datatables
+        window.zTables = [];
+        var tables = document.querySelectorAll(".zTable");
+        tables.forEach((item, i) => {
+            var jItem = $(item);
+            var columns = jItem.attr("no_sort") ? { select: jItem.attr("no_sort").split("-"), sortable: false} : {};
+            var dataTable = new simpleDatatables.DataTable(item, {
+                columns: [columns]
             });
-            zDetect();
+            dataTable.on("datatable.page", function(page) {
+                jItem.find("a").click(magicLinks);
+            });
+            dataTable.on("datatable.sort", function(column, direction) {
+                jItem.find("a").click(magicLinks);
+            });
+            window.zTables.push(dataTable);
+        });
+    }
+    </script>
+    <script>
+    $(window).on("load", function () {
+        zTable();
+        zDetect();
+        // do we have extra javascript function to be run on the new page?
+        // let's run it if we do, but we need to check if we have a function on the page at all.
+        var zPageJSS = [];
+
+        for (var x in window) {
+            if (typeof window[x] === "function" && x.indexOf("zPageJS") === 0) {
+                zPageJSS.push(x);
+            }
         }
-        zPageJS_zTable();
-        </script>
+        zPageJSS.forEach(function(item) {
+            window[item]();
+        });
+    });
+    </script>
+    </div>
+
+    <div id="zBottom">
         
         
     <script>

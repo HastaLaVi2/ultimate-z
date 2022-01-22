@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:47:13
+/* Smarty version 3.1.40, created on 2022-01-22 09:49:36
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/table/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd2a1831d48_75215666',
+  'unifunc' => 'content_61ebd330e11ba0_67652767',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -57,6 +57,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1640422377,
       2 => 'file',
     ),
+    'ea921527d0a89eb10256e18f21e891c839c80637' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/modal.tpl',
+      1 => 1641644877,
+      2 => 'file',
+    ),
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
@@ -72,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebd2a1831d48_75215666 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebd330e11ba0_67652767 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -85,8 +91,8 @@ function content_61ebd2a1831d48_75215666 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/_admin/advanced/database/table/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/advanced/database/tableindex.php?do=list&file=null" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/advanced/database/tableindex.php?do=list&file=null" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/advanced/database/tableindex.php?table=zViewsPage" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/advanced/database/tableindex.php?table=zViewsPage" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -357,7 +363,7 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Tablo: </h3>
+            <h3 class="boldText top-10">Tablo: zViewsPage</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
@@ -374,18 +380,3868 @@ $(window).resize(function(){
 
     <div class="whiteBack rad-15 pad-20 font-16">
         
-                        <table class="zTable" no_sort="<br />
-<b>Warning</b>:  count(): Parameter must be an array or an object that implements Countable in <b>/Users/kerimcanayaz/Sites/ultimate-z/_templates/cache/874ba74eb8061e9737deb3ec0cdeadd9aa154d32_0.file._template.tpl.cache.php</b> on line <b>123</b><br />
-0-<br />
-<b>Warning</b>:  count(): Parameter must be an array or an object that implements Countable in <b>/Users/kerimcanayaz/Sites/ultimate-z/_templates/cache/874ba74eb8061e9737deb3ec0cdeadd9aa154d32_0.file._template.tpl.cache.php</b> on line <b>124</b><br />
-1">
+                        <table class="zTable" no_sort="4-5">
             <thead>
                 <tr>
-                                        <th class="zEdit">Düzenle</th>
+                                                                                                        <th>id_views_page</th>
+                                                            <th>id_page</th>
+                                                            <th>value</th>
+                                                            <th>date</th>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <th class="zEdit">Düzenle</th>
                     <th class="zDelete">Sil</th>
                 </tr>
             </thead>
             <tbody>
+                                    <tr>
+                                                                                                                                                                                                                            <td>121</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>2</td>
+                                                                                                                                        <td>2022-01-21</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal0" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal0">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='121'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='121'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>2</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-21'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>120</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-20</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal1" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal1">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='120'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='120'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-20'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>119</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-10</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal2" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal2">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='119'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='119'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-10'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>118</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>7</td>
+                                                                                                                                        <td>2022-01-10</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal3" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal3">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='118'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='118'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>7</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-10'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>117</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-09</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal4" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal4">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='117'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='117'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-09'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>116</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-07</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal5" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal5">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='116'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='116'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-07'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>115</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>9</td>
+                                                                                                                                        <td>2022-01-06</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal6" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal6">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='115'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='115'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>9</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-06'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>114</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-05</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal7" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal7">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='114'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='114'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-05'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>113</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>2</td>
+                                                                                                                                        <td>2022-01-03</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal8" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal8">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='113'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='113'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>2</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-03'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>112</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-02</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal9" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal9">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='112'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='112'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-02'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>111</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-01</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal10" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal10">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='111'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='111'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-01'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>110</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>3</td>
+                                                                                                                                        <td>2022-01-01</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal11" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal11">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='110'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='110'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>3</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-01'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>109</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>2</td>
+                                                                                                                                        <td>2021-12-30</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal12" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal12">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='109'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='109'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>2</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-30'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>107</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>16</td>
+                                                                                                                                        <td>2021-12-30</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal13" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal13">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='107'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='107'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>16</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-30'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>106</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>4</td>
+                                                                                                                                        <td>2021-12-28</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal14" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal14">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='106'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='106'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>4</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-28'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>105</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-12-27</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal15" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal15">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='105'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='105'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-27'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>104</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>44</td>
+                                                                                                                                        <td>2021-12-26</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal16" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal16">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='104'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='104'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>44</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-26'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>103</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>9</td>
+                                                                                                                                        <td>2021-12-25</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal17" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal17">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='103'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='103'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>9</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-25'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>102</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>2</td>
+                                                                                                                                        <td>2021-12-23</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal18" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal18">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='102'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='102'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>2</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-23'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>101</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-12-21</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal19" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal19">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='101'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='101'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-21'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>100</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-12-20</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal20" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal20">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='100'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='100'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-20'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>99</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>5</td>
+                                                                                                                                        <td>2021-12-17</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal21" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal21">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='99'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='99'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>5</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-17'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>98</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-12-16</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal22" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal22">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='98'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='98'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-16'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>97</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-12-12</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal23" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal23">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='97'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='97'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-12'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>96</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>45</td>
+                                                                                                                                        <td>2021-12-10</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal24" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal24">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='96'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='96'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>45</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-10'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>95</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>71</td>
+                                                                                                                                        <td>2021-12-07</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal25" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal25">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='95'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='95'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>71</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-07'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>94</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>14</td>
+                                                                                                                                        <td>2021-12-06</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal26" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal26">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='94'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='94'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>14</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-06'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>93</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>7</td>
+                                                                                                                                        <td>2021-12-05</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal27" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal27">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='93'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='93'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>7</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-05'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>92</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>8</td>
+                                                                                                                                        <td>2021-12-03</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal28" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal28">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='92'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='92'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>8</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-03'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>91</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>6</td>
+                                                                                                                                        <td>2021-12-03</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal29" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal29">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='91'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='91'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>6</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-03'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>90</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>6</td>
+                                                                                                                                        <td>2021-12-02</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal30" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal30">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='90'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='90'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>6</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-02'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>88</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-12-01</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal31" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal31">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='88'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='88'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-01'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>87</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>7</td>
+                                                                                                                                        <td>2021-12-01</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal32" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal32">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='87'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='87'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>7</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-12-01'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>86</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>18</td>
+                                                                                                                                        <td>2021-11-30</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal33" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal33">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='86'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='86'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>18</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-30'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>85</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>5</td>
+                                                                                                                                        <td>2021-11-29</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal34" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal34">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='85'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='85'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>5</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-29'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>84</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-11-26</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal35" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal35">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='84'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='84'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-26'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>82</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>2</td>
+                                                                                                                                        <td>2021-11-25</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal36" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal36">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='82'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='82'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>2</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-25'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>81</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>15</td>
+                                                                                                                                        <td>2021-11-25</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal37" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal37">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='81'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='81'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>15</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-25'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>79</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>6</td>
+                                                                                                                                        <td>2021-11-23</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal38" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal38">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='79'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='79'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>6</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-23'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>78</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>18</td>
+                                                                                                                                        <td>2021-11-23</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal39" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal39">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='78'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='78'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>18</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-23'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>77</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-11-21</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal40" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal40">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='77'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='77'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-21'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>76</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>37</td>
+                                                                                                                                        <td>2021-11-21</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal41" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal41">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='76'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='76'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>37</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-21'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>75</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>17</td>
+                                                                                                                                        <td>2021-11-16</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal42" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal42">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='75'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='75'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>17</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-16'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>74</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-11-15</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal43" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal43">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='74'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='74'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-15'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>72</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-11-12</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal44" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal44">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='72'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='72'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-12'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>71</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>55</td>
+                                                                                                                                        <td>2021-11-12</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal45" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal45">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='71'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='71'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>55</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-12'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>69</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>12</td>
+                                                                                                                                        <td>2021-11-09</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal46" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal46">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='69'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='69'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>12</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-09'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>68</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>21</td>
+                                                                                                                                        <td>2021-11-09</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal47" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal47">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='68'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='68'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>21</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-09'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>67</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-11-08</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal48" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal48">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='67'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='67'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-08'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>66</td>
+                                                                                                                                        <td>1002</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-11-08</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal49" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal49">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='66'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='66'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1002'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-08'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>65</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>6</td>
+                                                                                                                                        <td>2021-11-06</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal50" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal50">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='65'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='65'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>6</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-06'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>64</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>2</td>
+                                                                                                                                        <td>2021-11-02</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal51" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal51">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='64'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='64'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>2</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-11-02'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>63</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2021-10-12</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal52" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal52">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='63'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='63'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-10-12'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>62</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>6</td>
+                                                                                                                                        <td>2021-10-07</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal53" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal53">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='62'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='62'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>6</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2021-10-07'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
+                                    <tr>
+                                                                                                                                                                                                                            <td>122</td>
+                                                                                                                                        <td>1001</td>
+                                                                                                                                        <td>1</td>
+                                                                                                                                        <td>2022-01-22</td>
+                                                <td class="zEdit">
+                            
+<a href="#modal54" class="zButton zHov-zShadow5 primary sweet font-16">Düzenle</a>
+
+<div class="zModal" id="modal54">
+    <a class="zCancel" href="#"></a>
+    <div class="zModalContent rad-15" zMob-768="zCol-11">
+        <div class="pad-20">
+                        <form  class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/advanced/database/table/index.php?table=zViewsPage">
+                            <div class="modal-header bg-primary">
+                    <h5 class="top-0 bottom-0 font-18">
+                        Edit Row
+                    </h5>
+                </div>
+                <div class="zInside gray2 font-15 padTB-20">
+                    <div class="displayNone"><input type='text' name='type' value='edit_row'><input type='text' name='key' value='id_views_page'><input type='text' name='keyValue' value='122'></div>
+                    
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_views_page'>
+                                        id_views_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_views_page' class='top-0 bottom-0 pad-10' value='122'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='id_page'>
+                                        id_page
+                                    </label>
+                                    
+                                        <input type='text' name='id_page' class='top-0 bottom-0 pad-10' value='1001'>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='value'>
+                                        value
+                                    </label>
+                                    
+                                        <textarea name='value' class='top-0 bottom-0 pad-10' style='min-height: 200px'>1</textarea>
+                                    
+                                </div>
+                                <div class='zGroup bottom-20'>
+                                    <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='date'>
+                                        date
+                                    </label>
+                                    
+                                        <input type='text' name='date' class='top-0 bottom-0 pad-10' value='2022-01-22'>
+                                    
+                                </div>
+                </div>
+                <div class="rightText">
+                                        <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
+                        Kapat
+                    </a>
+                                                            <button type="submit" class="zButton zHov-zShadow5 primary sweet font-16">
+                        <span>Kaydet</span>
+                    </button>
+                                    </div>
+                        </form>
+                    </div>
+    </div>
+</div>
+                        </td>
+                        <td class="zDelete"></td>
+                    </tr>
                             </tbody>
         </table>
     </div>

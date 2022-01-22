@@ -91,21 +91,26 @@
                 <i class="fas fa-trash-alt padR-5"></i> {zThis z="delete"}
             </span>
         </div>
-        <table id="table" class="zTable">
-            <thead>
-                <tr>
-                    <th class="width-20">
-                        <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
-                    </th>
-                    <th>{zThis z="Name"}</th>
-                    <th>{zThis z="Size"}</th>
-                    <th>{zThis z="Modified"}</th>
-                    <th>{zThis z="Permissions"}</th>
-                </tr>
-            </thead>
-            <tbody id="list">
-            </tbody>
-        </table>
+        <div id="table">
+            <table class="zTable">
+                <thead>
+                    <tr>
+                        <th class="width-20">
+                            <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
+                        </th>
+                        <th>{zThis z="Name"}</th>
+                        <th>{zThis z="Size"}</th>
+                        <th>{zThis z="Modified"}</th>
+                        <th>{zThis z="Permissions"}</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                </tbody>
+            </table>
+            <div id="Hover" class="floatingSpace widthAll row-12 mortalW-9 displayNone">
+                <div class="hollyMid centerText boldText text2 font-30 pointNo">Drop it like it's hot</div>
+            </div>
+        </div>
     </section>
     {include file="{$zContent->src["admin"]}/_partials/modal.tpl"
         _mLabel=ForView
@@ -378,9 +383,7 @@ function zPageJS_media() {
         var folder = $("#hashchange").val().substr(1);
 
         if (file.size > MAX_UPLOAD_SIZE) {
-            var $error_row = renderFileSizeErrorRow(file,folder);
-            $("#upload_progress").append($error_row);
-            window.setTimeout(function(){ $error_row.fadeOut();},5000);
+            renderFileSizeErrorRow(file,folder);
             return false;
         }
 
@@ -556,16 +559,51 @@ function zPageJS_media() {
 
         // hide it AFTER the action was triggered.
         $(".custom-menu").hide(100);
+    });// The plugin code
+
+    $.fn.draghover = function(options) {
+        return this.each(function() {
+
+            var collection = $(),
+            self = $(this);
+
+            self.on('dragenter', function(e) {
+                if (collection.length === 0) {
+                    self.trigger('draghoverstart');
+                }
+                collection = collection.add(e.target);
+            });
+
+            self.on('dragleave drop', function(e) {
+                collection = collection.not(e.target);
+                if (collection.length === 0) {
+                    self.trigger('draghoverend');
+                }
+            });
+        });
+    };
+
+    // Now that we have a plugin, we can listen for the new events
+    $(window).draghover().on({
+        'draghoverstart': function() {
+            $("#Hover").removeClass("displayNone");
+        },
+        'draghoverend': function() {
+            $("#Hover").addClass("displayNone");
+        }
     });
 
-    var area = $("#table");
-    $(area).on("dragenter", function(){
-        $(this).preventDefault();
-    });
-    $(area).on("dragover", function(){
-        $(this).css("background", "red");
-    });
-    $(area).on("dragleave", function(){
+    $(window).on("dragover", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    }).on("drop", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+		var files = e.originalEvent.dataTransfer.files;
+		$.each(files, function(k, file) {
+			uploadFile(file);
+		});
+        $("#Hover").addClass("displayNone");
     });
 
     functionIsRunning = true;

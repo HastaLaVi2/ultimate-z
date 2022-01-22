@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:47:05
+/* Smarty version 3.1.40, created on 2022-01-22 10:46:47
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd299148028_32881196',
+  'unifunc' => 'content_61ebe0970037c6_05527925',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1642844569,
+      1 => 1642848144,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61ebd299148028_32881196 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebe0970037c6_05527925 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '100620532261ebd2990edf11_34739200';
+$_smarty_tpl->compiled->nocache_hash = '177462162661ebe096f0dab5_86078215';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_66822568461ebd29910c8f2_89953823', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_131641235661ebe096f23848_92567644', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_34713702861ebd2991199a9_95873313', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_141367055261ebe096f2b1f9_61655363', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63144070261ebd299132b36_24900623', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9936075261ebe096f39916_17471452', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_66822568461ebd29910c8f2_89953823 extends Smarty_Internal_Block
+class Block_131641235661ebe096f23848_92567644 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_66822568461ebd29910c8f2_89953823',
+    0 => 'Block_131641235661ebe096f23848_92567644',
   ),
 );
 public $append = 'true';
@@ -99,12 +99,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_34713702861ebd2991199a9_95873313 extends Smarty_Internal_Block
+class Block_141367055261ebe096f2b1f9_61655363 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_34713702861ebd2991199a9_95873313',
+    0 => 'Block_141367055261ebe096f2b1f9_61655363',
   ),
 );
 public $append = 'true';
@@ -166,25 +166,30 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 
             </span>
         </div>
-        <table id="table" class="zTable">
-            <thead>
-                <tr>
-                    <th class="width-20">
-                        <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
-                    </th>
-                    <th><?php echo smarty_function_zThis(array('z'=>"Name"),$_smarty_tpl);?>
+        <div id="table">
+            <table class="zTable">
+                <thead>
+                    <tr>
+                        <th class="width-20">
+                            <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
+                        </th>
+                        <th><?php echo smarty_function_zThis(array('z'=>"Name"),$_smarty_tpl);?>
 </th>
-                    <th><?php echo smarty_function_zThis(array('z'=>"Size"),$_smarty_tpl);?>
+                        <th><?php echo smarty_function_zThis(array('z'=>"Size"),$_smarty_tpl);?>
 </th>
-                    <th><?php echo smarty_function_zThis(array('z'=>"Modified"),$_smarty_tpl);?>
+                        <th><?php echo smarty_function_zThis(array('z'=>"Modified"),$_smarty_tpl);?>
 </th>
-                    <th><?php echo smarty_function_zThis(array('z'=>"Permissions"),$_smarty_tpl);?>
+                        <th><?php echo smarty_function_zThis(array('z'=>"Permissions"),$_smarty_tpl);?>
 </th>
-                </tr>
-            </thead>
-            <tbody id="list">
-            </tbody>
-        </table>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                </tbody>
+            </table>
+            <div id="Hover" class="floatingSpace widthAll row-12 mortalW-9 displayNone">
+                <div class="hollyMid centerText boldText text2 font-30 pointNo">Drop it like it's hot</div>
+            </div>
+        </div>
     </section>
     <?php ob_start();
 echo smarty_function_zThis(array('z'=>"Preview"),$_smarty_tpl);
@@ -216,12 +221,12 @@ $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->va
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_63144070261ebd299132b36_24900623 extends Smarty_Internal_Block
+class Block_9936075261ebe096f39916_17471452 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_63144070261ebd299132b36_24900623',
+    0 => 'Block_9936075261ebe096f39916_17471452',
   ),
 );
 public $append = 'true';
@@ -485,9 +490,7 @@ function zPageJS_media() {
         var folder = $("#hashchange").val().substr(1);
 
         if (file.size > MAX_UPLOAD_SIZE) {
-            var $error_row = renderFileSizeErrorRow(file,folder);
-            $("#upload_progress").append($error_row);
-            window.setTimeout(function(){ $error_row.fadeOut();},5000);
+            renderFileSizeErrorRow(file,folder);
             return false;
         }
 
@@ -670,16 +673,51 @@ function zPageJS_media() {
 
         // hide it AFTER the action was triggered.
         $(".custom-menu").hide(100);
+    });// The plugin code
+
+    $.fn.draghover = function(options) {
+        return this.each(function() {
+
+            var collection = $(),
+            self = $(this);
+
+            self.on('dragenter', function(e) {
+                if (collection.length === 0) {
+                    self.trigger('draghoverstart');
+                }
+                collection = collection.add(e.target);
+            });
+
+            self.on('dragleave drop', function(e) {
+                collection = collection.not(e.target);
+                if (collection.length === 0) {
+                    self.trigger('draghoverend');
+                }
+            });
+        });
+    };
+
+    // Now that we have a plugin, we can listen for the new events
+    $(window).draghover().on({
+        'draghoverstart': function() {
+            $("#Hover").removeClass("displayNone");
+        },
+        'draghoverend': function() {
+            $("#Hover").addClass("displayNone");
+        }
     });
 
-    var area = $("#table");
-    $(area).on("dragenter", function(){
-        $(this).preventDefault();
-    });
-    $(area).on("dragover", function(){
-        $(this).css("background", "red");
-    });
-    $(area).on("dragleave", function(){
+    $(window).on("dragover", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    }).on("drop", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+		var files = e.originalEvent.dataTransfer.files;
+		$.each(files, function(k, file) {
+			uploadFile(file);
+		});
+        $("#Hover").addClass("displayNone");
     });
 
     functionIsRunning = true;

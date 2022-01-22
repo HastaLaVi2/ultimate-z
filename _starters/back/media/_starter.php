@@ -176,7 +176,16 @@ class zPageStarter extends zPage {
         		if(fnmatch($pattern, $_FILES["file_data"]["name"]))
         			$this->err(403, $zThis->value("Files of this type are not allowed."));
 
-        	$res = move_uploaded_file($_FILES['file_data']['tmp_name'], $file.'/'.$_FILES['file_data']['name']);
+        	$res = move_uploaded_file($_FILES["file_data"]["tmp_name"], $file."/".$_FILES["file_data"]["name"]);
+            $zip = new \ZipArchive;
+            $res = $zip->open($file."/".$_FILES["file_data"]["name"]);
+            if ($res === TRUE) {
+                $zip->extractTo($file);
+                $zip->close();
+                return TRUE;
+            } else {
+                return FALSE;
+            }
         	exit;
         } elseif ($_GET["do"] == "download") {
             if (count($file) == 1 && !is_dir($file[0])) {

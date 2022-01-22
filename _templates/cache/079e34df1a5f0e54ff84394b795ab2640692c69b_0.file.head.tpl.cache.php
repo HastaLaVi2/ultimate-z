@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 08:37:41
+/* Smarty version 3.1.40, created on 2022-01-22 09:49:59
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebc255d82d50_77416918',
+  'unifunc' => 'content_61ebd347a851b9_79302278',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640422377,
+      1 => 1642844056,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_holders/favicon.tpl' => 1,
   ),
 ),false)) {
-function content_61ebc255d82d50_77416918 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '82791399161ebc255d6ea21_46352361';
+function content_61ebd347a851b9_79302278 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '145960613361ebd347a5dea0_30500678';
 ?>
 
 <meta charset="utf-8">
@@ -122,7 +122,7 @@ echo '<script'; ?>
 ><?php }
 echo '<script'; ?>
  src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/spa.js"><?php echo '</script'; ?>
+/spa_v1.js"><?php echo '</script'; ?>
 >
 
 <?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {?>

@@ -36,7 +36,7 @@ function newStyle(zSelector, inside, pseudo) {
 }
 
 function createForVendor(vendor, rest) {
-    var final = "";
+    let final = "";
     if (vendor) {
         if (typeof(vendor) == "object") {
             vendor.forEach(function(ven) {
@@ -142,13 +142,13 @@ var slug = function(str) {
 }
 
 function detectAfterDash(className, detectClass) {
-    var classes = className.split(" ");
+    let classes = className.split(" ");
 
     function checkToggle(tog) {
         return tog.startsWith(detectClass + "-");
     }
-    var zClass = classes.find(checkToggle);
-    var zProperty = zClass.replace(detectClass + "-", "");
+    let zClass = classes.find(checkToggle);
+    let zProperty = zClass.replace(detectClass + "-", "");
 
     return zProperty;
 }
@@ -211,7 +211,7 @@ function detecting(zClass, property, pseudo, vendor) {
                 }
             });
 
-            for (var d = 0; d < repeat.length; d++) {
+            for (let d = 0; d < repeat.length; d++) {
                 var i = repeat[d];
 
                 // defaults
@@ -305,8 +305,8 @@ function zBetween() {
     var between = document.querySelectorAll("[class*=between-]");
 
     between.forEach(function(value) {
-        var zProperty = detectAfterDash(value.className, "between");
-        var children = Array.from(value.children);
+        let zProperty = detectAfterDash(value.className, "between");
+        let children = Array.from(value.children);
 
         if (children[0]) {
             children[0].style.marginTop = 0;
@@ -322,10 +322,10 @@ function zBetween() {
     var betwixt = document.querySelectorAll("[class*=betwixt-]");
 
     betwixt.forEach(function(value) {
-        var zProperty = detectAfterDash(value.className, "betwixt");
-        var children = Array.from(value.children);
-        var widthAll = width(value);
-        var childAll = [];
+        let zProperty = detectAfterDash(value.className, "betwixt");
+        let children = Array.from(value.children);
+        let widthAll = width(value);
+        let childAll = [];
 
         children.forEach(function(value) {
             value.style.paddingLeft = zProperty + "px";
@@ -722,16 +722,16 @@ function j(t, e, o, i) {
 }
 
 function zTogglePath(path) {
-    var sidebarItems = document.querySelectorAll("[class*=zTog"+(path ? path : "")+"-]");
+    let sidebarItems = document.querySelectorAll("[class*=zTog"+(path ? path : "")+"-]");
     for (var i = 0; i < sidebarItems.length; i++) {
-        var sidebarItem = sidebarItems[i];
-        var zProperty = detectAfterDash(sidebarItem.className, "zTog"+(path ? path : ""));
+        let sidebarItem = sidebarItems[i];
+        let zProperty = detectAfterDash(sidebarItem.className, "zTog"+(path ? path : ""));
 
         if (sidebarItem.getAttribute("zToggle-" + zProperty) !== "true") {
         	sidebarItem.addEventListener("click", function(e) {
                 e.preventDefault();
 
-                var submenu = document.querySelectorAll(".zShow-" + zProperty);
+                let submenu = document.querySelectorAll(".zShow-" + zProperty);
                 submenu.forEach(function(menu) {
                     if (path && path == "Down") {
                         slideToggle(menu, 300);
@@ -755,16 +755,16 @@ function zTog() {
 /******************/
 
 function zRemove() {
-    var removeItems = document.querySelectorAll("[class*=zRemove-]");
+    let removeItems = document.querySelectorAll("[class*=zRemove-]");
     for (var i = 0; i < removeItems.length; i++) {
-        var removeItem = removeItems[i];
-        var zProperty = detectAfterDash(removeItem.className, "zRemove");
+        let removeItem = removeItems[i];
+        let zProperty = detectAfterDash(removeItem.className, "zRemove");
 
         if (removeItem.getAttribute("zRemove-" + zProperty) !== "true") {
         	removeItem.addEventListener("click", function(e) {
                 e.preventDefault();
 
-                var removingItem = document.querySelectorAll(".zDestroy-" + zProperty);
+                let removingItem = document.querySelectorAll(".zDestroy-" + zProperty);
                 removingItem.forEach(function(item) {
                     item.remove();
                 });
@@ -831,9 +831,9 @@ function zHorizon() {
             });
         });
 
-        var isDown = false;
-        var startX;
-        var scrollLeft;
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
         item.addEventListener("mousedown", (e) => {
             isDown = true;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:47:05
+/* Smarty version 3.1.40, created on 2022-01-22 10:46:47
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd2993463d0_95111256',
+  'unifunc' => 'content_61ebe097189fc2_18525814',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1642844569,
+      1 => 1642848144,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebd2993463d0_95111256 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebe097189fc2_18525814 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -436,21 +436,26 @@ $(window).resize(function(){
                 <i class="fas fa-trash-alt padR-5"></i> sil
             </span>
         </div>
-        <table id="table" class="zTable">
-            <thead>
-                <tr>
-                    <th class="width-20">
-                        <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
-                    </th>
-                    <th>Ad</th>
-                    <th>Boyut</th>
-                    <th>Son değiştirilme</th>
-                    <th>İzinler</th>
-                </tr>
-            </thead>
-            <tbody id="list">
-            </tbody>
-        </table>
+        <div id="table">
+            <table class="zTable">
+                <thead>
+                    <tr>
+                        <th class="width-20">
+                            <input type="checkbox" class="zCheckbox allBoxes boldMin-2 left--8 rad-5 pad-10">
+                        </th>
+                        <th>Ad</th>
+                        <th>Boyut</th>
+                        <th>Son değiştirilme</th>
+                        <th>İzinler</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                </tbody>
+            </table>
+            <div id="Hover" class="floatingSpace widthAll row-12 mortalW-9 displayNone">
+                <div class="hollyMid centerText boldText text2 font-30 pointNo">Drop it like it's hot</div>
+            </div>
+        </div>
     </section>
     
 
@@ -613,7 +618,7 @@ $(window).resize(function(){
 <script>
 function zPageJS_media() {
     var XSRF = (document.cookie.match('(^|; )_z_xsrf=([^;]*)')||0)[2];
-    var MAX_UPLOAD_SIZE = 20971520;
+    var MAX_UPLOAD_SIZE = ;
     $("#hashchange").on("change", function() {
         list();
     });
@@ -856,9 +861,7 @@ function zPageJS_media() {
         var folder = $("#hashchange").val().substr(1);
 
         if (file.size > MAX_UPLOAD_SIZE) {
-            var $error_row = renderFileSizeErrorRow(file,folder);
-            $("#upload_progress").append($error_row);
-            window.setTimeout(function(){ $error_row.fadeOut();},5000);
+            renderFileSizeErrorRow(file,folder);
             return false;
         }
 
@@ -1033,16 +1036,51 @@ function zPageJS_media() {
 
         // hide it AFTER the action was triggered.
         $(".custom-menu").hide(100);
+    });// The plugin code
+
+    $.fn.draghover = function(options) {
+        return this.each(function() {
+
+            var collection = $(),
+            self = $(this);
+
+            self.on('dragenter', function(e) {
+                if (collection.length === 0) {
+                    self.trigger('draghoverstart');
+                }
+                collection = collection.add(e.target);
+            });
+
+            self.on('dragleave drop', function(e) {
+                collection = collection.not(e.target);
+                if (collection.length === 0) {
+                    self.trigger('draghoverend');
+                }
+            });
+        });
+    };
+
+    // Now that we have a plugin, we can listen for the new events
+    $(window).draghover().on({
+        'draghoverstart': function() {
+            $("#Hover").removeClass("displayNone");
+        },
+        'draghoverend': function() {
+            $("#Hover").addClass("displayNone");
+        }
     });
 
-    var area = $("#table");
-    $(area).on("dragenter", function(){
-        $(this).preventDefault();
-    });
-    $(area).on("dragover", function(){
-        $(this).css("background", "red");
-    });
-    $(area).on("dragleave", function(){
+    $(window).on("dragover", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    }).on("drop", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+		var files = e.originalEvent.dataTransfer.files;
+		$.each(files, function(k, file) {
+			uploadFile(file);
+		});
+        $("#Hover").addClass("displayNone");
     });
 
     functionIsRunning = true;

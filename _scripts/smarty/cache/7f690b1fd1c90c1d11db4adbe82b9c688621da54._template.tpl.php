@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 08:37:41
+/* Smarty version 3.1.40, created on 2022-01-22 09:49:59
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebc255db59d0_68974392',
+  'unifunc' => 'content_61ebd347bf1d80_23021308',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640422377,
+      1 => 1642844056,
       2 => 'file',
     ),
     '0731ef1aedb336563dff9b49bcc043d0fb40cf08' => 
@@ -48,7 +48,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebc255db59d0_68974392 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebd347bf1d80_23021308 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -104,7 +104,7 @@ function content_61ebc255db59d0_68974392 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
+<script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     
     <link rel="stylesheet" href="http://localhost/ultimate-z/_templates/1/assets/horizontal-scroll.css"/>
@@ -154,7 +154,6 @@ function content_61ebc255db59d0_68974392 (Smarty_Internal_Template $_smarty_tpl)
 <div class"pad-20">
                         <a href="http://localhost/ultimate-z/">Anasayfa</a>
                                 <a href="http://localhost/ultimate-z/moda">Moda</a>
-                                <a href="http://localhost/ultimate-z/1001">1001</a>
             </div>
 </div>
 
