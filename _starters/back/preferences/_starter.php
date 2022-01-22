@@ -29,41 +29,54 @@ class zPageStarter extends zPage {
             header("Location: " . $zContent->srcFull["_main"] . "index.php?view=403");
         }
 
+        $version = "0.2.3";
+
         if(!empty($data)) {
             if (isset($data["updateSite"])) {
                 $params = array();
                 $params["langcode"] = $data["langcode"];
                 $params["cookie_key"] = $z->key;
                 $params["hidden_key"] = $z->hidden_key;
-                $params["page"] = "_update.php";
 
                 $ch = curl_init();
+                $version_check = $params;
+                $version_check["version"] = "0.2.3";
 
                 curl_setopt($ch, CURLOPT_URL, "https://onucyirmibir.com/zUpdate.php");
-                curl_setopt($ch, CURLOPT_POST, count($params));
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+                curl_setopt($ch, CURLOPT_POST, count($version_check));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $version_check);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-                $new = curl_exec($ch);
+                $up_to_date = curl_exec($ch);
+                if ($up_to_date == $version) {
+                    $result = $zThis->value("ultimate Z is up to date.");
+                    curl_close($ch);
+                } else {
+                    $ch = curl_init();
+                    $params["page"] = "_update.php";
 
-                $current = file_get_contents($zContent->src["main"] . $params["page"]);
+                    curl_setopt($ch, CURLOPT_URL, "https://onucyirmibir.com/zUpdate.php");
+                    curl_setopt($ch, CURLOPT_POST, count($params));
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-                if ($current !== $new) {
-                    file_put_contents($zContent->src["main"] . $params["page"], $new);
+                    $new = curl_exec($ch);
+                    $current = file_get_contents($zContent->src["main"] . $params["page"]);
+                    if ($current !== $new) {
+                        file_put_contents($zContent->src["main"] . $params["page"], $new);
+                    }
+                    curl_close($ch);
+
+                    $ch = curl_init();
+
+                    curl_setopt($ch, CURLOPT_URL, $zContent->srcFull["_main"] . "/_update.php");
+                    curl_setopt($ch, CURLOPT_POST, count($params));
+                    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+                    $result = curl_exec($ch);
+                    curl_close($ch);
                 }
-
-                curl_close($ch);
-
-                $ch = curl_init();
-
-                curl_setopt($ch, CURLOPT_URL, $zContent->srcFull["_main"] . "/_update.php");
-                curl_setopt($ch, CURLOPT_POST, count($params));
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-                $result = curl_exec($ch);
-
-                curl_close($ch);
 
                 die($result);
             }

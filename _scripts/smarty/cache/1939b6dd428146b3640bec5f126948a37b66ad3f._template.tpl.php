@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 11:54:02
+/* Smarty version 3.1.40, created on 2022-01-22 13:41:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebf05ae99938_53254841',
+  'unifunc' => 'content_61ec09976dddb0_37158230',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1642852426,
+      1 => 1642858900,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -66,7 +66,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1641388364,
+      1 => 1642852845,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebf05ae99938_53254841 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ec09976dddb0_37158230 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -545,7 +545,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.0</b></p>
     </div>
 </footer>
     </div>
@@ -935,7 +935,7 @@ function zPageJS_media() {
         if(data.is_executable) perms.push('exec');
         var $html = $('<tr />')
             .attr("data-file", data.path)
-            .attr("data-download", data.path)
+            .attr("data-download", encodeURIComponent(data.path))
             .addClass(data.is_dir ? "is_dir" : "")
             .append("<td class='select'><input type='checkbox' class='zCheckbox boldMin-2 rad-5 pad-10'></td>")
             .append( $('<td class="first" />').append(data.is_dir ? "<i class='fas fa-folder font-24 gray2 padR-15'></i>" : "<i class='fas fa-file font-24 gray2 padR-15'></i>").append($link) )

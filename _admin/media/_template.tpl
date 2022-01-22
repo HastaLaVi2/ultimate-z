@@ -19,8 +19,8 @@
     <style>
     #upload_progress { padding: 4px 0;}
     #upload_progress > div { padding:3px 0;}
-    .progress_track { display:inline-block;width:200px;height:10px;border:1px solid #333;margin: 0 4px 0 10px;}
-    .progress { background-color: #82CFFA;height:10px; }
+    .progress_track { display:inline-block;width:200px;height:12px;border:2px solid var(--color2);border-radius:5px;margin: 0 4px 0 10px;}
+    .progress { background-color: var(--color2);border-radius:3px;height:10px; }
     .is_dir .size { color:transparent;font-size:0;}
     .is_dir .size:before { content: "--"; font-size:14px;color:#333;}
     .is_dir .download{ visibility: hidden}
@@ -401,6 +401,7 @@ function zPageJS_media() {
             list();
         };
         xhr.upload.onprogress = function(e){
+            console.log(e.loaded);
             if(e.lengthComputable) {
                 $row.find(".progress").css("width", (e.loaded/e.total*100 | 0)+'%' );
             }

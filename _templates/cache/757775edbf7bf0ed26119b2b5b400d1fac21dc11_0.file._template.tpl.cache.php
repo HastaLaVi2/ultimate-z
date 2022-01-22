@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 11:54:02
+/* Smarty version 3.1.40, created on 2022-01-22 13:41:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebf05ad53cb9_87049332',
+  'unifunc' => 'content_61ec09975a6497_53955823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1642852426,
+      1 => 1642858900,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61ebf05ad53cb9_87049332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ec09975a6497_53955823 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '78609652661ebf05ad034c2_16322480';
+$_smarty_tpl->compiled->nocache_hash = '161539431361ec099740cd10_03055520';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_86523413661ebf05ad23797_10813072', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_162453743761ec099757b116_01752920', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_200607707161ebf05ad2f494_56821798', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_213809196861ec0997588452_40718711', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_162188009561ebf05ad43a05_47577139', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_104206518561ec0997599b12_60054331', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_86523413661ebf05ad23797_10813072 extends Smarty_Internal_Block
+class Block_162453743761ec099757b116_01752920 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_86523413661ebf05ad23797_10813072',
+    0 => 'Block_162453743761ec099757b116_01752920',
   ),
 );
 public $append = 'true';
@@ -99,12 +99,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_200607707161ebf05ad2f494_56821798 extends Smarty_Internal_Block
+class Block_213809196861ec0997588452_40718711 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_200607707161ebf05ad2f494_56821798',
+    0 => 'Block_213809196861ec0997588452_40718711',
   ),
 );
 public $append = 'true';
@@ -221,12 +221,12 @@ $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->va
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_162188009561ebf05ad43a05_47577139 extends Smarty_Internal_Block
+class Block_104206518561ec0997599b12_60054331 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_162188009561ebf05ad43a05_47577139',
+    0 => 'Block_104206518561ec0997599b12_60054331',
   ),
 );
 public $append = 'true';
@@ -568,7 +568,7 @@ function zPageJS_media() {
         if(data.is_executable) perms.push('exec');
         var $html = $('<tr />')
             .attr("data-file", data.path)
-            .attr("data-download", data.path)
+            .attr("data-download", encodeURIComponent(data.path))
             .addClass(data.is_dir ? "is_dir" : "")
             .append("<td class='select'><input type='checkbox' class='zCheckbox boldMin-2 rad-5 pad-10'></td>")
             .append( $('<td class="first" />').append(data.is_dir ? "<i class='fas fa-folder font-24 gray2 padR-15'></i>" : "<i class='fas fa-file font-24 gray2 padR-15'></i>").append($link) )

@@ -206,8 +206,10 @@ class zPageStarter extends zPage {
         			$this->err(403, $zThis->value("Files of this type are not allowed."));
 
             $filename = basename($f);
-        	$finfo = finfo_open(FILEINFO_MIME_TYPE);
-        	header("Content-Type: " . finfo_file($finfo, $f));
+            if (function_exists(finfo_open)) {
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                header("Content-Type: " . finfo_file($finfo, $f));
+            }
         	header("Content-Length: ". filesize($f));
         	header(sprintf("Content-Disposition: attachment; filename=%s",
         		strpos("MSIE",$_SERVER["HTTP_REFERER"]) ? rawurlencode($filename) : "\"$filename\"" ));
