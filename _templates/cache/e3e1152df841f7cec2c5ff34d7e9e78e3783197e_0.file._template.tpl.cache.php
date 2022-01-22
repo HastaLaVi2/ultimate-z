@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 20:10:34
+/* Smarty version 3.1.40, created on 2022-01-22 09:46:19
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc92bae43944_37274984',
+  'unifunc' => 'content_61ebd26b1425a5_01691519',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e3e1152df841f7cec2c5ff34d7e9e78e3783197e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/_template.tpl',
-      1 => 1641845284,
+      1 => 1642844777,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61dc92bae43944_37274984 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebd26b1425a5_01691519 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '36238007961dc92bae0dcf2_36749404';
+$_smarty_tpl->compiled->nocache_hash = '6969917361ebd26b1045b5_06497259';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_45602585461dc92bae25b14_73984024', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_202891129561ebd26b11df40_24808874', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7602930561dc92bae292a5_34304495', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_18124311561ebd26b123ae3_06536053', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_75898521061dc92bae3fde0_90374390', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_116637154561ebd26b140867_70077464', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_45602585461dc92bae25b14_73984024 extends Smarty_Internal_Block
+class Block_202891129561ebd26b11df40_24808874 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_45602585461dc92bae25b14_73984024',
+    0 => 'Block_202891129561ebd26b11df40_24808874',
   ),
 );
 public $append = 'true';
@@ -64,12 +64,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_7602930561dc92bae292a5_34304495 extends Smarty_Internal_Block
+class Block_18124311561ebd26b123ae3_06536053 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_7602930561dc92bae292a5_34304495',
+    0 => 'Block_18124311561ebd26b123ae3_06536053',
   ),
 );
 public $append = 'true';
@@ -90,7 +90,7 @@ _admin/layouts/pages/create/" class="zButton zHov-zShadow5 primary sweet font-16
 
             </a>
             <div class="top-20"></div>
-            <table class="zTable">
+            <table class="zTable" no_sort="3-4">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -155,42 +155,18 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_75898521061dc92bae3fde0_90374390 extends Smarty_Internal_Block
+class Block_116637154561ebd26b140867_70077464 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_75898521061dc92bae3fde0_90374390',
+    0 => 'Block_116637154561ebd26b140867_70077464',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
 ?>
 
-    <?php echo '<script'; ?>
->
-    var entriesPerPage = "<?php echo smarty_function_zThis(array('z'=>"entries per page"),$_smarty_tpl);?>
-";
-    var searchOn = "<?php echo smarty_function_zThis(array('z'=>"Search..."),$_smarty_tpl);?>
-";
-    var showingOf = "<?php echo smarty_function_zThis(array('z'=>"Showing [start] to [end] of [rows] entries"),$_smarty_tpl);?>
-";
-    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-    var noRowFound = "<?php echo smarty_function_zThis(array('z'=>"No entries found"),$_smarty_tpl);?>
-";
-
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    <?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/simple-datatables/simple-datatables.js"><?php echo '</script'; ?>
->
     <?php echo '<script'; ?>
 >
         function deleteFromTable(dataTable) {
@@ -230,31 +206,18 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
             });
         }
         function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            let dataTable;
-            tables.forEach((item, i) => {
-                dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        { select: [3,4], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
+            window.zTables.forEach((item, i) => {
+                item.on("datatable.page", function(page) {
                     $("#zContent").find("a").click(magicLinks);
-                    deleteFromTable(dataTable);
+                    deleteFromTable(item);
                 });
-                dataTable.on("datatable.sort", function(column, direction) {
+                item.on("datatable.sort", function(column, direction) {
                     $("#zContent").find("a").click(magicLinks);
-                    deleteFromTable(dataTable);
+                    deleteFromTable(item);
                 });
             });
-            zDetect();
-            deleteFromTable(dataTable);
+            deleteFromTable(window.zTables[0]);
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     <?php echo '</script'; ?>
 >
 <?php

@@ -47,8 +47,11 @@
         {include file="_partials/footer.tpl"}
     </div>
 
-    <div id="zBottom">
+    <div id="zFooter">
         {include file="../_holders/footer.tpl"}
+    </div>
+
+    <div id="zBottom">
         {block name="zBottom"}
         {/block}
     </div>

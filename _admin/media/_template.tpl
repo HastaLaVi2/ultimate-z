@@ -133,7 +133,6 @@
 {block name="zBottom" append}
 <script>
 function zPageJS_media() {
-    let dataTable;
     var XSRF = (document.cookie.match('(^|; )_z_xsrf=([^;]*)')||0)[2];
     var MAX_UPLOAD_SIZE = {$MAX_UPLOAD_SIZE};
     $("#hashchange").on("change", function() {
@@ -145,23 +144,23 @@ function zPageJS_media() {
         // Simple Datatable
         let tables = document.querySelectorAll(".zTable");
 
-        if (dataTable && typeof(dataTable) == "object") {
+        if (zTables[0] && typeof(zTables[0]) == "object") {
             var newFolder = $("#list").clone().html();
-            dataTable.destroy();
+            zTables[0].destroy();
             $("#list").html(newFolder);
         }
 
         tables.forEach((item, i) => {
-            dataTable = new simpleDatatables.DataTable(item, {
+            zTables[0] = new simpleDatatables.DataTable(item, {
                 columns: [
                     { select: [0], sortable: false},
                 ]
             });
-            dataTable.on("datatable.page", function(page) {
+            zTables[0].on("datatable.page", function(page) {
                 $("#zContent").find("a").click(magicLinks);
                 tableFunctions();
             });
-            dataTable.on("datatable.sort", function(column, direction) {
+            zTables[0].on("datatable.sort", function(column, direction) {
                 $("#zContent").find("a").click(magicLinks);
                 tableFunctions();
             });
@@ -176,9 +175,9 @@ function zPageJS_media() {
             checkboxActions();
         });
 
-        $(".hideActions").each(function() {
-            if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
-        });
+        $(".hideActions").removeClass("display-none").addClass("display-none");
+        $(".copy").addClass("pointNo").removeClass("pointThis text5");
+        $(".cut").addClass("pointNo").removeClass("pointThis text5");
 
         $("#breadcrumb a").click(function() {
             $("#hashchange").val($(this).attr("data-href")).trigger("change");
@@ -259,11 +258,9 @@ function zPageJS_media() {
                 if(!cut.hasClass("pointNo")) cut.removeClass("pointThis text5").addClass("pointNo");
             }
         } else {
-           $(".hideActions").each(function() {
-               if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
-           });
-           copy.addClass("pointNo").removeClass("pointThis text5");
-           cut.addClass("pointNo").removeClass("pointThis text5");
+            $(".hideActions").removeClass("display-none").addClass("display-none");
+            copy.addClass("pointNo").removeClass("pointThis text5");
+            cut.addClass("pointNo").removeClass("pointThis text5");
         }
         $(".allBoxes").prop("checked", count.length == $("#list .zCheckbox").length ? true : false);
     }
@@ -275,9 +272,9 @@ function zPageJS_media() {
             data: { "do": "delete", file: $(this).attr("data-file"), xsrf: XSRF},
             error: function(e) {
                 list();
-                $(".hideActions").each(function() {
-                    if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
-                });
+                $(".hideActions").removeClass("display-none").addClass("display-none");
+                $(".copy").removeClass("pointThis text5 pointNo").addClass("pointNo");
+                $(".cut").removeClass("pointThis text5 pointNo").addClass("pointNo");
             },
             dataType: "json"
         });
@@ -292,9 +289,7 @@ function zPageJS_media() {
             data: { "do": "paste", file: $(this).attr("data-file"), xsrf: XSRF, action: action, location: $("#hashchange").val()},
             error: function() {
                 list();
-                $(".hideActions").each(function() {
-                    if(!$(this).hasClass("display-none")) $(this).addClass("display-none");
-                });
+                $(".hideActions").removeClass("display-none").addClass("display-none");
                 if(action == "cut") {
                     $("#actions").find(".paste").addClass("pointNo").removeClass("pointThis text5");
                 }
@@ -519,16 +514,16 @@ function zPageJS_media() {
     }
 
     // copied from: https://jsfiddle.net/u2kJq/241/
-    // Trigger action when the contexmenu is about to be shown
+    // trigger action when the contexmenu is about to be shown.
     $("#zContent").on("contextmenu", function (event) {
 
-        // Avoid the real one
+        // avoid the real one.
         event.preventDefault();
 
-        // Show contextmenu
+        // show contextmenu.
         $(".custom-menu").finish().toggle(100).
 
-        // In the right position (the mouse)
+        // in the right position (the mouse.)
         css({
             top: event.pageY - 32 + "px",
             left: event.pageX - 332 + "px"
@@ -536,31 +531,41 @@ function zPageJS_media() {
     });
 
 
-    // If the document is clicked somewhere
+    // if the document is clicked somewhere.
     $("#zContent").on("mousedown", function (e) {
 
-        // If the clicked element is not the menu
+        // if the clicked element is not the menu.
         if (!$(e.target).parents(".custom-menu").length > 0) {
 
-            // Hide it
+            // hide it.
             $(".custom-menu").hide(100);
         }
     });
 
 
-    // If the menu element is clicked
+    // if the menu element is clicked.
     $(".custom-menu li").click(function(){
-        // This is the triggered action name
+        // this is the triggered action name.
         switch($(this).attr("data-action")) {
 
-            // A case for each action. Your actions here
+            // a case for each action. your actions here.
             case "first": alert("first"); break;
             case "second": alert("second"); break;
             case "third": alert("third"); break;
         }
 
-        // Hide it AFTER the action was triggered
+        // hide it AFTER the action was triggered.
         $(".custom-menu").hide(100);
+    });
+
+    var area = $("#table");
+    $(area).on("dragenter", function(){
+        $(this).preventDefault();
+    });
+    $(area).on("dragover", function(){
+        $(this).css("background", "red");
+    });
+    $(area).on("dragleave", function(){
     });
 
     functionIsRunning = true;

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-06 18:53:00
+/* Smarty version 3.1.40, created on 2022-01-21 15:41:37
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/login/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61d73a8c142717_48877273',
+  'unifunc' => 'content_61ead4319ca2c9_93096767',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -42,7 +42,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61d73a8c142717_48877273 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ead4319ca2c9_93096767 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -55,8 +55,8 @@ function content_61d73a8c142717_48877273 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/_admin/login/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/login" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/login" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/loginindex.php?redirect=advanced/database/table/index.php?table=zPages_tr" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/loginindex.php?redirect=advanced/database/table/index.php?table=zPages_tr" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -144,7 +144,7 @@ $.validator.addMethod("alreadyexist", function(value, element, parameter) {
                 <h1 class="font-64 boldText">Giriş Yap.</h1>
                 <p class="font-27_2 gray2 bottom-48">Kendi kontrol panelini oluşturmak için bilgilerini girin.</p>
 
-                <form id="zUser-login-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/login/index.php">
+                <form id="zUser-login-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/login/index.php?redirect=advanced/database/table/index.php?table=zPages_tr">
                     
                     <div>
                         <input name="name" id="name" type="text" class="padL-45" placeholder="Ad">

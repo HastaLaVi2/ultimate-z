@@ -29,7 +29,7 @@
                 {zThis z="Add New Category"}
             </a>
             <div class="top-20"></div>
-            <table class="zTable">
+            <table class="zTable" no_sort="2-3">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -68,20 +68,6 @@
 
 {block name="zBottom" append}
     <script>
-    var entriesPerPage = "{zThis z="entries per page"}";
-    var searchOn = "{zThis z="Search..."}";
-    var showingOf = "{zThis z="Showing [start] to [end] of [rows] entries"}";
-    showingOf = showingOf.replaceAll("[", "{literal}{{/literal}").replaceAll("]", "{literal}}{/literal}");
-    var noRowFound = "{zThis z="No entries found"}";
-
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    </script>
-    <script src="{$zContent->srcFull["scripts"]}/simple-datatables/simple-datatables.js"></script>
-    <script>
         function deleteFromTable(dataTable) {
             // delete form functions
             $(".zForm").submit(function(e) {
@@ -119,30 +105,17 @@
             });
         }
         function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            let dataTable;
-            tables.forEach((item, i) => {
-                dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        { select: [2,3], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
+            window.zTables.forEach((item, i) => {
+                item.on("datatable.page", function(page) {
                     $("#zContent").find("a").click(magicLinks);
-                    deleteFromTable(dataTable);
+                    deleteFromTable(item);
                 });
-                dataTable.on("datatable.sort", function(column, direction) {
+                item.on("datatable.sort", function(column, direction) {
                     $("#zContent").find("a").click(magicLinks);
-                    deleteFromTable(dataTable);
+                    deleteFromTable(item);
                 });
             });
-            zDetect();
-            deleteFromTable(dataTable);
+            deleteFromTable(window.zTables[0]);
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     </script>
 {/block}

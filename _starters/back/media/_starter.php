@@ -265,31 +265,35 @@ class zPageStarter extends zPage {
 
     # copied from: https://www.geeksforgeeks.org/copy-the-entire-contents-of-a-directory-to-another-directory-in-php/
     private function custom_copy($src, $dst) {
-        // open the source directory
-        $dir = opendir($src);
+        if (is_dir($src)) {
+            // open the source directory
+            $dir = opendir($src);
 
-        // Make the destination directory if not exist
-        @mkdir($dst);
+            // Make the destination directory if not exist
+            @mkdir($dst);
 
-        // Loop through the files in source directory
-        foreach (scandir($src) as $file) {
+            // Loop through the files in source directory
+            foreach (scandir($src) as $file) {
 
-            if (( $file != '.' ) && ( $file != '..' )) {
-                if ( is_dir($src . '/' . $file) )
-                {
+                if (( $file != '.' ) && ( $file != '..' )) {
+                    if ( is_dir($src . '/' . $file) )
+                    {
 
-                    // Recursively calling custom copy function
-                    // for sub directory
-                    $this->custom_copy($src . '/' . $file, $dst . '/' . $file);
+                        // Recursively calling custom copy function
+                        // for sub directory
+                        $this->custom_copy($src . '/' . $file, $dst . '/' . $file);
 
-                }
-                else {
-                    copy($src . '/' . $file, $dst . '/' . $file);
+                    }
+                    else {
+                        copy($src . '/' . $file, $dst . '/' . $file);
+                    }
                 }
             }
-        }
 
-        closedir($dir);
+            closedir($dir);
+        } else {
+            copy($src, $dst);
+        }
     }
 
     private function addToZip($zip = NULL, $dir, $under = NULL) {

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-02 08:03:26
+/* Smarty version 3.1.40, created on 2022-01-22 09:47:09
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61d15c4e7f3c39_37738783',
+  'unifunc' => 'content_61ebd29dd82ce2_60080620',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de0d64c50b253ec0d54e6807c216dbf8854f56ef' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/advanced/database/_template.tpl',
-      1 => 1640422377,
+      1 => 1642844594,
       2 => 'file',
     ),
   ),
@@ -20,42 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61d15c4e7f3c39_37738783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebd29dd82ce2_60080620 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '5466832261d15c4e7c07a6_22803588';
+$_smarty_tpl->compiled->nocache_hash = '79361666661ebd29dd3d4a2_69217624';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_127779461061d15c4e7d6018_72211924', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_55185608361ebd29dd5ed46_07793668', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_135257523861d15c4e7d9634_64099871', "zPageTitle");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_177142101461ebd29dd645e1_52917502', "zPageTitle");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_119132699761d15c4e7da3a7_90767955', "zContent");
-?>
-
-
-<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_114162008361d15c4e7f0d16_05259269', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63184101461ebd29dd65ae4_34848106', "zContent");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_127779461061d15c4e7d6018_72211924 extends Smarty_Internal_Block
+class Block_55185608361ebd29dd5ed46_07793668 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_127779461061d15c4e7d6018_72211924',
+    0 => 'Block_55185608361ebd29dd5ed46_07793668',
   ),
 );
 public $append = 'true';
@@ -69,12 +64,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zPageTitle"} */
-class Block_135257523861d15c4e7d9634_64099871 extends Smarty_Internal_Block
+class Block_177142101461ebd29dd645e1_52917502 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zPageTitle' => 
   array (
-    0 => 'Block_135257523861d15c4e7d9634_64099871',
+    0 => 'Block_177142101461ebd29dd645e1_52917502',
   ),
 );
 public $append = 'true';
@@ -85,12 +80,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zPageTitle"} */
 /* {block "zContent"} */
-class Block_119132699761d15c4e7da3a7_90767955 extends Smarty_Internal_Block
+class Block_63184101461ebd29dd65ae4_34848106 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_119132699761d15c4e7da3a7_90767955',
+    0 => 'Block_63184101461ebd29dd65ae4_34848106',
   ),
 );
 public $append = 'true';
@@ -100,7 +95,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 
     <div class="whiteBack rad-15 pad-20 font-16">
         <?php $_smarty_tpl->_assignInScope('all', zDB::get()->all());?>
-        <table class="zTable">
+        <table class="zTable" no_sort="2-3">
             <thead>
                 <tr>
                     <th><?php echo smarty_function_zThis(array('z'=>"Table"),$_smarty_tpl);?>
@@ -161,70 +156,4 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 }
 /* {/block "zContent"} */
-/* {block "zBottom"} */
-class Block_114162008361d15c4e7f0d16_05259269 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'zBottom' => 
-  array (
-    0 => 'Block_114162008361d15c4e7f0d16_05259269',
-  ),
-);
-public $append = 'true';
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-?>
-
-    <?php echo '<script'; ?>
->
-    var entriesPerPage = "<?php echo smarty_function_zThis(array('z'=>"entries per page"),$_smarty_tpl);?>
-";
-    var searchOn = "<?php echo smarty_function_zThis(array('z'=>"Search..."),$_smarty_tpl);?>
-";
-    var showingOf = "<?php echo smarty_function_zThis(array('z'=>"Showing [start] to [end] of [rows] entries"),$_smarty_tpl);?>
-";
-    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-    var noRowFound = "<?php echo smarty_function_zThis(array('z'=>"No entries found"),$_smarty_tpl);?>
-";
-
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    <?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
-/simple-datatables/simple-datatables.js"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
->
-    
-        function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            tables.forEach((item, i) => {
-                let dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        {select: [2,3], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-            });
-            zDetect();
-        }
-    
-    zPageJS();
-    <?php echo '</script'; ?>
->
-<?php
-}
-}
-/* {/block "zBottom"} */
 }

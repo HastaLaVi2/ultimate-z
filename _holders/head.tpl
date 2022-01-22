@@ -69,7 +69,7 @@
 
 <!-- single-page application functions -->
 {if $zAdmin}<script>window.zAdmin = true</script>{/if}
-<script src="{$zContent->srcFull["scripts"]}/spa.js"></script>
+<script src="{$zContent->srcFull["scripts"]}/spa_v1.js"></script>
 
 {if $zAdmin}
     <!-- dragula -->

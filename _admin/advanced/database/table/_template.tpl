@@ -35,7 +35,7 @@
         {$zTools->zToolsFormWarning($success, $error)}
         {assign var=tableIn value=zDB::get()->table({$smarty.get.table})}
         {assign var=primaryKey value=zDB::get()->primaryKey({$smarty.get.table})}
-        <table class="zTable">
+        <table class="zTable" no_sort="{count($tableIn[0])}-{count($tableIn[0])+1}">
             <thead>
                 <tr>
                     {foreach from=$tableIn key=rowN item=row}
@@ -57,6 +57,7 @@
                             {if $key == $primaryKey}
                                 {assign var=keyValue value=$value}
                             {/if}
+                            {assign var=dataType value=zDB::get()->dataType($smarty.get.table, $key)}
                             {assign
                                 var=editValue
                                 value="{$editValue}
@@ -64,7 +65,7 @@
                                     <label class='back7 borderForm boldMin-1 boldNoR pad-10 text6' for='{$key}'>
                                         {$key}
                                     </label>
-                                    {if $value|count_characters:true > 200}
+                                    {if $dataType == "text"}
                                         <textarea name='{$key}' class='top-0 bottom-0 pad-10' style='min-height: 200px'>{$value}</textarea>
                                     {else}
                                         <input type='text' name='{$key}' class='top-0 bottom-0 pad-10' value='{$value}'>
@@ -94,34 +95,50 @@
 
 {block name="zBottom" append}
     <script>
-    var entriesPerPage = "{zThis z="entries per page"}";
-    var searchOn = "{zThis z="Search..."}";
-    var showingOf = "{zThis z="Showing [start] to [end] of [rows] entries"}";
-    showingOf = showingOf.replaceAll("[", "{literal}{{/literal}").replaceAll("]", "{literal}}{/literal}");
-    var noRowFound = "{zThis z="No entries found"}";
+        function submitForm() {
+            $(".zForm").submit(function(e) {
+                e.preventDefault();
+                var post_url = $(this).attr("action");
+                var post_data = $(this).serialize();
 
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    </script>
-    <script src="{$zContent->srcFull["scripts"]}/simple-datatables/simple-datatables.js"></script>
-    <script>
-    {literal}
-        function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            tables.forEach((item, i) => {
-                let dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        {select: [{/literal}{count($tableIn[0])}, {count($tableIn[0])+1}{literal}], sortable: false},
-                    ]
+                var json = $(this).serializeArray();
+                var final = {};
+                $.map(json, function(n, i){
+                    final[n["name"]] = n["value"];
+                });
+
+                console.log(final);
+
+                $.ajax({
+                    type: "POST",
+                    url: post_url,
+                    data: post_data,
+                    success: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000
+                        }).showToast();
+                    },
+                    error: function(responseText) {
+                        Toastify({
+                            text: responseText,
+                            duration: 3000,
+                            backgroundColor: "#f3616d",
+                        }).showToast();
+                    },
                 });
             });
-            zDetect();
         }
-    {/literal}
-    zPageJS();
+        function zPageJS() {
+            submitForm();
+            window.zTables.forEach((item, i) => {
+                item.on("datatable.page", function(page) {
+                    submitForm();
+                });
+                item.on("datatable.sort", function(column, direction) {
+                    submitForm();
+                });
+            });
+        }
     </script>
 {/block}

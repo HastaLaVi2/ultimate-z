@@ -113,4 +113,13 @@ class zDB {
             return $finalKey["Column_name"];
         }
     }
+
+    public function dataType($name = NULL, $column = NULL) {
+        $query = $this->select("SELECT DATA_TYPE
+            FROM INFORMATION_SCHEMA.COLUMNS
+            WHERE TABLE_NAME = '".$name."'
+            AND COLUMN_NAME = '".$column."'");
+
+        return $query[0] ? $query[0]["DATA_TYPE"] : NULL;
+    }
 }

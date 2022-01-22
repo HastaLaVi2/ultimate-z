@@ -34,7 +34,7 @@ class zPageStarter extends zPage {
                 $query .= "UPDATE " . $_GET["table"] . " SET ";
                 foreach ($data as $key => $value) {
                     if ($key !== "type" && $key !== "key" && $key !== "keyValue") {
-                        $query .= "`" . $key . "` = '" . $value . "',";
+                        $query .= "`" . $key . "` = '" . str_replace("'", "\'", $value) . "',";
                     }
                 }
                 $query = rtrim($query, ",") . " WHERE " . $data["key"] . " = '" . $data["keyValue"] . "'";
@@ -42,12 +42,9 @@ class zPageStarter extends zPage {
                 $run = zDB::get()->execute($query);
 
                 if ($run) {
-                    $success = $zThis["Change has been made."];
-                    $zSmarty->assign("success", $success);
+                    die($zThis["Change has been made."]);
                 } else {
-                    echo mysqli_error(zDB::get()->conn);
-                    $error = $zThis["Change has failed."];
-                    $zSmarty->assign("error", $error);
+                    die($zThis["Change has failed."] . " " . mysqli_error(zDB::get()->conn));
                 }
             }
         }

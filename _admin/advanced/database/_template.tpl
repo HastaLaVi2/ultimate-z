@@ -24,7 +24,7 @@
 {block name="zContent" append}
     <div class="whiteBack rad-15 pad-20 font-16">
         {assign var=all value=zDB::get()->all()}
-        <table class="zTable">
+        <table class="zTable" no_sort="2-3">
             <thead>
                 <tr>
                     <th>{zThis z="Table"}</th>
@@ -61,44 +61,4 @@
             </tbody>
         </table>
     </div>
-{/block}
-
-{block name="zBottom" append}
-    <script>
-    var entriesPerPage = "{zThis z="entries per page"}";
-    var searchOn = "{zThis z="Search..."}";
-    var showingOf = "{zThis z="Showing [start] to [end] of [rows] entries"}";
-    showingOf = showingOf.replaceAll("[", "{literal}{{/literal}").replaceAll("]", "{literal}}{/literal}");
-    var noRowFound = "{zThis z="No entries found"}";
-
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    </script>
-    <script src="{$zContent->srcFull["scripts"]}/simple-datatables/simple-datatables.js"></script>
-    <script>
-    {literal}
-        function zPageJS() {
-            // Simple Datatable
-            let tables = document.querySelectorAll(".zTable");
-            tables.forEach((item, i) => {
-                let dataTable = new simpleDatatables.DataTable(item, {
-                    columns: [
-                        {select: [2,3], sortable: false},
-                    ]
-                });
-                dataTable.on("datatable.page", function(page) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-                dataTable.on("datatable.sort", function(column, direction) {
-                    $("#zContent").find("a").click(magicLinks);
-                });
-            });
-            zDetect();
-        }
-    {/literal}
-    zPageJS();
-    </script>
 {/block}
