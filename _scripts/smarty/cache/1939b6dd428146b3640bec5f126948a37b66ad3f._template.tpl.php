@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 10:46:47
+/* Smarty version 3.1.40, created on 2022-01-22 11:54:02
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebe097189fc2_18525814',
+  'unifunc' => 'content_61ebf05ae99938_53254841',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1642848144,
+      1 => 1642852426,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebe097189fc2_18525814 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61ebf05ae99938_53254841 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -618,7 +618,7 @@ $(window).resize(function(){
 <script>
 function zPageJS_media() {
     var XSRF = (document.cookie.match('(^|; )_z_xsrf=([^;]*)')||0)[2];
-    var MAX_UPLOAD_SIZE = ;
+    var MAX_UPLOAD_SIZE = 20971520;
     $("#hashchange").on("change", function() {
         list();
     });
@@ -1082,17 +1082,7 @@ function zPageJS_media() {
 		});
         $("#Hover").addClass("displayNone");
     });
-
-    functionIsRunning = true;
 }
-
-var functionIsRunning = false;
-
-$(document).ready(function() {
-    if (!functionIsRunning) {
-        zPageJS_media();
-    }
-});
 </script>
 
     </div>

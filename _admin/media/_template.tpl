@@ -605,16 +605,6 @@ function zPageJS_media() {
 		});
         $("#Hover").addClass("displayNone");
     });
-
-    functionIsRunning = true;
 }
-
-var functionIsRunning = false;
-
-$(document).ready(function() {
-    if (!functionIsRunning) {
-        zPageJS_media();
-    }
-});
 </script>
 {/block}

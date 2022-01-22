@@ -257,8 +257,5 @@
             $(styleTags[styleTags.length-1]).remove();
         }
     }
-    document.addEventListener("DOMContentLoaded", function(event) {
-        zPageJS();
-    });
     </script>
 {/block}

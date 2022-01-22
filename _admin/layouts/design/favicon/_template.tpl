@@ -876,10 +876,5 @@
                 }, 301);
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-            zDetect();
-        });
     </script>
 {/block}
