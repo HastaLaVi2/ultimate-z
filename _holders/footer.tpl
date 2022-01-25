@@ -14,7 +14,22 @@
  *}
 
 {if !$zAdmin}
+    <script>
+    $(window).on("load", function () {
+        // do we have extra javascript function to be run on the new page?
+        // let's run it if we do, but we need to check if we have a function on the page at all.
+        var zPageJSS = [];
 
+        for (var x in window) {
+            if (typeof window[x] === "function" && x.indexOf("zPageJS") === 0) {
+                zPageJSS.push(x);
+            }
+        }
+        zPageJSS.forEach(function(item) {
+            window[item]();
+        });
+    });
+    </script>
 {/if}
 
 {if $zAdmin}

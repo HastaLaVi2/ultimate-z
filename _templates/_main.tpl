@@ -57,6 +57,10 @@
 
     <div id="zAfter">{block name="zAfter"}{/block}</div>
 
+    <div id="zFooter">
+        {include file="_holders/footer.tpl"}
+    </div>
+
     <div id="zBottom">
         {block name="zBottom"}
         {/block}

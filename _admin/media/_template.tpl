@@ -401,7 +401,6 @@ function zPageJS_media() {
             list();
         };
         xhr.upload.onprogress = function(e){
-            console.log(e.loaded);
             if(e.lengthComputable) {
                 $row.find(".progress").css("width", (e.loaded/e.total*100 | 0)+'%' );
             }
