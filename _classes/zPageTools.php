@@ -256,7 +256,7 @@ class zPageTools {
 
                         $zHolder = new zHolder($id_holder);
 
-                        foreach ($zHolder->types as $k => $v) {
+                        foreach ($zHolder->partials as $k => $v) {
                             $id_partial = $k + 1;
                             $check_page_holder = $db->select("SELECT * FROM zPagesHolders_tr WHERE id_page_holder = '$id_page_holder' AND id_partial = '$id_partial' AND id_lang = '$id_lang'");
                             $content = ($v == "image" || $v == "images") ? ltrim(rtrim($images[0], ";"), ";") : $holder_content[0];

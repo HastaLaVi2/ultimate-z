@@ -28,9 +28,9 @@ class zHolder {
     # order of the zHolder on the block that belongs to a zPage.
     public $order;
 
-    # data types contained in the zHolder.
-    public $types;
-    # contents of the data types contained in the zHolder.
+    # data partials contained in the zHolder.
+    public $partials;
+    # contents of the data partials contained in the zHolder.
     public $content;
 
     # id of the zHolder that specifically belongs to the zPage.
@@ -51,7 +51,7 @@ class zHolder {
         $query = $db->select("SELECT * FROM zHolders WHERE id_holder = '$this->id'");
         if (!empty($query)) {
             # assign the properies.
-            $this->types = explode(';', $query[0]["type"]);
+            $this->partials = explode(';', $query[0]["partials"]);
         }
 
         # get the data of the zHolder for the given zLanguage from the database.
@@ -90,9 +90,9 @@ class zHolder {
 
         # if our contents array is empty, this means the class does not belong to a zPage.
         # but we still need empty strings inside the contents array,
-        # that matchs with the types array.
+        # that matchs with the partials array.
         if (empty($this->content)) {
-            foreach ($this->types as $c) {
+            foreach ($this->partials as $c) {
                 array_push($this->content, "");
             }
         }

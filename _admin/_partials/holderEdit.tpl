@@ -57,25 +57,25 @@
                 <div class="hiddenData displayNone">
                     {foreach from=$zTools->zToolsGetAllLangs(true) item=l}
                         {assign var=h value=$editPage[$l->id]->zPageGetHolder($l->id, $holder->id, $id_block, $holder->order)}
-                        <textarea name="{if $holder->types[$key] == 'image' || $holder->types[$key] == 'images'}images{else}content{/if}[{$l->id}][]" data-type="{$holder->types[$key]}">
+                        <textarea name="{if $holder->partials[$key] == 'image' || $holder->partials[$key] == 'images'}images{else}content{/if}[{$l->id}][]" data-type="{$holder->partials[$key]}">
                             {$h->content[$key]}
                         </textarea>
                     {/foreach}
                 </div>
-                {if $holder->types[$key] == "no"}
-                {elseif $holder->types[$key] == "input"}
+                {if $holder->partials[$key] == "no"}
+                {elseif $holder->partials[$key] == "input"}
                     <div class="top-20">
                         <input name="zContent[{$zUser->id_lang_closest}][]" type="text" class="back-white page-title padL-45" value="{$content|escape:"html"}">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
                         </div>
                     </div>
-                {elseif $holder->types[$key] == "image"}
+                {elseif $holder->partials[$key] == "image"}
                     <div class="top-20">
                         <input class="displayNone" value="{$content}">
                         <input type="file" class="filepond">
                     </div>
-                {elseif $holder->types[$key] == "images"}
+                {elseif $holder->partials[$key] == "images"}
                     <div class="top-20">
                         <div class="zTog-imagesFor{$modalNumber} pad-10 rad-5 pointThis" style="background:#f0efee">
                             <div class="zShow-imagesFor{$modalNumber}">{zThis z="Click to upload your media."}</div>
@@ -87,7 +87,7 @@
                             <input type="file" class="filepond">
                         </div>
                     </div>
-                {elseif $holder->types[$key] == "categorylist"}
+                {elseif $holder->partials[$key] == "categorylist"}
                     {assign var=allcats value=$zCategoryTools->zCategoryGetAll($zContent->language->id)}
                     <div class="top-20">
                         <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[{$zUser->id_lang_closest}][]" style="background-color: white">
@@ -97,7 +97,7 @@
                             {/foreach}
                         </select>
                     </div>
-                {elseif $holder->types[$key] == "link"}
+                {elseif $holder->partials[$key] == "link"}
                     {assign var="contents" value=";"|explode:$content}
                     <div class="zGroup top-20">
                         <label class="back7 borderForm boldMin-1 boldNoR pad-16 text6">

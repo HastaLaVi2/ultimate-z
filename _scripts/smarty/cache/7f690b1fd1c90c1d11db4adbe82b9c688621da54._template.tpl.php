@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-25 08:28:41
+/* Smarty version 3.1.40, created on 2022-01-26 09:48:04
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61efb4b90d56d9_03606045',
+  'unifunc' => 'content_61f118d4df5786_03322838',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '3919874f51ba2bcf80120a6cbf05a2f24c4274ce' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/_main.tpl',
-      1 => 1640422377,
+      1 => 1643101780,
       2 => 'file',
     ),
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
@@ -39,32 +39,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1640874529,
       2 => 'file',
     ),
-    '37b0e39aed323c9a8a0278f28ec8e347d4af9913' => 
+    '626c299bef372eef9f643e344665241cf0ea7a51' => 
     array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/4/_holder.tpl',
-      1 => 1633642192,
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/2/_holder.tpl',
+      1 => 1633642248,
+      2 => 'file',
+    ),
+    'a2d8da40b145f70fc394dfc475516078a49ccbbd' => 
+    array (
+      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61efb4b90d56d9_03606045 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f118d4df5786_03322838 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Anasayfa | ultimate Z</title>
+    <title>Moda | ultimate Z</title>
     
         
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="description" content="ultimate Z" />
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/" />
+<link rel="alternate" href="http://localhost/ultimate-z/moda/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/moda" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/moda" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -245,16 +250,37 @@ function content_61efb4b90d56d9_03606045 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>-->
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <!-- zHolder: Etiket -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <!-- zHolder: Görsel -->
         
 <div class="pad-40">
-    <h1>ultimate Z'ye hoş geldiniz!</h1>
-</div>
-        <!-- zHolder: Etiket -->
+        <img src="http://localhost/ultimate-z/_media/uploads/1002/ş ş.png" class="widthAll rad-20">
+    </div>
+        <!-- zHolder: Görsel -->
     
     </div>
 
     <div id="zAfter"></div>
+
+    <div id="zFooter">
+        
+    <script>
+    $(window).on("load", function () {
+        // do we have extra javascript function to be run on the new page?
+        // let's run it if we do, but we need to check if we have a function on the page at all.
+        var zPageJSS = [];
+
+        for (var x in window) {
+            if (typeof window[x] === "function" && x.indexOf("zPageJS") === 0) {
+                zPageJSS.push(x);
+            }
+        }
+        zPageJSS.forEach(function(item) {
+            window[item]();
+        });
+    });
+    </script>
+
+    </div>
 
     <div id="zBottom">
         
