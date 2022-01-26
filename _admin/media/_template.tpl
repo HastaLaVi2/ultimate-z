@@ -163,11 +163,11 @@ function zPageJS_media() {
             });
             zTables[0].on("datatable.page", function(page) {
                 $("#zContent").find("a").click(magicLinks);
-                tableFunctions();
+                tableFunctions(true);
             });
             zTables[0].on("datatable.sort", function(column, direction) {
                 $("#zContent").find("a").click(magicLinks);
-                tableFunctions();
+                tableFunctions(true);
             });
         });
 
@@ -189,7 +189,7 @@ function zPageJS_media() {
         });
     }
 
-    function tableFunctions() {
+    function tableFunctions(special) {
         $("#list a").click(function() {
             var el = $(this);
             if (el.attr("type") == "dir") {
@@ -216,6 +216,13 @@ function zPageJS_media() {
         });
 
         $("#list .zCheckbox").change(checkboxActions);
+        if (special && special == true) {
+            $(".hideActions").removeClass("display-none").addClass("display-none");
+            $(".copy").addClass("pointNo").removeClass("pointThis text5");
+            $(".cut").addClass("pointNo").removeClass("pointThis text5");
+            $("#list .zCheckbox").prop("checked", false);
+            $(".allBoxes").prop("checked", false);
+        }
     }
 
     function checkboxActions() {
