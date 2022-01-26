@@ -1,57 +1,56 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 09:48:04
+/* Smarty version 3.1.40, created on 2022-01-26 13:47:47
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f118d4d7a034_17296678',
+  'unifunc' => 'content_61f151035c25b8_75235812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1640729141,
+      1 => 1643203012,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:_holders/".((string)$_smarty_tpl->tpl_vars[\'holder\']->value->id)."/_holder.tpl' => 1,
   ),
 ),false)) {
-function content_61f118d4d7a034_17296678 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f151035c25b8_75235812 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '113668557561f118d4d271c8_37885922';
+$_smarty_tpl->compiled->nocache_hash = '45832923361f15103592e98_24777913';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_88104849161f118d4d54007_33222143', "zHead");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_213176067961f151035ab323_14371978', "zHead");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13105078861f118d4d5a009_35236063', "zBefore");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_56813684061f151035afb61_34935781', "zBefore");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2112376261f118d4d6ac14_75210156', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_159028196861f151035bdc05_05787743', "zContent");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zHead"} */
-class Block_88104849161f118d4d54007_33222143 extends Smarty_Internal_Block
+class Block_213176067961f151035ab323_14371978 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zHead' => 
   array (
-    0 => 'Block_88104849161f118d4d54007_33222143',
+    0 => 'Block_213176067961f151035ab323_14371978',
   ),
 );
 public $append = 'true';
@@ -66,12 +65,12 @@ assets/horizontal-scroll.css"/>
 }
 /* {/block "zHead"} */
 /* {block "zBefore"} */
-class Block_13105078861f118d4d5a009_35236063 extends Smarty_Internal_Block
+class Block_56813684061f151035afb61_34935781 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBefore' => 
   array (
-    0 => 'Block_13105078861f118d4d5a009_35236063',
+    0 => 'Block_56813684061f151035afb61_34935781',
   ),
 );
 public $append = 'true';
@@ -100,16 +99,17 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zBefore"} */
 /* {block "zContent"} */
-class Block_2112376261f118d4d6ac14_75210156 extends Smarty_Internal_Block
+class Block_159028196861f151035bdc05_05787743 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_2112376261f118d4d6ac14_75210156',
+    0 => 'Block_159028196861f151035bdc05_05787743',
   ),
 );
 public $append = 'true';
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zBlock.php','function'=>'smarty_function_zBlock',),));
 ?>
 
     <!--<div class="back7 pad-20">
@@ -197,41 +197,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             </div>
         </div>
     </div>-->
-    <?php $_smarty_tpl->_assignInScope('holders', $_smarty_tpl->tpl_vars['zPage']->value->zPageGetHolders($_smarty_tpl->tpl_vars['zContent']->value->language->id,1));?>
-    <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['holders']->value, 'holder');
-$_smarty_tpl->tpl_vars['holder']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['holder']->value) {
-$_smarty_tpl->tpl_vars['holder']->do_else = false;
-?>
-        <?php
-$_smarty_tpl->tpl_vars['foo'] = new Smarty_Variable(null, $_smarty_tpl->isRenderingCache);$_smarty_tpl->tpl_vars['foo']->step = 1;$_smarty_tpl->tpl_vars['foo']->total = (int) ceil(($_smarty_tpl->tpl_vars['foo']->step > 0 ? 100+1 - (1) : 1-(100)+1)/abs($_smarty_tpl->tpl_vars['foo']->step));
-if ($_smarty_tpl->tpl_vars['foo']->total > 0) {
-for ($_smarty_tpl->tpl_vars['foo']->value = 1, $_smarty_tpl->tpl_vars['foo']->iteration = 1;$_smarty_tpl->tpl_vars['foo']->iteration <= $_smarty_tpl->tpl_vars['foo']->total;$_smarty_tpl->tpl_vars['foo']->value += $_smarty_tpl->tpl_vars['foo']->step, $_smarty_tpl->tpl_vars['foo']->iteration++) {
-$_smarty_tpl->tpl_vars['foo']->first = $_smarty_tpl->tpl_vars['foo']->iteration === 1;$_smarty_tpl->tpl_vars['foo']->last = $_smarty_tpl->tpl_vars['foo']->iteration === $_smarty_tpl->tpl_vars['foo']->total;?>
-            <?php $_smarty_tpl->_assignInScope("_".((string)$_smarty_tpl->tpl_vars['foo']->value), null);?>
-        <?php }
-}
-?>
-        <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['holder']->value->content, 'content', false, 'k');
-$_smarty_tpl->tpl_vars['content']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['k']->value => $_smarty_tpl->tpl_vars['content']->value) {
-$_smarty_tpl->tpl_vars['content']->do_else = false;
-?>
-            <?php $_smarty_tpl->_assignInScope("_".((string)($_smarty_tpl->tpl_vars['k']->value+1)), ((string)$_smarty_tpl->tpl_vars['content']->value));?>
-        <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        <!-- zHolder: <?php echo $_smarty_tpl->tpl_vars['holder']->value->name;?>
- -->
-        <?php $_smarty_tpl->_subTemplateRender("file:_holders/".((string)$_smarty_tpl->tpl_vars['holder']->value->id)."/_holder.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 2, true);
-?>
-        <!-- zHolder: <?php echo $_smarty_tpl->tpl_vars['holder']->value->name;?>
- -->
-    <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+    <?php echo smarty_function_zBlock(array('ID'=>"1"),$_smarty_tpl);?>
+
+<?php
 }
 }
 /* {/block "zContent"} */

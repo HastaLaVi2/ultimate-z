@@ -5,7 +5,7 @@
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f15103640de1_60459416',
+  'unifunc' => 'content_61f151036450f7_74900677',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -16,17 +16,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       2 => 'file',
     ),
   ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_61f15103640de1_60459416 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '74556584861f1510363ef25_81447207';
+  'cache_lifetime' => 120,
+),true)) {
+function content_61f151036450f7_74900677 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-
 <div class="pad-40">
-    <h1><?php echo $_smarty_tpl->tpl_vars['_1']->value;?>
-</h1>
+    <h1>ultimate Z'ye hoş geldiniz!</h1>
 </div>
 <?php }
 }

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 13:38:23
+/* Smarty version 3.1.40, created on 2022-01-26 10:57:46
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ec08cfecf288_88850884',
+  'unifunc' => 'content_61f1292aeb90c8_68480728',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -78,13 +78,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ec08cfecf288_88850884 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f1292aeb90c8_68480728 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -400,14 +400,14 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                480
+                                495
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
                                                                                 <div class="widthAll padL-20 padR-100">
                             Moda
                             <span class="floatingTheRight padR-20 boldText" style="color: #008b75">
-                                36
+                                39
                             </span>
                         </div>
                         <div id="chart-1002" class="left--22 right--10"></div>
@@ -425,7 +425,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">536</h6>
+        <h6 class="top-0 bottom-0">554</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -546,7 +546,7 @@ $(window).resize(function(){
     function dateTable(period, start) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
-        var date = new Date("2022/01/22");
+        var date = new Date("2022/01/26");
         if (start) {
             date.setDate(date.getDate() - start);
         }
@@ -690,19 +690,19 @@ $(window).resize(function(){
         window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["7","2","1","0","0","0","0"]);
+        apexBarCreate("#chart-profile-visit", 7, ["5","12","0","0","8","2","1"]);
                 if ($("#chart-1001").length) {
             apexLineCreate(
                 "#chart-1001",
                 12,
-                ["7","2","1","0","0","0","0","0","0","0","0","0"],
+                ["2","12","0","0","8","2","1","0","0","0","0","0"],
                 "#5350e9"            );
         }
                 if ($("#chart-1002").length) {
             apexLineCreate(
                 "#chart-1002",
                 12,
-                ["0","0","0","0","0","0","0","0","0","0","0","0"],
+                ["3","0","0","0","0","0","0","0","0","0","0","0"],
                 "#008b75"            );
         }
         

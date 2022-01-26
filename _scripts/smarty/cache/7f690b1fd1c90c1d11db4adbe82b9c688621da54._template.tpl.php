@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 09:48:04
+/* Smarty version 3.1.40, created on 2022-01-26 13:47:47
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f118d4df5786_03322838',
+  'unifunc' => 'content_61f15103655e75_66061018',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1fde8a938bd2ef3d005f8877a3c265d227320c2' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl',
-      1 => 1640729141,
+      1 => 1643203012,
       2 => 'file',
     ),
     '3919874f51ba2bcf80120a6cbf05a2f24c4274ce' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_templates/_main.tpl',
-      1 => 1643101780,
+      1 => 1643200970,
       2 => 'file',
     ),
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
@@ -39,12 +39,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
       1 => 1640874529,
       2 => 'file',
     ),
-    '626c299bef372eef9f643e344665241cf0ea7a51' => 
-    array (
-      0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/2/_holder.tpl',
-      1 => 1633642248,
-      2 => 'file',
-    ),
     'a2d8da40b145f70fc394dfc475516078a49ccbbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
@@ -54,22 +48,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f118d4df5786_03322838 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f15103655e75_66061018 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Moda | ultimate Z</title>
+    <title>Anasayfa | ultimate Z</title>
     
         
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="ultimate Z" />
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/moda/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/moda" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/moda" />
+<link rel="alternate" href="http://localhost/ultimate-z/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -250,13 +245,11 @@ function content_61f118d4df5786_03322838 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>-->
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <!-- zHolder: Görsel -->
-        
-<div class="pad-40">
-        <img src="http://localhost/ultimate-z/_media/uploads/1002/ş ş.png" class="widthAll rad-20">
-    </div>
-        <!-- zHolder: Görsel -->
-    
+    <div class="pad-40">
+    <h1>ultimate Z'ye hoş geldiniz!</h1>
+</div>
+
+
     </div>
 
     <div id="zAfter"></div>

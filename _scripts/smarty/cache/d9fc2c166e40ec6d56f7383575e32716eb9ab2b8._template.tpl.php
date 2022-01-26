@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:46:37
+/* Smarty version 3.1.40, created on 2022-01-26 13:50:07
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd27d854875_98433229',
+  'unifunc' => 'content_61f1518fa98fe7_16728626',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1641845245,
+      1 => 1643204794,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -60,7 +60,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1641843839,
+      1 => 1643205005,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
@@ -72,19 +72,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1641388364,
+      1 => 1642852845,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebd27d854875_98433229 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f1518fa98fe7_16728626 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -97,8 +97,8 @@ function content_61ebd27d854875_98433229 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/_admin/layouts/pages/edit/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1002" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1002" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1001" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1001" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -396,14 +396,14 @@ $(window).resize(function(){
         </nav>
 
         <div class="whiteBack rad-15 pad-20 font-16">
-            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002">
+            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001">
                 
                 <div>
                     <div class="inLeft index-10">
                         <h4 class="font-19 top-0 bottom-0 text6 boldText">Bu sayfayı düzenliyorsunuz:</h4>
                         <h4 class="font-19 top-0 text4 boldText">
-                            Moda
-                            <span class="font-14"><a href="http://localhost/ultimate-z/tr/moda" target="_blank">[Sayfayı Görüntüle]</a></span>
+                            Anasayfa
+                            <span class="font-14"><a href="http://localhost/ultimate-z/tr/" target="_blank">[Sayfayı Görüntüle]</a></span>
                         </h4>
                     </div>
                     <div class="rightText padB-15">
@@ -420,11 +420,11 @@ $(window).resize(function(){
                         </div>
                     </div>
                 </div>
-                <div><input name="id_page" id="id_page" type="text" value="1002" style="display:none"></div>
+                <div><input name="id_page" id="id_page" type="text" value="1001" style="display:none"></div>
                 <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
                     <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
                     <div class="bottom-10">
-                        <input name="page_url" id="page_url" type="text" class="padL-45" value="/moda" placeholder="Başında / ifadesi olan bir URL girin">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" value="/" placeholder="Başında / ifadesi olan bir URL girin">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-file-code"></i>
                         </div>
@@ -434,7 +434,7 @@ $(window).resize(function(){
                                         type="text" value="1" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[1]" id="page_name_1" type="text"
-                                       class="padL-45" value="Fashion" placeholder="Başlık">
+                                       class="padL-45" value="Home" placeholder="Başlık">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -445,7 +445,7 @@ $(window).resize(function(){
                                         type="text" value="2" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[2]" id="page_name_2" type="text"
-                                       class="padL-45" value="Moda" placeholder="Başlık">
+                                       class="padL-45" value="Anasayfa" placeholder="Başlık">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -455,7 +455,7 @@ $(window).resize(function(){
                     <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
                                             <div class="divFor1 divFor" style="display: none">
                             <div class="bottom-10">
-                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
+                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="ultimate Z">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-keyboard"></i>
                                 </div>
@@ -463,7 +463,7 @@ $(window).resize(function(){
                         </div>
                                             <div class="divFor2 divFor" style="">
                             <div class="bottom-10">
-                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="">
+                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="ultimate Z">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-keyboard"></i>
                                 </div>
@@ -487,7 +487,7 @@ $(window).resize(function(){
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
                         <option selected>Seç...</option>
-                        <option value='1001'>Anasayfa</option>
+                        <option value='1002'>Moda</option>
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
@@ -543,7 +543,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="1" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <div class="hiddenData displayNone">
+                                            <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="text">
                             
                         </textarea>
@@ -595,7 +595,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="2" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <div class="hiddenData displayNone">
+                            <h5 class="bottom--15">Görsel</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="images[1][]" data-type="images">
                             
                         </textarea>
@@ -655,7 +655,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="3" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <div class="hiddenData displayNone">
+                            <h5 class="bottom--15">Kategori Listesi</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="categorylist">
                             
                         </textarea>
@@ -710,7 +710,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="4" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <div class="hiddenData displayNone">
+                            <h5 class="bottom--15">Etiket</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="input">
                             
                         </textarea>
@@ -723,6 +723,23 @@ $(window).resize(function(){
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
                         </div>
+                    </div>
+                                                            <div class="hiddenData displayNone">
+                                                                    <textarea name="content[1][]" data-type="option">
+                            
+                        </textarea>
+                                                                    <textarea name="content[2][]" data-type="option">
+                            
+                        </textarea>
+                                    </div>
+                                    <div class="zGroup top-20 whiteBack">
+                        <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
+                            Seç...
+                        </label>
+                        <select class="zSelect pad-10 top-0 bottom-0" name="zContent[2][]">
+                                                            <option value="1">Seçenek 1</option>
+                                                            <option value="2">Seçenek 2</option>
+                                                    </select>
                     </div>
                                     </div>
     </div>
@@ -765,7 +782,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="5" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <div class="hiddenData displayNone">
+                            <h5 class="bottom--15">Başlık</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="input">
                             
                         </textarea>
@@ -779,7 +796,7 @@ $(window).resize(function(){
                             <i class="far fa-square"></i>
                         </div>
                     </div>
-                                            <div class="hiddenData displayNone">
+                                            <h5 class="bottom--15">Medya</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="images[1][]" data-type="image">
                             
                         </textarea>
@@ -791,7 +808,7 @@ $(window).resize(function(){
                         <input class="displayNone" value="">
                         <input type="file" class="filepond">
                     </div>
-                                            <div class="hiddenData displayNone">
+                                            <h5 class="bottom--15">Metin</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="text">
                             
                         </textarea>
@@ -810,7 +827,7 @@ $(window).resize(function(){
                                                                 
     <div class="zDestroy-holder6 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="6">
         <h6 class="bottom--10 top--10 left--10 right--10 font-1_5em thinText">
-            Görsel
+            Etiket
         </h6>
         <div class="text5 font-25 floatingTheRight pad-32 zMob-pad-20 index-10 top--10 right--10 hideForAdd">
             <span class="pointThis toggleParentNext">
@@ -845,26 +862,38 @@ $(window).resize(function(){
                     </div>
                 </div>
             </div>
-            <input name="id_holder[]" type="text" value="2" class="displayNone">
-            <input name="id_page_holder[]" type="text" value="2" class="displayNone">
-                            <div class="hiddenData displayNone">
-                                                                    <textarea name="images[1][]" data-type="images">
-                            ş ş.png
+            <input name="id_holder[]" type="text" value="4" class="displayNone">
+            <input name="id_page_holder[]" type="text" value="1" class="displayNone">
+                            <h5 class="bottom--15">Etiket</h5>                <div class="hiddenData displayNone">
+                                                                    <textarea name="content[1][]" data-type="input">
+                            ultimate Z'ye hoş geldiniz!
                         </textarea>
-                                                                    <textarea name="images[2][]" data-type="images">
-                            ş ş.png
+                                                                    <textarea name="content[2][]" data-type="input">
+                            ultimate Z'ye hoş geldiniz!
                         </textarea>
                                     </div>
                                     <div class="top-20">
-                        <div class="zTog-imagesFor6 pad-10 rad-5 pointThis" style="background:#f0efee">
-                            <div class="zShow-imagesFor6">Medya yüklemek için tıklayın.</div>
-                            <div class="zShow-imagesFor6 displayNone">Yükleme ekranını gizle.</div>
+                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="ultimate Z&#039;ye hoş geldiniz!">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                            <i class="far fa-square"></i>
                         </div>
-                        <div class="displayNone zShow-imagesFor6 _top--5">
-                            <div class="floatingSpace widthAll height-10 boldMin-1 boldSoG2 boldNoL boldNoR boldNoB index-10" style="background:#f0efee"></div>
-                            <input class="displayNone" value="ş ş.png" data-multi="true">
-                            <input type="file" class="filepond">
-                        </div>
+                    </div>
+                                                            <div class="hiddenData displayNone">
+                                                                    <textarea name="content[1][]" data-type="option">
+                            2
+                        </textarea>
+                                                                    <textarea name="content[2][]" data-type="option">
+                            2
+                        </textarea>
+                                    </div>
+                                    <div class="zGroup top-20 whiteBack">
+                        <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
+                            Seç...
+                        </label>
+                        <select class="zSelect pad-10 top-0 bottom-0" name="zContent[2][]">
+                                                            <option value="1">Seçenek 1</option>
+                                                            <option value="2">Seçenek 2</option>
+                                                    </select>
                     </div>
                                     </div>
     </div>
@@ -917,7 +946,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.0</b></p>
     </div>
 </footer>
     </div>
@@ -1173,7 +1202,7 @@ $(window).resize(function(){
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
-            data.set("zPage", "1002");
+            data.set("zPage", "1001");
             if (filepond) {
                 data.set("filepond", "true");
             }
@@ -1191,7 +1220,7 @@ $(window).resize(function(){
                 type: "POST",
                 success: function(filename) {
                     // this is an image tag to insert into a summernote after upload
-                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1002/" + filename).addClass("img-fluid");
+                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1001/" + filename).addClass("img-fluid");
                     if (summernote) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
@@ -1200,7 +1229,6 @@ $(window).resize(function(){
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
                         updateFilepond(e);
-                        console.log(filename);
                     }
                 },
                 error: function(data) {
@@ -1223,7 +1251,7 @@ $(window).resize(function(){
                         var files = [];
                         for (let i=0; i < value.split(";").length; i++) {
                             files.push({
-                                source: "../../../../_media/uploads/1002/"+value.split(";")[i],
+                                source: "../../../../_media/uploads/1001/"+value.split(";")[i],
                                 options: {
                                     type: "local"
                                 }
@@ -1467,10 +1495,6 @@ $(window).resize(function(){
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     </script>
 
     </div>

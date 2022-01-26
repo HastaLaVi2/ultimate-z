@@ -29,7 +29,7 @@ class zPageStarter extends zPage {
             header("Location: " . $zContent->srcFull["_main"] . "index.php?view=403");
         }
 
-        $version = "0.2.3";
+        $version = "0.3.1";
 
         if(!empty($data)) {
             if (isset($data["updateSite"])) {
@@ -37,14 +37,13 @@ class zPageStarter extends zPage {
                 $params["langcode"] = $data["langcode"];
                 $params["cookie_key"] = $z->key;
                 $params["hidden_key"] = $z->hidden_key;
+                $params["version"] = $version;
 
                 $ch = curl_init();
-                $version_check = $params;
-                $version_check["version"] = "0.2.3";
 
                 curl_setopt($ch, CURLOPT_URL, "https://onucyirmibir.com/zUpdate.php");
-                curl_setopt($ch, CURLOPT_POST, count($version_check));
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $version_check);
+                curl_setopt($ch, CURLOPT_POST, count($params));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
                 $up_to_date = curl_exec($ch);

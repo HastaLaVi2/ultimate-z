@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:46:37
+/* Smarty version 3.1.40, created on 2022-01-26 13:50:06
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd27d66ae55_95212594',
+  'unifunc' => 'content_61f1518ef11908_39053254',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1641845245,
+      1 => 1643204794,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/modal.tpl' => 1,
   ),
 ),false)) {
-function content_61ebd27d66ae55_95212594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f1518ef11908_39053254 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '49583286361ebd27d5e2b80_32892581';
+$_smarty_tpl->compiled->nocache_hash = '35261635061f1518eea8962_62788661';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_98791364761ebd27d6039a8_97074455', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_77992121661f1518eec2483_85778891', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_196519257061ebd27d60bb05_43972135', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_209597028261f1518eec8573_02167090', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_134642164261ebd27d652559_69100041', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63869170861f1518eefd842_25666510', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_98791364761ebd27d6039a8_97074455 extends Smarty_Internal_Block
+class Block_77992121661f1518eec2483_85778891 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_98791364761ebd27d6039a8_97074455',
+    0 => 'Block_77992121661f1518eec2483_85778891',
   ),
 );
 public $append = 'true';
@@ -78,12 +78,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_196519257061ebd27d60bb05_43972135 extends Smarty_Internal_Block
+class Block_209597028261f1518eec8573_02167090 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_196519257061ebd27d60bb05_43972135',
+    0 => 'Block_209597028261f1518eec8573_02167090',
   ),
 );
 public $append = 'true';
@@ -299,12 +299,12 @@ $_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_134642164261ebd27d652559_69100041 extends Smarty_Internal_Block
+class Block_63869170861f1518eefd842_25666510 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_134642164261ebd27d652559_69100041',
+    0 => 'Block_63869170861f1518eefd842_25666510',
   ),
 );
 public $append = 'true';
@@ -561,7 +561,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
                         updateFilepond(e);
-                        console.log(filename);
                     }
                 },
                 error: function(data) {
@@ -833,10 +832,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     <?php echo '</script'; ?>
 >
 <?php

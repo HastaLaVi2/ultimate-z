@@ -30,8 +30,9 @@ class zHolder {
 
     # data partials contained in the zHolder.
     public $partials;
-    # contents of the data partials contained in the zHolder.
-    public $content;
+
+    # if any of the partials in the zHolder is the type of option.
+    public $options;
 
     # id of the zHolder that specifically belongs to the zPage.
     public $id_page_holder;
@@ -44,27 +45,45 @@ class zHolder {
         # assign the id property.
         $this->id = $id_holder;
 
-        # create an empty array for the contents in the zHolder.
-        $this->content = array();
+        # create an empty array for the partials in the zHolder.
+        $this->partials = array();
 
         # get the data applicable for all zHolders across zPages with the same id from the database.
         $query = $db->select("SELECT * FROM zHolders WHERE id_holder = '$this->id'");
         if (!empty($query)) {
-            # assign the properies.
-            $this->partials = explode(';', $query[0]["partials"]);
+            $partials = explode(';', $query[0]["partials"]);
+
+            foreach ($partials as $p) {
+                $new = array();
+                $new["type"] = $p;
+                array_push($this->partials, $new);
+            }
         }
 
         # get the data of the zHolder for the given zLanguage from the database.
         $query_n = $db->select("SELECT * FROM zHolders_tr WHERE id_holder = '$this->id' AND id_lang = '$id_lang'");
 
-        if (!empty($query_n)) {
-            # assign the properies.
-            $this->name = $query_n[0]["value"];
-        } else {
+        if (empty($query_n)) {
             # if our query returned empty, this means we do not have a zLanguage id.
             # then use the default zLanguage: English.
             $query_n = $db->select("SELECT * FROM zHolders_tr WHERE id_holder = '$this->id' AND id_lang = '1'");
-            $this->name = $query_n[0]["value"];
+        }
+
+        # assign the properies.
+        $this->name = $query_n[0]["value"];
+
+        # assign the names of the partials.
+        $names = explode(";", $query_n[0]["names"]);
+        $options = explode("][", ltrim(rtrim($query_n[0]["options"], "]"), "["));
+
+        if (!empty($this->partials)) {
+            foreach ($this->partials as $key => &$p) {
+                $p["name"] = $names[$key] ? $names[$key] : "";
+                if ($p["type"] == "option") {
+                    $p["options"] = explode(";", $options[0]);
+                    array_shift($options);
+                }
+            }
         }
 
         # get the data that only used on a spesific zPage from the database.
@@ -77,24 +96,17 @@ class zHolder {
 
             # now, get the zLanguage-related data that only used on a spesific zPage from the database.
             $query_p2 = $db->select("SELECT * FROM zPagesHolders_tr WHERE id_page_holder = '$id_page_holder' AND id_lang = '$id_lang' ORDER BY id_partial");
-            if (!empty($query_p2)) {
-                foreach ($query_p2 as $c) {
-                    # push the contents in different zLanguages into the contents array.
-                    array_push($this->content, $c["value"]);
+            if (!empty($this->partials)) {
+                foreach ($this->partials as $key => &$p) {
+                    # if our contents array is empty, this means the class does not belong to a zPage.
+                    # but we still need empty strings inside the contents array,
+                    # that matchs with the partials array.
+                    $p["content"] = $query_p2[$key] ? $query_p2[$key]["value"] : "";
                 }
             }
 
             # assign the properies.
             $this->id_page_holder = $query_p1[0]["id_page_holder"];
-        }
-
-        # if our contents array is empty, this means the class does not belong to a zPage.
-        # but we still need empty strings inside the contents array,
-        # that matchs with the partials array.
-        if (empty($this->content)) {
-            foreach ($this->partials as $c) {
-                array_push($this->content, "");
-            }
         }
     }
  }

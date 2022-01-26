@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 13:41:43
+/* Smarty version 3.1.40, created on 2022-01-26 13:50:07
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ec09976d5324_57715075',
+  'unifunc' => 'content_61f1518f9f4574_91815282',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61ec09976d5324_57715075 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f1518f9f4574_91815282 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '10369781661ec09976cd876_38461912';
+$_smarty_tpl->compiled->nocache_hash = '192577343161f1518f9ed750_78205455';
 ?>
 
 <?php if (!$_smarty_tpl->tpl_vars['zAdmin']->value) {?>
+    <?php echo '<script'; ?>
+>
+    $(window).on("load", function () {
+        // do we have extra javascript function to be run on the new page?
+        // let's run it if we do, but we need to check if we have a function on the page at all.
+        var zPageJSS = [];
 
+        for (var x in window) {
+            if (typeof window[x] === "function" && x.indexOf("zPageJS") === 0) {
+                zPageJSS.push(x);
+            }
+        }
+        zPageJSS.forEach(function(item) {
+            window[item]();
+        });
+    });
+    <?php echo '</script'; ?>
+>
 <?php }?>
 
 <?php if ($_smarty_tpl->tpl_vars['zAdmin']->value) {?>

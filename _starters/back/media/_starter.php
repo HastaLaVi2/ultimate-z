@@ -86,7 +86,7 @@ class zPageStarter extends zPage {
         		$this->err(403, $zThis->value("XSRF Failure") . ": " . $_COOKIE['_z_xsrf'] . ", " . $data['xsrf']);
         }
 
-        if (isset($_REQUEST["file"]) && $this->isJson($_REQUEST["file"])) {
+        if (isset($_REQUEST["file"]) && $_REQUEST["file"] !== "" && $this->isJson($_REQUEST["file"])) {
             $file = array();
             foreach (json_decode($_REQUEST["file"]) as $d) {
                 array_push($file, "../../_media/".$d);
@@ -104,8 +104,12 @@ class zPageStarter extends zPage {
             }
         }
 
-        $zSmarty->assign("disk_free_space", disk_free_space("/"));
-        $zSmarty->assign("disk_total_space", disk_total_space("/"));
+        if (function_exists("disk_free_space")) {
+            $zSmarty->assign("disk_free_space", disk_free_space("/"));
+        }
+        if (function_exists("disk_total_space")) {
+            $zSmarty->assign("disk_total_space", disk_total_space("/"));
+        }
 
         if($_GET["do"] == "list") {
         	if (gettype($file) == "string" && is_dir($file)) {

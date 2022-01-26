@@ -53,29 +53,30 @@
             </div>
             <input name="id_holder[]" type="text" value="{$holder->id}" class="displayNone">
             <input name="id_page_holder[]" type="text" value="{$holder->id_page_holder}" class="displayNone">
-            {foreach from=$holder->content key=key item=content}
+            {foreach from=$holder->partials item=partial}
+                {if $partial['name']}<h5 class="bottom--15">{$partial['name']}</h5>{/if}
                 <div class="hiddenData displayNone">
                     {foreach from=$zTools->zToolsGetAllLangs(true) item=l}
                         {assign var=h value=$editPage[$l->id]->zPageGetHolder($l->id, $holder->id, $id_block, $holder->order)}
-                        <textarea name="{if $holder->partials[$key] == 'image' || $holder->partials[$key] == 'images'}images{else}content{/if}[{$l->id}][]" data-type="{$holder->partials[$key]}">
-                            {$h->content[$key]}
+                        <textarea name="{if $partial['type'] == 'image' || $partial['type'] == 'images'}images{else}content{/if}[{$l->id}][]" data-type="{$partial['type']}">
+                            {$partial['content']}
                         </textarea>
                     {/foreach}
                 </div>
-                {if $holder->partials[$key] == "no"}
-                {elseif $holder->partials[$key] == "input"}
+                {if $partial['type'] == "no"}
+                {elseif $partial['type'] == "input"}
                     <div class="top-20">
-                        <input name="zContent[{$zUser->id_lang_closest}][]" type="text" class="back-white page-title padL-45" value="{$content|escape:"html"}">
+                        <input name="zContent[{$zUser->id_lang_closest}][]" type="text" class="back-white page-title padL-45" value="{$partial['content']|escape:"html"}">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="far fa-square"></i>
                         </div>
                     </div>
-                {elseif $holder->partials[$key] == "image"}
+                {elseif $partial['type'] == "image"}
                     <div class="top-20">
-                        <input class="displayNone" value="{$content}">
+                        <input class="displayNone" value="{$partial['content']}">
                         <input type="file" class="filepond">
                     </div>
-                {elseif $holder->partials[$key] == "images"}
+                {elseif $partial['type'] == "images"}
                     <div class="top-20">
                         <div class="zTog-imagesFor{$modalNumber} pad-10 rad-5 pointThis" style="background:#f0efee">
                             <div class="zShow-imagesFor{$modalNumber}">{zThis z="Click to upload your media."}</div>
@@ -83,22 +84,22 @@
                         </div>
                         <div class="displayNone zShow-imagesFor{$modalNumber} _top--5">
                             <div class="floatingSpace widthAll height-10 boldMin-1 boldSoG2 boldNoL boldNoR boldNoB index-10" style="background:#f0efee"></div>
-                            <input class="displayNone" value="{$content}" data-multi="true">
+                            <input class="displayNone" value="{$partial['content']}" data-multi="true">
                             <input type="file" class="filepond">
                         </div>
                     </div>
-                {elseif $holder->partials[$key] == "categorylist"}
+                {elseif $partial['type'] == "categorylist"}
                     {assign var=allcats value=$zCategoryTools->zCategoryGetAll($zContent->language->id)}
                     <div class="top-20">
                         <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[{$zUser->id_lang_closest}][]" style="background-color: white">
                             <option disabled>{zThis z="Choose..."}</option>
                             {foreach from=$allcats item=cat}
-                                <option value="{$cat->id}" {if $content == $cat->id}selected{/if}>{$cat->name}</option>
+                                <option value="{$cat->id}" {if $partial['content'] == $cat->id}selected{/if}>{$cat->name}</option>
                             {/foreach}
                         </select>
                     </div>
-                {elseif $holder->partials[$key] == "link"}
-                    {assign var="contents" value=";"|explode:$content}
+                {elseif $partial['type'] == "link"}
+                    {assign var="contents" value=";"|explode:$partial['content']}
                     <div class="zGroup top-20">
                         <label class="back7 borderForm boldMin-1 boldNoR pad-16 text6">
                             {zThis z="Link"}
@@ -106,9 +107,20 @@
                         <input name="zContent[{$zUser->id_lang_closest}][]" type="text" class="zLink1 back-white top-0 bottom-0" placeholder="{zThis z="Link"}" value="{$contents[0]}">
                         <input type="text" class="zLink2 back-white top-0 bottom-0" placeholder="{zThis z="Button"}" value="{$contents[1]}">
                     </div>
+                {elseif $partial['type'] == "option"}
+                    <div class="zGroup top-20 whiteBack">
+                        <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
+                            {zThis z="Choose..."}
+                        </label>
+                        <select class="zSelect pad-10 top-0 bottom-0" name="zContent[{$zUser->id_lang_closest}][]">
+                            {foreach from=$partial["options"] key=key item=option}
+                                <option value="{$key+1}">{$option}</option>
+                            {/foreach}
+                        </select>
+                    </div>
                 {else}
                     <div class="top-20">
-                        <textarea class="summernote" name="zContent[{$zUser->id_lang_closest}][]">{$content}</textarea>
+                        <textarea class="summernote" name="zContent[{$zUser->id_lang_closest}][]">{$partial['content']}</textarea>
                     </div>
                 {/if}
             {/foreach}

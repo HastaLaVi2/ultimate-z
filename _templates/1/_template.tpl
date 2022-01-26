@@ -115,16 +115,5 @@
             </div>
         </div>
     </div>-->
-    {assign var=holders value=$zPage->zPageGetHolders($zContent->language->id, 1)}
-    {foreach from=$holders item=holder}
-        {for $foo=1 to 100}
-            {assign var="_{$foo}" value=null}
-        {/for}
-        {foreach from=$holder->content key=k item=content}
-            {assign var="_{$k+1}" value="$content"}
-        {/foreach}
-        <!-- zHolder: {$holder->name} -->
-        {include file="_holders/{$holder->id}/_holder.tpl" scope="parent"}
-        <!-- zHolder: {$holder->name} -->
-    {/foreach}
+    {zBlock ID="1"}
 {/block}

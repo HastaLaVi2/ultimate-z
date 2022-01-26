@@ -379,7 +379,6 @@
                         $(filepond).find("#filepond--item-" + filepondID).find("legend").text(filename);
                         $(filepond).find("#filepond--item-" + filepondID).find(".filepond--file-info-main").text(filename);
                         updateFilepond(e);
-                        console.log(filename);
                     }
                 },
                 error: function(data) {

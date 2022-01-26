@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 13:41:43
+/* Smarty version 3.1.40, created on 2022-01-26 11:04:56
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ec09976dddb0_37158230',
+  'unifunc' => 'content_61f12ad85c6e22_18201783',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1642858900,
+      1 => 1643097942,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -72,13 +72,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ec09976dddb0_37158230 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f12ad85c6e22_18201783 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -188,8 +188,8 @@ function content_61ec09976dddb0_37158230 (Smarty_Internal_Template $_smarty_tpl)
     <style>
     #upload_progress { padding: 4px 0;}
     #upload_progress > div { padding:3px 0;}
-    .progress_track { display:inline-block;width:200px;height:10px;border:1px solid #333;margin: 0 4px 0 10px;}
-    .progress { background-color: #82CFFA;height:10px; }
+    .progress_track { display:inline-block;width:200px;height:12px;border:2px solid var(--color2);border-radius:5px;margin: 0 4px 0 10px;}
+    .progress { background-color: var(--color2);border-radius:3px;height:10px; }
     .is_dir .size { color:transparent;font-size:0;}
     .is_dir .size:before { content: "--"; font-size:14px;color:#333;}
     .is_dir .download{ visibility: hidden}
@@ -935,7 +935,7 @@ function zPageJS_media() {
         if(data.is_executable) perms.push('exec');
         var $html = $('<tr />')
             .attr("data-file", data.path)
-            .attr("data-download", encodeURIComponent(data.path))
+            .attr("data-download", data.path)
             .addClass(data.is_dir ? "is_dir" : "")
             .append("<td class='select'><input type='checkbox' class='zCheckbox boldMin-2 rad-5 pad-10'></td>")
             .append( $('<td class="first" />').append(data.is_dir ? "<i class='fas fa-folder font-24 gray2 padR-15'></i>" : "<i class='fas fa-file font-24 gray2 padR-15'></i>").append($link) )
