@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 13:50:07
+/* Smarty version 3.1.40, created on 2022-01-27 20:39:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/sidebar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f1518f3ead76_35409897',
+  'unifunc' => 'content_61f3030f1e1d74_91637097',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,9 +21,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/logo.tpl' => 1,
   ),
 ),false)) {
-function content_61f1518f3ead76_35409897 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f3030f1e1d74_91637097 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),1=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageUrl.php','function'=>'smarty_function_zPageUrl',),2=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zPageName.php','function'=>'smarty_function_zPageName',),));
-$_smarty_tpl->compiled->nocache_hash = '82691194861f1518f3c5780_14576229';
+$_smarty_tpl->compiled->nocache_hash = '60355347161f3030f1bf836_02727400';
 ?>
 
 <div id="zSidebar" class="toggle-sidebar width-320 heightAll animSlow index-100 colTop fixed pad-20">

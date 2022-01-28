@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:50:26
+/* Smarty version 3.1.40, created on 2022-01-27 13:00:39
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd362591d78_18449014',
+  'unifunc' => 'content_61f297776c5b55_30118435',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40eca603e2fff03d9ede2e86dcef495b76ef25bf' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl',
-      1 => 1640422377,
+      1 => 1642852415,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -66,19 +66,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1641388364,
+      1 => 1643205706,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebd362591d78_18449014 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f297776c5b55_30118435 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -415,7 +415,7 @@ $(window).resize(function(){
                                             <li style="padding-left: 0">
                             <div>
                                 <input type="checkbox" id="language2" name="languages[]" value="2"
-                                    checked>
+                                    >
                                 <label for="language2">Türkçe</label>
                             </div>
                         </li>
@@ -504,7 +504,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.1</b></p>
     </div>
 </footer>
     </div>
@@ -639,10 +639,6 @@ $(window).resize(function(){
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     </script>
 
     </div>

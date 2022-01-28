@@ -52,10 +52,15 @@ class zHolder {
         $query = $db->select("SELECT * FROM zHolders WHERE id_holder = '$this->id'");
         if (!empty($query)) {
             $partials = explode(';', $query[0]["partials"]);
+            $multiple = explode(';', $query[0]["multiple"]);
 
             foreach ($partials as $p) {
                 $new = array();
                 $new["type"] = $p;
+                if ($multiple[0] == $p) {
+                    $new["multiple"] = true;
+                    array_shift($multiple);
+                }
                 array_push($this->partials, $new);
             }
         }
@@ -74,11 +79,14 @@ class zHolder {
 
         # assign the names of the partials.
         $names = explode(";", $query_n[0]["names"]);
+        # collect the options data
         $options = explode("][", ltrim(rtrim($query_n[0]["options"], "]"), "["));
 
         if (!empty($this->partials)) {
             foreach ($this->partials as $key => &$p) {
                 $p["name"] = $names[$key] ? $names[$key] : "";
+                # if the type of the partial is option,
+                # let's store its options inside an array
                 if ($p["type"] == "option") {
                     $p["options"] = explode(";", $options[0]);
                     array_shift($options);

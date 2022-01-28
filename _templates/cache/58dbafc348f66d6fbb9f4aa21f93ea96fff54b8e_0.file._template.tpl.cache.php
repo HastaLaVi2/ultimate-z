@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 13:50:06
+/* Smarty version 3.1.40, created on 2022-01-27 20:39:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f1518ef11908_39053254',
+  'unifunc' => 'content_61f3030f0ce639_71915374',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1643204794,
+      1 => 1643315981,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/modal.tpl' => 1,
   ),
 ),false)) {
-function content_61f1518ef11908_39053254 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f3030f0ce639_71915374 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '35261635061f1518eea8962_62788661';
+$_smarty_tpl->compiled->nocache_hash = '213726550961f3030f059632_71249718';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_77992121661f1518eec2483_85778891', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_135794075061f3030f079a57_60727750', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_209597028261f1518eec8573_02167090', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_93911669261f3030f07f672_96477859', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_63869170861f1518eefd842_25666510', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_121322282561f3030f0b9149_38766059', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_77992121661f1518eec2483_85778891 extends Smarty_Internal_Block
+class Block_135794075061f3030f079a57_60727750 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_77992121661f1518eec2483_85778891',
+    0 => 'Block_135794075061f3030f079a57_60727750',
   ),
 );
 public $append = 'true';
@@ -78,12 +78,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_209597028261f1518eec8573_02167090 extends Smarty_Internal_Block
+class Block_93911669261f3030f07f672_96477859 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_209597028261f1518eec8573_02167090',
+    0 => 'Block_93911669261f3030f07f672_96477859',
   ),
 );
 public $append = 'true';
@@ -115,8 +115,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
                         <h4 class="font-19 top-0 text4 boldText">
                             <?php echo $_smarty_tpl->tpl_vars['zPageTools']->value->zPageGetPageName($_GET['id_page'],$_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest);?>
 
-                            <span class="font-14"><a href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["main"];
-echo ltrim($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest]->url,'/');?>
+                            <span class="font-14"><a href="<?php echo smarty_function_zPageUrl(array('ID'=>$_GET['id_page']),$_smarty_tpl);?>
 " target="_blank">[<?php echo smarty_function_zThis(array('z'=>"View Page"),$_smarty_tpl);?>
 ]</a></span>
                         </h4>
@@ -299,12 +298,12 @@ $_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_63869170861f1518eefd842_25666510 extends Smarty_Internal_Block
+class Block_121322282561f3030f0b9149_38766059 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_63869170861f1518eefd842_25666510',
+    0 => 'Block_121322282561f3030f0b9149_38766059',
   ),
 );
 public $append = 'true';
@@ -377,7 +376,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     var searchPond = $(handle).closest(".filepond");
                     var searchSummer = $(handle).closest(".note-editor");
                     if (searchPond.length || searchSummer.length || handle.nodeName == "INPUT" ||
-                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
+                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle") ||
+                        handle.classList.contains("multiple") || handle.classList.contains("minus")) {
                         return false;
                     } else {
                         return true;
@@ -436,6 +436,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
                     $(el).find(".note-editor").remove();
                     summernoteStart($(el).find(".summernote"));
+                    $(el).find(".multiple").click(function() {
+                        multiExists($(this));
+                    });
                 }
 
                 // functions that need a rerun after a copy
@@ -469,6 +472,34 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     // this is the current language's hidden field to set the data
                     var nowo = $(v).parent().prev().find("[name^='content["+now+"]']");
 
+                    var multi = cur.parent().next();
+                    // if the data is a multiple one.
+                    if (cur.parent().find(".multiple").length) {
+                        // get the first item's value first.
+                        var calcVal = cur.val();
+                        // now search for the multipleDive DOM element,
+                        // because it stores the multiple information.
+                        if (multi.length && multi.hasClass("multipleDive")) {
+                            // if we have a "multiple" data for the partial.
+                            // let's seperate them and put them into different fields.
+                            var multiple = nowo.val().trim().split(";");
+                            multiple.shift();
+                            // if we have multiple intances for this partial,
+                            // let's collect all the information into a single
+                            // storing unit.
+                            multi.find("[name='multipleDive[]']").each(function() {
+                                calcVal = calcVal + ";" + $(this).val();
+                                if (prev !== now) {
+                                    $(this).val(multiple[0] ? multiple[0].trim() : "");
+                                    multiple.shift();
+                                }
+                            });
+                            // and then store them all together.
+                            cur.val(calcVal);
+                        }
+                    }
+
+                    // if our data is a link.
                     if (cur.hasClass("zLink1")) {
                         old.val(cur.val() + ";" + cur.next().val());
                         $(v).parent().prev().children().each(function() {
@@ -478,15 +509,27 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             $(this).val(already);
                         });
 
-                        var nowo = nowo.val().split(";");
+                        nowo = nowo.val().split(";");
 
                         cur.val(nowo[0]);
                         cur.next().val(nowo[1]);
+                    // if our data is an option.
+                    } else if (cur.hasClass("zSelect")) {
+                        $(v).parent().prev().children().each(function() {
+                            $(this).val(calcVal);
+                        });
+                        if (multi.length && multi.hasClass("multipleDive")) {
+                            cur.val(calcVal.split(";")[0]);
+                        } else {
+                            // retrieve the current language's data from hidden field
+                            cur.val(nowo.val().trim());
+                        }
+                    // every other data types.
                     } else {
                         // store the previous language's data to hidden field
                         old.val(cur.val());
                         // retrieve the current language's data from hidden field
-                        cur.val(nowo.val().trim());
+                        cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0] : nowo.val().trim());
                     }
 
                     // if we have summernote on our holder, we should do this trick
@@ -705,6 +748,58 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             });
         }
 
+        function multiExists(el, load) {
+            // let's get this first.
+            var th = el;
+            // clone the partial, because we are going to multiply it.
+            var all = th.parent().clone();
+            var zContent = th.parent().find("[name^='zContent[']");
+            zContent = zContent.hasClass("zSelect") ? th.parent().prev().children().first() : zContent;
+            var now = zContent.val().trim().split(";");
+            // find the plus (multiple) button and turn into
+            // minus (remove) button.
+            all.find(".multiple").removeClass("multiple").addClass("minus");
+            all.find(".fas").removeClass("fa-plus").addClass("fa-minus");
+            all.find("[name^='zContent[']").attr("name", "multipleDive[]").val("");
+            // if we do not have a div next to the original parent named 'multipleDive'
+            // we should create it to store new instances.
+            var nwe = th.parent().next();
+            var yeahThere = 0;
+            th.parent().prev().children().each(function() {
+                yeahThere = yeahThere > $(this).val().split(";").length ? yeahThere : $(this).val().split(";").length;
+            });
+            if (load) {
+                if (yeahThere > 1) {
+                    th.parent().find("[name^='zContent[']").val(now[0]);
+                    for (let i = 1; i < yeahThere; i++) {
+                        // now, let's multiply!
+                        nwe.append(all.clone());
+                        nwe.children().eq(i-1).find("[name^='multipleDive[']").val(now[i] ? now[i].trim() : "");
+                    }
+                }
+            } else {
+                // now, let's multiply!
+                nwe.append(all.clone());
+            }
+            var rem = load ? nwe : nwe.children().last();
+            // one more thing, add the click function to minus button
+            // that will remove a multiplied partial.
+            rem.find(".minus").click(function() {
+                var el = $(this).parent();
+                el.parent().prev().prev().children().each(function() {
+                    var all = $(this).val().split(";");
+                    var newA = [];
+                    all.forEach((item, i) => {
+                        if (i !== el.index()+1) {
+                            newA.push(item);
+                        }
+                    });
+                    $(this).val(newA.join(";"));
+                });
+                el.remove();
+            });
+        }
+
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
         var modalNumber = "<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
@@ -756,20 +851,31 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
             // add new holder button
             $("#AddNewHolder").click(function() {
+                // first we want the user to be at the zHolders section,
+                // so animate the screen to there.
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $(this).offset().top - 100
                 }, 500);
 
+                // get dragula DOM elements.
                 var dragula = $("#dragula");
                 var dragulaAdd = $("#dragulaAdd");
 
+                // display the dragulaAdd, which holds all zHolders in waiting.
                 dragulaAdd.toggle();
+                // but when the dragulaAdd opens, we shoul decrease the width of
+                // the dragula side, because dragulaAdd comes from left.
                 dragula.toggleClass("col-8").toggleClass("col-12");
+                // when there are lots of zHolders on an ultimate Z, dragulaAdd element's
+                // height becomes too long, so we calculate a height based on the device height.
+                // and give that height to both dragula and dragulaAdd.
                 var calcPX = ($(window).width() > 1024)
                     ? ($(window).height() - 180 - $(this).height() - $(".ButtonPos2").height() + "px")
                     : "40vh";
 
+                // if dragulaAdd is open.
                 if (dragulaAdd.css("display") !== "none") {
+                    // how many zHolders we currently have on the zPage?
                     var count = dragula.children().length;
                     var newHeight = (dragulaAdd.height() - ((count-1)*20)) / count;
                     dragula.children().css("min-height", newHeight);
@@ -786,6 +892,17 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     dragula.css("height", "auto");
                 }
             });
+
+            // if we have a multiple button on a partial of the zHolder,
+            // let's assign a click function to it.
+            $(".multiple").click(function() {
+                multiExists($(this));
+            });
+            if ($(".multipleDive").length) {
+                $(".multiple").each(function() {
+                    multiExists($(this), true);
+                });
+            }
 
             // submit form functions
             $("#zPage-edit-form").submit(function(e) {

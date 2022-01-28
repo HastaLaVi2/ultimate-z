@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 11:04:56
+/* Smarty version 3.1.40, created on 2022-01-27 12:42:08
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f12ad85c6e22_18201783',
+  'unifunc' => 'content_61f29320e067f0_33635547',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1643097942,
+      1 => 1643287327,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -66,7 +66,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1642852845,
+      1 => 1643205706,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f12ad85c6e22_18201783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f29320e067f0_33635547 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -186,6 +186,7 @@ function content_61f12ad85c6e22_18201783 (Smarty_Internal_Template $_smarty_tpl)
 
     <div id="zTop">
     <style>
+    #actions span, #actions a { white-space: nowrap;}
     #upload_progress { padding: 4px 0;}
     #upload_progress > div { padding:3px 0;}
     .progress_track { display:inline-block;width:200px;height:12px;border:2px solid var(--color2);border-radius:5px;margin: 0 4px 0 10px;}
@@ -545,7 +546,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.1</b></p>
     </div>
 </footer>
     </div>
@@ -642,11 +643,11 @@ function zPageJS_media() {
             });
             zTables[0].on("datatable.page", function(page) {
                 $("#zContent").find("a").click(magicLinks);
-                tableFunctions();
+                tableFunctions(true);
             });
             zTables[0].on("datatable.sort", function(column, direction) {
                 $("#zContent").find("a").click(magicLinks);
-                tableFunctions();
+                tableFunctions(true);
             });
         });
 
@@ -668,7 +669,7 @@ function zPageJS_media() {
         });
     }
 
-    function tableFunctions() {
+    function tableFunctions(special) {
         $("#list a").click(function() {
             var el = $(this);
             if (el.attr("type") == "dir") {
@@ -695,6 +696,13 @@ function zPageJS_media() {
         });
 
         $("#list .zCheckbox").change(checkboxActions);
+        if (special && special == true) {
+            $(".hideActions").removeClass("display-none").addClass("display-none");
+            $(".copy").addClass("pointNo").removeClass("pointThis text5");
+            $(".cut").addClass("pointNo").removeClass("pointThis text5");
+            $("#list .zCheckbox").prop("checked", false);
+            $(".allBoxes").prop("checked", false);
+        }
     }
 
     function checkboxActions() {

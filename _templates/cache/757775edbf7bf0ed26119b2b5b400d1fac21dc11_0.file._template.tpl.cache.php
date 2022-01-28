@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 11:04:56
+/* Smarty version 3.1.40, created on 2022-01-27 12:42:08
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f12ad8097057_57437814',
+  'unifunc' => 'content_61f29320c6e591_46892506',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '757775edbf7bf0ed26119b2b5b400d1fac21dc11' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/media/_template.tpl',
-      1 => 1643097942,
+      1 => 1643287327,
       2 => 'file',
     ),
   ),
@@ -20,37 +20,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61f12ad8097057_57437814 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f29320c6e591_46892506 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '7112871561f12ad7db3060_80384687';
+$_smarty_tpl->compiled->nocache_hash = '74905463461f29320c309c5_81799288';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_77068826661f12ad80669b5_59752027', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12749647361f29320c47815_75305305', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_183134547861f12ad8074262_30507279', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_212819396161f29320c4fd75_02729543', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_140507333061f12ad8086064_21143159', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_109863411861f29320c61313_86452061', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_77068826661f12ad80669b5_59752027 extends Smarty_Internal_Block
+class Block_12749647361f29320c47815_75305305 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_77068826661f12ad80669b5_59752027',
+    0 => 'Block_12749647361f29320c47815_75305305',
   ),
 );
 public $append = 'true';
@@ -59,6 +59,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 ?>
 
     <style>
+    #actions span, #actions a { white-space: nowrap;}
     #upload_progress { padding: 4px 0;}
     #upload_progress > div { padding:3px 0;}
     .progress_track { display:inline-block;width:200px;height:12px;border:2px solid var(--color2);border-radius:5px;margin: 0 4px 0 10px;}
@@ -99,12 +100,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_183134547861f12ad8074262_30507279 extends Smarty_Internal_Block
+class Block_212819396161f29320c4fd75_02729543 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_183134547861f12ad8074262_30507279',
+    0 => 'Block_212819396161f29320c4fd75_02729543',
   ),
 );
 public $append = 'true';
@@ -221,12 +222,12 @@ $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->va
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_140507333061f12ad8086064_21143159 extends Smarty_Internal_Block
+class Block_109863411861f29320c61313_86452061 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_140507333061f12ad8086064_21143159',
+    0 => 'Block_109863411861f29320c61313_86452061',
   ),
 );
 public $append = 'true';
@@ -263,11 +264,11 @@ function zPageJS_media() {
             });
             zTables[0].on("datatable.page", function(page) {
                 $("#zContent").find("a").click(magicLinks);
-                tableFunctions();
+                tableFunctions(true);
             });
             zTables[0].on("datatable.sort", function(column, direction) {
                 $("#zContent").find("a").click(magicLinks);
-                tableFunctions();
+                tableFunctions(true);
             });
         });
 
@@ -289,7 +290,7 @@ function zPageJS_media() {
         });
     }
 
-    function tableFunctions() {
+    function tableFunctions(special) {
         $("#list a").click(function() {
             var el = $(this);
             if (el.attr("type") == "dir") {
@@ -317,6 +318,13 @@ function zPageJS_media() {
         });
 
         $("#list .zCheckbox").change(checkboxActions);
+        if (special && special == true) {
+            $(".hideActions").removeClass("display-none").addClass("display-none");
+            $(".copy").addClass("pointNo").removeClass("pointThis text5");
+            $(".cut").addClass("pointNo").removeClass("pointThis text5");
+            $("#list .zCheckbox").prop("checked", false);
+            $(".allBoxes").prop("checked", false);
+        }
     }
 
     function checkboxActions() {

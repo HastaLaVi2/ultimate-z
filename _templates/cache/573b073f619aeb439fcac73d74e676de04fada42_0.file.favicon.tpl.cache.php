@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 13:50:07
+/* Smarty version 3.1.40, created on 2022-01-27 20:39:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/favicon.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f1518f1f4c25_32765837',
+  'unifunc' => 'content_61f3030f1b5dc7_41719458',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61f1518f1f4c25_32765837 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '104469392361f1518f1eeb01_83094888';
+function content_61f3030f1b5dc7_41719458 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '179026121461f3030f1af2d4_20816843';
 ?>
 
 <!-- favicon -->

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:46:03
+/* Smarty version 3.1.40, created on 2022-01-27 13:00:34
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/categories/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd25b1992f5_94394839',
+  'unifunc' => 'content_61f2977250f648_46684526',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9383d56e130f38b69f2c73e295931b1c58a4208f' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/categories/_template.tpl',
-      1 => 1642844761,
+      1 => 1642844870,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -66,19 +66,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1641388364,
+      1 => 1643205706,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebd25b1992f5_94394839 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f2977250f648_46684526 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -390,7 +390,7 @@ $(window).resize(function(){
                 <tbody>
                                             <tr id="zCategory-1">
                             <td>1</td>
-                            <td>Menü</td>
+                            <td>Untitled</td>
                             <td>
                                 <a href="http://localhost/ultimate-z/_admin/layouts/categories/edit/index.php?id_category=1" class="zButton zHov-zShadow5 primary sweet">
                                      Düzenle
@@ -441,7 +441,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.1</b></p>
     </div>
 </footer>
     </div>
@@ -511,20 +511,6 @@ $(window).resize(function(){
     <div id="zBottom">
         
         
-    <script>
-    var entriesPerPage = "gösterilen öge sayısı";
-    var searchOn = "Ara...";
-    var showingOf = "Toplam [rows] ögeden [start] ila [end] arası gösteriliyor";
-    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
-    var noRowFound = "Sonuç bulunamadı";
-
-    $("input[type=checkbox]").change(function() {
-        var clas = $(this).attr("class").split(" ")[1];
-        var checked = $(this).prop("checked");
-        $("."+clas).prop("checked", checked);
-    });
-    </script>
-    <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
     <script>
         function deleteFromTable(dataTable) {
             // delete form functions

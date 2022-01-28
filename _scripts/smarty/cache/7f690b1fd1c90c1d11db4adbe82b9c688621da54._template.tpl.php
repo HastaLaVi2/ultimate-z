@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 13:47:47
+/* Smarty version 3.1.40, created on 2022-01-27 20:39:50
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f15103655e75_66061018',
+  'unifunc' => 'content_61f3031693b995_97687344',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -48,23 +48,22 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f15103655e75_66061018 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f3031693b995_97687344 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Anasayfa | ultimate Z</title>
+    <title>Moda | ultimate Z</title>
     
         
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="description" content="ultimate Z" />
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/" />
+<link rel="alternate" href="http://localhost/ultimate-z/moda/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/moda" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/moda" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -245,10 +244,7 @@ function content_61f15103655e75_66061018 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>-->
-    <div class="pad-40">
-    <h1>ultimate Z'ye hoş geldiniz!</h1>
-</div>
-
+    
 
     </div>
 

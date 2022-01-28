@@ -57,7 +57,7 @@ class zUser {
 
             if ($zLanguage->disabled) {
                 foreach ($zTools->zToolsGetAllLangs() as $l) {
-                    if (!$now->disabled) {
+                    if (!$l->disabled) {
                         $this->id_lang_closest = $l->id;
                     }
                 }

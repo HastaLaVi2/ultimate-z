@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 13:50:07
+/* Smarty version 3.1.40, created on 2022-01-27 20:39:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f1518fa98fe7_16728626',
+  'unifunc' => 'content_61f3030f329968_02575239',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1643204794,
+      1 => 1643315981,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -60,7 +60,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1643205005,
+      1 => 1643292542,
       2 => 'file',
     ),
     'ea921527d0a89eb10256e18f21e891c839c80637' => 
@@ -72,7 +72,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1642852845,
+      1 => 1643205706,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
@@ -84,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f1518fa98fe7_16728626 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f3030f329968_02575239 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -97,8 +97,8 @@ function content_61f1518fa98fe7_16728626 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- alternate links -->
 <link rel="alternate" href="http://localhost/ultimate-z/_admin/layouts/pages/edit/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1001" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1001" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/_admin/layouts/pages/editindex.php?id_page=1002" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/_admin/layouts/pages/editindex.php?id_page=1002" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -396,14 +396,14 @@ $(window).resize(function(){
         </nav>
 
         <div class="whiteBack rad-15 pad-20 font-16">
-            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1001">
+            <form id="zPage-edit-form" class="zForm" method="POST" role="form" enctype="multipart/form-data" action="http://localhost/ultimate-z/_admin/layouts/pages/edit/index.php?id_page=1002">
                 
                 <div>
                     <div class="inLeft index-10">
                         <h4 class="font-19 top-0 bottom-0 text6 boldText">Bu sayfayı düzenliyorsunuz:</h4>
                         <h4 class="font-19 top-0 text4 boldText">
-                            Anasayfa
-                            <span class="font-14"><a href="http://localhost/ultimate-z/tr/" target="_blank">[Sayfayı Görüntüle]</a></span>
+                            Moda
+                            <span class="font-14"><a href="http://localhost/ultimate-z/moda" target="_blank">[Sayfayı Görüntüle]</a></span>
                         </h4>
                     </div>
                     <div class="rightText padB-15">
@@ -420,11 +420,11 @@ $(window).resize(function(){
                         </div>
                     </div>
                 </div>
-                <div><input name="id_page" id="id_page" type="text" value="1001" style="display:none"></div>
+                <div><input name="id_page" id="id_page" type="text" value="1002" style="display:none"></div>
                 <div class="col-8 colTop padR-10 padT-10" zMob-1024="padR-0">
                     <h6 class="bottom-10 top-0 font-1em">Başlık</h6>
                     <div class="bottom-10">
-                        <input name="page_url" id="page_url" type="text" class="padL-45" value="/" placeholder="Başında / ifadesi olan bir URL girin">
+                        <input name="page_url" id="page_url" type="text" class="padL-45" value="/moda" placeholder="Başında / ifadesi olan bir URL girin">
                         <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                             <i class="fas fa-file-code"></i>
                         </div>
@@ -434,7 +434,7 @@ $(window).resize(function(){
                                         type="text" value="1" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[1]" id="page_name_1" type="text"
-                                       class="padL-45" value="Home" placeholder="Başlık">
+                                       class="padL-45" value="Fashion" placeholder="Başlık">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -445,7 +445,7 @@ $(window).resize(function(){
                                         type="text" value="2" style="display:none"></div>
                             <div class="bottom-10">
                                 <input name="page_name[2]" id="page_name_2" type="text"
-                                       class="padL-45" value="Anasayfa" placeholder="Başlık">
+                                       class="padL-45" value="Moda" placeholder="Başlık">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-file-alt"></i>
                                 </div>
@@ -455,7 +455,7 @@ $(window).resize(function(){
                     <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
                                             <div class="divFor1 divFor" style="display: none">
                             <div class="bottom-10">
-                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="ultimate Z">
+                                <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-keyboard"></i>
                                 </div>
@@ -463,7 +463,7 @@ $(window).resize(function(){
                         </div>
                                             <div class="divFor2 divFor" style="">
                             <div class="bottom-10">
-                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="ultimate Z">
+                                <input name="page_meta[2]" id="page_meta_2" type="text" class="padL-45" value="">
                                 <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                                     <i class="fas fa-keyboard"></i>
                                 </div>
@@ -487,7 +487,7 @@ $(window).resize(function(){
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
                         <option selected>Seç...</option>
-                        <option value='1002'>Moda</option>
+                        <option value='1001'>Anasayfa</option>
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
@@ -551,9 +551,9 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="top-20">
-                        <textarea class="summernote" name="zContent[2][]"></textarea>
-                    </div>
+                <div class="top-20">
+                                            <textarea class="summernote" name="zContent[2][]"></textarea>
+                                                        </div>
                                     </div>
     </div>
         <div class="zDestroy-holder2 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="2">
@@ -595,7 +595,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="2" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <h5 class="bottom--15">Görsel</h5>                <div class="hiddenData displayNone">
+                            <h5 class="bottom--15 gray2">Görsel</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="images[1][]" data-type="images">
                             
                         </textarea>
@@ -603,8 +603,8 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="top-20">
-                        <div class="zTog-imagesFor2 pad-10 rad-5 pointThis" style="background:#f0efee">
+                <div class="top-20">
+                                            <div class="zTog-imagesFor2 pad-10 rad-5 pointThis" style="background:#f0efee">
                             <div class="zShow-imagesFor2">Medya yüklemek için tıklayın.</div>
                             <div class="zShow-imagesFor2 displayNone">Yükleme ekranını gizle.</div>
                         </div>
@@ -613,7 +613,7 @@ $(window).resize(function(){
                             <input class="displayNone" value="" data-multi="true">
                             <input type="file" class="filepond">
                         </div>
-                    </div>
+                                                        </div>
                                     </div>
     </div>
         <div class="zDestroy-holder3 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="3">
@@ -655,7 +655,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="3" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <h5 class="bottom--15">Kategori Listesi</h5>                <div class="hiddenData displayNone">
+                            <h5 class="bottom--15 gray2">Kategori Listesi</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="categorylist">
                             
                         </textarea>
@@ -663,12 +663,12 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                                        <div class="top-20">
-                        <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[2][]" style="background-color: white">
+                <div class="top-20">
+                                                                    <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[2][]" style="background-color: white">
                             <option disabled>Seç...</option>
                                                             <option value="1" >Menü</option>
                                                     </select>
-                    </div>
+                                                        </div>
                                     </div>
     </div>
         <div class="zDestroy-holder4 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="4">
@@ -710,7 +710,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="4" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <h5 class="bottom--15">Etiket</h5>                <div class="hiddenData displayNone">
+                            <h5 class="bottom--15 gray2">Etiket</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="input">
                             
                         </textarea>
@@ -718,12 +718,16 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="top-20">
-                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="">
-                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                <div class="top-20 zGroup">
+                                            <input name="zContent[2][]" type="text" class="top-0 index-1 bottom-0 back-white page-title padL-45" value="">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2 index-1">
                             <i class="far fa-square"></i>
                         </div>
+                                                            <div class="multiple back7 borderForm boldMin-1 padTB-10 padLR-20 text6 pointThis index-0">
+                        <div class="hollyMid"><i class="fas fa-plus"></i></div>
                     </div>
+                                    </div>
+                                <div class="multipleDive"></div>
                                                             <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="option">
                             
@@ -732,15 +736,19 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="zGroup top-20 whiteBack">
-                        <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
+                <div class="top-20 zGroup">
+                                            <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
                             Seç...
                         </label>
-                        <select class="zSelect pad-10 top-0 bottom-0" name="zContent[2][]">
-                                                            <option value="1">Seçenek 1</option>
-                                                            <option value="2">Seçenek 2</option>
+                        <select class="zSelect index-1 pad-10 top-0 bottom-0" style="background-color:white" name="zContent[2][]">
+                                                            <option value="1" >Seçenek 1</option>
+                                                            <option value="2" >Seçenek 2</option>
                                                     </select>
+                                                            <div class="multiple back7 borderForm boldMin-1 padTB-10 padLR-20 text6 pointThis index-0">
+                        <div class="hollyMid"><i class="fas fa-plus"></i></div>
                     </div>
+                                    </div>
+                                <div class="multipleDive"></div>
                                     </div>
     </div>
         <div class="zDestroy-holder5 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="5">
@@ -782,7 +790,7 @@ $(window).resize(function(){
             </div>
             <input name="id_holder[]" type="text" value="5" class="displayNone">
             <input name="id_page_holder[]" type="text" value="" class="displayNone">
-                            <h5 class="bottom--15">Başlık</h5>                <div class="hiddenData displayNone">
+                            <h5 class="bottom--15 gray2">Başlık</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="input">
                             
                         </textarea>
@@ -790,13 +798,13 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="top-20">
-                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="">
-                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                <div class="top-20">
+                                            <input name="zContent[2][]" type="text" class="top-0 index-1 bottom-0 back-white page-title padL-45" value="">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2 index-1">
                             <i class="far fa-square"></i>
                         </div>
-                    </div>
-                                            <h5 class="bottom--15">Medya</h5>                <div class="hiddenData displayNone">
+                                                        </div>
+                                            <h5 class="bottom--15 gray2">Medya</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="images[1][]" data-type="image">
                             
                         </textarea>
@@ -804,11 +812,11 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="top-20">
-                        <input class="displayNone" value="">
+                <div class="top-20">
+                                            <input class="displayNone" value="">
                         <input type="file" class="filepond">
-                    </div>
-                                            <h5 class="bottom--15">Metin</h5>                <div class="hiddenData displayNone">
+                                                        </div>
+                                            <h5 class="bottom--15 gray2">Metin</h5>                <div class="hiddenData displayNone">
                                                                     <textarea name="content[1][]" data-type="text">
                             
                         </textarea>
@@ -816,88 +824,16 @@ $(window).resize(function(){
                             
                         </textarea>
                                     </div>
-                                    <div class="top-20">
-                        <textarea class="summernote" name="zContent[2][]"></textarea>
-                    </div>
+                <div class="top-20">
+                                            <textarea class="summernote" name="zContent[2][]"></textarea>
+                                                        </div>
                                     </div>
     </div>
                         </div>
                     <div id="dragula" class="hideScroll hideRest col-12 colTop between-20">
                                                                             <div class="dragula pad-20 padT-40 back7 rad-5 between-20">
                                                                 
-    <div class="zDestroy-holder6 grayBack1 pad-40 zMob-pad-20 rad-5 boldMin-1" style="border-color: var(--zFormBorderColor)" data="6">
-        <h6 class="bottom--10 top--10 left--10 right--10 font-1_5em thinText">
-            Etiket
-        </h6>
-        <div class="text5 font-25 floatingTheRight pad-32 zMob-pad-20 index-10 top--10 right--10 hideForAdd">
-            <span class="pointThis toggleParentNext">
-                <i class="fas fa-chevron-down arrows" style="display:none"></i>
-                <i class="fas fa-chevron-up arrows"></i>
-            </span>
-            <a href="#modal6" class="zModalLink">
-                <i class="fas fa-times"></i>
-            </a>
-        </div>
-        <div class="padT-20 hideForAdd">
-            <div class="zModal" id="modal6">
-                <a class="zCancel" href="#"></a>
-                <div class="zModalContent rad-15">
-                    <div class="pad-20">
-                        <div class="modal-header bg-primary">
-                            <h5 class="top-0 bottom-0 font-18">
-                                Tutucuyu Sil
-                            </h5>
-                        </div>
-                        <div class="gray2 font-15 padTB-20">
-                            Bu tutucuyu silmek istediğinize emin misiniz?
-                        </div>
-                        <div class="rightText">
-                            <a class="zButton backTrans boldMin-0 sweet font-16" href="#">
-                                Kapat
-                            </a>
-                            <a class="zButton zHov-zShadow5 primary sweet font-16 zRemove-holder6" href="#">
-                                <span>Evet</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input name="id_holder[]" type="text" value="4" class="displayNone">
-            <input name="id_page_holder[]" type="text" value="1" class="displayNone">
-                            <h5 class="bottom--15">Etiket</h5>                <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="input">
-                            ultimate Z'ye hoş geldiniz!
-                        </textarea>
-                                                                    <textarea name="content[2][]" data-type="input">
-                            ultimate Z'ye hoş geldiniz!
-                        </textarea>
-                                    </div>
-                                    <div class="top-20">
-                        <input name="zContent[2][]" type="text" class="back-white page-title padL-45" value="ultimate Z&#039;ye hoş geldiniz!">
-                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
-                            <i class="far fa-square"></i>
-                        </div>
-                    </div>
-                                                            <div class="hiddenData displayNone">
-                                                                    <textarea name="content[1][]" data-type="option">
-                            2
-                        </textarea>
-                                                                    <textarea name="content[2][]" data-type="option">
-                            2
-                        </textarea>
-                                    </div>
-                                    <div class="zGroup top-20 whiteBack">
-                        <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
-                            Seç...
-                        </label>
-                        <select class="zSelect pad-10 top-0 bottom-0" name="zContent[2][]">
-                                                            <option value="1">Seçenek 1</option>
-                                                            <option value="2">Seçenek 2</option>
-                                                    </select>
-                    </div>
-                                    </div>
-    </div>
-                                    <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
+                                <div class="blockTitle floatingSpace text6 font-14 boldText top-10 left-10">
                                     Blok 1
                                 </div>
                             </div>
@@ -946,7 +882,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.0</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.1</b></p>
     </div>
 </footer>
     </div>
@@ -1050,7 +986,8 @@ $(window).resize(function(){
                     var searchPond = $(handle).closest(".filepond");
                     var searchSummer = $(handle).closest(".note-editor");
                     if (searchPond.length || searchSummer.length || handle.nodeName == "INPUT" ||
-                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle")) {
+                        handle.classList.contains("filepond") || handle.classList.contains("blockTitle") ||
+                        handle.classList.contains("multiple") || handle.classList.contains("minus")) {
                         return false;
                     } else {
                         return true;
@@ -1109,6 +1046,9 @@ $(window).resize(function(){
 
                     $(el).find(".note-editor").remove();
                     summernoteStart($(el).find(".summernote"));
+                    $(el).find(".multiple").click(function() {
+                        multiExists($(this));
+                    });
                 }
 
                 // functions that need a rerun after a copy
@@ -1142,6 +1082,34 @@ $(window).resize(function(){
                     // this is the current language's hidden field to set the data
                     var nowo = $(v).parent().prev().find("[name^='content["+now+"]']");
 
+                    var multi = cur.parent().next();
+                    // if the data is a multiple one.
+                    if (cur.parent().find(".multiple").length) {
+                        // get the first item's value first.
+                        var calcVal = cur.val();
+                        // now search for the multipleDive DOM element,
+                        // because it stores the multiple information.
+                        if (multi.length && multi.hasClass("multipleDive")) {
+                            // if we have a "multiple" data for the partial.
+                            // let's seperate them and put them into different fields.
+                            var multiple = nowo.val().trim().split(";");
+                            multiple.shift();
+                            // if we have multiple intances for this partial,
+                            // let's collect all the information into a single
+                            // storing unit.
+                            multi.find("[name='multipleDive[]']").each(function() {
+                                calcVal = calcVal + ";" + $(this).val();
+                                if (prev !== now) {
+                                    $(this).val(multiple[0] ? multiple[0].trim() : "");
+                                    multiple.shift();
+                                }
+                            });
+                            // and then store them all together.
+                            cur.val(calcVal);
+                        }
+                    }
+
+                    // if our data is a link.
                     if (cur.hasClass("zLink1")) {
                         old.val(cur.val() + ";" + cur.next().val());
                         $(v).parent().prev().children().each(function() {
@@ -1151,15 +1119,27 @@ $(window).resize(function(){
                             $(this).val(already);
                         });
 
-                        var nowo = nowo.val().split(";");
+                        nowo = nowo.val().split(";");
 
                         cur.val(nowo[0]);
                         cur.next().val(nowo[1]);
+                    // if our data is an option.
+                    } else if (cur.hasClass("zSelect")) {
+                        $(v).parent().prev().children().each(function() {
+                            $(this).val(calcVal);
+                        });
+                        if (multi.length && multi.hasClass("multipleDive")) {
+                            cur.val(calcVal.split(";")[0]);
+                        } else {
+                            // retrieve the current language's data from hidden field
+                            cur.val(nowo.val().trim());
+                        }
+                    // every other data types.
                     } else {
                         // store the previous language's data to hidden field
                         old.val(cur.val());
                         // retrieve the current language's data from hidden field
-                        cur.val(nowo.val().trim());
+                        cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0] : nowo.val().trim());
                     }
 
                     // if we have summernote on our holder, we should do this trick
@@ -1202,7 +1182,7 @@ $(window).resize(function(){
             // create a new formdata
             var data = new FormData();
             // send the page id to server, because we will create a folder for it
-            data.set("zPage", "1001");
+            data.set("zPage", "1002");
             if (filepond) {
                 data.set("filepond", "true");
             }
@@ -1220,7 +1200,7 @@ $(window).resize(function(){
                 type: "POST",
                 success: function(filename) {
                     // this is an image tag to insert into a summernote after upload
-                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1001/" + filename).addClass("img-fluid");
+                    var image = $("<img>").attr("src", "http://localhost/ultimate-z/_media/uploads/1002/" + filename).addClass("img-fluid");
                     if (summernote) {
                         // if a summernote uploaded the file, insert the image tag
                         summernote.summernote("insertNode", image[0]);
@@ -1251,7 +1231,7 @@ $(window).resize(function(){
                         var files = [];
                         for (let i=0; i < value.split(";").length; i++) {
                             files.push({
-                                source: "../../../../_media/uploads/1001/"+value.split(";")[i],
+                                source: "../../../../_media/uploads/1002/"+value.split(";")[i],
                                 options: {
                                     type: "local"
                                 }
@@ -1370,9 +1350,61 @@ $(window).resize(function(){
             });
         }
 
+        function multiExists(el, load) {
+            // let's get this first.
+            var th = el;
+            // clone the partial, because we are going to multiply it.
+            var all = th.parent().clone();
+            var zContent = th.parent().find("[name^='zContent[']");
+            zContent = zContent.hasClass("zSelect") ? th.parent().prev().children().first() : zContent;
+            var now = zContent.val().trim().split(";");
+            // find the plus (multiple) button and turn into
+            // minus (remove) button.
+            all.find(".multiple").removeClass("multiple").addClass("minus");
+            all.find(".fas").removeClass("fa-plus").addClass("fa-minus");
+            all.find("[name^='zContent[']").attr("name", "multipleDive[]").val("");
+            // if we do not have a div next to the original parent named 'multipleDive'
+            // we should create it to store new instances.
+            var nwe = th.parent().next();
+            var yeahThere = 0;
+            th.parent().prev().children().each(function() {
+                yeahThere = yeahThere > $(this).val().split(";").length ? yeahThere : $(this).val().split(";").length;
+            });
+            if (load) {
+                if (yeahThere > 1) {
+                    th.parent().find("[name^='zContent[']").val(now[0]);
+                    for (let i = 1; i < yeahThere; i++) {
+                        // now, let's multiply!
+                        nwe.append(all.clone());
+                        nwe.children().eq(i-1).find("[name^='multipleDive[']").val(now[i] ? now[i].trim() : "");
+                    }
+                }
+            } else {
+                // now, let's multiply!
+                nwe.append(all.clone());
+            }
+            var rem = load ? nwe : nwe.children().last();
+            // one more thing, add the click function to minus button
+            // that will remove a multiplied partial.
+            rem.find(".minus").click(function() {
+                var el = $(this).parent();
+                el.parent().prev().prev().children().each(function() {
+                    var all = $(this).val().split(";");
+                    var newA = [];
+                    all.forEach((item, i) => {
+                        if (i !== el.index()+1) {
+                            newA.push(item);
+                        }
+                    });
+                    $(this).val(newA.join(";"));
+                });
+                el.remove();
+            });
+        }
+
         // this is the modal number, each holder has a cross button,
         // to remove the holder itself, so they all need a unique id
-        var modalNumber = "7";
+        var modalNumber = "6";
 
         function zPageJS() {
             toggleParentNext($(".toggleParentNext"));
@@ -1419,20 +1451,31 @@ $(window).resize(function(){
 
             // add new holder button
             $("#AddNewHolder").click(function() {
+                // first we want the user to be at the zHolders section,
+                // so animate the screen to there.
                 $([document.documentElement, document.body]).animate({
                     scrollTop: $(this).offset().top - 100
                 }, 500);
 
+                // get dragula DOM elements.
                 var dragula = $("#dragula");
                 var dragulaAdd = $("#dragulaAdd");
 
+                // display the dragulaAdd, which holds all zHolders in waiting.
                 dragulaAdd.toggle();
+                // but when the dragulaAdd opens, we shoul decrease the width of
+                // the dragula side, because dragulaAdd comes from left.
                 dragula.toggleClass("col-8").toggleClass("col-12");
+                // when there are lots of zHolders on an ultimate Z, dragulaAdd element's
+                // height becomes too long, so we calculate a height based on the device height.
+                // and give that height to both dragula and dragulaAdd.
                 var calcPX = ($(window).width() > 1024)
                     ? ($(window).height() - 180 - $(this).height() - $(".ButtonPos2").height() + "px")
                     : "40vh";
 
+                // if dragulaAdd is open.
                 if (dragulaAdd.css("display") !== "none") {
+                    // how many zHolders we currently have on the zPage?
                     var count = dragula.children().length;
                     var newHeight = (dragulaAdd.height() - ((count-1)*20)) / count;
                     dragula.children().css("min-height", newHeight);
@@ -1449,6 +1492,17 @@ $(window).resize(function(){
                     dragula.css("height", "auto");
                 }
             });
+
+            // if we have a multiple button on a partial of the zHolder,
+            // let's assign a click function to it.
+            $(".multiple").click(function() {
+                multiExists($(this));
+            });
+            if ($(".multipleDive").length) {
+                $(".multiple").each(function() {
+                    multiExists($(this), true);
+                });
+            }
 
             // submit form functions
             $("#zPage-edit-form").submit(function(e) {

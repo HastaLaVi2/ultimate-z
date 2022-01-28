@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 13:50:07
+/* Smarty version 3.1.40, created on 2022-01-27 20:39:43
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f1518f7c8604_45128774',
+  'unifunc' => 'content_61f3030f2e1ac1_22302912',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'facad15687820393eb46a3b9f58432dea0c53d77' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/holderEdit.tpl',
-      1 => 1643205005,
+      1 => 1643292542,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61f1518f7c8604_45128774 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f3030f2e1ac1_22302912 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '188435885061f1518f79b600_49824881';
+$_smarty_tpl->compiled->nocache_hash = '57666678861f3030f2b83e6_66069735';
 ?>
 
 <?php
@@ -83,12 +83,12 @@ $_smarty_tpl->tpl_vars['holder']->do_else = false;
             <input name="id_page_holder[]" type="text" value="<?php echo $_smarty_tpl->tpl_vars['holder']->value->id_page_holder;?>
 " class="displayNone">
             <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['holder']->value->partials, 'partial');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['holder']->value->partials, 'partial', false, 'id');
 $_smarty_tpl->tpl_vars['partial']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['partial']->value) {
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['id']->value => $_smarty_tpl->tpl_vars['partial']->value) {
 $_smarty_tpl->tpl_vars['partial']->do_else = false;
 ?>
-                <?php if ($_smarty_tpl->tpl_vars['partial']->value['name']) {?><h5 class="bottom--15"><?php echo $_smarty_tpl->tpl_vars['partial']->value['name'];?>
+                <?php if ($_smarty_tpl->tpl_vars['partial']->value['name']) {?><h5 class="bottom--15 gray2"><?php echo $_smarty_tpl->tpl_vars['partial']->value['name'];?>
 </h5><?php }?>
                 <div class="hiddenData displayNone">
                     <?php
@@ -101,31 +101,27 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
                         <textarea name="<?php if ($_smarty_tpl->tpl_vars['partial']->value['type'] == 'image' || $_smarty_tpl->tpl_vars['partial']->value['type'] == 'images') {?>images<?php } else { ?>content<?php }?>[<?php echo $_smarty_tpl->tpl_vars['l']->value->id;?>
 ][]" data-type="<?php echo $_smarty_tpl->tpl_vars['partial']->value['type'];?>
 ">
-                            <?php echo $_smarty_tpl->tpl_vars['partial']->value['content'];?>
+                            <?php echo $_smarty_tpl->tpl_vars['h']->value->partials[$_smarty_tpl->tpl_vars['id']->value]['content'];?>
 
                         </textarea>
                     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
-                <?php if ($_smarty_tpl->tpl_vars['partial']->value['type'] == "no") {?>
-                <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "input") {?>
-                    <div class="top-20">
+                <div class="top-20<?php if ($_smarty_tpl->tpl_vars['partial']->value['type'] == 'link' || $_smarty_tpl->tpl_vars['partial']->value['type'] == 'option' || (($_smarty_tpl->tpl_vars['partial']->value['type'] == 'option' || $_smarty_tpl->tpl_vars['partial']->value['type'] == 'input') && (isset($_smarty_tpl->tpl_vars['partial']->value['multiple'])))) {?> zGroup<?php }?>">
+                    <?php if ($_smarty_tpl->tpl_vars['partial']->value['type'] == "no") {?>
+                    <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "input") {?>
                         <input name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
-][]" type="text" class="back-white page-title padL-45" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['partial']->value['content'], ENT_QUOTES, 'UTF-8', true);?>
+][]" type="text" class="top-0 index-1 bottom-0 back-white page-title padL-45" value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['partial']->value['content'], ENT_QUOTES, 'UTF-8', true);?>
 ">
-                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
+                        <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2 index-1">
                             <i class="far fa-square"></i>
                         </div>
-                    </div>
-                <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "image") {?>
-                    <div class="top-20">
+                    <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "image") {?>
                         <input class="displayNone" value="<?php echo $_smarty_tpl->tpl_vars['partial']->value['content'];?>
 ">
                         <input type="file" class="filepond">
-                    </div>
-                <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "images") {?>
-                    <div class="top-20">
+                    <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "images") {?>
                         <div class="zTog-imagesFor<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
  pad-10 rad-5 pointThis" style="background:#f0efee">
                             <div class="zShow-imagesFor<?php echo $_smarty_tpl->tpl_vars['modalNumber']->value;?>
@@ -142,10 +138,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 " data-multi="true">
                             <input type="file" class="filepond">
                         </div>
-                    </div>
-                <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "categorylist") {?>
-                    <?php $_smarty_tpl->_assignInScope('allcats', $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryGetAll($_smarty_tpl->tpl_vars['zContent']->value->language->id));?>
-                    <div class="top-20">
+                    <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "categorylist") {?>
+                        <?php $_smarty_tpl->_assignInScope('allcats', $_smarty_tpl->tpl_vars['zCategoryTools']->value->zCategoryGetAll($_smarty_tpl->tpl_vars['zContent']->value->language->id));?>
                         <select class="pad-10 top-0 bottom-0 zCategory" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]" style="background-color: white">
                             <option disabled><?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
@@ -163,10 +157,8 @@ $_smarty_tpl->tpl_vars['cat']->do_else = false;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </select>
-                    </div>
-                <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "link") {?>
-                    <?php $_smarty_tpl->_assignInScope('contents', explode(";",$_smarty_tpl->tpl_vars['partial']->value['content']));?>
-                    <div class="zGroup top-20">
+                    <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "link") {?>
+                        <?php $_smarty_tpl->_assignInScope('contents', explode(";",$_smarty_tpl->tpl_vars['partial']->value['content']));?>
                         <label class="back7 borderForm boldMin-1 boldNoR pad-16 text6">
                             <?php echo smarty_function_zThis(array('z'=>"Link"),$_smarty_tpl);?>
 
@@ -178,14 +170,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <input type="text" class="zLink2 back-white top-0 bottom-0" placeholder="<?php echo smarty_function_zThis(array('z'=>"Button"),$_smarty_tpl);?>
 " value="<?php echo $_smarty_tpl->tpl_vars['contents']->value[1];?>
 ">
-                    </div>
-                <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "option") {?>
-                    <div class="zGroup top-20 whiteBack">
+                    <?php } elseif ($_smarty_tpl->tpl_vars['partial']->value['type'] == "option") {?>
                         <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
                             <?php echo smarty_function_zThis(array('z'=>"Choose..."),$_smarty_tpl);?>
 
                         </label>
-                        <select class="zSelect pad-10 top-0 bottom-0" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
+                        <select class="zSelect index-1 pad-10 top-0 bottom-0" style="background-color:white" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]">
                             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['partial']->value["options"], 'option', false, 'key');
@@ -194,19 +184,25 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 ?>
                                 <option value="<?php echo $_smarty_tpl->tpl_vars['key']->value+1;?>
-"><?php echo $_smarty_tpl->tpl_vars['option']->value;?>
+" <?php if (($_smarty_tpl->tpl_vars['key']->value+1) == $_smarty_tpl->tpl_vars['partial']->value['content']) {?>selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['option']->value;?>
 </option>
                             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </select>
-                    </div>
-                <?php } else { ?>
-                    <div class="top-20">
+                    <?php } else { ?>
                         <textarea class="summernote" name="zContent[<?php echo $_smarty_tpl->tpl_vars['zUser']->value->id_lang_closest;?>
 ][]"><?php echo $_smarty_tpl->tpl_vars['partial']->value['content'];?>
 </textarea>
+                    <?php }?>
+                    <?php if (($_smarty_tpl->tpl_vars['partial']->value['type'] == 'option' || $_smarty_tpl->tpl_vars['partial']->value['type'] == 'input') && (isset($_smarty_tpl->tpl_vars['partial']->value['multiple']))) {?>
+                    <div class="multiple back7 borderForm boldMin-1 padTB-10 padLR-20 text6 pointThis index-0">
+                        <div class="hollyMid"><i class="fas fa-plus"></i></div>
                     </div>
+                    <?php }?>
+                </div>
+                <?php if ((isset($_smarty_tpl->tpl_vars['partial']->value['multiple']))) {?>
+                <div class="multipleDive"></div>
                 <?php }?>
             <?php
 }

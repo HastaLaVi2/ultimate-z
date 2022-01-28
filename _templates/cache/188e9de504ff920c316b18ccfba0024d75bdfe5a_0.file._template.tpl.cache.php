@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 20:10:31
+/* Smarty version 3.1.40, created on 2022-01-27 13:31:57
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/profile/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc92b784bda4_98241842',
+  'unifunc' => 'content_61f29ecd712e59_51466248',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '188e9de504ff920c316b18ccfba0024d75bdfe5a' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/profile/_template.tpl',
-      1 => 1640422377,
+      1 => 1642852405,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61dc92b784bda4_98241842 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f29ecd712e59_51466248 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '54231466761dc92b780c5e7_63651456';
+$_smarty_tpl->compiled->nocache_hash = '119478096361f29ecd6c9067_43133826';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_70556344961dc92b7825329_92114794', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_164439718661f29ecd6e0fc4_86065550', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_91359286061dc92b7849c82_94711171', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_184725326561f29ecd710819_20533158', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_70556344961dc92b7825329_92114794 extends Smarty_Internal_Block
+class Block_164439718661f29ecd6e0fc4_86065550 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_70556344961dc92b7825329_92114794',
+    0 => 'Block_164439718661f29ecd6e0fc4_86065550',
   ),
 );
 public $append = 'true';
@@ -277,12 +277,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_91359286061dc92b7849c82_94711171 extends Smarty_Internal_Block
+class Block_184725326561f29ecd710819_20533158 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_91359286061dc92b7849c82_94711171',
+    0 => 'Block_184725326561f29ecd710819_20533158',
   ),
 );
 public $append = 'true';
@@ -333,10 +333,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     <?php echo '</script'; ?>
 >
 <?php

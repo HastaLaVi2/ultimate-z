@@ -1,30 +1,30 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-10 20:10:31
+/* Smarty version 3.1.40, created on 2022-01-27 13:31:57
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/profile/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61dc92b7939ca1_03012692',
+  'unifunc' => 'content_61f29ecd8ac631_38777704',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '188e9de504ff920c316b18ccfba0024d75bdfe5a' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/profile/_template.tpl',
-      1 => 1640422377,
+      1 => 1642852405,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_main.tpl',
-      1 => 1640422377,
+      1 => 1642843802,
       2 => 'file',
     ),
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1640422377,
+      1 => 1642844056,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -60,24 +60,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1641388364,
+      1 => 1643205706,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1630787909,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61dc92b7939ca1_03012692 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f29ecd8ac631_38777704 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <title>Profil | zAdmin</title>
+    <title>Profile | zAdmin</title>
     
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
@@ -126,7 +126,7 @@ function content_61dc92b7939ca1_03012692 (Smarty_Internal_Template $_smarty_tpl)
 <script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa.js"></script>
+<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
@@ -190,35 +190,35 @@ function content_61dc92b7939ca1_03012692 (Smarty_Internal_Template $_smarty_tpl)
 </div>
         <div class="top-40">
             <ul class="cleanList font-16">
-                <li class="text4 padLR-1rem weight-600">Menü</li>
+                <li class="text4 padLR-1rem weight-600">Menu</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-th-large text6"></i>
-                        <span class="padL-15">Gösterge Paneli</span>
+                        <span class="padL-15">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="#" class="pad-13 rad-10 blockThis zTogDown-side1 zHov-grayBack1 animSlow text4">
                         <i class="fas fa-layer-group text6"></i>
-                        <span class="padL-15">Düzen</span>
+                        <span class="padL-15">Layouts</span>
                         <i class="fas fa-chevron-down inRight top-3 text6"></i>
                     </a>
                     <ul class="zShow-side1 font-13 padL-2rem left-2rem displayNone">
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/design" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Tasarım
+                                Design
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/pages/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Sayfalar
+                                Pages
                             </a>
                         </li>
                         <li class="weight-600">
                             <a href="http://localhost/ultimate-z/_admin/layouts/categories/index.php" class="weight-700 animSlow text4 zHov-text5 zHov-padL-5">
-                                Kategoriler
+                                Categories
                             </a>
                         </li>
                     </ul>
@@ -227,39 +227,39 @@ function content_61dc92b7939ca1_03012692 (Smarty_Internal_Template $_smarty_tpl)
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/media" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-photo-video text6"></i>
-                        <span class="padL-15">Medya</span>
+                        <span class="padL-15">Media</span>
                     </a>
                 </li>
 
-                                <li class="text4 padLR-1rem weight-600 padT-30">Seçenekler</li>
+                                <li class="text4 padLR-1rem weight-600 padT-30">Preferences</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/preferences" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-cog text6"></i>
-                        <span class="padL-15">Seçenekler</span>
+                        <span class="padL-15">Preferences</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/users" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-users text6"></i>
-                        <span class="padL-15">Kullanıcılar</span>
+                        <span class="padL-15">Users</span>
                     </a>
                 </li>
 
-                <li class="text4 padLR-1rem weight-600 padT-30">İleri Düzey</li>
+                <li class="text4 padLR-1rem weight-600 padT-30">Advanced</li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/database" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-server text6"></i>
-                        <span class="padL-15">Veritabanı</span>
+                        <span class="padL-15">Database</span>
                     </a>
                 </li>
 
                 <li class="top-0_5rem padTB-5">
                     <a href="http://localhost/ultimate-z/_admin/advanced/run-queries" class="pad-13 rad-10 blockThis zHov-grayBack1 animSlow text4">
                         <i class="fas fa-terminal text6"></i>
-                        <span class="padL-15">Sorgu Çalıştır</span>
+                        <span class="padL-15">Run Queries</span>
                     </a>
                 </li>
                 
@@ -306,7 +306,7 @@ $(window).resize(function(){
     <a href="http://localhost/ultimate-z/" target="_blank" class="inLine colTop pointThis right-30 rightText index-10">
         <div class="no zMob768-displayNone">
             <div class="inLine verMid font-15">
-                Görüntüle
+                View
                 <div class="font-12">ultimate Z</div>
             </div>
             <div class="inLine verMid">
@@ -317,7 +317,7 @@ $(window).resize(function(){
     <div id="zUser" class="inLine colTop pointThis zTog-userMenu index-10">
         <div class="inLine colTop rightText padR-15">
             <h5 class="top-0 bottom-0">Kerimcan Ayaz</h5>
-            <h6 class="top-0 bottom-0">Yönetici</h6>
+            <h6 class="top-0 bottom-0">Administrator</h6>
         </div>
         <div class="inLine width-39">
             <img src="http://localhost/ultimate-z/_media/user/profile/4.jpg" class="pagePic widthAll rad-half">
@@ -325,14 +325,14 @@ $(window).resize(function(){
     </div>
     <div class="zShow-userMenu displayNone">
         <div class="floatingTheRight whiteBack rad-15 pad-20 index-10 width-250 zShadow font-16">
-            <div class="font-14 weight-700 gray3 bottom-10">Merhaba, Kerimcan!</div>
+            <div class="font-14 weight-700 gray3 bottom-10">Hello, Kerimcan!</div>
             <a href="http://localhost/ultimate-z/" target="_blank" class="displayNone zMob768-no">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoT boldMin-1">
                     <div class="inLine verMid">
                         <i class="fas fa-home padR-10"></i>
                     </div>
                     <div class="inLine verMid font-15">
-                        Görüntüle
+                        View
                         <div class="font-12">ultimate Z</div>
                     </div>
                 </div>
@@ -340,13 +340,13 @@ $(window).resize(function(){
             <a href="http://localhost/ultimate-z/_admin/profile/">
                 <div class="left--20 right--20 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3">
                     <i class="fas fa-id-badge padR-10"></i>
-                    Profil
+                    Profile
                 </div>
             </a>
             <a href="http://localhost/ultimate-z/_admin/logout/" class="forceLink">
                 <div class="left--20 right--20 bottom--20 rad-b-15 padTB-10 padLR-20 zHov-grayBack1 animSlow gray3 boldSoG1 boldNoL boldNoR boldNoB boldMin-1">
                     <i class="fas fa-sign-out-alt padR-10"></i>
-                    Çıkış Yap
+                    Log out
                 </div>
             </a>
         </div>
@@ -355,7 +355,7 @@ $(window).resize(function(){
         
 
         <div class="font-24 text4 index-20 fixed" zMob-1200="padT-30" id="zPageTitle">
-            <h3 class="boldText top-10">Profil</h3>
+            <h3 class="boldText top-10">Profile</h3>
         </div>
 
         <div class="font0 padT-100" zMob-1200="padT-130" id="zContent">
@@ -363,7 +363,7 @@ $(window).resize(function(){
             
                     <div class="col-3 colTop padR-10 zMob-padB-20">
                 <div class="whiteBack rad-15 pad-20 font-16 ">
-            <h4 class="font-19 top-0 text4 boldText">Profili Değiştir</h4>
+            <h4 class="font-19 top-0 text4 boldText">Change Avatar</h4>
             <form id="zUser-change-avatar-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/profile/index.php">
                 
                 <input name="id_user" id="id_user" type="text" value="1" style="display:none">
@@ -429,84 +429,84 @@ $(window).resize(function(){
                         });
                     </script>
                 </div>
-                <button class="zButton primary widthAll zShadow5">Tamamla</button>
+                <button class="zButton primary widthAll zShadow5">Submit</button>
             </form>
         </div>
     </div>
     <div class="col-9 padL-10 zMob-padB-20">
         <div class="whiteBack rad-15 pad-20 font-16">
-            <h4 class="font-19 top-0 text4 boldText">Dili Değiştir</h4>
+            <h4 class="font-19 top-0 text4 boldText">Change Language</h4>
             <form id="zUser-change-language-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/profile/index.php">
                 
                 <input name="id_user" id="id_user" type="text" value="1" style="display:none">
                 <input name="form_type" id="form_type" type="text" value="change-language" style="display:none">
                 <div class="zGroup bottom-20">
                     <label class="back7 borderForm boldMin-1 boldNoR pad-10 text6" for="id_lang">
-                        Bir Dil Seç
+                        Select Language
                     </label>
                     <select class="pad-10 top-0 bottom-0" id="id_lang" name="id_lang">
-                        <option disabled>Seç...</option>
-                        <option value='1'>English</option><option value='2'selected>Türkçe</option>
+                        <option disabled>Choose...</option>
+                        <option value='1'selected>English</option><option value='2'>Türkçe</option>
                     </select>
                 </div>
-                <button class="zButton primary widthAll zShadow5">Tamamla</button>
+                <button class="zButton primary widthAll zShadow5">Submit</button>
             </form>
         </div>
         <div class="whiteBack rad-15 pad-20 font-16 top-20">
-            <h4 class="font-19 top-0 text4 boldText">Epostayı Değiştir</h4>
+            <h4 class="font-19 top-0 text4 boldText">Change Email</h4>
             <form id="zUser-change-email-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/profile/index.php">
                 
                 <input name="id_user" id="id_user" type="text" value="1" style="display:none">
                 <input name="form_type" id="form_type" type="text" value="change-email" style="display:none">
                 <div class="bottom-20">
-                    <input name="email_new" id="email_new" type="email" class="padL-45" placeholder="Eposta" value="kerimcanayaz@gmail.com">
+                    <input name="email_new" id="email_new" type="email" class="padL-45" placeholder="Email" value="kerimcanayaz@gmail.com">
                     <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                         <i class="far fa-envelope"></i>
                     </div>
                 </div>
-                <button class="zButton primary widthAll zShadow5">Tamamla</button>
+                <button class="zButton primary widthAll zShadow5">Submit</button>
             </form>
         </div>
         <div class="whiteBack rad-15 pad-20 font-16 top-20">
-            <h4 class="font-19 top-0 text4 boldText">Adı Değiştir</h4>
+            <h4 class="font-19 top-0 text4 boldText">Change Name</h4>
             <form id="zUser-change-name-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/profile/index.php">
                 
                 <input name="id_user" id="id_user" type="text" value="1" style="display:none">
                 <input name="form_type" id="form_type" type="text" value="change-name" style="display:none">
                 <div class="bottom-20">
-                    <input name="name_new" id="name_new" type="text" class="padL-45" placeholder="Ad">
+                    <input name="name_new" id="name_new" type="text" class="padL-45" placeholder="Name">
                     <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                         <i class="far fa-user"></i>
                     </div>
                 </div>
                 <div class="bottom-20">
-                    <input name="surname_new" id="surname_new" type="text" class="padL-45" placeholder="Soyadı">
+                    <input name="surname_new" id="surname_new" type="text" class="padL-45" placeholder="Surname">
                     <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                         <i class="far fa-user"></i>
                     </div>
                 </div>
-                <button class="zButton primary widthAll zShadow5">Tamamla</button>
+                <button class="zButton primary widthAll zShadow5">Submit</button>
             </form>
         </div>
         <div class="whiteBack rad-15 pad-20 font-16 top-20">
-            <h4 class="font-19 top-0 text4 boldText">Şifre Değiştir</h4>
+            <h4 class="font-19 top-0 text4 boldText">Change Password</h4>
             <form id="zUser-change-password-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/profile/index.php">
                 
                 <input name="id_user" id="id_user" type="text" value="1" style="display:none">
                 <input name="form_type" id="form_type" type="text" value="change-password" style="display:none">
                 <div class="bottom-20">
-                    <input name="password" id="password" type="password" class="padL-45" placeholder="Eski Şifre">
+                    <input name="password" id="password" type="password" class="padL-45" placeholder="Old Password">
                     <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                 </div>
                 <div class="bottom-20">
-                    <input name="password_new" id="password_new" type="password" class="padL-45" placeholder="Yeni Şifre">
+                    <input name="password_new" id="password_new" type="password" class="padL-45" placeholder="New Password">
                     <div class="floatingSpace font-25_6 padTB-13 padL-10 gray2">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                 </div>
-                <button class="zButton primary widthAll zShadow5">Tamamla</button>
+                <button class="zButton primary widthAll zShadow5">Submit</button>
             </form>
         </div>
     </div>
@@ -519,16 +519,74 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.1</b></p>
     </div>
 </footer>
     </div>
 
-    <div id="zBottom">
+    <div id="zFooter">
         
 
     <!-- toastify -->
     <script src="http://localhost/ultimate-z/_scripts/toastify/toastify.js"></script>
+
+    <!-- simple-datatables -->
+    <script>
+    var entriesPerPage = "entries per page";
+    var searchOn = "Search...";
+    var showingOf = "Showing [start] to [end] of [rows] entries";
+    showingOf = showingOf.replaceAll("[", "{").replaceAll("]", "}");
+    var noRowFound = "No entries found";
+
+    $("input[type=checkbox]").change(function() {
+        var clas = $(this).attr("class").split(" ")[1];
+        var checked = $(this).prop("checked");
+        $("."+clas).prop("checked", checked);
+    });
+    </script>
+    <script src="http://localhost/ultimate-z/_scripts/simple-datatables/simple-datatables.js"></script>
+    <script>
+    function zTable() {
+        // create simple datatables
+        window.zTables = [];
+        var tables = document.querySelectorAll(".zTable");
+        tables.forEach((item, i) => {
+            var jItem = $(item);
+            var columns = jItem.attr("no_sort") ? { select: jItem.attr("no_sort").split("-"), sortable: false} : {};
+            var dataTable = new simpleDatatables.DataTable(item, {
+                columns: [columns]
+            });
+            dataTable.on("datatable.page", function(page) {
+                jItem.find("a").click(magicLinks);
+            });
+            dataTable.on("datatable.sort", function(column, direction) {
+                jItem.find("a").click(magicLinks);
+            });
+            window.zTables.push(dataTable);
+        });
+    }
+    </script>
+    <script>
+    $(window).on("load", function () {
+        zTable();
+        zDetect();
+        // do we have extra javascript function to be run on the new page?
+        // let's run it if we do, but we need to check if we have a function on the page at all.
+        var zPageJSS = [];
+
+        for (var x in window) {
+            if (typeof window[x] === "function" && x.indexOf("zPageJS") === 0) {
+                zPageJSS.push(x);
+            }
+        }
+        zPageJSS.forEach(function(item) {
+            window[item]();
+        });
+    });
+    </script>
+    </div>
+
+    <div id="zBottom">
         
         
     <script>
@@ -572,10 +630,6 @@ $(window).resize(function(){
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     </script>
 
     </div>

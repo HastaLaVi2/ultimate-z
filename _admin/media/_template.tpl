@@ -17,6 +17,7 @@
 
 {block name="zTop" append}
     <style>
+    #actions span, #actions a { white-space: nowrap;}
     #upload_progress { padding: 4px 0;}
     #upload_progress > div { padding:3px 0;}
     .progress_track { display:inline-block;width:200px;height:12px;border:2px solid var(--color2);border-radius:5px;margin: 0 4px 0 10px;}

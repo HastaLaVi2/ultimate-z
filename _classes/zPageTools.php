@@ -259,10 +259,11 @@ class zPageTools {
                         foreach ($zHolder->partials as $k => $v) {
                             $id_partial = $k + 1;
                             $check_page_holder = $db->select("SELECT * FROM zPagesHolders_tr WHERE id_page_holder = '$id_page_holder' AND id_partial = '$id_partial' AND id_lang = '$id_lang'");
-                            $content = ($v == "image" || $v == "images") ? ltrim(rtrim($images[0], ";"), ";") : $holder_content[0];
+                            $content = ($v["type"] == "image" || $v["type"] == "images") ? ltrim(rtrim($images[0], ";"), ";") : $holder_content[0];
                             $content = str_replace("'", "\'", $content);
+                            $now = $now . $v["name"] . "-" . $content . "\n";
 
-                            if ($v == "link") {
+                            if ($v["type"] == "link") {
                                 $content = ltrim(rtrim($content, ";"), ";");
                             }
 
@@ -272,7 +273,7 @@ class zPageTools {
                                 $query .= "INSERT INTO `zPagesHolders_tr` (id_page_holder, id_partial, id_lang, value) VALUES ('$id_page_holder', '$id_partial', '$id_lang', '$content');";
                             }
 
-                            if ($v == "image" || $v == "images") {
+                            if ($v["type"] == "image" || $v["type"] == "images") {
                                 array_shift($images);
                             } else {
                                 array_shift($holder_content);
