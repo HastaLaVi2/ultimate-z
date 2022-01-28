@@ -220,7 +220,7 @@ function formButton() {
     var ButtonPos2 = $(".ButtonPos2");
 
     if (ButtonPos2 && ButtonPos1) {
-        if (ButtonPos2.offset() && ButtonPos2.offset().top < (scroll + $(window).height() - ButtonPos2.height())) {
+        if (ButtonPos2.offset() && ButtonPos2.offset().top < (scroll + $(window).height() - ButtonPos2.height() - 20)) {
             ButtonPos1.hide();
         } else {
             ButtonPos1.show();

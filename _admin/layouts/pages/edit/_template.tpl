@@ -300,7 +300,7 @@
                     // if the data is a multiple one.
                     if (cur.parent().find(".multiple").length) {
                         // get the first item's value first.
-                        var calcVal = cur.val();
+                        var calcVal = cur.val().replace(";", "%3B");
                         // now search for the multipleDive DOM element,
                         // because it stores the multiple information.
                         if (multi.length && multi.hasClass("multipleDive")) {
@@ -312,9 +312,9 @@
                             // let's collect all the information into a single
                             // storing unit.
                             multi.find("[name='multipleDive[]']").each(function() {
-                                calcVal = calcVal + ";" + $(this).val();
+                                calcVal = calcVal + ";" + $(this).val().replace(";", "%3B");
                                 if (prev !== now) {
-                                    $(this).val(multiple[0] ? multiple[0].trim() : "");
+                                    $(this).val(multiple[0] ? multiple[0].trim().replace("%3B", ";") : "");
                                     multiple.shift();
                                 }
                             });
@@ -353,7 +353,7 @@
                         // store the previous language's data to hidden field
                         old.val(cur.val());
                         // retrieve the current language's data from hidden field
-                        cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0] : nowo.val().trim());
+                        cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0].replace("%3B", ";") : nowo.val().trim());
                     }
 
                     // if we have summernote on our holder, we should do this trick
@@ -586,7 +586,7 @@
             });
             if (load) {
                 if (yeahThere > 1) {
-                    th.parent().find("[name^='zContent[']").val(now[0]);
+                    th.parent().find("[name^='zContent[']").val(now[0].replace("%3B", ";"));
                     for (let i = 1; i < yeahThere; i++) {
                         // now, let's multiply!
                         nwe.append(all.clone());
