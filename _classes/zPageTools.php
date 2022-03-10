@@ -93,8 +93,11 @@ class zPageTools {
             # get zPage status value
             $page_status = isset($data["page_status"]) ? 1 : 0;
 
+            # get zPage product status
+            $is_product = isset($data["is_product"]) ? 1 : 0;
+
             # check if we are on a "create page" or "edit page".
-            if (!isset($id_page)) {
+            if (!isset($id_page) || (isset($id_page) && $id_page == "")) {
                 # if we are creating a zPage, we need to set a new id to our zPage.
                 # check he last biggest number on the database.
                 $check_id_page = $db->select("SELECT * FROM zPages WHERE id_page > 1000 ORDER BY id_page");
@@ -106,12 +109,12 @@ class zPageTools {
 
                 # plus one to that number and insert a new zPage row.
                 $id_page = $check + 1;
-                $query .= "INSERT INTO `zPages` (id_page, url, area, id_template, subpage) VALUES ('$id_page', '$page_url', 'front', '$id_template', '$subpage');";
+                $query .= "INSERT INTO `zPages` (id_page, url, area, id_template, subpage, status, is_product) VALUES ('$id_page', '$page_url', 'front', '$id_template', '$subpage', '$page_status', '$is_product');";
             } else {
                 # if we are editing a zPage, we need to update some values.
                 # url is always a single value, so we start with that.
                 # also, we need to update subpage parameter as well.
-                $query .= "UPDATE zPages SET url = '$page_url', subpage = '$subpage', status = '$page_status' WHERE id_page = '$id_page';";
+                $query .= "UPDATE zPages SET url = '$page_url', subpage = '$subpage', status = '$page_status', is_product = '$is_product' WHERE id_page = '$id_page';";
 
                 # now, time to find out which template is used on the zPage.
                 $select1 = $db->select("SELECT * FROM zPages WHERE id_page = '$id_page'");

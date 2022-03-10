@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 20:38:52
+/* Smarty version 3.1.40, created on 2022-03-10 15:44:59
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/user_card.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f302dcbb2aa5_16714462',
+  'unifunc' => 'content_622a1cfb452604_86785188',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61f302dcbb2aa5_16714462 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a1cfb452604_86785188 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ultimate-z/_scripts/smarty/libs/plugins/function.zThis.php','function'=>'smarty_function_zThis',),));
-$_smarty_tpl->compiled->nocache_hash = '63605504461f302dcbae628_09117650';
+$_smarty_tpl->compiled->nocache_hash = '737748397622a1cfb44e5a1_83600535';
 ?>
 
 <div class="whiteBack rad-15 pad-20">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 20:39:50
+/* Smarty version 3.1.40, created on 2022-03-10 15:20:24
   from '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f3031690a9e0_65796124',
+  'unifunc' => 'content_622a1738dfe335_05054095',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1645698748,
       2 => 'file',
     ),
   ),
@@ -22,8 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_holders/favicon.tpl' => 1,
   ),
 ),false)) {
-function content_61f3031690a9e0_65796124 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '146233672261f303168f0399_68631135';
+function content_622a1738dfe335_05054095 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '297576009622a1738abafc3_88642497';
 ?>
 
 <meta charset="utf-8">
@@ -69,7 +69,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /ultimate-z/z.min.css"/>
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /ultimate-z/z.min.js"><?php echo '</script'; ?>
 >
 
@@ -92,13 +92,13 @@ assets/owl.theme.default.css"/>
 <?php }
 if (file_exists(((string)$_smarty_tpl->tpl_vars['tempDirectory']->value)."assets/owl.carousel.min.js")) {?>
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["_main"];
 echo $_smarty_tpl->tpl_vars['tempDirectory']->value;?>
 assets/owl.carousel.min.js"><?php echo '</script'; ?>
 >
 <?php } else { ?>
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /owl.carousel/owl.carousel.min.js"><?php echo '</script'; ?>
 >
 <?php }?>
@@ -111,7 +111,7 @@ assets/owl.carousel.min.js"><?php echo '</script'; ?>
 
 <!-- lazysizes -->
 <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /lazysizes/lazysizes.min.js" async=""><?php echo '</script'; ?>
 >
 
@@ -121,7 +121,7 @@ echo '<script'; ?>
 >window.zAdmin = true<?php echo '</script'; ?>
 ><?php }
 echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /spa_v1.js"><?php echo '</script'; ?>
 >
 
@@ -130,7 +130,7 @@ echo '<script'; ?>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /dragula/dragula.min.css"/>
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /dragula/dragula.min.js"><?php echo '</script'; ?>
 >
 
@@ -140,13 +140,13 @@ echo '<script'; ?>
 
     <!-- imagetracer -->
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /imagetracer/imagetracer_v1.2.6.js"><?php echo '</script'; ?>
 >
 
     <!-- html2canvas -->
     <?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
+ defer src="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->srcFull["scripts"];?>
 /html2canvas/html2canvas.min.js"><?php echo '</script'; ?>
 >
 <?php }

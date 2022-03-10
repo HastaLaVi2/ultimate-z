@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:44:48
+/* Smarty version 3.1.40, created on 2022-01-28 22:25:55
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd210b52e11_16992438',
+  'unifunc' => 'content_61f46d73342b17_73374636',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1641843834,
+      1 => 1643408746,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1643376836,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -60,19 +60,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '37ad690d114aa609e1e968d0e1276ea0a862870d' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_partials/footer.tpl',
-      1 => 1641388364,
+      1 => 1643205706,
       2 => 'file',
     ),
     'bccd1d6e5f756a0c71889da5394d7176cd403d20' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/footer.tpl',
-      1 => 1642844528,
+      1 => 1643101759,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61ebd210b52e11_16992438 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f46d73342b17_73374636 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -444,7 +444,7 @@ $(window).resize(function(){
                             </div>
                         </div>
                                         <h6 class="bottom-10 top-0 font-1em">Meta Açıklaması</h6>
-                    <p>Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
+                    <p class="font-13 bottom-0">Eğer bir meta açıklaması girmezseniz, sayfadaki ilk bulunan metin geçerli olacaktır.</p>
                                             <div class="divFor1 divFor" style="display: none">
                             <div class="bottom-10">
                                 <input name="page_meta[1]" id="page_meta_1" type="text" class="padL-45" value="">
@@ -466,18 +466,30 @@ $(window).resize(function(){
                         $("#page_url").val("/"+slug($(this).val()));
                     });
                     </script>
+                    <h6 class="bottom-10 top-0 font-1em">E-commerce Options</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="is_product" id="is_product"
+                        >
+                        <label for="is_product">This is a product page</label>
+                        <div class="font-13">Determine whether the page is a product page or not.</div>
+                    </div>
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">Alt Sayfa</h6>
+                    <h6 class="bottom-12 top-0 font-1em">Durum</h6>
                     <div>
-                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
-                        value="enabled" checked>
+                        <input class="zSwitch" type="checkbox" name="page_status" id="page_status" value="enabled" checked>
+                        <label for="page_status">Sayfa durumu</label>
+                        <div class="font-13">Sayfanın aktif olarak görüntülenip görüntülenemeyeceğini belirleyin.</div>
+                    </div>
+                    <h6 class="bottom-12 top-12 font-1em">Alt Sayfa</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage" value="enabled" checked>
                         <label for="not_a_subpage">Bir alt sayfa değil.</label>
                         <div class="font-13">Eğer bu sayfanın, başka bir sayfanın alt sayfası olmasını istiyorsanız, bu tuşa basın.</div>
                     </div>
                     <select class="zSelect pad-10 top-12 bottom-20 disabledInput" id="change_subpage" name="change_subpage">
                         <option selected>Seç...</option>
-                        <option value='1001'>Anasayfa</option><option value='1002'>Moda</option><option value='1003'>1001</option>
+                        <option value='1001'>Anasayfa</option><option value='1002'>Ürün</option>
                     </select>
                     <script>
                     $("#not_a_subpage").change(function() {
@@ -507,7 +519,7 @@ $(window).resize(function(){
         <p>2021 &copy; ultimate Z</p>
     </div>
     <div class="inRight">
-        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.2.3</b></p>
+        <p><span style="color: #dc3545;"><i class="far fa-heart"></i></span> version <b>0.3.1</b></p>
     </div>
 </footer>
     </div>
@@ -614,10 +626,6 @@ $(window).resize(function(){
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     </script>
 
     </div>

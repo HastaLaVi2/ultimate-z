@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 20:38:52
+/* Smarty version 3.1.40, created on 2022-03-10 15:44:59
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f302dcc36398_60344987',
+  'unifunc' => 'content_622a1cfb74abe4_80160170',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f3ce0a95b089b83ae762214d8d39d79fcd27b89' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/_template.tpl',
-      1 => 1642852377,
+      1 => 1646926772,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1645698748,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -84,7 +84,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f302dcc36398_60344987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a1cfb74abe4_80160170 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -113,12 +113,12 @@ function content_61f302dcc36398_60344987 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- the ultimate z -->
 <link rel="stylesheet" type="text/css" href="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.css"/>
-<script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
+<script defer src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
     
 <!-- favicon -->
@@ -135,23 +135,23 @@ function content_61f302dcc36398_60344987 (Smarty_Internal_Template $_smarty_tpl)
 <meta name="theme-color" content="#99154e">
 
 <!-- lazysizes -->
-<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+<script defer src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
+<script>window.zAdmin = true</script><script defer src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
-    <script src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
 
     <!-- toastify -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/toastify/toastify.css">
 
     <!-- imagetracer -->
-    <script src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
 
     <!-- html2canvas -->
-    <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
 </head>
 <body class="back7">
     
@@ -400,14 +400,14 @@ $(window).resize(function(){
                                             <div class="widthAll padL-20 padR-100">
                             Anasayfa
                             <span class="floatingTheRight padR-20 boldText" style="color: #5350e9">
-                                587
+                                619
                             </span>
                         </div>
                         <div id="chart-1001" class="left--22 right--10"></div>
                                                                                 <div class="widthAll padL-20 padR-100">
-                            Moda
+                            Ürün
                             <span class="floatingTheRight padR-20 boldText" style="color: #008b75">
-                                40
+                                43
                             </span>
                         </div>
                         <div id="chart-1002" class="left--22 right--10"></div>
@@ -425,7 +425,7 @@ $(window).resize(function(){
     <div class="whiteBack rad-15 pad-20 padL-2_3em">
         <i class="fas fa-eye floatingSpace top-1em pad-13 whiteText rad-10 left--10" style="background: #9694ff"></i>
         <h6 class="text6 weight-600 top-0 bottom-10">Toplam Sayfa Görüntülenme</h6>
-        <h6 class="top-0 bottom-0">647</h6>
+        <h6 class="top-0 bottom-0">682</h6>
     </div>
 </div>
 <div class="col-4 colTop padLR-10 zMob-padB-20 font-24">
@@ -546,7 +546,7 @@ $(window).resize(function(){
     function dateTable(period, start) {
         var months = window.apexLang.options.shortMonths;
         var days = window.apexLang.options.days;
-        var date = new Date("2022/01/27");
+        var date = new Date("2022/03/10");
         if (start) {
             date.setDate(date.getDate() - start);
         }
@@ -690,19 +690,19 @@ $(window).resize(function(){
         window.next = true;
         $("[id^=SvgjsSvg]").remove();
 
-        apexBarCreate("#chart-profile-visit", 7, ["8","90","12","0","0","8","2"]);
+        apexBarCreate("#chart-profile-visit", 7, ["4","0","0","0","0","0","0"]);
                 if ($("#chart-1001").length) {
             apexLineCreate(
                 "#chart-1001",
                 12,
-                ["8","86","12","0","0","8","2","1","0","0","0","0"],
+                ["4","0","0","0","0","0","0","0","0","0","0","0"],
                 "#5350e9"            );
         }
                 if ($("#chart-1002").length) {
             apexLineCreate(
                 "#chart-1002",
                 12,
-                ["0","4","0","0","0","0","0","0","0","0","0","0"],
+                ["0","0","0","0","0","0","0","0","0","0","0","0"],
                 "#008b75"            );
         }
         

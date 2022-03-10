@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-26 10:55:25
+/* Smarty version 3.1.40, created on 2022-03-10 15:28:24
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/login/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f1289d301af8_15037792',
+  'unifunc' => 'content_622a1918aa1458_44828110',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1645698748,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -42,7 +42,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f1289d301af8_15037792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a1918aa1458_44828110 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -71,12 +71,12 @@ function content_61f1289d301af8_15037792 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- the ultimate z -->
 <link rel="stylesheet" type="text/css" href="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.css"/>
-<script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
+<script defer src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
     
 <!-- favicon -->
@@ -93,23 +93,23 @@ function content_61f1289d301af8_15037792 (Smarty_Internal_Template $_smarty_tpl)
 <meta name="theme-color" content="#99154e">
 
 <!-- lazysizes -->
-<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+<script defer src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
+<script>window.zAdmin = true</script><script defer src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
-    <script src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
 
     <!-- toastify -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/toastify/toastify.css">
 
     <!-- imagetracer -->
-    <script src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
 
     <!-- html2canvas -->
-    <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
     
 <!-- form validation -->
 <script src="http://localhost/ultimate-z/_scripts/jquery/jquery.validate.min.js"></script>

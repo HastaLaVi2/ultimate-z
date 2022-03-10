@@ -39,7 +39,7 @@
 
 <!-- the ultimate z -->
 <link rel="stylesheet" type="text/css" href="{$zContent->srcFull["scripts"]}/ultimate-z/z.min.css"/>
-<script src="{$zContent->srcFull["scripts"]}/ultimate-z/z.min.js"></script>
+<script defer src="{$zContent->srcFull["scripts"]}/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
 {if file_exists("{$tempDirectory}assets/owl.carousel.css")}
@@ -53,9 +53,9 @@
     <link href="{$zContent->srcFull["scripts"]}/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
 {/if}
 {if file_exists("{$tempDirectory}assets/owl.carousel.min.js")}
-    <script src="{$zContent->srcFull["_main"]}{$tempDirectory}assets/owl.carousel.min.js"></script>
+    <script defer src="{$zContent->srcFull["_main"]}{$tempDirectory}assets/owl.carousel.min.js"></script>
 {else}
-    <script src="{$zContent->srcFull["scripts"]}/owl.carousel/owl.carousel.min.js"></script>
+    <script defer src="{$zContent->srcFull["scripts"]}/owl.carousel/owl.carousel.min.js"></script>
 {/if}
 
 {if $zAdmin}
@@ -65,23 +65,23 @@
 {/if}
 
 <!-- lazysizes -->
-<script src="{$zContent->srcFull["scripts"]}/lazysizes/lazysizes.min.js" async=""></script>
+<script defer src="{$zContent->srcFull["scripts"]}/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
 {if $zAdmin}<script>window.zAdmin = true</script>{/if}
-<script src="{$zContent->srcFull["scripts"]}/spa_v1.js"></script>
+<script defer src="{$zContent->srcFull["scripts"]}/spa_v1.js"></script>
 
 {if $zAdmin}
     <!-- dragula -->
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/dragula/dragula.min.css"/>
-    <script src="{$zContent->srcFull["scripts"]}/dragula/dragula.min.js"></script>
+    <script defer src="{$zContent->srcFull["scripts"]}/dragula/dragula.min.js"></script>
 
     <!-- toastify -->
     <link rel="stylesheet" href="{$zContent->srcFull["scripts"]}/toastify/toastify.css">
 
     <!-- imagetracer -->
-    <script src="{$zContent->srcFull["scripts"]}/imagetracer/imagetracer_v1.2.6.js"></script>
+    <script defer src="{$zContent->srcFull["scripts"]}/imagetracer/imagetracer_v1.2.6.js"></script>
 
     <!-- html2canvas -->
-    <script src="{$zContent->srcFull["scripts"]}/html2canvas/html2canvas.min.js"></script>
+    <script defer src="{$zContent->srcFull["scripts"]}/html2canvas/html2canvas.min.js"></script>
 {/if}

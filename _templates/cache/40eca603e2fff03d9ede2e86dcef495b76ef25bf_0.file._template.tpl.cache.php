@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 13:00:39
+/* Smarty version 3.1.40, created on 2022-03-10 16:41:26
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f29777157bc8_23442357',
+  'unifunc' => 'content_622a2a36ccfa46_98298674',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40eca603e2fff03d9ede2e86dcef495b76ef25bf' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl',
-      1 => 1642852415,
+      1 => 1643405891,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61f29777157bc8_23442357 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a2a36ccfa46_98298674 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '191203028361f29776f1d5c7_92875565';
+$_smarty_tpl->compiled->nocache_hash = '671502718622a2a36c8c5f6_83264254';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_99871359161f29777132748_79806246', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1315385519622a2a36ca5936_48548577', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_134412319661f29777155da7_22678280', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_995060437622a2a36cce4f2_34754049', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_99871359161f29777132748_79806246 extends Smarty_Internal_Block
+class Block_1315385519622a2a36ca5936_48548577 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_99871359161f29777132748_79806246',
+    0 => 'Block_1315385519622a2a36ca5936_48548577',
   ),
 );
 public $append = 'true';
@@ -56,10 +56,11 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Users/kerimcanayaz/Sites/ul
     <section class="whiteBack rad-15 pad-20 font-16">
         <h4 class="font-19 top-0 text4 boldText"><?php echo smarty_function_zThis(array('z'=>"Site Settings"),$_smarty_tpl);?>
 </h4>
-        <form id="zUser-preferences-form" class="zForm" method="POST" role="form" action="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+        <form class="zForm zUser-preferences-form" method="POST" role="form" action="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
 ">
             <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsFormWarning($_smarty_tpl->tpl_vars['success']->value,$_smarty_tpl->tpl_vars['error']->value);?>
 
+            <input type="text" class="displayNone" value="true" name="preferences">
             <div class="col-12">
                 <div class="zGroup">
                     <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -139,25 +140,40 @@ $_smarty_tpl->tpl_vars['lang']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </ul>
                 </div>
-                <?php echo '<script'; ?>
->
-                $(".zSwitch").change(function() {
-                    var value = $(this).val();
-                    var enText = $(this).parent().find(".enable").text();
-                    var disText = $(this).parent().find(".disable").text();
-                    if (value == "enabled") {
-                        $(this).next("label").text(enText);
-                        $(this).val("disabled");
-                    } else {
-                        $(this).next("label").text(disText);
-                        $(this).val("enabled");
-                    }
-                });
-                <?php echo '</script'; ?>
->
                 <button id="btnSubmit" class="zButton primary widthAll zShadow5"><?php echo smarty_function_zThis(array('z'=>"Submit"),$_smarty_tpl);?>
 </button>
             </div>
+        </form>
+    </section>
+    <section class="whiteBack rad-15 pad-20 font-16 top-20">
+        <h4 class="font-19 top-0 text4 boldText"><?php echo smarty_function_zThis(array('z'=>"E-commerce Options"),$_smarty_tpl);?>
+</h4>
+        <p class="top-0 bottom-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"If this is to be an e-commerce network, enable the switch."),$_smarty_tpl);?>
+</p>
+        <form class="zForm zUser-preferences-form" method="POST" role="form" action="<?php echo $_smarty_tpl->tpl_vars['zContent']->value->base_uri;?>
+">
+            <?php echo $_smarty_tpl->tpl_vars['zTools']->value->zToolsFormWarning($_smarty_tpl->tpl_vars['success']->value,$_smarty_tpl->tpl_vars['error']->value);?>
+
+            <input type="text" class="displayNone" value="true" name="e_commerce">
+            <div class="padTB-15">
+                <input class="zSwitch" type="checkbox" name="eCommerce" id="eCommerce"
+                <?php if ($_smarty_tpl->tpl_vars['z']->value->eCommerce == "enabled") {?>value="enabled" checked<?php }?>>
+                <label for="eCommerce">
+                    <?php if ($_smarty_tpl->tpl_vars['z']->value->eCommerce == "enabled") {?>
+                        <?php echo smarty_function_zThis(array('z'=>"Disable e-commerce settings"),$_smarty_tpl);?>
+
+                    <?php } else { ?>
+                        <?php echo smarty_function_zThis(array('z'=>"Enable e-commerce settings"),$_smarty_tpl);?>
+
+                    <?php }?>
+                </label>
+                <span class="enable displayNone"><?php echo smarty_function_zThis(array('z'=>"Enable e-commerce settings"),$_smarty_tpl);?>
+</span>
+                <span class="disable displayNone"><?php echo smarty_function_zThis(array('z'=>"Disable e-commerce settings"),$_smarty_tpl);?>
+</span>
+            </div>
+            <button id="btnSubmit" class="zButton primary widthAll zShadow5"><?php echo smarty_function_zThis(array('z'=>"Submit"),$_smarty_tpl);?>
+</button>
         </form>
     </section>
     <section class="whiteBack rad-15 pad-20 font-16 top-20">
@@ -190,12 +206,12 @@ $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['zContent']->va
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_134412319661f29777155da7_22678280 extends Smarty_Internal_Block
+class Block_995060437622a2a36cce4f2_34754049 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_134412319661f29777155da7_22678280',
+    0 => 'Block_995060437622a2a36cce4f2_34754049',
   ),
 );
 public $append = 'true';
@@ -205,13 +221,26 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     <?php echo '<script'; ?>
 >
         function zPageJS() {
+            $(".zSwitch").change(function() {
+                var value = $(this).val();
+                var enText = $(this).parent().find(".enable").text();
+                var disText = $(this).parent().find(".disable").text();
+                if (value == "enabled") {
+                    $(this).next("label").text(enText);
+                    $(this).val("disabled");
+                } else {
+                    $(this).next("label").text(disText);
+                    $(this).val("enabled");
+                }
+            });
+
             $(".zSure").submit(function(e) {
                 e.preventDefault();
                 window.location.assign("#modalsure");
             });
 
             // submit form functions
-            $("#zUser-preferences-form").submit(function(e) {
+            $(".zUser-preferences-form").submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this).clone();

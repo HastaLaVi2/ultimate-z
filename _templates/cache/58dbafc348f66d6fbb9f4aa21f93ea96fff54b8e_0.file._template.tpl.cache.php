@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 20:39:43
+/* Smarty version 3.1.40, created on 2022-03-10 15:46:18
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f3030f0ce639_71915374',
+  'unifunc' => 'content_622a1d4ab4a736_48585350',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58dbafc348f66d6fbb9f4aa21f93ea96fff54b8e' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/edit/_template.tpl',
-      1 => 1643315981,
+      1 => 1644576233,
       2 => 'file',
     ),
   ),
@@ -21,37 +21,37 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:_partials/modal.tpl' => 1,
   ),
 ),false)) {
-function content_61f3030f0ce639_71915374 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a1d4ab4a736_48585350 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '213726550961f3030f059632_71249718';
+$_smarty_tpl->compiled->nocache_hash = '1254541247622a1d4aac4043_34482010';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_135794075061f3030f079a57_60727750', "zTop");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1850132907622a1d4aadf827_27948147', "zTop");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_93911669261f3030f07f672_96477859', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_764342400622a1d4aae8179_38395953', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_121322282561f3030f0b9149_38766059', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1326274247622a1d4ab2db49_00269710', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zTop"} */
-class Block_135794075061f3030f079a57_60727750 extends Smarty_Internal_Block
+class Block_1850132907622a1d4aadf827_27948147 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zTop' => 
   array (
-    0 => 'Block_135794075061f3030f079a57_60727750',
+    0 => 'Block_1850132907622a1d4aadf827_27948147',
   ),
 );
 public $append = 'true';
@@ -78,12 +78,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "zTop"} */
 /* {block "zContent"} */
-class Block_93911669261f3030f07f672_96477859 extends Smarty_Internal_Block
+class Block_764342400622a1d4aae8179_38395953 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_93911669261f3030f07f672_96477859',
+    0 => 'Block_764342400622a1d4aae8179_38395953',
   ),
 );
 public $append = 'true';
@@ -180,7 +180,7 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Meta Description"),$_smarty_tpl);?>
 </h6>
-                    <p><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
+                    <p class="font-13 bottom-0"><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
 </p>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(true), 'l');
@@ -203,6 +203,18 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
                     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                    <?php if ($_smarty_tpl->tpl_vars['z']->value->eCommerce) {?>
+                    <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"E-commerce Options"),$_smarty_tpl);?>
+</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="is_product" id="is_product"
+                        <?php if ($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->is_product) {?>value="enabled" checked<?php }?>>
+                        <label for="is_product"><?php echo smarty_function_zThis(array('z'=>"This is a product page"),$_smarty_tpl);?>
+</label>
+                        <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Determine whether the page is a product page or not."),$_smarty_tpl);?>
+</div>
+                    </div>
+                    <?php }?>
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
                     <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Status"),$_smarty_tpl);?>
@@ -298,12 +310,12 @@ $_smarty_tpl->_subTemplateRender("file:_partials/modal.tpl", $_smarty_tpl->cache
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_121322282561f3030f0b9149_38766059 extends Smarty_Internal_Block
+class Block_1326274247622a1d4ab2db49_00269710 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_121322282561f3030f0b9149_38766059',
+    0 => 'Block_1326274247622a1d4ab2db49_00269710',
   ),
 );
 public $append = 'true';
@@ -476,7 +488,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     // if the data is a multiple one.
                     if (cur.parent().find(".multiple").length) {
                         // get the first item's value first.
-                        var calcVal = cur.val();
+                        var calcVal = cur.val().replace(";", "%3B");
                         // now search for the multipleDive DOM element,
                         // because it stores the multiple information.
                         if (multi.length && multi.hasClass("multipleDive")) {
@@ -488,9 +500,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                             // let's collect all the information into a single
                             // storing unit.
                             multi.find("[name='multipleDive[]']").each(function() {
-                                calcVal = calcVal + ";" + $(this).val();
+                                calcVal = calcVal + ";" + $(this).val().replace(";", "%3B");
                                 if (prev !== now) {
-                                    $(this).val(multiple[0] ? multiple[0].trim() : "");
+                                    $(this).val(multiple[0] ? multiple[0].trim().replace("%3B", ";") : "");
+                                    // if we have a summernote we also change its value from its object
+                                    if ($(this).hasClass("summernote")) {
+                                        // the way of doing it:
+                                        $(this).summernote("code", multiple[0] ? multiple[0].trim().replace("%3B", ";") : "");
+                                    }
                                     multiple.shift();
                                 }
                             });
@@ -529,12 +546,13 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                         // store the previous language's data to hidden field
                         old.val(cur.val());
                         // retrieve the current language's data from hidden field
-                        cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0] : nowo.val().trim());
+                        cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0].replace("%3B", ";") : nowo.val().trim());
                     }
 
-                    // if we have summernote on our holder, we should do this trick
+                    // if we have a summernote we also change its value from its object
                     if (cur.hasClass("summernote")) {
-                        cur.summernote("code", nowo.val().trim());
+                        // the way of doing it:
+                        cur.summernote("code", (multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0].replace("%3B", ";") : nowo.val().trim());
                     }
                     // this is a BUG: don't know why, but sometimes
                     // summernote doubles itself, but when that happens, remove the second
@@ -746,11 +764,38 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                     }
                 }
             });
+
+            // if we have a multiple on our summernote, we should add a "+"
+            // button for users to add multiple summernotes.
+            element.each(function() {
+                var el = $(this);
+                // appending the "+" button to toolbar of summernote.
+                if (el.parent().next().hasClass("multipleDive")) {
+                    el.next().find(".note-toolbar").append("<div class='multiple floatingTheRight pointThis row-12 back7 text6' style='padding:8px 15px;border-top-right-radius:5px;border-left: 1px solid var(--zFormBorderColor);font-size:18px'><div class='hollyMid'><i class='fas fa-plus'></i></div></div>");
+                }
+            });
+        }
+
+        // this function recreates a summernote, if a summernote has multiple option,
+        // this function runs from the "+" button on the right top of any summernote.
+        function doubleSummer(nwe) {
+            // find the textarea that summernote object controls itself from.
+            var change = nwe.children().last().find(".summernote");
+            // get the minus button.
+            var minue = "<div class='minus floatingTheRight pointThis row-12 back7 text6' style='padding:8px 15px;border-top-right-radius:5px;border-left: 1px solid var(--zFormBorderColor);font-size:18px'><div class='hollyMid'><i class='fas fa-minus'></i></div></div>";
+            // remove the old summernote.
+            change.next().remove();
+            // create a new one.
+            summernoteStart(change);
+            // bind (with ".on()") the keyup event to summernote with the textarea.
+            summernoteKeyup(change);
+            // finally, add the minus (destroy!) button to the toolbar.
+            change.next().find(".note-toolbar").append(minue);
         }
 
         function multiExists(el, load) {
             // let's get this first.
-            var th = el;
+            var th = el.parent().hasClass("note-toolbar") ? el.parent().parent() : el;
             // clone the partial, because we are going to multiply it.
             var all = th.parent().clone();
             var zContent = th.parent().find("[name^='zContent[']");
@@ -770,22 +815,37 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
             });
             if (load) {
                 if (yeahThere > 1) {
-                    th.parent().find("[name^='zContent[']").val(now[0]);
+                    th.parent().find("[name^='zContent[']").val(now[0].replace("%3B", ";"));
+                    // if we have a summernote we also change its value from its object
+                    if (th.prev().hasClass("summernote")) {
+                        // the way of doing it:
+                        th.prev().summernote("code", now[0].replace("%3B", ";"));
+                    }
                     for (let i = 1; i < yeahThere; i++) {
                         // now, let's multiply!
                         nwe.append(all.clone());
                         nwe.children().eq(i-1).find("[name^='multipleDive[']").val(now[i] ? now[i].trim() : "");
+                        // if the partial of the holder is a textarea,
+                        // we also need to recreate the summernote.
+                        if (th.prev().hasClass("summernote")) {
+                            doubleSummer(nwe);
+                        }
                     }
                 }
             } else {
-                // now, let's multiply!
+            // now, let's multiply!
                 nwe.append(all.clone());
+                // if the partial of the holder is a textarea,
+                // we also need to recreate the summernote.
+                if (th.prev().hasClass("summernote")) {
+                    doubleSummer(nwe);
+                }
             }
             var rem = load ? nwe : nwe.children().last();
             // one more thing, add the click function to minus button
             // that will remove a multiplied partial.
             rem.find(".minus").click(function() {
-                var el = $(this).parent();
+                var el = $(this).parent().hasClass("note-toolbar") ? $(this).parent().parent().parent() : $(this).parent();
                 el.parent().prev().prev().children().each(function() {
                     var all = $(this).val().split(";");
                     var newA = [];

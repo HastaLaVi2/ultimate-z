@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 20:39:50
+/* Smarty version 3.1.40, created on 2022-03-10 15:20:26
   from '/Users/kerimcanayaz/Sites/ultimate-z/_templates/1/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f3031693b995_97687344',
+  'unifunc' => 'content_622a173a7fc450_89799266',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '079e34df1a5f0e54ff84394b795ab2640692c69b' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1645698748,
       2 => 'file',
     ),
     '0731ef1aedb336563dff9b49bcc043d0fb40cf08' => 
@@ -48,22 +48,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f3031693b995_97687344 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a173a7fc450_89799266 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <title>Moda | ultimate Z</title>
+    <title>Anasayfa | ultimate Z</title>
     
         
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="ultimate Z" />
 
 <!-- alternate links -->
-<link rel="alternate" href="http://localhost/ultimate-z/moda/" />
-<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/moda" />
-<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/moda" />
+<link rel="alternate" href="http://localhost/ultimate-z/" />
+<link rel="alternate" hreflang="en" href="http://localhost/ultimate-z/en/" />
+<link rel="alternate" hreflang="tr" href="http://localhost/ultimate-z/tr/" />
 
 <!-- font libraries -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,12 +79,12 @@ function content_61f3031693b995_97687344 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- the ultimate z -->
 <link rel="stylesheet" type="text/css" href="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.css"/>
-<script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
+<script defer src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
     
 <!-- favicon -->
@@ -100,10 +101,10 @@ function content_61f3031693b995_97687344 (Smarty_Internal_Template $_smarty_tpl)
 <meta name="theme-color" content="#99154e">
 
 <!-- lazysizes -->
-<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+<script defer src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
+<script defer src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     
     <link rel="stylesheet" href="http://localhost/ultimate-z/_templates/1/assets/horizontal-scroll.css"/>
@@ -152,7 +153,7 @@ function content_61f3031693b995_97687344 (Smarty_Internal_Template $_smarty_tpl)
     <div id="zBefore">
 <div class"pad-20">
                         <a href="http://localhost/ultimate-z/">Anasayfa</a>
-                                <a href="http://localhost/ultimate-z/moda">Moda</a>
+                                <a href="http://localhost/ultimate-z/product">Ürün</a>
             </div>
 </div>
 
@@ -244,7 +245,10 @@ function content_61f3031693b995_97687344 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div>
     </div>-->
-    
+    <div class="pad-40">
+    <h1>ultimate Z'ye hoş geldiniz!</h1>
+</div>
+
 
     </div>
 

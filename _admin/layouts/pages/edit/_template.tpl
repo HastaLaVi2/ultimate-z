@@ -88,7 +88,7 @@
                         </div>
                     {/foreach}
                     <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
-                    <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
+                    <p class="font-13 bottom-0">{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
                     {foreach from=$zTools->zToolsGetAllLangs(true) item=l}
                         <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display: none{/if}">
                             <div class="bottom-10">
@@ -99,6 +99,15 @@
                             </div>
                         </div>
                     {/foreach}
+                    {if $z->eCommerce}
+                    <h6 class="bottom-10 top-0 font-1em">{zThis z="E-commerce Options"}</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="is_product" id="is_product"
+                        {if $editPage[$l->id]->is_product}value="enabled" checked{/if}>
+                        <label for="is_product">{zThis z="This is a product page"}</label>
+                        <div class="font-13">{zThis z="Determine whether the page is a product page or not."}</div>
+                    </div>
+                    {/if}
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
                     <h6 class="bottom-12 top-0 font-1em">{zThis z="Status"}</h6>
@@ -315,6 +324,11 @@
                                 calcVal = calcVal + ";" + $(this).val().replace(";", "%3B");
                                 if (prev !== now) {
                                     $(this).val(multiple[0] ? multiple[0].trim().replace("%3B", ";") : "");
+                                    // if we have a summernote we also change its value from its object
+                                    if ($(this).hasClass("summernote")) {
+                                        // the way of doing it:
+                                        $(this).summernote("code", multiple[0] ? multiple[0].trim().replace("%3B", ";") : "");
+                                    }
                                     multiple.shift();
                                 }
                             });
@@ -356,9 +370,10 @@
                         cur.val((multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0].replace("%3B", ";") : nowo.val().trim());
                     }
 
-                    // if we have summernote on our holder, we should do this trick
+                    // if we have a summernote we also change its value from its object
                     if (cur.hasClass("summernote")) {
-                        cur.summernote("code", nowo.val().trim());
+                        // the way of doing it:
+                        cur.summernote("code", (multi.length && multi.hasClass("multipleDive")) ? nowo.val().trim().split(";")[0].replace("%3B", ";") : nowo.val().trim());
                     }
                     // this is a BUG: don't know why, but sometimes
                     // summernote doubles itself, but when that happens, remove the second
@@ -562,11 +577,38 @@
                     }
                 }
             });
+
+            // if we have a multiple on our summernote, we should add a "+"
+            // button for users to add multiple summernotes.
+            element.each(function() {
+                var el = $(this);
+                // appending the "+" button to toolbar of summernote.
+                if (el.parent().next().hasClass("multipleDive")) {
+                    el.next().find(".note-toolbar").append("<div class='multiple floatingTheRight pointThis row-12 back7 text6' style='padding:8px 15px;border-top-right-radius:5px;border-left: 1px solid var(--zFormBorderColor);font-size:18px'><div class='hollyMid'><i class='fas fa-plus'></i></div></div>");
+                }
+            });
+        }
+
+        // this function recreates a summernote, if a summernote has multiple option,
+        // this function runs from the "+" button on the right top of any summernote.
+        function doubleSummer(nwe) {
+            // find the textarea that summernote object controls itself from.
+            var change = nwe.children().last().find(".summernote");
+            // get the minus button.
+            var minue = "<div class='minus floatingTheRight pointThis row-12 back7 text6' style='padding:8px 15px;border-top-right-radius:5px;border-left: 1px solid var(--zFormBorderColor);font-size:18px'><div class='hollyMid'><i class='fas fa-minus'></i></div></div>";
+            // remove the old summernote.
+            change.next().remove();
+            // create a new one.
+            summernoteStart(change);
+            // bind (with ".on()") the keyup event to summernote with the textarea.
+            summernoteKeyup(change);
+            // finally, add the minus (destroy!) button to the toolbar.
+            change.next().find(".note-toolbar").append(minue);
         }
 
         function multiExists(el, load) {
             // let's get this first.
-            var th = el;
+            var th = el.parent().hasClass("note-toolbar") ? el.parent().parent() : el;
             // clone the partial, because we are going to multiply it.
             var all = th.parent().clone();
             var zContent = th.parent().find("[name^='zContent[']");
@@ -587,21 +629,36 @@
             if (load) {
                 if (yeahThere > 1) {
                     th.parent().find("[name^='zContent[']").val(now[0].replace("%3B", ";"));
+                    // if we have a summernote we also change its value from its object
+                    if (th.prev().hasClass("summernote")) {
+                        // the way of doing it:
+                        th.prev().summernote("code", now[0].replace("%3B", ";"));
+                    }
                     for (let i = 1; i < yeahThere; i++) {
                         // now, let's multiply!
                         nwe.append(all.clone());
                         nwe.children().eq(i-1).find("[name^='multipleDive[']").val(now[i] ? now[i].trim() : "");
+                        // if the partial of the holder is a textarea,
+                        // we also need to recreate the summernote.
+                        if (th.prev().hasClass("summernote")) {
+                            doubleSummer(nwe);
+                        }
                     }
                 }
             } else {
-                // now, let's multiply!
+            // now, let's multiply!
                 nwe.append(all.clone());
+                // if the partial of the holder is a textarea,
+                // we also need to recreate the summernote.
+                if (th.prev().hasClass("summernote")) {
+                    doubleSummer(nwe);
+                }
             }
             var rem = load ? nwe : nwe.children().last();
             // one more thing, add the click function to minus button
             // that will remove a multiplied partial.
             rem.find(".minus").click(function() {
-                var el = $(this).parent();
+                var el = $(this).parent().hasClass("note-toolbar") ? $(this).parent().parent().parent() : $(this).parent();
                 el.parent().prev().prev().children().each(function() {
                     var all = $(this).val().split(";");
                     var newA = [];

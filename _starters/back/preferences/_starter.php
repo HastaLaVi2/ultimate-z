@@ -80,25 +80,39 @@ class zPageStarter extends zPage {
                 die($result);
             }
 
-			$error_page = $data["error_page"];
-			$site_name = $data["site_name"];
-			$status = $data["enabledSite"];
-			$disabledLangs = $data["languages"];
-            if (!isset($error_page))$error_page = "disabled";
-            if (!isset($status))$status = "disabled";
+            if (isset($data["e_commerce"])) {
+                $eCommerce = $data["eCommerce"];
 
-            $query = "UPDATE zLanguages SET disabled = '1';";
-            if (!empty($disabledLangs)) {
-                foreach ($disabledLangs as $id_lang) {
-                    $query .= "UPDATE zLanguages SET disabled = '0' WHERE id_lang = '$id_lang';";
+                $query = "UPDATE z SET e_commerce = '$eCommerce' WHERE id_z = '1';";
+                if (zDB::get()->execute($query)) {
+                    die($zThis->value("Change has been made."));
+                } else {
+                    header("Content-Type: application/json; charset=UTF-8");
+                    die($zThis->value("Change has failed."));
                 }
             }
-			$query .= "UPDATE z SET name = '$site_name', status = '$status', error = '$error_page' WHERE id_z = '1';";
-            if (zDB::get()->execute($query)) {
-                die($zThis->value("Change has been made."));
-            } else {
-                header("Content-Type: application/json; charset=UTF-8");
-                die($zThis->value("Change has failed."));
+
+            if (isset($data["preferences"])) {
+                $error_page = $data["error_page"];
+    			$site_name = $data["site_name"];
+    			$status = $data["enabledSite"];
+    			$disabledLangs = $data["languages"];
+                if (!isset($error_page))$error_page = "disabled";
+                if (!isset($status))$status = "disabled";
+
+                $query = "UPDATE zLanguages SET disabled = '1';";
+                if (!empty($disabledLangs)) {
+                    foreach ($disabledLangs as $id_lang) {
+                        $query .= "UPDATE zLanguages SET disabled = '0' WHERE id_lang = '$id_lang';";
+                    }
+                }
+    			$query .= "UPDATE z SET name = '$site_name', status = '$status', error = '$error_page' WHERE id_z = '1';";
+                if (zDB::get()->execute($query)) {
+                    die($zThis->value("Change has been made."));
+                } else {
+                    header("Content-Type: application/json; charset=UTF-8");
+                    die($zThis->value("Change has failed."));
+                }
             }
 		}
     }

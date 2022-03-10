@@ -90,7 +90,7 @@
                         </div>
                     {/foreach}
                     <h6 class="bottom-10 top-0 font-1em">{zThis z="Meta Description"}</h6>
-                    <p>{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
+                    <p class="font-13 bottom-0">{zThis z="If you do not enter a meta description, the first text on the page will be used."}</p>
                     {foreach from=$zTools->zToolsGetAllLangs() item=l}
                         <div class="divFor{$l->id} divFor" style="{if $l->id !== $zUser->id_lang_closest}display: none{/if}">
                             <div class="bottom-10">
@@ -106,12 +106,26 @@
                         $("#page_url").val("/"+slug($(this).val()));
                     });
                     </script>
+                    {if $z->eCommerce}
+                    <h6 class="bottom-10 top-0 font-1em">{zThis z="E-commerce Options"}</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="is_product" id="is_product"
+                        {if $editPage[$l->id]->is_product}value="enabled" checked{/if}>
+                        <label for="is_product">{zThis z="This is a product page"}</label>
+                        <div class="font-13">{zThis z="Determine whether the page is a product page or not."}</div>
+                    </div>
+                    {/if}
                 </div>
                 <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em">{zThis z="Subpage"}</h6>
+                    <h6 class="bottom-12 top-0 font-1em">{zThis z="Status"}</h6>
                     <div>
-                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
-                        {if !$editPage[$l->id]->isSubpage}value="enabled" checked{/if}>
+                        <input class="zSwitch" type="checkbox" name="page_status" id="page_status" value="enabled" checked>
+                        <label for="page_status">{zThis z="Page status"}</label>
+                        <div class="font-13">{zThis z="Determine whether the page should active or not."}</div>
+                    </div>
+                    <h6 class="bottom-12 top-12 font-1em">{zThis z="Subpage"}</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage" value="enabled" checked>
                         <label for="not_a_subpage">{zThis z="Not a subpage."}</label>
                         <div class="font-13">{zThis z="Uncheck this switch, if you want this page to be a subpage of another."}</div>
                     </div>

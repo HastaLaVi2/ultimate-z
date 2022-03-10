@@ -49,6 +49,9 @@ class zPage {
     # is this zPage accessible?
     public $status;
 
+    # is this zPage a product?
+    public $is_product;
+
     # construct the object.
     public function __construct($id_page = NULL, $id_lang = NULL) {
         $db = zDB::get();
@@ -74,6 +77,7 @@ class zPage {
         if($query[0])$this->area=$query[0]["area"];
         if($query[0])$this->subpageOf=$query[0]["subpage"];
         if($query[0])$this->status=$query[0]["status"];
+        if($query[0])$this->is_product=$query[0]["is_product"];
 
         if ($this->subpageOf > 0) {
             $this->isSubpage = true;
@@ -152,8 +156,10 @@ class zPage {
         }
         $zHolder = "";
 
-        if ($id_holder && $order) {
+        if ($id_holder && $order && $id_block) {
             $zHolder = new zHolder($id_holder, $id_lang, $this->id, $id_block, $order);
+        } else if ($id_holder) {
+            $zHolder = new zHolder($id_holder, $id_lang, $this->id);
         }
 
         return $zHolder;

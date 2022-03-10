@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 13:00:39
+/* Smarty version 3.1.40, created on 2022-03-10 16:41:26
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f297776c5b55_30118435',
+  'unifunc' => 'content_622a2a36e785e1_79758501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '40eca603e2fff03d9ede2e86dcef495b76ef25bf' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/preferences/_template.tpl',
-      1 => 1642852415,
+      1 => 1643405891,
       2 => 'file',
     ),
     '2de67654463ebbed118f4a9466ca3d8b72fb2cbd' => 
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1645698748,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f297776c5b55_30118435 (Smarty_Internal_Template $_smarty_tpl) {
+function content_622a2a36e785e1_79758501 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -107,12 +107,12 @@ function content_61f297776c5b55_30118435 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- the ultimate z -->
 <link rel="stylesheet" type="text/css" href="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.css"/>
-<script src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
+<script defer src="http://localhost/ultimate-z/_scripts/ultimate-z/z.min.js"></script>
 
 <!-- owl.carousel -->
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.css" rel="stylesheet"/>
     <link href="http://localhost/ultimate-z/_scripts/owl.carousel/owl.theme.default.css" rel="stylesheet"/>
-    <script src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/owl.carousel/owl.carousel.min.js"></script>
 
     
 <!-- favicon -->
@@ -129,23 +129,23 @@ function content_61f297776c5b55_30118435 (Smarty_Internal_Template $_smarty_tpl)
 <meta name="theme-color" content="#99154e">
 
 <!-- lazysizes -->
-<script src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
+<script defer src="http://localhost/ultimate-z/_scripts/lazysizes/lazysizes.min.js" async=""></script>
 
 <!-- single-page application functions -->
-<script>window.zAdmin = true</script><script src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
+<script>window.zAdmin = true</script><script defer src="http://localhost/ultimate-z/_scripts/spa_v1.js"></script>
 
     <!-- dragula -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/dragula/dragula.min.css"/>
-    <script src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/dragula/dragula.min.js"></script>
 
     <!-- toastify -->
     <link rel="stylesheet" href="http://localhost/ultimate-z/_scripts/toastify/toastify.css">
 
     <!-- imagetracer -->
-    <script src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/imagetracer/imagetracer_v1.2.6.js"></script>
 
     <!-- html2canvas -->
-    <script src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
+    <script defer src="http://localhost/ultimate-z/_scripts/html2canvas/html2canvas.min.js"></script>
 </head>
 <body class="back7">
     
@@ -369,8 +369,9 @@ $(window).resize(function(){
             
     <section class="whiteBack rad-15 pad-20 font-16">
         <h4 class="font-19 top-0 text4 boldText">Site Ayarları</h4>
-        <form id="zUser-preferences-form" class="zForm" method="POST" role="form" action="http://localhost/ultimate-z/_admin/preferences/index.php">
+        <form class="zForm zUser-preferences-form" method="POST" role="form" action="http://localhost/ultimate-z/_admin/preferences/index.php">
             
+            <input type="text" class="displayNone" value="true" name="preferences">
             <div class="col-12">
                 <div class="zGroup">
                     <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -415,28 +416,32 @@ $(window).resize(function(){
                                             <li style="padding-left: 0">
                             <div>
                                 <input type="checkbox" id="language2" name="languages[]" value="2"
-                                    >
+                                    checked>
                                 <label for="language2">Türkçe</label>
                             </div>
                         </li>
                                         </ul>
                 </div>
-                <script>
-                $(".zSwitch").change(function() {
-                    var value = $(this).val();
-                    var enText = $(this).parent().find(".enable").text();
-                    var disText = $(this).parent().find(".disable").text();
-                    if (value == "enabled") {
-                        $(this).next("label").text(enText);
-                        $(this).val("disabled");
-                    } else {
-                        $(this).next("label").text(disText);
-                        $(this).val("enabled");
-                    }
-                });
-                </script>
                 <button id="btnSubmit" class="zButton primary widthAll zShadow5">Tamamla</button>
             </div>
+        </form>
+    </section>
+    <section class="whiteBack rad-15 pad-20 font-16 top-20">
+        <h4 class="font-19 top-0 text4 boldText">E-commerce Options</h4>
+        <p class="top-0 bottom-0 font-1em">If this is to be an e-commerce network, enable the switch.</p>
+        <form class="zForm zUser-preferences-form" method="POST" role="form" action="http://localhost/ultimate-z/_admin/preferences/index.php">
+            
+            <input type="text" class="displayNone" value="true" name="e_commerce">
+            <div class="padTB-15">
+                <input class="zSwitch" type="checkbox" name="eCommerce" id="eCommerce"
+                value="enabled" checked>
+                <label for="eCommerce">
+                                            Disable e-commerce settings
+                                    </label>
+                <span class="enable displayNone">Enable e-commerce settings</span>
+                <span class="disable displayNone">Disable e-commerce settings</span>
+            </div>
+            <button id="btnSubmit" class="zButton primary widthAll zShadow5">Tamamla</button>
         </form>
     </section>
     <section class="whiteBack rad-15 pad-20 font-16 top-20">
@@ -576,13 +581,26 @@ $(window).resize(function(){
         
     <script>
         function zPageJS() {
+            $(".zSwitch").change(function() {
+                var value = $(this).val();
+                var enText = $(this).parent().find(".enable").text();
+                var disText = $(this).parent().find(".disable").text();
+                if (value == "enabled") {
+                    $(this).next("label").text(enText);
+                    $(this).val("disabled");
+                } else {
+                    $(this).next("label").text(disText);
+                    $(this).val("enabled");
+                }
+            });
+
             $(".zSure").submit(function(e) {
                 e.preventDefault();
                 window.location.assign("#modalsure");
             });
 
             // submit form functions
-            $("#zUser-preferences-form").submit(function(e) {
+            $(".zUser-preferences-form").submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this).clone();

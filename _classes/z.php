@@ -42,6 +42,9 @@ class z {
     # the hidden key to check the authorisation for the ultimate Z.
     public $hidden_key;
 
+    # e-commerce?
+    public $eCommerce;
+
     # construct the object.
     public function __construct($id_site = NULL) {
         # get the database.
@@ -61,6 +64,7 @@ class z {
             $this->status = $query[0]["status"];
             $this->error = $query[0]["error"];
             $this->creation = $query[0]["create_date"];
+            $this->eCommerce = $query[0]["e_commerce"];
         }
     }
  }

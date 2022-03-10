@@ -17,6 +17,9 @@ function smarty_function_zBlock($params, Smarty_Internal_Template $template)
     $result = "";
 
     foreach ($holders as $holder) {
+        $template->smarty->assign("holder", $holder);
+        $template->smarty->assign("zHolder", $holder);
+
         for ($x = 0; $x <= 2; $x++) {
             $val = $template->smarty->tpl_vars["_" . $x]->value;
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-22 09:44:48
+/* Smarty version 3.1.40, created on 2022-01-28 22:25:53
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61ebd21099a5d7_35517788',
+  'unifunc' => 'content_61f46d71dfb981_55241220',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed767e28d112dbb4d0452eb02d67f0f49ab9f651' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/pages/create/_template.tpl',
-      1 => 1641843834,
+      1 => 1643408746,
       2 => 'file',
     ),
   ),
@@ -20,32 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61ebd21099a5d7_35517788 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61f46d71dfb981_55241220 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
-$_smarty_tpl->compiled->nocache_hash = '67867917661ebd21095a658_98325864';
+$_smarty_tpl->compiled->nocache_hash = '41715328361f46d7057be98_18833887';
 ?>
 
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_155175758561ebd210975a54_73382898', "zContent");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_153819783161f46d71528e83_29442565', "zContent");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_163193040061ebd210999437_93248052', "zBottom");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_8102326261f46d71dfa480_11174907', "zBottom");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "_main.tpl");
 }
 /* {block "zContent"} */
-class Block_155175758561ebd210975a54_73382898 extends Smarty_Internal_Block
+class Block_153819783161f46d71528e83_29442565 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zContent' => 
   array (
-    0 => 'Block_155175758561ebd210975a54_73382898',
+    0 => 'Block_153819783161f46d71528e83_29442565',
   ),
 );
 public $append = 'true';
@@ -159,7 +159,7 @@ $_smarty_tpl->tpl_vars['l']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Meta Description"),$_smarty_tpl);?>
 </h6>
-                    <p><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
+                    <p class="font-13 bottom-0"><?php echo smarty_function_zThis(array('z'=>"If you do not enter a meta description, the first text on the page will be used."),$_smarty_tpl);?>
 </p>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['zTools']->value->zToolsGetAllLangs(), 'l');
@@ -189,13 +189,31 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     });
                     <?php echo '</script'; ?>
 >
-                </div>
-                <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
-                    <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Subpage"),$_smarty_tpl);?>
+                    <h6 class="bottom-10 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"E-commerce Options"),$_smarty_tpl);?>
 </h6>
                     <div>
-                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage"
-                        <?php if (!$_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->isSubpage) {?>value="enabled" checked<?php }?>>
+                        <input class="zSwitch" type="checkbox" name="is_product" id="is_product"
+                        <?php if ($_smarty_tpl->tpl_vars['editPage']->value[$_smarty_tpl->tpl_vars['l']->value->id]->is_product) {?>value="enabled" checked<?php }?>>
+                        <label for="is_product"><?php echo smarty_function_zThis(array('z'=>"This is a product page"),$_smarty_tpl);?>
+</label>
+                        <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Determine whether the page is a product page or not."),$_smarty_tpl);?>
+</div>
+                    </div>
+                </div>
+                <div class="col-4 colTop padL-10 padT-10" zMob-1024="padL-0">
+                    <h6 class="bottom-12 top-0 font-1em"><?php echo smarty_function_zThis(array('z'=>"Status"),$_smarty_tpl);?>
+</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="page_status" id="page_status" value="enabled" checked>
+                        <label for="page_status"><?php echo smarty_function_zThis(array('z'=>"Page status"),$_smarty_tpl);?>
+</label>
+                        <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Determine whether the page should active or not."),$_smarty_tpl);?>
+</div>
+                    </div>
+                    <h6 class="bottom-12 top-12 font-1em"><?php echo smarty_function_zThis(array('z'=>"Subpage"),$_smarty_tpl);?>
+</h6>
+                    <div>
+                        <input class="zSwitch" type="checkbox" name="not_a_subpage" id="not_a_subpage" value="enabled" checked>
                         <label for="not_a_subpage"><?php echo smarty_function_zThis(array('z'=>"Not a subpage."),$_smarty_tpl);?>
 </label>
                         <div class="font-13"><?php echo smarty_function_zThis(array('z'=>"Uncheck this switch, if you want this page to be a subpage of another."),$_smarty_tpl);?>
@@ -237,12 +255,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block "zContent"} */
 /* {block "zBottom"} */
-class Block_163193040061ebd210999437_93248052 extends Smarty_Internal_Block
+class Block_8102326261f46d71dfa480_11174907 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'zBottom' => 
   array (
-    0 => 'Block_163193040061ebd210999437_93248052',
+    0 => 'Block_8102326261f46d71dfa480_11174907',
   ),
 );
 public $append = 'true';
@@ -287,10 +305,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 });
             });
         }
-
-        document.addEventListener("DOMContentLoaded", function(event) {
-            zPageJS();
-        });
     <?php echo '</script'; ?>
 >
 <?php

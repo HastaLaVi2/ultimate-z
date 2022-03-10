@@ -18,8 +18,9 @@
 {block name="zContent" append}
     <section class="whiteBack rad-15 pad-20 font-16">
         <h4 class="font-19 top-0 text4 boldText">{zThis z="Site Settings"}</h4>
-        <form id="zUser-preferences-form" class="zForm" method="POST" role="form" action="{$zContent->base_uri}">
+        <form class="zForm zUser-preferences-form" method="POST" role="form" action="{$zContent->base_uri}">
             {$zTools->zToolsFormWarning($success, $error)}
+            <input type="text" class="displayNone" value="true" name="preferences">
             <div class="col-12">
                 <div class="zGroup">
                     <span class="back7 borderForm boldMin-1 boldNoR pad-10 text6">
@@ -74,22 +75,30 @@
                     {/foreach}
                     </ul>
                 </div>
-                <script>
-                $(".zSwitch").change(function() {
-                    var value = $(this).val();
-                    var enText = $(this).parent().find(".enable").text();
-                    var disText = $(this).parent().find(".disable").text();
-                    if (value == "enabled") {
-                        $(this).next("label").text(enText);
-                        $(this).val("disabled");
-                    } else {
-                        $(this).next("label").text(disText);
-                        $(this).val("enabled");
-                    }
-                });
-                </script>
                 <button id="btnSubmit" class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
             </div>
+        </form>
+    </section>
+    <section class="whiteBack rad-15 pad-20 font-16 top-20">
+        <h4 class="font-19 top-0 text4 boldText">{zThis z="E-commerce Options"}</h4>
+        <p class="top-0 bottom-0 font-1em">{zThis z="If this is to be an e-commerce network, enable the switch."}</p>
+        <form class="zForm zUser-preferences-form" method="POST" role="form" action="{$zContent->base_uri}">
+            {$zTools->zToolsFormWarning($success, $error)}
+            <input type="text" class="displayNone" value="true" name="e_commerce">
+            <div class="padTB-15">
+                <input class="zSwitch" type="checkbox" name="eCommerce" id="eCommerce"
+                {if $z->eCommerce == "enabled"}value="enabled" checked{/if}>
+                <label for="eCommerce">
+                    {if $z->eCommerce == "enabled"}
+                        {zThis z="Disable e-commerce settings"}
+                    {else}
+                        {zThis z="Enable e-commerce settings"}
+                    {/if}
+                </label>
+                <span class="enable displayNone">{zThis z="Enable e-commerce settings"}</span>
+                <span class="disable displayNone">{zThis z="Disable e-commerce settings"}</span>
+            </div>
+            <button id="btnSubmit" class="zButton primary widthAll zShadow5">{zThis z="Submit"}</button>
         </form>
     </section>
     <section class="whiteBack rad-15 pad-20 font-16 top-20">
@@ -119,13 +128,26 @@
 {block name="zBottom" append}
     <script>
         function zPageJS() {
+            $(".zSwitch").change(function() {
+                var value = $(this).val();
+                var enText = $(this).parent().find(".enable").text();
+                var disText = $(this).parent().find(".disable").text();
+                if (value == "enabled") {
+                    $(this).next("label").text(enText);
+                    $(this).val("disabled");
+                } else {
+                    $(this).next("label").text(disText);
+                    $(this).val("enabled");
+                }
+            });
+
             $(".zSure").submit(function(e) {
                 e.preventDefault();
                 window.location.assign("#modalsure");
             });
 
             // submit form functions
-            $("#zUser-preferences-form").submit(function(e) {
+            $(".zUser-preferences-form").submit(function(e) {
                 e.preventDefault();
 
                 var form = $(this).clone();

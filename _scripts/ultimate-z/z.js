@@ -895,12 +895,16 @@ function zAnimate() {
             if (params[3]) {
                 createStyleTag("[zAnimate*=\""+CHILD+"\"]", "transition", params[3]+"s");
             }
-            // this is the first state of the animation,
-            // this can be used to state filters or transforms.
-            createStyleTag("[zAnimate*=\""+CHILD+"\"]", params[0], params[1], (zHov ? "hover" : false));
             // final state of the animation.
-            if (params[2]) {
-                createStyleTag("[zAnimate*=\""+CHILD+"\"].zView", params[0], params[2]);
+            if (zHov && params[2]) {
+                createStyleTag("[zAnimate*=\""+CHILD+"\"]", params[0], params[2], "hover");
+            } else {
+                // this is the first state of the animation,
+                // this can be used to state filters or transforms.
+                createStyleTag("[zAnimate*=\""+CHILD+"\"]", params[0], params[1]);
+                if (params[2]) {
+                    createStyleTag("[zAnimate*=\""+CHILD+"\"].zView", params[0], params[2]);
+                }
             }
         });
     });

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.40, created on 2022-01-27 13:00:34
+/* Smarty version 3.1.40, created on 2022-02-11 09:26:09
   from '/Users/kerimcanayaz/Sites/ultimate-z/_admin/layouts/categories/_template.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.40',
-  'unifunc' => 'content_61f2977250f648_46684526',
+  'unifunc' => 'content_62062bb1400664_10790345',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     '0538971dc732ac65971b8a4e8622951228ba23c9' => 
     array (
       0 => '/Users/kerimcanayaz/Sites/ultimate-z/_holders/head.tpl',
-      1 => 1642844056,
+      1 => 1643376836,
       2 => 'file',
     ),
     '573b073f619aeb439fcac73d74e676de04fada42' => 
@@ -78,7 +78,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_61f2977250f648_46684526 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62062bb1400664_10790345 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="tr">
@@ -390,7 +390,7 @@ $(window).resize(function(){
                 <tbody>
                                             <tr id="zCategory-1">
                             <td>1</td>
-                            <td>Untitled</td>
+                            <td>Menü</td>
                             <td>
                                 <a href="http://localhost/ultimate-z/_admin/layouts/categories/edit/index.php?id_category=1" class="zButton zHov-zShadow5 primary sweet">
                                      Düzenle
